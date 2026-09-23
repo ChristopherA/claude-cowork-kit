@@ -32,7 +32,7 @@ Never bundle two independent choices into one question; the reader cannot answer
 
 ## A plan, in rounds
 
-When the decision is a plan with several branches, map it as a tree: every decision opens the decisions that hang off it. The frontier is every decision whose prerequisites are settled, the ones you can ask now without guessing at answers you have not heard. Ask the whole frontier in one round: number each question, give the stakes in a sentence, and give your recommended answer under it. Then wait. The reader's answers reshape the tree; recompute the frontier and ask the next round. A question whose answer depends on another still open in this round belongs to a later round. Where the app's question control cannot carry a round, ask the round in prose with the same numbering and recommendations.
+When the decision is a plan with several branches, map it as a tree: every decision opens the decisions that hang off it. The frontier is every decision whose prerequisites are settled, the ones you can ask now without guessing at answers you have not heard. Ask the whole frontier in one round: number each question, give the stakes in a sentence, and give your recommended answer under it, up to four questions in one control as the Asking section says, and a round larger than four across as many controls as it needs. Then wait. The reader's answers reshape the tree; recompute the frontier and ask the next round. A question whose answer depends on another still open in this round belongs to a later round. Where the control cannot carry a round, ask the round in prose with the same numbering and recommendations.
 
 The plan is done when the frontier is empty: every branch visited, nothing left silently assumed. Say so, summarize as under Ending, and act on none of it until the reader confirms you have reached a shared understanding.
 
@@ -45,6 +45,10 @@ Ask the question the loop cannot ask itself: does the premise still hold? Should
 ## Ending
 
 When the dimensions are settled, or the reader stops, write a short summary of what was decided, each decision in one line with the reason, and what was left open. Do not start doing any of it. If something decided should be recorded, say where it would go (a convention in `map.md`, a line in a thread) and wait to be asked.
+
+## Asking
+
+Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said.
 
 ## What this skill does not do
 

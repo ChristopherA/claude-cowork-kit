@@ -35,6 +35,10 @@ Go through `questions.md` and, for each question, ask the reader in one line whe
 
 Report: the timeline line added, the file written in the folder by name, how many questions were struck and how many remain. End with one word for completeness: full (all three steps done), partial (a step was skipped or something could not be read, with what), or minimal (stopped early). If something the reader told you looks like it warrants a clinician's attention before the next scheduled visit, say so plainly, once, without alarm, and leave the decision to them.
 
+## Asking
+
+Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said.
+
 ## What this skill does not do
 
 It does not diagnose, interpret a result, or say that something is probably nothing. It does not put anything clinical into a project doc, and it does not file into a project doc when the folder is out of reach. It does not write anywhere without a yes. It does not draft the next visit's questions; that is the visit-prep skill, before the appointment.

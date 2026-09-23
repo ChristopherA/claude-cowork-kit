@@ -43,6 +43,10 @@ On a yes, write `questions.md`, read it back to confirm it landed as shown, and 
 
 Report: which visit this is for, how many questions are on the list, and anything in the record you could not read or find. End with one word for completeness: full (the record since the last visit was read and the list is written), partial (something was unreadable or missing, with what), or minimal (stopped early). If you said something warrants attention before the visit, say it once more here and no more.
 
+## Asking
+
+Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said.
+
 ## What this skill does not do
 
 It does not diagnose, interpret a result, or say that something is probably nothing. It does not write into the records folder or add to the timeline; that is the record-a-visit skill, after the appointment. It does not write to `questions.md` without a yes. It does not draft from memory when the folder is out of reach.

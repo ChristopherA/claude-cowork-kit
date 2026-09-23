@@ -25,6 +25,10 @@ Read `priorities.md` first if you have not this conversation; a plan that ignore
 
 Report in a few lines: the things the plan moves, the fragility sentence if there was one, what was deliberately left out, and whether `priorities.md` changed. End with one word for completeness: full (calendar and in-flight both known), partial (planned around a gap, named), or minimal (stopped early). Offer to save the plan as a project doc only if the reader wants it from the phone; by default it lives in the chat.
 
+## Asking
+
+Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said.
+
 ## What this skill does not do
 
 It does not create or change a calendar event, or write to a connected calendar in any way. It does not send anything. It does not change `priorities.md` without showing the edit and getting a yes. It does not do the tasks it places; it says where they go.

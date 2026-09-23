@@ -21,7 +21,7 @@ Check whether a project doc named `mission.md` already exists. If it does, this 
 
 ## The interview, one question at a time
 
-Ask each through the app's question control where there is a choice, the first option being the one to take when unsure, and wait for the answer. Reflect it back in a phrase before the next. Skip any the reader has already answered in their request.
+Ask as the Asking section says, grouping the questions whose answers do not depend on each other in one control and putting the dependent ones after. Skip any the reader has already answered in their request.
 
 1. **What.** The subject, skill, or exam, in a phrase. If it is an exam, its name and format if they know it.
 2. **Why, and by when.** One or two sentences on why now, and a date if there is one. If there is no date, say that the mission will carry none rather than invent a horizon.
@@ -63,6 +63,10 @@ Say that Claude has a built-in Learning style, in the style menu, that makes it 
 ## End
 
 Report what exists now: the three project docs by name, and the two fields waiting for a paste, the description and Instructions. Then name the day-one checks, in order: in this project, with the style turned on, ask Claude a direct question about the subject and see whether it answers or asks; from the phone with the computer closed, ask where the progress record says you are. Do not run them; the reader does. Say that the first lesson is `next lesson`, and that `quiz me` works once there is something to quiz.
+
+## Asking
+
+Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said.
 
 ## What this skill does not do
 

@@ -245,6 +245,10 @@ def kit_references(kit_path):
     if "[FULL FOLDER PATH ON MY COMPUTER]" not in block4:
         fail("kit: Block 4 has no folder placeholder")
     projects = {name: fenced_block_after(text, rf"^## The {name} project$") for name in PROJECT_SECTIONS}
+    asking = fenced_block_after(text, r"^### How Claude asks$").strip()
+    for skill_md in sorted(PLUGINS_DIR.glob("*/skills/*/SKILL.md")):
+        if asking not in skill_md.read_text():
+            fail(f"{skill_md.relative_to(ROOT)}: does not carry the explainer's asking convention word for word (## Asking)")
     for name, body in projects.items():
         if "[FOLDER PATH ON MY COMPUTER]" not in body:
             fail(f"kit: the {name} project's block has no folder placeholder")

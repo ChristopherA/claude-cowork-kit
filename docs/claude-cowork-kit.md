@@ -113,6 +113,14 @@ Claude working in one project cannot read or write another project's docs, and m
 
 That's why each instruction block below has a section telling Claude what belongs elsewhere, and to name the right project and stop rather than helpfully filing things wherever you happen to be standing.
 
+### How Claude asks
+
+Every skill in the kit asks its questions the same way, through the question control, the prompt a task shows with options to tap rather than a question to type an answer to. The convention below is carried word for word by every skill; the build checks each copy against this one, so it changes here or nowhere. It assumes the control can carry up to four questions at once and more than one answer where that fits, which is what the same control does in Claude Code; until the run confirms it in Cowork, a skill that finds the control cannot do that falls back to one question at a time.
+
+```
+Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said.
+```
+
 ---
 
 ## Setup

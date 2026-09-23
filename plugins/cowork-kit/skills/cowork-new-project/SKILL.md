@@ -33,6 +33,10 @@ Say the hand steps the app needs: create the project, connect the folder, paste 
 
 If the reader wants the project as a plugin, so its setup runs from a sentence like the kit's own, point them at the kit's template folder, `template/` in the claude-cowork-kit repository: a copy with the brackets filled in is the plugin, and its `references/project-instructions.md` is the text drafted above. The `.plugin` file is built with Anthropic's `create-cowork-plugin` skill, from the Cowork plugin management plugin, not by the kit; say so in one sentence, and say that a project that lives in the Instructions text alone works without a plugin at all.
 
+## Asking
+
+Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said.
+
 ## What this skill does not do
 
 It does not create a project, connect a folder, set any setting, or install anything. It does not write project docs; the reader asks for those in the new project. It does not build the plugin file.

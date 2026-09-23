@@ -36,6 +36,10 @@ On a yes: write it, read it back to confirm it landed as shown, and say the doc'
 
 Report: the month, the files read, what was missing by file and period, how many rows went into categories, how many did not fit and what they were, what was set aside as doubtful, how the month stood against each target, and whether the summary was written and where. End with one word for completeness: full (every file the reader named read whole, every row categorized or listed), partial (a file or period missing, or rows left uncategorized or doubtful, with the counts), or minimal (stopped before the totals, with the reason). If the reader asks what to do about a category over its target, lay out what the decision turns on and stop; the choice is theirs.
 
+## Asking
+
+Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said.
+
 ## What this skill does not do
 
 It does not change `categories.md` or `targets.md`. It does not write into the folder, and it does not write to a project doc without a yes. It does not close a month from anything but files in the folder, and it does not carry figures between months. It does not advise on investments or tax, log into or connect to any account, or supply a number the reader did not give.

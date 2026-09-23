@@ -22,6 +22,10 @@ Show the exact wording and where it goes: which section of `rules.md` or `map.md
 
 If the honest answer to question four is that nothing reasonable prevents it, say that; not every mistake earns a rule, and a rule that never fires is the dilution the kit warns about.
 
+## Asking
+
+Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said.
+
 ## What this skill does not do
 
 It does not assign blame, to the reader or to itself; the questions are about the system. It does not fix the original mistake unless asked; that is a separate, smaller job. It does not add more than one change per postmortem.

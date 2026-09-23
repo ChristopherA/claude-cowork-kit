@@ -21,7 +21,7 @@ Read the reader's Account instructions if you can see them. If they do not yet c
 
 ## Three questions, one at a time
 
-Ask each through the app's question control where there is a choice, the recommended option first, and wait for the answer. Reflect it back in a phrase before the next. Skip any the reader has already answered in their request.
+Ask as the Asking section says, grouping the questions whose answers do not depend on each other in one control and putting the dependent ones after. Skip any the reader has already answered in their request.
 
 1. **The folder.** Where the working files are on their computer: the folder that holds drafts, lists, threads they are keeping, earlier replies. If they name a folder, confirm you can reach it; if you cannot, say so, continue from their description, and mark in `priorities.md` that the folder is to be checked at the desk. The folder is reachable only from a task at the desk; the project doc this skill creates is reachable from the phone as well, which is why the priorities live in the doc and not in the folder.
 2. **Current priorities.** The two or three things that matter this month, in order, each in a phrase, and the one eating their attention right now. Not everything they owe; the things a plan should bend around. If they offer eight, ask which three would still matter if the other five slipped.
@@ -48,6 +48,10 @@ Show the block whole, one code block, and nothing else inside the fence.
 ## End
 
 Report what exists now: the project doc by name, and the two fields waiting for a paste, the description and Instructions. Then name the three day-one checks, in order: at the desk, dump a mess of obligations into a task and see whether a short ordered list comes back with nothing around it; from the phone with the computer closed, ask what the current priorities are, which the doc alone can answer; hand over a message and see whether a draft comes back and the task stops there. Do not run them; the reader does.
+
+## Asking
+
+Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said.
 
 ## What this skill does not do
 

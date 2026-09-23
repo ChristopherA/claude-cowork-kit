@@ -32,6 +32,10 @@ One recommendation, in two or three sentences: what to do, why it is the one, an
 
 If the reader says no, give the runner-up as the new recommendation with the same shape. Do not produce a menu on the second try either.
 
+## Asking
+
+Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said.
+
 ## What this skill does not do
 
 It does not file, write, or edit anything. It does not read every note in the folder; the newest few and the description are the whole input. It does not tell the reader what they should care about; it tells them where they left off.

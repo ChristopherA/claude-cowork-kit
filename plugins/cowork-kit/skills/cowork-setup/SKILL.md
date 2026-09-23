@@ -19,11 +19,11 @@ Read the reader's Account instructions if you can see them. If they already carr
 
 ## The interview, one question at a time
 
-Ask each through the app's question control where there is a choice, the first option being the one to take when unsure, and wait for the answer. Reflect it back in a phrase before the next. Skip any the reader has already answered in their request.
+Ask as the Asking section says: questions 1 to 3 do not depend on each other and can share one control; question 4 depends on the answer to 3 and goes in the next. Skip any the reader has already answered in their request.
 
 1. **Who they are and how they work.** Three or four sentences, free text: what they do, what they want Claude for, when and how they tend to work. Not a biography; the things you would otherwise guess wrong. This is kept for the project setups, which ask it again only if it is missing.
 2. **The voice.** Read `references/voices.md` and offer the three by name with one phrase each: plain, warm, archivist. Plain is listed first because it is the safe default, not because it is better; this is taste.
-3. **Which projects.** Offer the five the kit describes, more than one allowed: a personal knowledge base (notes and reading), learning (a subject, a skill, or an exam), running the week, money, and medical records; and "something else". Recommend starting with one, the knowledge base, because every other project's habits come from it and because most readers build one project and stop.
+3. **Which projects.** Offer the five the kit describes, more than one allowed, so the control lets them pick several: a personal knowledge base (notes and reading), learning (a subject, a skill, or an exam), running the week, money, and medical records; and "something else". Recommend starting with one, the knowledge base, because every other project's habits come from it and because most readers build one project and stop.
 4. **For the knowledge base, if chosen:** whether the reader is in the project they intend for their notes right now, or in a scratch task. The answer decides the kickoff below.
 
 ## Hand back the account instructions
@@ -49,6 +49,10 @@ If the reader chose the knowledge base and is in the project they intend for it,
 ## End
 
 Report what exists now: the field waiting for a paste, the plugin to install next with its setup phrase, and the inbox doc if you created one. Then name the one day-one check: from the phone, in plain chat, ask Claude anything and listen for the voice; if it sounds the same as before, the paste did not land.
+
+## Asking
+
+Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said.
 
 ## What this skill does not do
 

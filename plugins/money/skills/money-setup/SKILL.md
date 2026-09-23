@@ -23,7 +23,7 @@ Ask whether to go on. If the reader would rather not let a session read their re
 
 ## Three questions, one at a time
 
-Ask each through the app's question control where there is a choice, the recommended option first, and wait for the answer. Reflect it back in a phrase before the next. Skip any the reader has already answered in their request.
+Ask as the Asking section says, grouping the questions whose answers do not depend on each other in one control and putting the dependent ones after. Skip any the reader has already answered in their request.
 
 1. **The folder.** Where the financial files are on their computer. If they name a folder, confirm you can reach it; if you cannot, say so and continue from their description, and say that the folder is reachable only at the desk. If it is reachable, list the top-level folders and file names and roughly how many files there are, without opening any file; do not read a statement during setup.
 2. **The categories.** What categories they sort their spending and income into. Offer to start from a short common set (housing, utilities, groceries, transport, health, insurance, subscriptions, eating out, other) and let them add, rename and remove, or take their own list as given. A category is a name and one line saying what falls in it; ask for the line where a name is ambiguous. Do not invent categories they did not accept.
@@ -52,6 +52,10 @@ Show the block whole, one code block, and nothing else inside the fence. The acc
 ## End
 
 Report what exists now: the two project docs by name, and the two fields waiting for a paste, the description and Instructions. Then name what only the reader can do, in the app: set the project's mode to ask before acting, and block banking apps and sites from screen use if screen use is on. Then name the day-one check: at the desk, with the folder connected, drop one statement or export in it and ask for a summary; the summary should show categories and totals and nothing that identifies an account. Do not run it; the reader does.
+
+## Asking
+
+Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said.
 
 ## What this skill does not do
 

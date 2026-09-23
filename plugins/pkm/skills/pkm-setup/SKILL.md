@@ -53,6 +53,10 @@ Show the block whole, one code block, and nothing else inside the fence.
 
 Report what exists now: the three project docs by name, the folders created if any, and the two fields waiting for a paste, the description and Instructions. Then name the three day-one checks from the kit, in order: at the desk, ask what is in the notes; from the phone with the computer closed, ask something the description alone can answer; send a capture from the phone and check it lands in the inbox doc. Do not run them; the reader does.
 
+## Asking
+
+Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said.
+
 ## What this skill does not do
 
 It does not write or change any note. It does not set any setting. It does not paste anything anywhere; it hands text back. It does not hand back the account-wide instructions; the core plugin's setup does. It does not run twice on a project that already has a description.

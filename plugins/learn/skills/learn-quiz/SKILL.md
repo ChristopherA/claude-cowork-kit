@@ -40,6 +40,10 @@ Then show the lines you would write into `progress.md`: gaps moved to shaky, dat
 
 End with one word for completeness: full (every item confirmed), partial (gaps remain, with the count), or minimal (stopped early, with where to resume).
 
+## Asking
+
+Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said.
+
 ## What this skill does not do
 
 It does not teach; when a gap needs more than an explanation of the gap, it names the concept for the next lesson and moves on. It does not build a mock exam or a study schedule. It does not write into the materials folder, and it does not write into `progress.md` without a yes. It does not mark anything settled from a recall question alone, and never because the reader said they knew it.

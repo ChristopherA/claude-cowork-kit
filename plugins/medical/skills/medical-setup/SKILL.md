@@ -21,7 +21,7 @@ Then say plainly, in a short paragraph of your own words, what this project does
 
 ## Three questions, one at a time
 
-Ask each, wait for the answer, and reflect it back in a phrase before the next. Ask through the app's question control where there is a choice, the recommended option first. Skip any the reader has already answered in their request.
+Ask as the Asking section says, grouping the questions whose answers do not depend on each other in one control and putting the dependent ones after. Skip any the reader has already answered in their request.
 
 1. **The folder.** Where the records folder is on their computer. If they name it, confirm you can reach it; if you cannot, say so and continue from their description, and say that the visit-prep and record-a-visit skills need the folder and run at the desk. If it is reachable, look only at the top-level folders and file names, enough to describe how the records are arranged; do not read a record, and do not quote anything from one.
 2. **Their clinicians, by role.** The roles they see, such as a primary care doctor, a specialist by specialty, a dentist; no names are needed, and the timeline uses roles, not names. Do not ask about conditions, medications, or results; those are in the folder, and this skill does not read them.
@@ -50,6 +50,10 @@ Show the block whole, one code block, and nothing else inside the fence.
 ## End
 
 Report what exists now: the two project docs by name and the two fields waiting for a paste, the description and Instructions. Then name the three things only the reader can do, in order: paste the instructions; check that the project is in the mode that asks before acting; and, if Claude can use the screen, block patient portals and health apps from it in Cowork's settings. Then name the day-one check: from the phone with the computer closed, open the project and ask for the questions list; it should come back empty, with no record in it.
+
+## Asking
+
+Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said.
 
 ## What this skill does not do
 

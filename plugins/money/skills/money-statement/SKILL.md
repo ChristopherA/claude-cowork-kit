@@ -38,6 +38,10 @@ On a yes: write it, read it back to confirm it landed as shown, and say the doc'
 
 Report: the file read and its period, how many rows went into categories, how many did not fit and what they were, what was left out as doubtful, and whether the summary was written and where. End with one word for completeness: full (every row categorized or listed and the period whole), partial (rows left uncategorized or doubtful, with the count), or minimal (the file could not be read as a statement, with the reason). If the reader asks whether to change something about their spending, lay out what the decision turns on and stop; the choice is theirs.
 
+## Asking
+
+Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said.
+
 ## What this skill does not do
 
 It does not read more than one file at a time, and it does not combine files; the close does that for a month. It does not compare against targets. It does not write into the folder, and it does not write to a project doc without a yes. It does not advise on investments or tax, log into or connect to any account, or supply a number the reader did not give.

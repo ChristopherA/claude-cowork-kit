@@ -28,6 +28,10 @@ Do not add encouragement, a summary of what the reader is going through, or a se
 
 The list is the report. Under it, only what step 6 allows, then one word for completeness: full (every obligation in the dump is in the list, left out with a reason, or redirected), partial (something could not be placed, with what), or minimal (stopped early).
 
+## Asking
+
+Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said.
+
 ## What this skill does not do
 
 It does not write the list to a doc or to the folder unless asked; the answer goes in the chat. It does not change `priorities.md`; the planning skill proposes those changes. It does not schedule anything, send anything, or start any of the actions. It does not file a note; it names the inbox for it and stops.

@@ -35,6 +35,10 @@ Show the lines you would write into `progress.md`: the concept moved to settled,
 
 Say what the next lesson is, from the curriculum, and that `quiz me` is there when the reader wants to test what has settled. Then end with one word for completeness: full (the concept is settled), partial (the concept is shaky, with what is still shaky named), or minimal (stopped early, with where to resume).
 
+## Asking
+
+Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said.
+
 ## What this skill does not do
 
 It does not decide the reader is ready for anything; it shows what the progress record says and lets them decide. It does not mark something settled because the reader said they understood it. It does not write into the materials folder, and it does not create a note for the knowledge project; it names that project and stops. It does not change `mission.md` or `curriculum.md` unless asked, and then shows the change and waits for a yes.
