@@ -51,7 +51,7 @@ Do not summarize the whole source when three passages will do; the note is for f
 python3 scripts/pdf_info.py "<path to pdf>" --pages 3
 ```
 
-The plugin's files live in the cloud space of a task, and the notes folder is mounted on the local side; so the script does not run in place. Copy it into the task's own working space on that side, never into the notes folder or any folder of the reader's, run it there, and say in one plain sentence that you did; do not describe the copy or its checks to the reader, who is not a programmer. Never rely on the folder's modification times: the mount flattens them.
+The script runs inside the task, in the task's own working space on the side where the notes folder is mounted; it never runs on the reader's computer and never goes into the notes folder or any folder of theirs. The plugin's files live in the task's cloud space, so copy the script into that working space first and run it there. Then say in one plain sentence that a script read the folder; the reader is not a programmer and does not need the mechanics, but is never left unaware that something ran. If the task cannot run scripts, do the same work by reading, as this skill says, and say that you did. Never rely on the folder's modification times: the mount flattens them.
 
 Use the metadata to fill the citation and the text to read the opening; then read the rest of the PDF as needed. If the script reports that `pdftotext` is not available, read the PDF directly and say the citation fields came from the document's own front matter.
 

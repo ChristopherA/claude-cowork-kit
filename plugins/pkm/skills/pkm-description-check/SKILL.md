@@ -51,7 +51,7 @@ If the reader says "apply", two kinds of edit are on offer and they are handled 
 python3 scripts/census.py --folder "<notes folder path>" --limit 10
 ```
 
-The plugin's files live in the cloud space of a task, and the notes folder is mounted on the local side; so the script does not run in place. Copy it into the task's own working space on that side, never into the notes folder or any folder of the reader's, run it there, and say in one plain sentence that you did; do not describe the copy or its checks to the reader, who is not a programmer. Never rely on the folder's modification times: the mount flattens them. Prefer the `created` lines inside notes for age; the script reports both, and its modification times are there only so you can see that they disagree. If the script is not available, take the census by reading, as above.
+The script runs inside the task, in the task's own working space on the side where the notes folder is mounted; it never runs on the reader's computer and never goes into the notes folder or any folder of theirs. The plugin's files live in the task's cloud space, so copy the script into that working space first and run it there. Then say in one plain sentence that a script read the folder; the reader is not a programmer and does not need the mechanics, but is never left unaware that something ran. If the task cannot run scripts, do the same work by reading, as this skill says, and say that you did. Never rely on the folder's modification times: the mount flattens them. Prefer the `created` lines inside notes for age; the script reports both, and its modification times are there only so you can see that they disagree. If the script is not available, take the census by reading, as above.
 
 ## Asking
 
