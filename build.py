@@ -20,7 +20,10 @@ the repository is also a Cowork marketplace: .claude-plugin/marketplace.json
 at the root lists every plugin by its directory, and Cowork reads the tree
 as it is. So each plugin directory carries its manifest, its README and its
 setup skill's references/, all generated here; --check fails when any of
-them differs from what the explainer and the table below would produce.
+them differs from what the explainer and the table below would produce,
+and, in a git checkout, when any of them is untracked or differs from
+HEAD: content that matches the explainer but is not committed is exactly
+what leaves the public listing stale after a pathspec commit.
 
 Usage:
     python3 build.py                 generate in place, then build dist/
@@ -32,6 +35,7 @@ import hashlib
 import json
 import re
 import shutil
+import subprocess
 import sys
 import zipfile
 from pathlib import Path
@@ -325,6 +329,32 @@ def generated_files(refs):
     return out
 
 
+def git_uncommitted(generated):
+    """Generated paths that git sees as untracked or changed against HEAD.
+
+    Returns None outside a git checkout, with a note, since a downloaded tree
+    has nothing to commit; inside one, every path whose porcelain status is
+    not clean, as (status, path) pairs. The content check runs first, so a
+    hit here is a file that is right on disk and wrong in the listing.
+    """
+    rels = [str(p.relative_to(ROOT)) for p in generated]
+    try:
+        run = subprocess.run(
+            ["git", "-C", str(ROOT), "status", "--porcelain", "--untracked-files=all", "--"] + rels,
+            capture_output=True, text=True, check=False)
+    except FileNotFoundError:
+        print("note  git not found; the committed-state check is skipped")
+        return None
+    if run.returncode != 0:
+        print("note  not a git checkout; the committed-state check is skipped")
+        return None
+    out = []
+    for line in run.stdout.splitlines():
+        status, rel = line[:2], line[3:]
+        out.append(({"??": "untracked"}.get(status, "modified"), rel))
+    return out
+
+
 def build():
     on_disk = sorted(d.name for d in PLUGINS_DIR.iterdir() if d.is_dir() and not d.name.startswith("."))
     if on_disk != sorted(PLUGINS):
@@ -358,7 +388,13 @@ def build():
             for p in stray:
                 print(f"stray  {p.relative_to(ROOT)}", file=sys.stderr)
             fail("generated files differ from the explainer; run build.py and commit the result")
-        print(f"{len(checked)} skills in {len(PLUGINS)} plugins valid; generated files current; nothing written")
+        uncommitted = git_uncommitted(generated)
+        if uncommitted:
+            for status, rel in uncommitted:
+                print(f"{status:6s} {rel}", file=sys.stderr)
+            fail("generated files are not committed; git add them and commit before the push")
+        state = "current" if uncommitted is None else "current and committed"
+        print(f"{len(checked)} skills in {len(PLUGINS)} plugins valid; generated files {state}; nothing written")
         return
     for p in stray:
         p.unlink()
