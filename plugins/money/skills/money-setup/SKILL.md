@@ -7,7 +7,7 @@ description: Sets up the money project: the privacy floor, three questions, then
 
 Build the money project the Claude Cowork Kit describes, from three answers. Create what a task can create, the two project docs, and hand back what only the reader can paste, the project instructions. Read the financial files folder if it is connected; do not write into it.
 
-The texts this skill hands back are in `references/`, generated from the kit's explainer when the plugin was packaged: `money-instructions.md` (the project instructions), `global-instructions.md` (the account-wide instructions) and `voices.md` (the three voices). Use them as they are; do not rewrite them, and do not paraphrase them into the conversation. Fill in only the folder path where it is marked.
+The texts this skill hands back are in `references/`, generated from the kit's docs when the plugin was packaged: `money-instructions.md` (the project instructions), `global-instructions.md` (the account-wide instructions) and `voices.md` (the three voices). Use them as they are; do not rewrite them, and do not paraphrase them into the conversation. Fill in only the folder path where it is marked.
 
 ## What a task can and cannot do
 

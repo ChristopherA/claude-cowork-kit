@@ -8,14 +8,14 @@ Open an issue on this repository. Say which plugin and skill, what you said, wha
 
 ## Changing the text
 
-The paste blocks live once, in `docs/claude-cowork-kit.md`; the paragraphs several skills share live once, in `docs/shared.md`. Edit those, not the copies. Then:
+The account instructions and the voices live once, in `docs/claude-cowork-kit.md`; each project's paste blocks live once, in its document under `docs/projects/`; the paragraphs several skills share live once, in `docs/shared.md`. Edit those, not the copies. The skills index, `docs/skills.md`, carries every skill's description word for word; a changed description is changed there too. Then:
 
 ```
 python3 build.py            # regenerate the manifests, READMEs and references in place; build dist/
 python3 build.py --check    # what a pull request must pass: skills valid, generated files current and committed
 ```
 
-`--check` fails on a skill description over 200 characters, a copy of a shared paragraph that differs from its source, a project skill without its "Where this runs" section, a generated file that differs from what the explainer would produce, and, in a git checkout, a generated file left uncommitted. Commit the generated files with the change that caused them.
+`--check` fails on a skill description over 200 characters, a copy of a shared paragraph that differs from its source, a project skill without its "Where this runs" section, a generated file that differs from what the docs would produce, a skills index that does not match the skills, and, in a git checkout, a generated file left uncommitted. Commit the generated files with the change that caused them.
 
 ## Adding a skill
 

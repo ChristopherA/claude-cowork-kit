@@ -13,7 +13,7 @@ A copy of this folder, with every `PROJECT` and every bracket filled in, is a pl
 
 ## Building the `.plugin` file
 
-The kit's own plugins are built by its `build.py`, which generates the references from the explainer. A plugin made from this template is built with Anthropic's `create-cowork-plugin` skill instead, from the Cowork plugin management plugin: install that plugin, start a task in Cowork, say `create a plugin from this folder`, and hand it this folder. It packages the tree as a `.plugin` file for Customize, Plugins, upload. Or add the folder to a Git repository of your own and add that repository as a marketplace.
+The kit's own plugins are built by its `build.py`, which generates the references from the kit's docs. A plugin made from this template is built with Anthropic's `create-cowork-plugin` skill instead, from the Cowork plugin management plugin: install that plugin, start a task in Cowork, say `create a plugin from this folder`, and hand it this folder. It packages the tree as a `.plugin` file for Customize, Plugins, upload. Or add the folder to a Git repository of your own and add that repository as a marketplace.
 
 ## Layout
 

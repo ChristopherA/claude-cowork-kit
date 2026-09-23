@@ -7,7 +7,7 @@ description: Sets up the medical project: the privacy floor, three questions, th
 
 Build the medical project the Claude Cowork Kit describes, from three answers. Say what the folder does and does not protect before anything else, create what a task can create, the two project docs, and hand back what only the reader can paste, the project instructions. Read the records folder if it is reachable; do not write into it, except to create the standing files as headed empty files when the reader has none and says yes.
 
-The texts this skill hands back are in `references/`, generated from the kit's explainer when the plugin was packaged: `medical-instructions.md` (the project instructions), `global-instructions.md` (the account-wide instructions) and `voices.md` (the three voices). Use them as they are; do not rewrite them, and do not paraphrase them into the conversation. Fill in only the folder path where it is marked.
+The texts this skill hands back are in `references/`, generated from the kit's docs when the plugin was packaged: `medical-instructions.md` (the project instructions), `global-instructions.md` (the account-wide instructions) and `voices.md` (the three voices). Use them as they are; do not rewrite them, and do not paraphrase them into the conversation. Fill in only the folder path where it is marked.
 
 ## What a task can and cannot do
 

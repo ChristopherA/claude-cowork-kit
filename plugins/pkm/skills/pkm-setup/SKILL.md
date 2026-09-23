@@ -7,7 +7,7 @@ description: Sets up the notes project: three questions, then rules.md, map.md a
 
 Build the notes project the Claude Cowork Kit describes, from four answers. Create what a task can create, the three project docs, and hand back what only the reader can paste, the short project instructions. Read the notes folder; do not write into it, except to create empty folders when the reader is starting from nothing and has said yes.
 
-The texts this skill hands back are in `references/`, generated from the kit document when the plugin was packaged: `project-instructions.md` (the short text for the Instructions field), `rules-template.md` (the working rules doc), `map-template.md` (the description), `voices.md` (the three voices), `global-instructions.md` (the account-wide instructions). Use them as they are; do not rewrite them, and do not paraphrase them into the conversation. Fill in only the marked fields.
+The texts this skill hands back are in `references/`, generated from the kit's docs when the plugin was packaged: `project-instructions.md` (the short text for the Instructions panel), `rules-template.md` (the working rules doc), `map-template.md` (the description), `voices.md` (the three voices), `global-instructions.md` (the account-wide instructions). Use them as they are; do not rewrite them, and do not paraphrase them into the conversation. Fill in only the marked fields.
 
 ## What a task can and cannot do
 

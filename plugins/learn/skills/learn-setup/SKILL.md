@@ -7,7 +7,7 @@ description: Sets up the learning project: an interview, then mission.md, curric
 
 Build the learning project the Claude Cowork Kit describes, from a short interview. Create what a task can create, the three project docs, and hand back what only the reader can paste, the project instructions. Read the materials folder if it is connected; do not write into it.
 
-The texts this skill hands back are in `references/`, generated from the kit's explainer when the plugin was packaged: `learning-instructions.md` (the project instructions), `global-instructions.md` (the account-wide instructions) and `voices.md` (the three voices). Use them as they are; do not rewrite them, and do not paraphrase them into the conversation. Fill in only the marked brackets.
+The texts this skill hands back are in `references/`, generated from the kit's docs when the plugin was packaged: `learning-instructions.md` (the project instructions), `global-instructions.md` (the account-wide instructions) and `voices.md` (the three voices). Use them as they are; do not rewrite them, and do not paraphrase them into the conversation. Fill in only the marked brackets.
 
 The shape of the interview, a mission and a curriculum with an intuition target per lesson, is learned from Matt Pocock's teach skill and derwells's learn skill, both written for Claude Code with tooling; only the shapes are taken, and the docs here are plain markdown the reader can read on a phone.
 

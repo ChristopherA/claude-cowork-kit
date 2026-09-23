@@ -7,7 +7,7 @@ description: Sets up the week project: three questions, then priorities.md as a 
 
 Build the week project the Claude Cowork Kit describes, from three answers. Create what a task can create, the one project doc, and hand back what only the reader can paste, the project instructions. Read the working folder if it is reachable; do not write into it.
 
-The texts this skill hands back are in `references/`, generated from the kit's explainer when the plugin was packaged: `week-instructions.md` (the project instructions), `global-instructions.md` (the account-wide instructions) and `voices.md` (the three voices). Use them as they are; do not rewrite them, and do not paraphrase them into the conversation. Fill in only the folder path where the block marks it.
+The texts this skill hands back are in `references/`, generated from the kit's docs when the plugin was packaged: `week-instructions.md` (the project instructions), `global-instructions.md` (the account-wide instructions) and `voices.md` (the three voices). Use them as they are; do not rewrite them, and do not paraphrase them into the conversation. Fill in only the folder path where the block marks it.
 
 ## What a task can and cannot do
 
