@@ -29,9 +29,9 @@ Draft the Instructions text in the kit's shape from the answers: what the projec
 
 Say the hand steps the app needs: create the project, connect the folder, paste the Instructions text into the Instructions panel at the side of the project page (not the description), and ask Claude in a task to create the project docs.
 
-## The plugin, if they want one
+## A plugin is optional, and it is not for everyone
 
-If the reader wants the project as a plugin, so its setup runs from a sentence like the kit's own, point them at the kit's template folder, `template/` in the claude-cowork-kit repository: a copy with the brackets filled in is the plugin, and its `references/project-instructions.md` is the text drafted above. The `.plugin` file is built with Anthropic's `create-cowork-plugin` skill, from the Cowork plugin management plugin, not by the kit; say so in one sentence, and say that a project that lives in the Instructions text alone works without a plugin at all.
+The project is complete without a plugin: the Instructions text and the project docs are the project, and a task does everything a setup skill would. Say so first. Then say, once and without pushing it, that a reader who is comfortable editing files can turn the design into a plugin of their own, so its setup runs from a phrase like the kit's: the kit's repository carries a template folder, a copy of it with the bracketed lines filled in from the text drafted above is the plugin, and Anthropic's plugin-management plugin packages a folder as a `.plugin` file from inside a Cowork task. That path needs the repository downloaded, a text editor and the filled-in folder; if the reader would rather not, nothing is lost.
 
 ## Asking
 
@@ -39,4 +39,4 @@ Ask through the app's question control whenever there is a choice, and for every
 
 ## What this skill does not do
 
-It does not create a project, connect a folder, set any setting, or install anything. It does not write project docs; the reader asks for those in the new project. It does not build the plugin file.
+It does not create a project, connect a folder, set any setting, or install anything. It does not write project docs; the reader asks for those in the new project. It does not build the plugin file, and it does not send a reader who did not ask for one down that path.

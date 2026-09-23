@@ -1,5 +1,7 @@
 # Template for a project plugin
 
+For a reader comfortable editing files, or a contributor. A reader who wants a project of their own does not need this: the core plugin's `cowork-new-project` skill designs the project and hands back the instructions text, and that text with a few project docs is the whole project. This folder is the extra step that turns such a design into a plugin whose setup runs from a phrase.
+
 A copy of this folder, with every `PROJECT` and every bracket filled in, is a plugin for a project the Claude Cowork Kit does not describe. It carries the shape the kit's own project plugins share: a setup skill that interviews the reader, creates the project docs, and hands back the one text only the reader can paste, plus whatever routine skills the project needs.
 
 ## What to change
