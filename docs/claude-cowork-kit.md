@@ -12,6 +12,8 @@ Setup takes about thirty minutes for the first project. You make the decisions; 
 
 The rest of this document is the part no plugin can carry: why Cowork, what the connected folder does and does not protect, the two approval modes, the privacy floor for money and medical records, and what the kit will not do. The instruction blocks each plugin hands back are printed here too, so you can read what a setup will write before you run it, and paste it by hand if you would rather.
 
+If you want to start now, go straight to **Setup**. In order, the sections are: What this is for, What you need, What you end up with, How it works, Setup, the four blocks the notes project uses (global instructions, a voice, project instructions, the description), Maintenance, and one section for each of the other four projects.
+
 ---
 
 ## What this is for
@@ -83,7 +85,7 @@ Three places things can live, and only two of them last. Then one fact about mem
 
 **The session is a workbench that gets cleared.** Everything Claude does during a conversation happens in temporary space that's wiped when the conversation ends. This catches people constantly: they watch Claude build something good, close the window, and it's gone. Anything that matters has to land in one of the first two.
 
-**Memory is for sessions that run in the cloud.** Claude remembers things across conversations, and that memory is scoped to each project. But a session that runs on your computer — the kind that reads your folder — does not use memory at all. So at your desk, the very place you'd expect Claude to remember last time, it works from two things only: the description in project knowledge and what's actually in the folder. That is why the description exists, and why it has to be kept true. (This is how Anthropic documents it as of September 2026; it is the kind of detail that changes, so if Claude at your desk starts recalling last week unprompted, the rule has moved.)
+**Memory is for sessions that run in the cloud.** Claude remembers things across conversations, and that memory is scoped to each project. But a session that runs on your computer — the kind that reads your folder — does not use memory at all. So at your desk, the very place you'd expect Claude to remember last time, it works from two things only: the description in project knowledge and what's actually in the folder. That is why the description exists, and why it has to be kept true. (As Anthropic documents it, September 2026.)
 
 ### The description is not a copy
 
@@ -117,7 +119,7 @@ That's why each instruction block below has a section telling Claude what belong
 
 ### How Claude asks
 
-Every skill in the kit asks its questions the same way, through the question control, the prompt a task shows with options to tap rather than a question to type an answer to. The convention below is carried word for word by every skill; the build checks each copy against this one, so it changes here or nowhere. It assumes the control can carry up to four questions at once and more than one answer where that fits, which is what the same control does in Claude Code; until the run confirms it in Cowork, a skill that finds the control cannot do that falls back to one question at a time.
+Every skill in the kit asks its questions the same way, through the question control, the prompt a task shows with options to tap rather than a question to type an answer to. This is the rule every skill carries, and you can hold them to it. The one exception is a question that tests you, in the learning project: there no option is marked as recommended, because the mark would be the answer.
 
 ```
 Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said.
@@ -133,33 +135,34 @@ Back the folder up first, with whatever you already use — Time Machine, your s
 
 ### The two approval modes
 
-Cowork can pause for your approval before it acts on the world — sending, sharing, changing files outside the session — or it can act without asking. Whichever you pick, it always asks before permanently deleting a file. The default is to ask. Leave it there for a project until you've watched it work for a while; switch a project to acting freely only when you've stopped reading the approvals because they're always right. For a project holding anything you'd mind leaking, keep it asking. Where that line sits is yours to draw; the kit only insists that you draw it on purpose.
+Cowork can pause for your approval before it acts on the world — sending, sharing, changing files outside the session — or it can act without asking. Whichever you pick, it always asks before permanently deleting a file. The default is to ask. Leave it there for a project until you've watched it work for a while; switch a project to acting freely only when you've stopped reading the approvals because they're always right. For a project holding anything you'd mind leaking, keep it asking. Where that line sits is yours to draw; the kit only insists that you draw it on purpose. The switch is in the desktop app's Cowork settings; the kit has not yet pinned whether it is set per project or once for all tasks, so until you find it, the default, which asks, is what you have.
 
-### The plugin way
+### Setup, step by step
 
 Two plugins, installed in order, and one paste each.
 
-1. **Install the core plugin.** In the desktop app: Customize, Plugins, Add marketplace, enter `ChristopherA/claude-cowork-kit`, and install `cowork-kit` from it; or download `cowork-kit.plugin` from the kit's releases and upload it from the same Plugins page. Turn it on. Don't drag it into a task's composer; a plugin dropped there is attached to that one task only.
-2. **Run its setup.** Start a task anywhere and say `set up the kit`. Claude asks who you are and how you work, which voice you want, and which projects you want, then hands back the account instructions with your voice filled in — Block 1 below — for you to paste into Settings, Account, "Instructions for Claude". It ends by naming the project plugin to install next.
-3. **Install that project plugin** the same way — `pkm.plugin` for the notes project — then create a project in the app, connect your notes folder to it, and in that project start a task and say `set up my notes project`. That setup asks about the folder, creates the project docs (`rules.md`, `map.md`, `inbox.md`), and hands back the short project instructions — Block 3a below — for you to paste into the project's Instructions panel.
+1. **Back the folder up** if you have not already; the section above says why.
+2. **Install the core plugin.** In the desktop app: Customize, Plugins, Add marketplace, enter `ChristopherA/claude-cowork-kit`, then install the plugin shown as **Cowork Kit core** (its file name is `cowork-kit`). Or download `cowork-kit.plugin` from the kit's releases at https://github.com/ChristopherA/claude-cowork-kit/releases and add it with the upload option on the same Plugins page. Turn it on. Don't drag it into a task's composer; a plugin dropped there is attached to that one task only.
+3. **Run its setup.** Start a task and say `set up the kit`. Claude asks which voice you want and which project you want first, then hands back the account instructions with your voice filled in, Block 1 below, for you to paste into Settings, Account, "Instructions for Claude". It ends by naming the project plugin to install next.
+4. **Create the notes project and connect the folder.** Make an ordinary project in the app and name it; the one-line description under the title is a label, so something like `Personal knowledge base: notes and reading. The rules are in Instructions; the notes are in my notes folder.` is enough. Then connect your notes folder to it from the project's page in the desktop app. Do not create the project *from* the folder: a project created from a folder lives on that computer and doesn't sync, which breaks the phone half of this entirely. If unsure, make an ordinary project and connect the folder to it.
+5. **Install the notes plugin and run its setup.** Install `pkm`, shown as **Personal knowledge**, from the marketplace, or upload `pkm.plugin` from the releases page, and turn it on. Then, in the notes project, start a task and say `set up my notes project`. That setup asks about the folder, creates the project docs (`rules.md`, `map.md`, `inbox.md`), and hands back the short project instructions, Block 3a below, for you to paste into the Instructions panel at the side of the project page, not into the description.
 
-That is the whole gap between this and a one-click install. A task can create project docs and read your folder, but it cannot write Settings, create a project, connect a folder, or install a plugin. Those are yours, and the hand steps below are exactly them.
+That is the whole gap between this and a one-click install. A task can create project docs and read your folder, but it cannot write Settings, create a project, connect a folder, or install a plugin. Those are yours, and the steps above are exactly them.
 
-### The hand steps
+### Without the plugins
 
-With or without the plugins, the app needs these from you, in this order:
+Everything the plugins do can be done by hand from the blocks printed below, in this order:
 
 1. **Settings, Account, "Instructions for Claude".** Paste the global instructions (Block 1), with your chosen voice from Block 2 substituted in. The app's own label on this field says it reaches chats and Cowork alike; it is not the Cowork entry in the Settings sidebar.
-2. **Create the project.** Name it. The one-line description under the title is a label, not the place for instructions, and it is the field people paste instructions into by mistake; something like `Personal knowledge base: notes and reading. The rules are in Instructions; the notes are in my notes folder.` is enough. The Instructions panel at the side of the project page is where Block 3a goes, at step 4.
-3. **Connect your notes folder** in the desktop app. Then check which kind of project you made — a project created *from* a folder lives on that computer and doesn't sync, which breaks the phone half of this entirely. If unsure, make an ordinary project and connect the folder to it.
+2. **Create the project and connect the folder,** as in step 4 above.
+3. **Ask Claude to create the project docs.** In a task inside the project, ask it to create `rules.md` from Block 3b with your folder path filled in, `map.md` from Block 4 with every bracket filled, and `inbox.md` as a heading and nothing else. The app has no way to create a project doc by hand, and a task can.
 4. **Paste the project instructions** from Block 3a into the Instructions panel at the side of the project page, not into the description.
-5. **Install the plugins,** the core and then the project's, each by Customize, Plugins, add a plugin, choose the file, turn it on. If you would rather not, ask Claude in a task inside the project to create `rules.md` from Block 3b with your folder path filled in, `map.md` from Block 4 with every bracket filled, and `inbox.md` as a heading and nothing else. The app has no way to create a project doc by hand, and a task can.
 
 ### Check it works
 
 1. **At your desk, ask:** *what's in my notes?* This checks that the folder is reachable and the description matches reality.
 2. **From your phone, with the computer closed,** ask something the description alone can answer.
-3. **Send yourself a capture** from the phone. Check that it lands in `inbox.md` and that Claude didn't try to file it. A project doc already open in the side panel doesn't refresh when a task writes to it; close it and reopen it from the chat before deciding the capture was lost.
+3. **Send yourself a capture** from the phone: open the project and type a thought with no request attached, `idea: notes should lead with the claim`. Check that it lands in `inbox.md` and that Claude didn't try to file it. A project doc already open in the side panel doesn't refresh when a task writes to it; close it and reopen it from the chat before deciding the capture was lost.
 4. **Back at your desk, process the inbox.** One item, start to finish.
 5. **Two weeks later,** cut any instruction that never changed Claude's behavior, and have Claude check the description against the folder.
 
@@ -191,7 +194,7 @@ When you tell me you've changed something I'll look at, read it back and confirm
 When you finish something, tell me what changed and where it is — the folder and file name, or which project doc. One or two sentences.
 ```
 
-**There are two global layers, and they reach different things.** The Account field, Settings, Account, "Instructions for Claude", reaches every conversation you have with Claude anywhere, casual chat included; the app's own label on it says as much. Cowork also has its own global instructions, under Settings → Cowork, that reach only tasks. Block 1 goes in the first because most of it is about how Claude talks to you, and you want that everywhere. If a rule only makes sense for tasks — "anything you build that isn't saved disappears" is the one above that's really about task sessions — the Cowork layer is where it could live instead. A task reads the Account field as chat does, and the app's label says so, so there is no day-one voice test to run; the one thing still worth checking is what the Cowork entry in the Settings sidebar holds and whether it adds a second layer.
+**There are two global layers, and they reach different things.** The Account field, Settings, Account, "Instructions for Claude", reaches every conversation you have with Claude anywhere, casual chat included; the app's own label on it says as much. Cowork also has its own global instructions, under Settings, Cowork, that reach only tasks. Block 1 goes in the first because most of it is about how Claude talks to you, and you want that everywhere. If a rule only makes sense for tasks — "anything you build that isn't saved disappears" is the one above that's really about task sessions — the Cowork layer is where it could live instead. A task reads the Account field as chat does, and the app's label says so, so there is no day-one voice test to run. What the Cowork entry adds beyond it is something the kit is still confirming in the app; Block 1 goes in the Account field either way.
 
 **A trap worth naming.** Whatever goes in the Account field hits everything, including casual chat and every other project. "No bullet lists" is right for knowledge notes and actively wrong for a productivity project whose job is handing back ordered lists. Only universal preferences go global. Anything right in one project and wrong in another stays local, even at the cost of a little duplication — duplication you chose beats a rule that silently fights you in half your work.
 
@@ -370,9 +373,9 @@ The `created` date in the note metadata is doing more work than it looks. A proj
 
 Two ways to get them. Add the kit's repository as a marketplace in the desktop app (Customize, Plugins, Add marketplace, then `ChristopherA/claude-cowork-kit`) and install each plugin from it, which also brings updates; or download a `.plugin` file from the kit's releases and upload it.
 
-The instruction blocks are the floor and the plugins are the upgrade: everything a skill does, you can ask for in a sentence, more slowly. Skills trigger from their description rather than needing a command you have to remember, and they work everywhere including your phone. When you write your own, three good ones beat fifteen half-finished.
+The instruction blocks are the floor and the plugins are the upgrade: everything a skill does, you can ask for in a sentence, more slowly. Skills trigger from their description rather than needing a command you have to remember. They run in Cowork tasks, not in plain chat, and whether the phone app runs them is something the kit is still confirming; the instruction blocks work from the phone regardless, which is why they are the floor. When you write your own, three good ones beat fifteen half-finished.
 
-One note if you've read other guides. Much of the published advice for keeping notes with Claude assumes you're running Claude Code, the command-line tool, where it opens inside your notes folder and a file called `CLAUDE.md` is loaded automatically. Cowork reads that file too: a `CLAUDE.md` at the root of a connected folder is read at the start of a task without being asked. That is the reason to connect only folders whose contents you wrote or trust — a file in a connected folder can carry instructions Claude will follow — and it is why this kit keeps its rules in the project docs, `rules.md` and `map.md`, rather than in a file on disk: your phone can read a project doc and cannot read the folder, and a file Claude can edit and then obeys unprompted is the wrong place for rules. Cowork also has folder instructions, set on the desktop when you connect the folder; whether they are that same file is worth testing before you rely on either. Your instructions go in the places described above.
+One note if you've read other guides. Much of the published advice for keeping notes with Claude assumes you're running Claude Code, the command-line tool, where it opens inside your notes folder and a file called `CLAUDE.md` is loaded automatically. Cowork reads that file too: a `CLAUDE.md` at the root of a connected folder is read at the start of a task without being asked. That is the reason to connect only folders whose contents you wrote or trust — a file in a connected folder can carry instructions Claude will follow — and it is why this kit keeps its rules in the project docs, `rules.md` and `map.md`, rather than in a file on disk: your phone can read a project doc and cannot read the folder, and a file Claude can edit and then obeys unprompted is the wrong place for rules. Cowork also has folder instructions, set on the desktop when you connect the folder; the kit does not use them. Your instructions go in the places described above.
 
 ---
 
@@ -388,7 +391,7 @@ Two of these carry data you'd mind leaking, and it's worth being exact about wha
 
 Learning something on purpose: a subject, a skill, or an exam. This project holds the plan, the record of what has clicked, and the practice. It is deliberately not the knowledge project: what you learn that is worth keeping goes there, as a note; what lives here goes stale by design once the course is done.
 
-Two things before the instructions. First, Claude has a built-in Learning style, in the style menu, that makes it ask you questions rather than hand you answers; turn it on for this project, because it does most of what the instructions below ask for and does it more reliably than a paragraph can. Claude also offers Study Projects, a project type built around that style. As of September 2026 both are chat features, and whether they carry into a Cowork task is something to check on day one: ask Claude a direct question in this project and see whether it answers or asks. Second, the project docs here are small on purpose — a mission, a curriculum, a progress record — so that a lesson works from your phone with the computer closed. The reading material itself stays in the folder.
+Two things before the instructions. First, Claude has a built-in Learning style, in the style menu, that makes it ask you questions rather than hand you answers; turn it on for this project, because it does most of what the instructions below ask for and does it more reliably than a paragraph can. Claude also offers Study Projects, a project type built around that style. As of September 2026 both are chat features; the learning plugin's lesson skill does the same work inside a task, so nothing here depends on them carrying over. Second, the project docs here are small on purpose — a mission, a curriculum, a progress record — so that a lesson works from your phone with the computer closed. The reading material itself stays in the folder.
 
 ```
 # What this project is for
@@ -426,7 +429,7 @@ At the end of each session, write what clicked and what is still shaky into `pro
 You are not the exam and not the credential. Don't tell me I'm ready; show me what the progress record says and let me decide. Don't reassure me about a gap; name it.
 ```
 
-Three notes. The mission comes out of the first conversation: ask Claude to interview you and write `mission.md` and `curriculum.md` from your answers, the same way the knowledge project's setup works. A lesson is the thing to make a skill of first, once you've done a few and know what shape works for you, then "quiz me"; the Learning style already does the Socratic part, so don't write a skill for that. Flashcards synced to a scheduler are one of the things this kit won't do — that needs a tool Cowork doesn't run — so keep a plain question-and-answer list in the folder and review it on a schedule you set in your week project.
+Three notes. The `learn` plugin's setup interviews you and writes `mission.md`, `curriculum.md` and `progress.md` from your answers; its lesson skill runs one concept at a time and its quiz skill answers "quiz me", so there is nothing to write yourself before the first lesson. Without the plugin, ask Claude to interview you and write the three docs from the block above. Flashcards synced to a scheduler are one of the things this kit won't do — that needs a tool Cowork doesn't run — so keep a plain question-and-answer list in the folder and review it on a schedule you set in your week project.
 
 ---
 
@@ -462,7 +465,7 @@ Don't pad a list to look complete. Three real things beat eight.
 
 ## The money project
 
-If you let Claude use your computer's screen and apps at all, block your banking apps and sites from it in Cowork's settings, so a task in some other project never wanders into them.
+If you let Claude use your computer's screen and apps at all, block your banking apps and sites from it in the Cowork settings that govern computer use, so a task in some other project never wanders into them.
 
 ```
 # What this project is for
