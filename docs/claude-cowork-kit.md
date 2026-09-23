@@ -363,7 +363,7 @@ The `created` date in the note metadata is doing more work than it looks. A proj
 - `cowork-kit`, the core: the setup interview, and twelve routines for any project — clarify a decision, be interviewed before a plan, hear an answer again in plain words, write the questions for someone who knows what you don't, prepare a meeting pack for a professional, clean a transcript, check confidence, run a premortem or a postmortem, find the thread of where you were, wrap up for next time, and design a project the kit does not describe.
 - `pkm`, the notes project: set the project up, drain the capture inbox, write a source note, and check the description against the folder.
 - `learn`, the learning project: set a course, run a lesson, and quiz yourself on what you have learned or read.
-- `week`, your week: set it up, triage a pile of obligations into next actions, plan the week, review it, and draft a reply without sending it.
+- `week`, your week: set it up, triage a pile of obligations into next actions, plan the week, review it, write up a meeting, and draft a reply without sending it.
 - `money`: set it up with the privacy floor, summarize a statement, and close a month against your categories.
 - `medical`: set it up, prepare a visit and its pack, record a visit into the folder, keep a weekly functional log, and turn a handed article into questions for the clinician.
 - A template, for a project the kit does not describe: the core's `cowork-new-project` skill walks you through copying it.

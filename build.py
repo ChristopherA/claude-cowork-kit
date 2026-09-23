@@ -92,8 +92,8 @@ PLUGINS = {
         "version": "0.1.0",
         "description": (
             "Skills for the Claude Cowork Kit's week project: set it up, triage a pile of "
-            "obligations into next actions, plan the week, review it, and draft a reply without "
-            "sending it."
+            "obligations into next actions, plan the week, review it, write up a meeting, and "
+            "draft a reply without sending it."
         ),
         "keywords": ["productivity", "planning", "cowork", "week"],
         "setup": "week-setup",

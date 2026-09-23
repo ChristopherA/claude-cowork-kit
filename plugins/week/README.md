@@ -1,11 +1,12 @@
 # week
 
-Skills for the Claude Cowork Kit's week project: set it up, triage a pile of obligations into next actions, plan the week, review it, and draft a reply without sending it.
+Skills for the Claude Cowork Kit's week project: set it up, triage a pile of obligations into next actions, plan the week, review it, write up a meeting, and draft a reply without sending it.
 
 Each skill expects the week project the Claude Cowork Kit describes: a working folder connected in the desktop app, a priorities doc the setup creates, and a reviews doc the review creates. Nothing here sends a message or changes a calendar; drafts are handed back.
 
 ## Skills
 
+- `week-meeting-notes`: After a meeting: notes by topic with decisions first, quotes inline from this transcript only, action items with owners, carry-forward for a series; to the folder on a yes. Use for "meeting notes".
 - `week-plan`: Plans the week from the calendar and priorities.md, assuming less time than stated, and flags a plan that only works if nothing goes wrong. Use for "plan my week", "lay out this week".
 - `week-reply`: Drafts a reply in the reader's voice from the message they hand over and their earlier replies, then stops; never sends. Use for "draft a reply", "answer this for me", "write back to".
 - `week-review`: A weekly review in the reader's words: done, slipped, avoided, what ate the week, energy; compared with recent weeks, carry-forward listed, priorities.md changes on a yes. Use for "review my week".
