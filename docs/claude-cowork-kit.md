@@ -363,7 +363,7 @@ The `created` date in the note metadata is doing more work than it looks. A proj
 - `learn`, the learning project: set a course, run a lesson, and quiz yourself on what you have learned or read.
 - `week`, your week: set it up, triage a pile of obligations into next actions, plan the week, and draft a reply without sending it.
 - `money`: set it up with the privacy floor, summarize a statement, and close a month against your categories.
-- `medical`: set it up, prepare the questions for a visit from what changed in the record, and record a visit afterward.
+- `medical`: set it up, prepare a visit and its pack, record a visit into the folder, keep a weekly functional log, and turn a handed article into questions for the clinician.
 - A template, for a project the kit does not describe: the core's `cowork-new-project` skill walks you through copying it.
 
 Two ways to get them. Add the kit's repository as a marketplace in the desktop app (Customize, Plugins, Add marketplace, then `ChristopherA/claude-cowork-kit`) and install each plugin from it, which also brings updates; or download a `.plugin` file from the kit's releases and upload it.
@@ -502,6 +502,10 @@ Don't log into, connect to, or transact on any account. Don't supply a number I 
 
 The same applies here as for money: if Claude can use your screen at all, block your patient portals and health apps from it.
 
+The folder is where the record accumulates, and its shape matters more here than anywhere else in the kit, because a record that lives in one paragraph per visit cannot be compared across visits. The block below names a default: an overview; one file per condition, with its timeline, findings and treatment history; medications; providers, with what to expect from each; an action plan; a functional log, the weekly entries in your own words that show gradual change a doctor would otherwise never see; and a research file for treatments you are weighing. Visit documents are named by date and the clinician's role, so a year of them sorts itself. Not everything earns a file: the test is whether it would help to have it written down the next time you talk to a clinician or make a decision; a one-off question or a bad day does not.
+
+The plugin's skills are built on that folder. Visit prep drafts the questions from what changed since the last visit and, when a companion is coming or the clinician is new, a visit pack: a one-page handout the clinician can scan, a script you follow, and a checklist the companion fills in with the clinician's exact words. Record a visit turns the recording, the checklist and the portal papers into a visit note and updates the standing files, so the next prep starts from a current record. The check-in writes the functional log. And questions about a treatment reads an article or a suggestion you hand over, says what it claims and on what evidence it cites, and turns the gaps into questions; it does not research, because a task cannot reach the web and this project is not the place to work out what is wrong between appointments. When it grades evidence it uses five words and no others, strong, moderate, limited, anecdotal, none stated, and only for what the source itself cites.
+
 ```
 # What this project is for
 
@@ -516,6 +520,8 @@ This is also not a place to work out what's wrong with me between appointments. 
 # Where things live
 
 My records are in [FOLDER PATH ON MY COMPUTER] and they stay there. Never copy test results, diagnoses, or anything identifying into project docs — those sync to the cloud.
+
+The folder keeps an overview, one file per condition, a medications file, a providers file, an action plan, a functional log, and a research file; visit documents are named by date and the clinician's role. Describe what is actually there if it differs.
 
 Project docs hold my running list of questions for appointments and a bare timeline of visit dates. Nothing clinical.
 

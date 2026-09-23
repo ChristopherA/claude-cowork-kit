@@ -19,6 +19,8 @@ This is also not a place to work out what's wrong with me between appointments. 
 
 My records are in [FOLDER PATH ON MY COMPUTER] and they stay there. Never copy test results, diagnoses, or anything identifying into project docs — those sync to the cloud.
 
+The folder keeps an overview, one file per condition, a medications file, a providers file, an action plan, a functional log, and a research file; visit documents are named by date and the clinician's role. Describe what is actually there if it differs.
+
 Project docs hold my running list of questions for appointments and a bare timeline of visit dates. Nothing clinical.
 
 # Accuracy

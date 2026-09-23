@@ -122,16 +122,18 @@ PLUGINS = {
         "display": "Medical records",
         "version": "0.1.0",
         "description": (
-            "Skills for the Claude Cowork Kit's medical project: set it up, prepare the questions "
-            "for a visit from what changed in the record, and record a visit afterward."
+            "Skills for the Claude Cowork Kit's medical project: set it up, prepare a visit and its "
+            "pack, record a visit into the folder, keep a weekly functional log, and turn a handed "
+            "article into questions for the clinician."
         ),
         "keywords": ["medical", "health", "cowork", "records"],
         "setup": "medical-setup",
         "references": ["medical-instructions.md"],
         "readme": (
             "Each skill expects the medical project the Claude Cowork Kit describes: records in a "
-            "connected folder that stays on the computer, and project docs holding only a questions "
-            "list and a bare timeline. Keep the project in the mode that asks."
+            "connected folder that stays on the computer, arranged as the explainer's medical section "
+            "describes, and project docs holding only a questions list and a bare timeline. Keep the "
+            "project in the mode that asks."
         ),
     },
     "pkm": {

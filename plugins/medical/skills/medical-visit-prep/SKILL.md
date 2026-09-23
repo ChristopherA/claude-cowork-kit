@@ -1,6 +1,6 @@
 ---
 name: medical-visit-prep
-description: Before an appointment, drafts a short list of questions from what changed in the record since the last visit, values quoted exactly. Use for "prep my visit", "questions for my appointment".
+description: Before an appointment, drafts the questions from what changed in the record, and on request a visit pack: a one-page handout, a script and a companion checklist. Use for "prep my visit", "visit pack".
 ---
 
 # Visit prep
@@ -33,6 +33,18 @@ Draft the questions from the changes, and show them as a list, most important fi
 
 Keep the list short, the handful the visit has time for. Add a one-line why-this-matters under a question only where it could be misread; leave the rest bare. Include anything already on `questions.md` that still stands, unchanged, below the new ones unless the reader ranks it higher. Do not add a generic question the record gives no reason for.
 
+## The visit pack
+
+When the reader asks for it, when a companion is coming, or when the clinician is new, the questions become three documents with three readers, written into the folder and not into any project doc, since all three are clinical. Draft the questions first, as above, and get the yes on them; the pack is built from them and from the record, never the other way round.
+
+1. **The handout**, one page the clinician can scan in a minute, handed over at the start. In this order: a header (name, date of birth, allergies, who else is present, the referring clinician if any); the reason for the visit in one bold sentence with a line of context; anything enclosed (an imaging disc, printed reports); findings from earlier visits, by whom and when; results, with anything still pending; current medications as a table; what the reader can and cannot do now, and what has helped; then "what I need from this visit", the questions as numbered asks, and only after that the timeline, which may run to a second page. The asks stay on page one.
+2. **The script**, for the reader, read before and glanced at on the phone during. One sentence at the top saying who this clinician is and what the reader's job is in this visit. On arrival: hand over the handout; if the reader means to record, ask first, since the rules on recording differ from place to place. An opening statement of three or four sentences, as a quoted block, flagging anything that has changed since the last visit, because that is new to the clinician. Then the questions, each as a heading with a listen-for line and a follow-up prompt if the answer leaves a gap. Then "who do you know": the clinician's own network for any referral the reader is seeking. Last, "if time runs short": what must be settled before leaving and what can follow by phone.
+3. **The checklist**, for the companion, who captures while the reader talks. Before the visit: the handout printed, anything enclosed packed, the phone charged. One section per question, mirroring the script, with room for the clinician's exact words and a line for the outcome. A section for names and contacts of anyone referred. Follow-up: the next appointment, anything ordered or prescribed, what would bring the reader back sooner. And a few lines to fill in before leaving the building: the main finding, whether the reader got what they came for, the most urgent next step, anything missed.
+
+Adapt by visit type. A new specialist gets the fullest handout, the whole timeline and every result; a follow-up handout carries only what changed since last time, and the script is shorter and acknowledges the relationship; an allied-health visit (physical therapy, a dietitian, a counsellor) carries the specialist's findings and says whether the specialist approved this visit. Where a point is contested, a cause, a diagnosis the reader questions, a matter with an insurer or a claim behind it, the question leads with the reader's own history as rule 3 says, and the checklist asks for the clinician's exact words on it.
+
+Name the three files by date and role, such as `2026-10-02 orthopedist handout.md`, `... script.md`, `... checklist.md`, show each in full, and write each into the folder on its own yes, read back, and confirmed by file name. If the reader wants to print them, produce a document version of each as well, the handout kept to one page.
+
 ## Write on a yes
 
 Show the list you would write to `questions.md` in full, then wait for a yes. A no, an edit, or a reordering changes what you write; silence is not a yes. Every wait for a yes goes through the app's question control with the recommended option first.
@@ -49,4 +61,4 @@ Ask through the app's question control whenever there is a choice, and for every
 
 ## What this skill does not do
 
-It does not diagnose, interpret a result, or say that something is probably nothing. It does not write into the records folder or add to the timeline; that is the record-a-visit skill, after the appointment. It does not write to `questions.md` without a yes. It does not draft from memory when the folder is out of reach.
+It does not diagnose, interpret a result, or say that something is probably nothing. It does not add to the timeline; that is the record-a-visit skill, after the appointment. It writes into the folder only the visit pack, and only on a yes per file. It does not write to `questions.md` without a yes. It does not draft from memory when the folder is out of reach.

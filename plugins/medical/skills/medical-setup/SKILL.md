@@ -33,7 +33,7 @@ Create `questions.md` as a project doc: a heading, `Questions for my next appoin
 
 Create `timeline.md` as a project doc: a heading, one line naming the form of each entry (date, clinician role, purpose, nothing clinical), and the next appointment as its first line if the reader gave one, marked as upcoming. Nothing from the folder goes in it.
 
-Read both back and confirm they exist as project docs. The app may file them under a `claude/` folder inside the project; that is fine, and the other skills find them by name. If project docs cannot be created from a task, say so plainly, show the two texts in full so the reader can add them however the app allows, and say that the other two skills depend on them.
+Read both back and confirm they exist as project docs. The app may file them under a `claude/` folder inside the project; that is fine, and the other skills find them by name. If project docs cannot be created from a task, say so plainly, show the two texts in full so the reader can add them however the app allows, and say that the other skills depend on them.
 
 ## Hand back the text to paste
 
