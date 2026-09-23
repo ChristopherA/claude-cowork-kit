@@ -6,7 +6,11 @@ description: Compares map.md against the notes folder and reports every claim th
 # Description check
 
 `map.md` is what Claude knows about the notes when it cannot see them, and at the desk it is the only memory it has. It drifts. This skill reads the folder and the description side by side and reports where they disagree. It changes nothing; the reader decides what to fix.
-\nIf the reader means the one-line description under the project's title, say that it is a label and that this skill checks `map.md`, the description of the notes.\n\1
+
+If the reader means the one-line description under the project's title, say that it is a label and that this skill checks `map.md`, the description of the notes.
+
+## Where this runs
+
 This skill belongs to the notes project, whose project docs are `rules.md`, `map.md` and `inbox.md`. Before anything else, check that they are here. If not, this is another project: say which project this skill is for and stop, so nothing is written into the wrong folder or the wrong docs; if this is the right project and it is not set up yet, offer its setup, `set up my notes project`.
 
 ## Before starting
