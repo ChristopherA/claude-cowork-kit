@@ -7,6 +7,10 @@ description: Closes a month: categorizes its transactions against categories.md,
 
 Close one month: gather the files in the folder that cover it, categorize every transaction against `categories.md`, show the arithmetic, compare with `targets.md` where it has content, and write the month's summary to a project doc with no account details in it. This is the statement summary run across a whole month, with the comparison the reader set up the project for.
 
+## Where this runs
+
+This skill belongs to the money project, whose project docs are `categories.md` and `targets.md`. Before anything else, check that they are here. If not, this is another project: say which project this skill is for and stop, so nothing is written into the wrong folder or the wrong docs; if this is the right project and it is not set up yet, offer its setup, `set up my money project`.
+
 ## Before starting
 
 Read `categories.md` and then `targets.md` first if you have not this conversation. The first says what the categories are and what falls in each; the second says what the reader is aiming at, per category or in total, or holds a heading and nothing else.

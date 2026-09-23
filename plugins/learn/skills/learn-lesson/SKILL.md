@@ -9,6 +9,10 @@ Teach one concept in one sitting of about thirty minutes, intuition first, and l
 
 The shape, one concept per session with a record of what is settled, shaky or untested, is learned from derwells's learn skill, which keeps that record in a JSON file for Claude Code; the kit keeps it in a markdown project doc so a lesson works from the phone.
 
+## Where this runs
+
+This skill belongs to the learning project, whose project docs are `mission.md`, `curriculum.md` and `progress.md`. Before anything else, check that they are here. If not, this is another project: say which project this skill is for and stop, so nothing is written into the wrong folder or the wrong docs; if this is the right project and it is not set up yet, offer its setup, `set up my learning project`.
+
 ## Before starting
 
 Read `mission.md` and then `progress.md` first if you have not this conversation. The mission says what the reader is learning, why, how they like to learn, and where they stand; the progress record says where they are. Pick up where it says. Do not re-teach what it marks as settled, and do not skip what it marks as shaky.

@@ -7,6 +7,10 @@ description: Turns a dump of half-formed obligations into a short ordered list o
 
 Take a mess of obligations, pasted text, an email thread, a transcript of a voice note, and hand back a short ordered list of concrete next actions, each one the reader could start today. This is the kit's default shape of an answer made callable: no encouragement, no framing, no preamble, and three real things over eight.
 
+## Where this runs
+
+This skill belongs to the week project, whose project docs are `priorities.md`. Before anything else, check that it is here. If not, this is another project: say which project this skill is for and stop, so nothing is written into the wrong folder or the wrong docs; if this is the right project and it is not set up yet, offer its setup, `set up my week project`.
+
 ## Before starting
 
 Read `priorities.md` first if you have not this conversation; the order of the list comes from it. This skill needs the project doc and not the working folder, so it works from the phone. If the reader points at a file in the folder rather than pasting, that needs the desk; if the folder is not reachable, say so in one line and ask for a paste.

@@ -9,6 +9,10 @@ Test what the reader actually knows, one question at a time, and leave the progr
 
 The shape is learned from the quiz-me pattern on the Skiln list and the active-recall generator in the digitally-create study skills, for the question-and-grade loop, and from Alex Hillman's teach skill, which builds a checklist from a session transcript and confirms it item by item; the kit's builds the checklist from a note, a chapter, or the project's own record instead. No dependencies.
 
+## Where this runs
+
+This skill belongs to the learning project, whose project docs are `mission.md`, `curriculum.md` and `progress.md`. Before anything else, check that they are here. If not, this is another project: say which project this skill is for and stop, so nothing is written into the wrong folder or the wrong docs; if this is the right project and it is not set up yet, offer its setup, `set up my learning project`.
+
 ## Before starting
 
 Read `mission.md` and then `progress.md` first if you have not this conversation. The mission says what the reader is learning and where they stand; the progress record says what is settled, shaky, and untested, and the quiz is aimed at that record.

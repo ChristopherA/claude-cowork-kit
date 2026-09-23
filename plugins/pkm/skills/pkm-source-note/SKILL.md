@@ -7,6 +7,10 @@ description: Writes one source note from a book, paper, article or transcript th
 
 Turn something the reader has read, or is about to, into one note in the sources folder, written the way `map.md` says notes are written. You file; the reader fetches. If the source is behind a login or a paywall, say so and ask for the file or the pasted text; do not try to reach it yourself.
 
+## Where this runs
+
+This skill belongs to the notes project, whose project docs are `rules.md`, `map.md` and `inbox.md`. Before anything else, check that they are here. If not, this is another project: say which project this skill is for and stop, so nothing is written into the wrong folder or the wrong docs; if this is the right project and it is not set up yet, offer its setup, `set up my notes project`.
+
 ## Before starting
 
 Read `rules.md` and then `map.md` if you have not this conversation: the folder path, the sources folder, the file-naming rule for sources (the default is `author-year-short-title.md`), the metadata lines a note carries, the citation form, wrapping, and link style.

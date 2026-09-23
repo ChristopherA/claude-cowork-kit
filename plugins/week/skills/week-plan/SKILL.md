@@ -7,6 +7,10 @@ description: Plans the week from the calendar and priorities.md, assuming less t
 
 Lay out the week the reader can actually have: what is fixed, what is in flight, and the few things that matter placed where they can happen. This is the kit's planning clause made callable. The plan comes back in the chat; it is not written to a calendar.
 
+## Where this runs
+
+This skill belongs to the week project, whose project docs are `priorities.md`. Before anything else, check that it is here. If not, this is another project: say which project this skill is for and stop, so nothing is written into the wrong folder or the wrong docs; if this is the right project and it is not set up yet, offer its setup, `set up my week project`.
+
 ## Before starting
 
 Read `priorities.md` first if you have not this conversation; a plan that ignores it is a to-do list. This skill needs the project doc and not the working folder, so it works from the phone. If the reader has a connected calendar, read it and never write to it; if not, the calendar is what the reader tells you, which is why the first question is about it.

@@ -7,6 +7,10 @@ description: After an appointment: a bare timeline line, the visit note from the
 
 Put the visit where it belongs, in two steps kept apart. The timeline doc gets a dated line with nothing clinical in it; the folder gets the clinical detail. This skill is the project's where-things-live rule made into a routine, so the split is not left to the moment when the reader is tired and the notes are in one paragraph.
 
+## Where this runs
+
+This skill belongs to the medical project, whose project docs are `questions.md` and `timeline.md`. Before anything else, check that they are here. If not, this is another project: say which project this skill is for and stop, so nothing is written into the wrong folder or the wrong docs; if this is the right project and it is not set up yet, offer its setup, `set up my medical project`.
+
 ## Before starting
 
 Read the project instructions if you have not this conversation, and hold to them: never diagnose, never say what a result means clinically, never reassure the reader that something is probably nothing.

@@ -7,6 +7,10 @@ description: Processes the capture inbox one item at a time into notes in the no
 
 Work the inbox doc down to empty, one item at a time, writing real notes into the notes folder. This skill is the "capture and filing are different" rule made into a routine: the reader captured without deciding, and now decides, with you doing the typing.
 
+## Where this runs
+
+This skill belongs to the notes project, whose project docs are `rules.md`, `map.md` and `inbox.md`. Before anything else, check that they are here. If not, this is another project: say which project this skill is for and stop, so nothing is written into the wrong folder or the wrong docs; if this is the right project and it is not set up yet, offer its setup, `set up my notes project`.
+
 ## Before starting
 
 Read `rules.md` and then `map.md` first if you have not this conversation. The rules say how captures are drained; the description says where the folder is, how notes are named and formatted, what the reader is working on, and which conventions are settled. Every note you write follows them.

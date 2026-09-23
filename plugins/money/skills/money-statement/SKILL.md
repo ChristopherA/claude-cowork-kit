@@ -7,6 +7,10 @@ description: Summarizes one statement or export from the folder into categories 
 
 Turn one statement or export the reader placed in the folder into a summary fit for a project doc: categories and totals, no account numbers, no balances, no transaction rows. This skill is the project's accuracy clause made into a routine: every figure traces to a row in a file the reader gave, the arithmetic is shown, and what is missing is named rather than filled in.
 
+## Where this runs
+
+This skill belongs to the money project, whose project docs are `categories.md` and `targets.md`. Before anything else, check that they are here. If not, this is another project: say which project this skill is for and stop, so nothing is written into the wrong folder or the wrong docs; if this is the right project and it is not set up yet, offer its setup, `set up my money project`.
+
 ## Before starting
 
 Read `categories.md` first if you have not this conversation; it says what the categories are and what falls in each. Read `targets.md` too, so you know whether the reader keeps targets, but this skill does not compare against them; the close does.

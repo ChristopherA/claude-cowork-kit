@@ -7,6 +7,10 @@ description: Before an appointment, drafts the questions from what changed in th
 
 Walk into the appointment with clear questions. This skill is the project's Appointments clause made into a routine: a short list drawn from what has actually changed in the record since the last visit, values quoted exactly as they appear, and not a generic checklist. The questions are drafted first because they are the leverage; a question that is well framed gets an answer.
 
+## Where this runs
+
+This skill belongs to the medical project, whose project docs are `questions.md` and `timeline.md`. Before anything else, check that they are here. If not, this is another project: say which project this skill is for and stop, so nothing is written into the wrong folder or the wrong docs; if this is the right project and it is not set up yet, offer its setup, `set up my medical project`.
+
 ## Before starting
 
 Read the project instructions if you have not this conversation, and hold to them: never diagnose, never say what a result means clinically, never reassure the reader that something is probably nothing. If something in the record looks like it warrants a clinician's attention before the scheduled visit, say so plainly, once, without alarm, and leave the decision to the reader.

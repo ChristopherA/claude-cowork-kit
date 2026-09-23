@@ -7,6 +7,10 @@ description: After a meeting: notes by topic with decisions first, quotes inline
 
 After a meeting, turn what the reader has, a cleaned transcript, the capture sheet from the meeting pack, their own memory, into one note that someone who was not there could act on: what was decided, who does what, and what the discussion settled or left open, by topic rather than in the order it was said. The note goes into the working folder, since a candid meeting is not for a synced doc; what the reader owes from it is offered to the priorities doc.
 
+## Where this runs
+
+This skill belongs to the week project, whose project docs are `priorities.md`. Before anything else, check that it is here. If not, this is another project: say which project this skill is for and stop, so nothing is written into the wrong folder or the wrong docs; if this is the right project and it is not set up yet, offer its setup, `set up my week project`.
+
 ## Take stock
 
 Ask in one control, skipping what the reader has said: what the meeting was (who, when, what for, and whether it is one of a series); and what materials exist (a transcript, raw or cleaned; the capture sheet; an agenda; a summary from the meeting tool; the reader's memory). A raw transcript is cleaned first with the transcript skill; do not build notes on a noisy one. If the folder is out of reach, the note comes back in the chat for the reader to save.

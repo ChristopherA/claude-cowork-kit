@@ -279,6 +279,7 @@ def kit_references(kit_path):
         if asking not in skill_md.read_text():
             fail(f"{skill_md.relative_to(ROOT)}: does not carry the explainer's asking convention word for word (## Asking)")
     check_shared_text()
+    check_project_sections()
     for name, body in projects.items():
         if "[FOLDER PATH ON MY COMPUTER]" not in body:
             fail(f"kit: the {name} project's block has no folder placeholder")
@@ -294,6 +295,32 @@ def kit_references(kit_path):
         "map-template.md": stamp + "# The description (the kit's Block 4)\n\nCreated as the project doc map.md, every bracket filled.\n\n```markdown\n" + block4 + "```\n",
     })
     return refs
+
+
+PROJECT_DOCS = {  # each project plugin's setup docs, which every one of its other skills must name
+    "pkm": ["rules.md", "map.md", "inbox.md"],
+    "learn": ["mission.md", "curriculum.md", "progress.md"],
+    "week": ["priorities.md"],
+    "money": ["categories.md", "targets.md"],
+    "medical": ["questions.md", "timeline.md"],
+}
+
+
+def check_project_sections():
+    """Every non-setup skill of a project plugin says where it runs and names its docs.
+
+    Plugins installed under Customize reach every project, so a skill that does
+    not check its project writes into whatever folder is connected.
+    """
+    for plugin, docs in PROJECT_DOCS.items():
+        for skill_md in sorted((PLUGINS_DIR / plugin / "skills").glob("*/SKILL.md")):
+            if skill_md.parent.name.endswith("-setup"):
+                continue
+            text = skill_md.read_text()
+            if "## Where this runs" not in text:
+                fail(f"{skill_md.relative_to(ROOT)}: no '## Where this runs' section (the project check)")
+            if not any(f"`{d}`" in text for d in docs):
+                fail(f"{skill_md.relative_to(ROOT)}: names none of the {plugin} project's docs {docs}")
 
 
 def check_shared_text():

@@ -7,6 +7,10 @@ description: A weekly check-in in the reader's own words: what they did, what hu
 
 Memory is unreliable for gradual change. A dated entry every week or so, in the reader's own words, shows what a single day cannot: an activity possible now that was not three months ago, a treatment that lines up with better weeks, a trigger that keeps showing up. Brought to a clinician, that is evidence; "about the same" is not. This skill asks a few questions, writes the entry into the functional log in the folder, and says what moved against the last few entries.
 
+## Where this runs
+
+This skill belongs to the medical project, whose project docs are `questions.md` and `timeline.md`. Before anything else, check that they are here. If not, this is another project: say which project this skill is for and stop, so nothing is written into the wrong folder or the wrong docs; if this is the right project and it is not set up yet, offer its setup, `set up my medical project`.
+
 ## Before starting
 
 Read the project instructions if you have not this conversation, and hold to them: never diagnose, never say what a change means clinically, never reassure the reader that something is probably nothing. If something they tell you looks like it warrants a clinician's attention before the next scheduled visit, say so plainly, once, without alarm, and leave the decision to them.
