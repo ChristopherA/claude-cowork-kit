@@ -9,13 +9,17 @@ Build the notes project the Claude Cowork Kit describes, from four answers. Crea
 
 The texts this skill hands back are in `references/`, generated from the kit document when the plugin was packaged: `project-instructions.md` (the short text for the Instructions field), `rules-template.md` (the working rules doc), `map-template.md` (the description), `voices.md` (the three voices), `global-instructions.md` (the account-wide instructions, which the core plugin's setup hands back; this skill only reads it to recognize a voice). Use them as they are; do not rewrite them, and do not paraphrase them into the conversation. Fill in only the marked fields.
 
+## What a task can and cannot do
+
+A task can read the project docs, create project docs in the project it runs in, read a connected folder, and read the reader's Account instructions. It cannot change Settings, set the project's approval mode, create a project, connect a folder, install a plugin, or send anything; those are the reader's, in the app. Say which is which as you go, so the reader never waits for something that will not happen.
+
 ## Before the first question
 
 Check which of the three project docs already exist: `rules.md`, `map.md`, `inbox.md`. If `map.md` exists, this project is already set up: say so, offer the description check instead, and stop. Do not run setup twice. If `inbox.md` exists alone, the core setup created it and captures may already be in it: keep it exactly as it is, and say so. A doc that exists is never recreated.
 
-## Four questions, one at a time
+## Four questions
 
-Ask each, wait for the answer, and reflect it back in a phrase before the next. Skip any the reader has already answered in their request.
+Ask as the Asking section says, grouping the questions whose answers do not depend on each other in one control and putting the dependent ones after. Skip any the reader has already answered in their request. Reflect each answer back in a phrase before going on.
 
 1. **The folder.** Where the notes folder is on their computer, or whether they need to start one. If they name a folder, confirm you can reach it; if you cannot, say so and continue from their description, marking in `map.md` that the folder section is to be checked at the desk. If they are starting one, propose the default layout from the description template (inbox, sources, notes, threads, archive), show it, say that the folder should be backed up before anything writes into it, and create the empty folders only after a yes.
 2. **The voice.** Read `references/voices.md` and offer the three by name with one phrase each: plain, warm, archivist. Do not recommend one; this is taste. If the account instructions already carry the kit's block with one of the voices in it, say which and skip the question.

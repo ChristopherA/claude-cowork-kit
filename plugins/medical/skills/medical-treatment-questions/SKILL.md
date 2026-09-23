@@ -13,7 +13,7 @@ Read the project instructions if you have not this conversation, and hold to the
 
 ## Read the source
 
-Say in a few lines what the source is, who wrote it and for whom, and what it claims: what the treatment is and how it is said to work, in plain words; what it says about evidence, quoting the specifics it gives (how many trials, of what size, for which condition); risks and downsides it names; cost, frequency and recovery if it says. Grade the evidence the source itself cites, in these words and no others: strong (several controlled trials or a systematic review or a guideline named), moderate (some trials, mixed results, or experts disagreeing), limited (small studies or case reports, a plausible mechanism), anecdotal (people report it helped, no controlled study named), none stated. Then say what the source does not say, above all whether the condition it studied is the reader's; that is the first gap.
+Say in a few lines what the source is, who wrote it and for whom, and what it claims: what the treatment is and how it is said to work, in plain words; what it says about evidence, quoting the specifics it gives (how many trials, of what size, for which condition); risks and downsides it names; cost, frequency and recovery if it says. Grade the evidence the source itself cites, in these words and no others: strong (several controlled trials, a systematic review, or a guideline named), moderate (some trials, mixed results, or experts disagreeing), limited (small studies or case reports, or a plausible mechanism), anecdotal (people report it helped, no controlled study named), none stated. Then say what the source does not say, above all whether the condition it studied is the reader's; that is the first gap.
 
 ## The questions
 

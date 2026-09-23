@@ -11,7 +11,7 @@ The text this skill hands back is in `references/`, generated from the kit's exp
 
 ## What a task can and cannot do
 
-A task can read the reader's Account instructions, create project docs in the project it runs in, and read a connected folder. It cannot write Settings, install a plugin, or connect a folder; those are the reader's, in the app. Whether a task can create a new project is not settled; assume it cannot, and have the reader create projects in the app. Say which is which as you go, so the reader never waits for something that will not happen.
+A task can read the project docs, create project docs in the project it runs in, read a connected folder, and read the reader's Account instructions. It cannot change Settings, set the project's approval mode, create a project, connect a folder, install a plugin, or send anything; those are the reader's, in the app. Say which is which as you go, so the reader never waits for something that will not happen. Whether a task can create a new project is not settled; assume it cannot, and have the reader create projects in the app.
 
 ## Before the first question
 

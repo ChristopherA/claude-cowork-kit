@@ -45,12 +45,15 @@ PLUGINS_DIR = ROOT / "plugins"
 DIST = ROOT / "dist"
 MARKETPLACE = ROOT / ".claude-plugin" / "marketplace.json"
 KIT_DEFAULT = ROOT / "docs" / "claude-cowork-kit.md"
+SHARED_DOC = ROOT / "docs" / "shared.md"
+TEMPLATE_SKILLS = ROOT / "template" / "skills"
 PROJECT_SECTIONS = ("learning", "week", "money", "medical")  # each `## The <name> project` section carries one block
 AUTHOR = "Christopher Allen"
 DESCRIPTION_LIMIT = 200  # Cowork rejects a longer description on upload
 ALLOWED_KEYS = {"name", "description", "license", "allowed-tools", "metadata", "compatibility"}
 SKIP_DIRS = {"__pycache__", "node_modules", "evals"}
 SKIP_FILES = {".DS_Store"}
+
 
 # One entry per plugin directory. `setup` names the skill that receives the
 # generated references listed in `references`; the reference names are keys
@@ -164,6 +167,22 @@ PLUGINS = {
 }
 
 
+# Text more than one skill carries word for word: each heading in docs/shared.md
+# and the skills (glob under plugins/ and template/) that must carry its block.
+SETUPS = [f"plugins/{n}/skills/{s['setup']}/SKILL.md" for n, s in PLUGINS.items() if n != "cowork-kit"] + ["template/skills/*-setup/SKILL.md"]
+SHARED = {
+    "What a task can and cannot do": SETUPS + ["plugins/cowork-kit/skills/cowork-setup/SKILL.md"],
+    "Grouping the questions": SETUPS,
+    "The two fields": SETUPS,
+    "Hand the text back": SETUPS,
+    "Running a script": ["plugins/pkm/skills/pkm-description-check/SKILL.md",
+                         "plugins/pkm/skills/pkm-inbox-drain/SKILL.md",
+                         "plugins/pkm/skills/pkm-source-note/SKILL.md"],
+    "The evidence words": ["plugins/pkm/skills/pkm-source-note/SKILL.md",
+                           "plugins/medical/skills/medical-treatment-questions/SKILL.md"],
+}
+
+
 def fail(msg):
     print(f"FAIL: {msg}", file=sys.stderr)
     sys.exit(1)
@@ -255,9 +274,10 @@ def kit_references(kit_path):
         fail("kit: Block 4 has no folder placeholder")
     projects = {name: fenced_block_after(text, rf"^## The {name} project$") for name in PROJECT_SECTIONS}
     asking = fenced_block_after(text, r"^### How Claude asks$").strip()
-    for skill_md in sorted(PLUGINS_DIR.glob("*/skills/*/SKILL.md")):
+    for skill_md in sorted(list(PLUGINS_DIR.glob("*/skills/*/SKILL.md")) + list(TEMPLATE_SKILLS.glob("*/SKILL.md"))):
         if asking not in skill_md.read_text():
             fail(f"{skill_md.relative_to(ROOT)}: does not carry the explainer's asking convention word for word (## Asking)")
+    check_shared_text()
     for name, body in projects.items():
         if "[FOLDER PATH ON MY COMPUTER]" not in body:
             fail(f"kit: the {name} project's block has no folder placeholder")
@@ -273,6 +293,21 @@ def kit_references(kit_path):
         "map-template.md": stamp + "# The description (the kit's Block 4)\n\nCreated as the project doc map.md, every bracket filled.\n\n```markdown\n" + block4 + "```\n",
     })
     return refs
+
+
+def check_shared_text():
+    """Every skill listed for a block in docs/shared.md carries it word for word."""
+    if not SHARED_DOC.exists():
+        fail(f"shared text not found: {SHARED_DOC.relative_to(ROOT)}")
+    shared = SHARED_DOC.read_text()
+    for heading, globs in SHARED.items():
+        block = fenced_block_after(shared, rf"^## {re.escape(heading)}$").strip()
+        files = sorted(p for g in globs for p in ROOT.glob(g))
+        if not files:
+            fail(f"shared.md: no skill matches {globs} for '{heading}'")
+        for skill_md in files:
+            if block not in skill_md.read_text():
+                fail(f"{skill_md.relative_to(ROOT)}: does not carry docs/shared.md's '{heading}' word for word")
 
 
 def sha256(path):
