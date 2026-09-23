@@ -12,6 +12,7 @@ Every release is listed here, newest first, with what changed since the one befo
 - One version, from `VERSION`, in every manifest; `build.py --check` fails on a generated file left uncommitted.
 - The README is the kit's first page; a changelog, contributing notes and a privacy statement exist.
 - The explainer is the kit's case with no project in it; each project has its own document under `docs/projects/` with its use case, skills, setup, check and paste blocks; `docs/skills.md` indexes every skill and the build checks it against the skills.
+- A folder in iCloud Drive, directly or through Desktop & Documents sync, needs Optimize Mac Storage and Time Machine turned on: Claude cannot read a file iCloud has moved off the Mac, and a reorganizing task has been reported losing such files.
 
 ## 0.1.0-rc.5 (2026-09-23)
 

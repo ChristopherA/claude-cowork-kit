@@ -131,6 +131,8 @@ A file in a connected folder can carry instructions Claude will follow without b
 
 Back the folder up before the first session that's allowed to write, with whatever you already use: Time Machine, your sync service's version history, git if that's your habit. Claude should never be the only copy of anything, and the kit's own rule that Claude shows you what it would change and waits for a yes is an instruction, not a backup; an instruction can be misread.
 
+**If the folder is in iCloud Drive,** either in iCloud Drive itself, where the Files app on your phone reaches it too, or in Desktop or Documents with Desktop & Documents Folders turned on, two settings matter. Turn on Optimize Mac Storage, in System Settings under your name, then iCloud, then Drive: its label there promises the full contents of iCloud Drive stay on the Mac while there is room, and Claude can read only a file that is actually on the Mac. A file iCloud has moved off to free space still shows in the folder, with its size, and Claude cannot open it. And have Time Machine on, whatever else you use. A task reorganizing a synced folder has been reported copying files like that as empty ones and then deleting the originals, and iCloud's Recently Deleted did not bring them back; Time Machine did.
+
 ---
 
 ## The two approval modes
