@@ -129,7 +129,7 @@ Cowork can pause for your approval before it acts on the world — sending, shar
 
 Two plugins, installed in order, and one paste each.
 
-1. **Install the core plugin.** Get `cowork-kit.plugin` from the kit's releases. In the desktop app: Customize, Plugins, add a plugin, choose the file, and turn it on. Don't drag it into a task's composer; a plugin dropped there is attached to that one task only.
+1. **Install the core plugin.** In the desktop app: Customize, Plugins, Add marketplace, enter `ChristopherA/claude-cowork-kit`, and install `cowork-kit` from it; or download `cowork-kit.plugin` from the kit's releases and upload it from the same Plugins page. Turn it on. Don't drag it into a task's composer; a plugin dropped there is attached to that one task only.
 2. **Run its setup.** Start a task anywhere and say `set up the kit`. Claude asks who you are and how you work, which voice you want, and which projects you want, then hands back the account instructions with your voice filled in — Block 1 below — for you to paste into Settings, Account, "Instructions for Claude". It ends by naming the project plugin to install next.
 3. **Install that project plugin** the same way — `pkm.plugin` for the notes project — then create a project in the app, connect your notes folder to it, and in that project start a task and say `set up my notes project`. That setup asks about the folder, creates the project docs (`rules.md`, `map.md`, `inbox.md`), and hands back the short project instructions — Block 3a below — for you to paste into the project's Instructions panel.
 
@@ -352,8 +352,13 @@ The `created` date in the note metadata is doing more work than it looks. A proj
 
 - `cowork-kit`, the core: the setup interview, and four routines for any project — clarify a decision, check confidence, find the thread of where you were, and learn from a mistake.
 - `pkm`, the notes project: set the project up, drain the capture inbox, write a source note, and check the description against the folder.
-- The learning, week, money and medical plugins are not yet published. Until they are, each project's section below carries the instructions block to paste by hand, and the core setup says so.
-- A template plugin, for a project the kit does not describe, is on the roadmap.
+- `learn`, the learning project: set a course, run a lesson, and quiz yourself on what you have learned or read.
+- `week`, your week: set it up, triage a pile of obligations into next actions, plan the week, and draft a reply without sending it.
+- `money`: set it up with the privacy floor, summarize a statement, and close a month against your categories.
+- `medical`: set it up, prepare the questions for a visit from what changed in the record, and record a visit afterward.
+- A template, for a project the kit does not describe: the core's `cowork-new-project` skill walks you through copying it.
+
+Two ways to get them. Add the kit's repository as a marketplace in the desktop app (Customize, Plugins, Add marketplace, then `ChristopherA/claude-cowork-kit`) and install each plugin from it, which also brings updates; or download a `.plugin` file from the kit's releases and upload it.
 
 The instruction blocks are the floor and the plugins are the upgrade: everything a skill does, you can ask for in a sentence, more slowly. Skills trigger from their description rather than needing a command you have to remember, and they work everywhere including your phone. When you write your own, three good ones beat fifteen half-finished.
 
@@ -363,7 +368,7 @@ One note if you've read other guides. Much of the published advice for keeping n
 
 ## The other four projects
 
-Each gets its own project, sharing the global instructions from Block 1 and differing in what's distinctive about the work. Build them when you want them, not all at once. Each will be its own plugin, with a setup that interviews you and creates the project docs the way the notes setup does; until a project's plugin is published, the instructions block in its section is the thing to paste into the project's Instructions panel, with the folder path filled in.
+Each gets its own project, sharing the global instructions from Block 1 and differing in what's distinctive about the work. Build them when you want them, not all at once. Each is its own plugin, with a setup that interviews you and creates the project docs the way the notes setup does, and hands back the instructions block printed in its section for the Instructions panel; the block is here so you can read it first, or paste it by hand with the folder path filled in.
 
 Two of these carry data you'd mind leaking, and it's worth being exact about what the folder does and doesn't protect. **The sensitive material stays in the folder on your computer, and project docs hold only what you'd be relaxed about syncing.** That keeps your statements and records out of project knowledge, out of every other project, and off your phone. It does not keep them off Anthropic's servers: when Claude reads a statement to answer you, that statement goes to the session, which runs in the cloud. Anthropic's own safety guidance says to avoid giving Claude local access to financial documents at all. Plenty of people are fine with a session reading a bank statement or a lab result and would never let it near a password; others draw the line further back. Where you draw it is yours to decide, and these two projects assume you've decided to let Claude read the records. One floor for everyone: credentials, logins, and card numbers never go in a connected folder or a pasted message. Connect only folders whose contents you wrote or trust, because a file in a connected folder can carry instructions Claude will follow without being asked. And keep both of these projects in the mode that asks before acting.
 
@@ -398,7 +403,7 @@ My materials — the book, the papers, the course files — are in [FOLDER PATH 
 
 Intuition first. Before you explain a thing, ask me what I think it is or how I'd approach it, and build from my answer. One concept per session, about thirty minutes. Check that I understand by having me explain it back or apply it, never by asking whether I understood. When I'm wrong, lead me to find it rather than telling me.
 
-# When I say grill me
+# When I say quiz me
 
 Ask one question at a time from the material, and wait. Grade my answer, explain the gap, and make the next question harder. Vary the form — open, short-answer, pick-one — so I can't pattern-guess.
 
@@ -411,7 +416,7 @@ At the end of each session, write what clicked and what is still shaky into `pro
 You are not the exam and not the credential. Don't tell me I'm ready; show me what the progress record says and let me decide. Don't reassure me about a gap; name it.
 ```
 
-Three notes. The mission comes out of the first conversation: ask Claude to interview you and write `mission.md` and `curriculum.md` from your answers, the same way the knowledge project's setup works. A lesson is the thing to make a skill of first, once you've done a few and know what shape works for you, then "grill me"; the Learning style already does the Socratic part, so don't write a skill for that. Flashcards synced to a scheduler are one of the things this kit won't do — that needs a tool Cowork doesn't run — so keep a plain question-and-answer list in the folder and review it on a schedule you set in your week project.
+Three notes. The mission comes out of the first conversation: ask Claude to interview you and write `mission.md` and `curriculum.md` from your answers, the same way the knowledge project's setup works. A lesson is the thing to make a skill of first, once you've done a few and know what shape works for you, then "quiz me"; the Learning style already does the Socratic part, so don't write a skill for that. Flashcards synced to a scheduler are one of the things this kit won't do — that needs a tool Cowork doesn't run — so keep a plain question-and-answer list in the folder and review it on a schedule you set in your week project.
 
 ---
 

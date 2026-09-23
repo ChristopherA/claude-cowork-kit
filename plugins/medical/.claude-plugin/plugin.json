@@ -1,0 +1,14 @@
+{
+  "name": "medical",
+  "version": "0.1.0",
+  "description": "Skills for the Claude Cowork Kit's medical project: set it up, prepare the questions for a visit from what changed in the record, and record a visit afterward.",
+  "author": {
+    "name": "Christopher Allen"
+  },
+  "keywords": [
+    "medical",
+    "health",
+    "cowork",
+    "records"
+  ]
+}

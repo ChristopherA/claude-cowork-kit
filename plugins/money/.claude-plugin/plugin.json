@@ -1,0 +1,14 @@
+{
+  "name": "money",
+  "version": "0.1.0",
+  "description": "Skills for the Claude Cowork Kit's money project: set it up with the privacy floor, summarize a statement, and close a month against your categories.",
+  "author": {
+    "name": "Christopher Allen"
+  },
+  "keywords": [
+    "money",
+    "budget",
+    "cowork",
+    "household"
+  ]
+}

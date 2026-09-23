@@ -1,0 +1,14 @@
+{
+  "name": "learn",
+  "version": "0.1.0",
+  "description": "Skills for the Claude Cowork Kit's learning project: set a course, run a lesson, and quiz yourself on what you have learned or read.",
+  "author": {
+    "name": "Christopher Allen"
+  },
+  "keywords": [
+    "learning",
+    "study",
+    "cowork",
+    "tutor"
+  ]
+}

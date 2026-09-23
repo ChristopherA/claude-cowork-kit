@@ -14,11 +14,17 @@ create-cowork-plugin skill produces.
 
 Setup skills hand the reader the kit's own instruction blocks, so their
 references/ are GENERATED here from the explainer (docs/, or --kit PATH)
-and never edited by hand; the explainer stays the single source.
+and never edited by hand; the explainer stays the single source. The
+generated files are written IN PLACE under plugins/ and committed, because
+the repository is also a Cowork marketplace: .claude-plugin/marketplace.json
+at the root lists every plugin by its directory, and Cowork reads the tree
+as it is. So each plugin directory carries its manifest, its README and its
+setup skill's references/, all generated here; --check fails when any of
+them differs from what the explainer and the table below would produce.
 
 Usage:
-    python3 build.py                 build everything into dist/
-    python3 build.py --check         validate only, write nothing
+    python3 build.py                 generate in place, then build dist/
+    python3 build.py --check         validate and detect drift, write nothing
     python3 build.py --kit PATH      read the explainer from PATH
 """
 
@@ -26,7 +32,6 @@ import hashlib
 import json
 import re
 import shutil
-import subprocess
 import sys
 import zipfile
 from pathlib import Path
@@ -34,6 +39,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 PLUGINS_DIR = ROOT / "plugins"
 DIST = ROOT / "dist"
+MARKETPLACE = ROOT / ".claude-plugin" / "marketplace.json"
 KIT_DEFAULT = ROOT / "docs" / "claude-cowork-kit.md"
 PROJECT_SECTIONS = ("learning", "week", "money", "medical")  # each `## The <name> project` section carries one block
 AUTHOR = "Christopher Allen"
@@ -47,6 +53,7 @@ SKIP_FILES = {".DS_Store"}
 # of what kit_references() produces.
 PLUGINS = {
     "cowork-kit": {
+        "display": "Cowork Kit core",
         "version": "0.1.0",
         "description": (
             "The Claude Cowork Kit's core: a setup interview that hands back the account "
@@ -63,7 +70,72 @@ PLUGINS = {
             "says which project plugin to install next. The other four skills work in any project."
         ),
     },
+    "learn": {
+        "display": "Learning",
+        "version": "0.1.0",
+        "description": (
+            "Skills for the Claude Cowork Kit's learning project: set a course, run a lesson, "
+            "and quiz yourself on what you have learned or read."
+        ),
+        "keywords": ["learning", "study", "cowork", "tutor"],
+        "setup": "learn-setup",
+        "references": ["learning-instructions.md"],
+        "readme": (
+            "Each skill expects the learning project the Claude Cowork Kit describes: a folder of "
+            "materials connected in the desktop app and the project docs mission.md, curriculum.md "
+            "and progress.md, which the setup creates. Turn on the Learning style for the project."
+        ),
+    },
+    "week": {
+        "display": "Your week",
+        "version": "0.1.0",
+        "description": (
+            "Skills for the Claude Cowork Kit's week project: set it up, triage a pile of "
+            "obligations into next actions, plan the week, and draft a reply without sending it."
+        ),
+        "keywords": ["productivity", "planning", "cowork", "week"],
+        "setup": "week-setup",
+        "references": ["week-instructions.md"],
+        "readme": (
+            "Each skill expects the week project the Claude Cowork Kit describes: a working folder "
+            "connected in the desktop app and a priorities doc the setup creates. Nothing here sends "
+            "a message or changes a calendar; drafts are handed back."
+        ),
+    },
+    "money": {
+        "display": "Money",
+        "version": "0.1.0",
+        "description": (
+            "Skills for the Claude Cowork Kit's money project: set it up with the privacy floor, "
+            "summarize a statement, and close a month against your categories."
+        ),
+        "keywords": ["money", "budget", "cowork", "household"],
+        "setup": "money-setup",
+        "references": ["money-instructions.md"],
+        "readme": (
+            "Each skill expects the money project the Claude Cowork Kit describes: statements in a "
+            "connected folder that stays on the computer, and project docs holding only categories, "
+            "targets and summaries with no account details. Keep the project in the mode that asks."
+        ),
+    },
+    "medical": {
+        "display": "Medical records",
+        "version": "0.1.0",
+        "description": (
+            "Skills for the Claude Cowork Kit's medical project: set it up, prepare the questions "
+            "for a visit from what changed in the record, and record a visit afterward."
+        ),
+        "keywords": ["medical", "health", "cowork", "records"],
+        "setup": "medical-setup",
+        "references": ["medical-instructions.md"],
+        "readme": (
+            "Each skill expects the medical project the Claude Cowork Kit describes: records in a "
+            "connected folder that stays on the computer, and project docs holding only a questions "
+            "list and a bare timeline. Keep the project in the mode that asks."
+        ),
+    },
     "pkm": {
+        "display": "Personal knowledge",
         "version": "0.2.0",
         "description": (
             "Skills for the Claude Cowork Kit's notes project: set the project up, drain the "
@@ -159,11 +231,6 @@ def kit_references(kit_path):
     if not kit_path.exists():
         fail(f"kit document not found: {kit_path} (pass --kit PATH)")
     text = kit_path.read_text()
-    try:
-        rev = subprocess.run(["git", "-C", str(kit_path.parent), "rev-parse", "--short", "HEAD"],
-                             capture_output=True, text=True, check=True).stdout.strip()
-    except (subprocess.CalledProcessError, FileNotFoundError):
-        rev = "unknown"
     block1 = fenced_block_after(text, r"^## Block 1 ")
     block3a = fenced_block_after(text, r"^## Block 3a ")
     block3b = fenced_block_after(text, r"^## Block 3b ")
@@ -181,7 +248,7 @@ def kit_references(kit_path):
     for name, body in projects.items():
         if "[FOLDER PATH ON MY COMPUTER]" not in body:
             fail(f"kit: the {name} project's block has no folder placeholder")
-    stamp = f"<!-- generated by build.py from the Claude Cowork Kit explainer at {rev}; edit the explainer, not this file -->\n\n"
+    stamp = "<!-- generated by build.py from the Claude Cowork Kit explainer; edit the explainer, not this file -->\n\n"
     refs = {f"{name}-instructions.md": stamp + f"# Project instructions for the {name} project\n\nGoes in that project's Instructions panel, with the folder path filled in.\n\n```\n" + body + "```\n"
             for name, body in projects.items()}
     refs.update({
@@ -209,6 +276,46 @@ def plugin_skills(name):
     return skills
 
 
+def generated_files(refs):
+    """Every generated path under the tree, mapped to its content."""
+    out = {}
+    listing = []
+    for name, spec in PLUGINS.items():
+        plugin_dir = PLUGINS_DIR / name
+        manifest = {
+            "name": name,
+            "version": spec["version"],
+            "description": spec["description"],
+            "author": {"name": AUTHOR},
+            "keywords": spec["keywords"],
+        }
+        out[plugin_dir / ".claude-plugin" / "plugin.json"] = json.dumps(manifest, indent=2) + "\n"
+        readme = [f"# {name}", "", spec["description"], "", spec["readme"], "", "## Skills", ""]
+        for folder in plugin_skills(name):
+            fm = frontmatter(folder / "SKILL.md")
+            readme.append(f"- `{fm['name']}`: {fm['description']}")
+        readme += ["", "## Install", "",
+                   "In the Claude desktop app, either add this repository as a marketplace (Customize, Plugins, Add marketplace, `ChristopherA/claude-cowork-kit`) and install the plugin from it, or download the `.plugin` file from a release and upload it (Customize, Plugins, the upload option), then turn it on. A plugin dragged into a task's composer is attached to that task only. To add one skill instead of the set: Customize, Skills, upload the matching `.skill` file.", ""]
+        out[plugin_dir / "README.md"] = "\n".join(readme)
+        for ref in spec["references"]:
+            out[plugin_dir / "skills" / spec["setup"] / "references" / ref] = refs[ref]
+        listing.append({
+            "name": name,
+            "displayName": spec["display"],
+            "description": spec["description"],
+            "version": spec["version"],
+            "source": f"./plugins/{name}",
+        })
+    marketplace = {
+        "name": "claude-cowork-kit",
+        "owner": {"name": AUTHOR},
+        "metadata": {"description": "Plugins for people who use Claude Cowork rather than Claude Code, with the reasoning explained beside them."},
+        "plugins": listing,
+    }
+    out[MARKETPLACE] = json.dumps(marketplace, indent=2) + "\n"
+    return out
+
+
 def build():
     on_disk = sorted(d.name for d in PLUGINS_DIR.iterdir() if d.is_dir() and not d.name.startswith("."))
     if on_disk != sorted(PLUGINS):
@@ -232,50 +339,39 @@ def build():
         missing = [r for r in spec["references"] if r not in refs]
         if missing:
             fail(f"{name}: unknown references {missing}")
+    generated = generated_files(refs)
+    stale = [p for p in generated if not p.exists() or p.read_text() != generated[p]]
+    stray = [p for p in PLUGINS_DIR.glob("*/skills/*/references/*") if p not in generated]
     if "--check" in sys.argv:
-        print(f"{len(checked)} skills in {len(PLUGINS)} plugins valid; nothing written")
+        if stale or stray:
+            for p in stale:
+                print(f"drift  {p.relative_to(ROOT)}", file=sys.stderr)
+            for p in stray:
+                print(f"stray  {p.relative_to(ROOT)}", file=sys.stderr)
+            fail("generated files differ from the explainer; run build.py and commit the result")
+        print(f"{len(checked)} skills in {len(PLUGINS)} plugins valid; generated files current; nothing written")
         return
+    for p in stray:
+        p.unlink()
+    for p, content in generated.items():
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_text(content)
+    print(f"ok  {len(generated)} generated files written in place ({len(stale)} changed, {len(stray)} stray removed)")
 
     if DIST.exists():
         shutil.rmtree(DIST)
-    for name, spec in PLUGINS.items():
-        plugin_dir = DIST / name
-        (plugin_dir / ".claude-plugin").mkdir(parents=True)
-        manifest = {
-            "name": name,
-            "version": spec["version"],
-            "description": spec["description"],
-            "author": {"name": AUTHOR},
-            "keywords": spec["keywords"],
-        }
-        (plugin_dir / ".claude-plugin" / "plugin.json").write_text(json.dumps(manifest, indent=2) + "\n")
-        readme = [f"# {name}", "", spec["description"], "", spec["readme"], "", "## Skills", ""]
-        skills = plugin_skills(name)
-        for folder in skills:
-            fm = frontmatter(folder / "SKILL.md")
-            readme.append(f"- `{fm['name']}`: {fm['description']}")
-            dest = plugin_dir / "skills" / folder.name
-            for src, rel in files_of(folder):
-                (dest / rel).parent.mkdir(parents=True, exist_ok=True)
-                shutil.copy2(src, dest / rel)
-            if folder.name == spec["setup"]:
-                (dest / "references").mkdir(exist_ok=True)
-                for ref in spec["references"]:
-                    (dest / "references" / ref).write_text(refs[ref])
-        readme += ["", "## Install", "",
-                   "In the Claude desktop app: Customize, Plugins, add a plugin, choose this `.plugin` file, then turn it on. A plugin dragged into a task's composer is attached to that task only. To add one skill instead of the set: Customize, Skills, upload the matching `.skill` file.", ""]
-        (plugin_dir / "README.md").write_text("\n".join(readme))
-
+    DIST.mkdir()
+    for name in PLUGINS:
+        plugin_dir = PLUGINS_DIR / name
         plugin_zip = DIST / f"{name}.plugin"
         with zipfile.ZipFile(plugin_zip, "w", zipfile.ZIP_DEFLATED) as z:
             for src, rel in files_of(plugin_dir):
                 z.write(src, str(rel))
         print(f"\nwrote {plugin_zip.relative_to(ROOT)}  {plugin_zip.stat().st_size} bytes  sha256 {sha256(plugin_zip)}")
-        for folder in skills:
+        for folder in plugin_skills(name):
             skill_zip = DIST / f"{folder.name}.skill"
-            packed = plugin_dir / "skills" / folder.name  # the copy, which carries generated references
             with zipfile.ZipFile(skill_zip, "w", zipfile.ZIP_DEFLATED) as z:
-                for src, rel in files_of(packed):
+                for src, rel in files_of(folder):
                     z.write(src, str(Path(folder.name) / rel))
             print(f"wrote {skill_zip.relative_to(ROOT)}  {skill_zip.stat().st_size} bytes  sha256 {sha256(skill_zip)}")
 
