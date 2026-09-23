@@ -7,7 +7,7 @@ description: Sets up the week project: three questions, then priorities.md as a 
 
 Build the week project the Claude Cowork Kit describes, from three answers. Create what a task can create, the one project doc, and hand back what only the reader can paste, the project instructions. Read the working folder if it is reachable; do not write into it.
 
-The text this skill hands back is in `references/`, generated from the kit document when the plugin was packaged: `week-instructions.md` (the project's instructions, for the Instructions panel). Use it as it is; do not rewrite it, and do not paraphrase it into the conversation. Fill in only the folder path where the block marks it.
+The texts this skill hands back are in `references/`, generated from the kit's explainer when the plugin was packaged: `week-instructions.md` (the project instructions), `global-instructions.md` (the account-wide instructions) and `voices.md` (the three voices). Use them as they are; do not rewrite them, and do not paraphrase them into the conversation. Fill in only the folder path where the block marks it.
 
 ## What a task can and cannot do
 
@@ -16,8 +16,6 @@ A task can read the project docs, create project docs in the project it runs in,
 ## Before the first question
 
 Check whether a project doc named `priorities.md` already exists. If it does, this project is already set up: say so, offer to update the priorities instead, and stop. Do not run setup twice.
-
-Read the reader's Account instructions if you can see them. If they do not yet carry the kit's block, say so once and point the reader at the core plugin's setup, which hands it back; do not hand it back here.
 
 ## Three questions, one at a time
 
@@ -32,6 +30,10 @@ Ask as the Asking section says, grouping the questions whose answers do not depe
 Create `priorities.md` as a project doc: a heading, today's date on a line of its own, the priorities from question 2 in order with the one eating attention marked, and a short section naming which other kit projects exist from question 3, with a line for any that do not yet, so a redirect to one is read as "when you build it". Keep it short enough to read on a phone. Leave nothing in brackets; where an answer is missing, ask rather than invent.
 
 Read it back and confirm it exists as a project doc. The app may file it under a `claude/` folder inside the project; that is fine, and the other skills find it by name. If a project doc cannot be created from a task, say so plainly, show the text in full so the reader can add it however the app allows, and say that the planning skill depends on it.
+
+## The account block
+
+Before the project instructions, read the reader's Account instructions if you can see them. If they carry the kit's block, say so and name the voice in it; do not ask the voice again. If they do not, or you cannot see them, ask which voice they want, plain, warm or archivist, one phrase each from `references/voices.md`, plain first as the safe default, and hand back `references/global-instructions.md` with that voice substituted where marked, in a code block of its own: it goes in Settings, Account, "Instructions for Claude", reaches every chat on the account, casual chat included, and is pasted once for all the kit's projects. If the field already holds text of the reader's own, say to add the block below it and cut whatever the two say twice. No plugin has to be installed before this one.
 
 ## Hand back the text to paste
 

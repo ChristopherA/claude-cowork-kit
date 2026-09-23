@@ -48,4 +48,4 @@ Ask through the app's question control whenever there is a choice, and for every
 
 ## What this skill does not do
 
-It does not write into the folder. It does not set any setting. It does not paste anything anywhere; it hands text back. It does not hand back the account-wide instructions; the core plugin's setup does.
+It does not write into the folder. It does not set any setting. It does not paste anything anywhere; it hands text back. It does not hand back the account-wide instructions; any of the kit's own project setups, or the core plugin's setup, does.

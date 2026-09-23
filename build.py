@@ -87,7 +87,7 @@ PLUGINS = {
         ),
         "keywords": ["learning", "study", "cowork", "tutor"],
         "setup": "learn-setup",
-        "references": ["learning-instructions.md"],
+        "references": ["learning-instructions.md", "global-instructions.md", "voices.md"],
         "readme": (
             "Each skill expects the learning project the Claude Cowork Kit describes: a folder of "
             "materials connected in the desktop app and the project docs mission.md, curriculum.md "
@@ -104,7 +104,7 @@ PLUGINS = {
         ),
         "keywords": ["productivity", "planning", "cowork", "week"],
         "setup": "week-setup",
-        "references": ["week-instructions.md"],
+        "references": ["week-instructions.md", "global-instructions.md", "voices.md"],
         "readme": (
             "Each skill expects the week project the Claude Cowork Kit describes: a working folder "
             "connected in the desktop app, a priorities doc the setup creates, and a reviews doc the "
@@ -121,7 +121,7 @@ PLUGINS = {
         ),
         "keywords": ["money", "budget", "cowork", "household"],
         "setup": "money-setup",
-        "references": ["money-instructions.md"],
+        "references": ["money-instructions.md", "global-instructions.md", "voices.md"],
         "readme": (
             "Each skill expects the money project the Claude Cowork Kit describes: statements in a "
             "connected folder that stays on the computer, and project docs holding only categories, "
@@ -138,7 +138,7 @@ PLUGINS = {
         ),
         "keywords": ["medical", "health", "cowork", "records"],
         "setup": "medical-setup",
-        "references": ["medical-instructions.md"],
+        "references": ["medical-instructions.md", "global-instructions.md", "voices.md"],
         "readme": (
             "Each skill expects the medical project the Claude Cowork Kit describes: records in a "
             "connected folder that stays on the computer, arranged as the explainer's section The medical "
@@ -175,6 +175,7 @@ SHARED = {
     "Grouping the questions": SETUPS,
     "The two fields": SETUPS,
     "Hand the text back": SETUPS,
+    "The account block": [g for g in SETUPS if g.startswith("plugins/")],
     "Running a script": ["plugins/pkm/skills/pkm-description-check/SKILL.md",
                          "plugins/pkm/skills/pkm-inbox-drain/SKILL.md",
                          "plugins/pkm/skills/pkm-source-note/SKILL.md"],

@@ -7,7 +7,7 @@ description: Sets up the learning project: an interview, then mission.md, curric
 
 Build the learning project the Claude Cowork Kit describes, from a short interview. Create what a task can create, the three project docs, and hand back what only the reader can paste, the project instructions. Read the materials folder if it is connected; do not write into it.
 
-The text this skill hands back is in `references/`, generated from the kit's explainer when the plugin was packaged: `learning-instructions.md` (the text for the Instructions panel). Use it as it is; do not rewrite it, and do not paraphrase it into the conversation. Fill in only the marked brackets.
+The texts this skill hands back are in `references/`, generated from the kit's explainer when the plugin was packaged: `learning-instructions.md` (the project instructions), `global-instructions.md` (the account-wide instructions) and `voices.md` (the three voices). Use them as they are; do not rewrite them, and do not paraphrase them into the conversation. Fill in only the marked brackets.
 
 The shape of the interview, a mission and a curriculum with an intuition target per lesson, is learned from Matt Pocock's teach skill and derwells's learn skill, both written for Claude Code with tooling; only the shapes are taken, and the docs here are plain markdown the reader can read on a phone.
 
@@ -43,6 +43,10 @@ Draft `curriculum.md` before creating it: units, and under each unit its lessons
 Create `progress.md` as a project doc: a heading, the three states as sections in this order, settled, shaky, untested, and every lesson from the curriculum listed under untested. Nothing is settled on day one.
 
 Read all three back and confirm they exist as project docs. The app may file them under a `claude/` folder inside the project; that is fine, and the other skills find them by name. If project docs cannot be created from a task, say so plainly, show the three texts in full so the reader can add them however the app allows, and say that the lesson and quiz skills depend on them.
+
+## The account block
+
+Before the project instructions, read the reader's Account instructions if you can see them. If they carry the kit's block, say so and name the voice in it; do not ask the voice again. If they do not, or you cannot see them, ask which voice they want, plain, warm or archivist, one phrase each from `references/voices.md`, plain first as the safe default, and hand back `references/global-instructions.md` with that voice substituted where marked, in a code block of its own: it goes in Settings, Account, "Instructions for Claude", reaches every chat on the account, casual chat included, and is pasted once for all the kit's projects. If the field already holds text of the reader's own, say to add the block below it and cut whatever the two say twice. No plugin has to be installed before this one.
 
 ## Hand back the text to paste
 

@@ -7,7 +7,7 @@ description: Sets up the money project: the privacy floor, three questions, then
 
 Build the money project the Claude Cowork Kit describes, from three answers. Create what a task can create, the two project docs, and hand back what only the reader can paste, the project instructions. Read the financial files folder if it is connected; do not write into it.
 
-The text this skill hands back is in `references/`, generated from the kit's explainer when the plugin was packaged: `money-instructions.md` (the project instructions). Use it as it is; do not rewrite it, and do not paraphrase it into the conversation. Fill in only the folder path where it is marked.
+The texts this skill hands back are in `references/`, generated from the kit's explainer when the plugin was packaged: `money-instructions.md` (the project instructions), `global-instructions.md` (the account-wide instructions) and `voices.md` (the three voices). Use them as they are; do not rewrite them, and do not paraphrase them into the conversation. Fill in only the folder path where it is marked.
 
 ## What a task can and cannot do
 
@@ -37,6 +37,10 @@ Create `targets.md` as a project doc: a heading, then one line per target as the
 
 Neither doc holds an account number, a balance, or a transaction row, and neither names the folder path; the path lives in the instructions. Read both back and confirm they exist as project docs. The app may file them under a `claude/` folder inside the project; that is fine, and the other skills find them by name. If project docs cannot be created from a task, say so plainly, show both texts in full so the reader can add them however the app allows, and say that the statement and close skills depend on them.
 
+## The account block
+
+Before the project instructions, read the reader's Account instructions if you can see them. If they carry the kit's block, say so and name the voice in it; do not ask the voice again. If they do not, or you cannot see them, ask which voice they want, plain, warm or archivist, one phrase each from `references/voices.md`, plain first as the safe default, and hand back `references/global-instructions.md` with that voice substituted where marked, in a code block of its own: it goes in Settings, Account, "Instructions for Claude", reaches every chat on the account, casual chat included, and is pasted once for all the kit's projects. If the field already holds text of the reader's own, say to add the block below it and cut whatever the two say twice. No plugin has to be installed before this one.
+
 ## Hand back the text to paste
 
 The project page has two text fields that look alike, a one-line description under the title and an Instructions panel at the side, and readers put the instructions in the description. So hand back two things, in this order, and say which field each goes in. If the project's description already holds the instructions text, say so and tell the reader to move it.
@@ -47,7 +51,7 @@ The instructions go into a field only the reader can fill: a task can create pro
 
 1. **Project instructions**, from `references/money-instructions.md`, with the folder path filled in where it is marked and nothing else changed. It goes in the Instructions panel on the project's page, not in the project's description; the description is visible to a task too, but it is a label, and the reader should not have to know that it happens to work.
 
-Show the block whole, one code block, and nothing else inside the fence. The account-wide instructions are the core plugin's job, handed back by its setup skill; if the reader's Account field does not yet carry the kit's block, say so and point them there rather than handing it back here.
+Show the block whole, one code block, and nothing else inside the fence.
 
 ## End
 

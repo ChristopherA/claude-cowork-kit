@@ -7,7 +7,7 @@ description: Sets up the medical project: the privacy floor, three questions, th
 
 Build the medical project the Claude Cowork Kit describes, from three answers. Say what the folder does and does not protect before anything else, create what a task can create, the two project docs, and hand back what only the reader can paste, the project instructions. Read the records folder if it is reachable; do not write into it, except to create the standing files as headed empty files when the reader has none and says yes.
 
-The text this skill hands back is in `references/`, generated from the kit's explainer when the plugin was packaged: `medical-instructions.md` (the project instructions). Use it as it is; do not rewrite it, and do not paraphrase it into the conversation. Fill in only the folder path where it is marked.
+The texts this skill hands back are in `references/`, generated from the kit's explainer when the plugin was packaged: `medical-instructions.md` (the project instructions), `global-instructions.md` (the account-wide instructions) and `voices.md` (the three voices). Use them as they are; do not rewrite them, and do not paraphrase them into the conversation. Fill in only the folder path where it is marked.
 
 ## What a task can and cannot do
 
@@ -38,6 +38,10 @@ Read both back and confirm they exist as project docs. The app may file them und
 ## The folder's standing files
 
 If the folder is reachable and holds none of the standing files the instructions name, offer, through the question control, to create them as empty files with a heading each: an overview, medications, providers, an action plan, a functional log, a research file, and one file per condition the reader names. Show the list first and create them only on a yes; nothing goes in them but the heading, and the record-a-visit skill fills them. If the folder already has its own shape, describe it and create nothing.
+
+## The account block
+
+Before the project instructions, read the reader's Account instructions if you can see them. If they carry the kit's block, say so and name the voice in it; do not ask the voice again. If they do not, or you cannot see them, ask which voice they want, plain, warm or archivist, one phrase each from `references/voices.md`, plain first as the safe default, and hand back `references/global-instructions.md` with that voice substituted where marked, in a code block of its own: it goes in Settings, Account, "Instructions for Claude", reaches every chat on the account, casual chat included, and is pasted once for all the kit's projects. If the field already holds text of the reader's own, say to add the block below it and cut whatever the two say twice. No plugin has to be installed before this one.
 
 ## Hand back the text to paste
 
