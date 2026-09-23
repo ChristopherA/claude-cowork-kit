@@ -13,7 +13,7 @@ Ask what the project is for in one sentence, and take that as the working title.
 
 ## The interview, as a plan in rounds
 
-Work this as the clarify skill's plan shape: a first round of numbered questions, each with a recommended answer, then the next round from what the answers open. The first round is usually these five.
+Work this as the interview skill does: a first round of numbered questions, each with a recommended answer, then the next round from what the answers open, and a write-back of what you understood before any text is drafted. The first round is usually these five.
 
 1. **What belongs elsewhere.** The neighbouring things that have their own project, so a request for them is redirected rather than absorbed.
 2. **The folder.** Whether there is one on the computer, and what in it must never be copied into a project doc.

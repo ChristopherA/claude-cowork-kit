@@ -358,7 +358,7 @@ The `created` date in the note metadata is doing more work than it looks. A proj
 
 **The plugins.** The kit's skills ship as plugins, one per project plus the core, and each installs the same way: Customize, Plugins, add a plugin, choose the `.plugin` file, turn it on. To add one skill on its own instead: Customize, Skills, upload its `.skill` file. What exists now:
 
-- `cowork-kit`, the core: the setup interview, and four routines for any project — clarify a decision, check confidence, find the thread of where you were, and learn from a mistake.
+- `cowork-kit`, the core: the setup interview, and ten routines for any project — clarify a decision, be interviewed before a plan, hear an answer again in plain words, write the questions for someone who knows what you don't, check confidence, run a premortem or a postmortem, find the thread of where you were, wrap up for next time, and design a project the kit does not describe.
 - `pkm`, the notes project: set the project up, drain the capture inbox, write a source note, and check the description against the folder.
 - `learn`, the learning project: set a course, run a lesson, and quiz yourself on what you have learned or read.
 - `week`, your week: set it up, triage a pile of obligations into next actions, plan the week, and draft a reply without sending it.

@@ -57,9 +57,9 @@ PLUGINS = {
         "version": "0.1.0",
         "description": (
             "The Claude Cowork Kit's core: a setup interview that hands back the account "
-            "instructions and says which project plugins to install next, plus four routines "
-            "for any project: deciding, checking confidence, finding the thread, and learning "
-            "from a mistake."
+            "instructions and says which project plugins to install next, plus ten routines "
+            "for any project: deciding, interviewing, explaining again, questions for others, "
+            "confidence, premortem, postmortem, where was I, wrap-up, and a new project."
         ),
         "keywords": ["cowork", "setup", "personal", "non-programmer"],
         "setup": "cowork-setup",
@@ -67,7 +67,7 @@ PLUGINS = {
         "readme": (
             "Install this plugin first, then start a task and say `set up the kit`. The setup "
             "skill asks a few questions, hands back the account-wide instructions to paste, and "
-            "says which project plugin to install next. The other four skills work in any project."
+            "says which project plugin to install next. The other ten skills work in any project."
         ),
     },
     "learn": {
