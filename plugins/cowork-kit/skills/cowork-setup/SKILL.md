@@ -35,15 +35,15 @@ Say plainly that this field reaches every chat on the account, casual chat inclu
 
 For each project the reader chose, in the order they chose them:
 
-- **Knowledge base:** the `pkm` plugin, shown as Personal knowledge. In the desktop app, Customize, Plugins: install it from the kit's marketplace if that is how the core was installed, or download `pkm.plugin` from the kit's releases page (https://github.com/ChristopherA/claude-cowork-kit/releases) and add it with the upload option. Turn it on. A plugin dragged into a task's composer is attached to that task only, so use Customize. Then, in the project meant for notes, with the notes folder connected, start a task and say `set up my notes project`. That setup asks about the folder, creates the three project docs, and hands back the short project instructions.
-- **Learning, the week, money, medical:** each is its own plugin with its own setup, installed the same way, from the marketplace or from its file on the releases page, and run with its phrase: `learn` and `set up my learning project`; `week` and `set up my week project`; `money` and `set up my money project`; `medical` and `set up my medical project`. Each project's document in the kit, `docs/projects/<name>.md`, carries its instructions block for a reader who would rather paste by hand. For money and medical, say now that the project should stay in the mode that asks before acting, and that the setup opens by saying what the folder does and does not protect.
-- **Something else:** say that the core's `cowork-new-project` skill designs a project the kit does not describe, hands back its Instructions text, and points at the kit's template for a plugin of its own; offer to run it next, once the account block is pasted, by saying `new project`.
+- **Knowledge base:** the `research` plugin, shown as Research. In the desktop app, Customize, Plugins: install it from the kit's marketplace if that is how the core was installed, or download `research.plugin` from the kit's releases page (https://github.com/ChristopherA/claude-cowork-kit/releases) and add it with the upload option. Turn it on. A plugin dragged into a task's composer is attached to that task only, so use Customize. Then, in the project meant for notes, with the notes folder connected, start a task and say `set up my notes project`. That setup asks about the folder, creates the three project docs, and hands back the short project instructions.
+- **Learning, the week, money, medical:** each is its own plugin with its own setup, installed the same way, from the marketplace or from its file on the releases page, and run with its phrase: `learn` and `set up my learning project`; `week` and `set up my week project`; `money` and `set up my money project`; `medical` and `set up my medical project`. Each project's document in the kit, `docs/binders/<name>.md`, carries its instructions block for a reader who would rather paste by hand. For money and medical, say now that the project should stay in the mode that asks before acting, and that the setup opens by saying what the folder does and does not protect.
+- **Something else:** say that the core's `cowork-new-binder` skill designs a project the kit does not describe, hands back its Instructions text, and points at the kit's template for a plugin of its own; offer to run it next, once the account block is pasted, by saying `new project`.
 
 Install one plugin at a time and run its setup before the next; a reader who installs five plugins at once cannot tell which skill did what.
 
 ## The knowledge base kickoff
 
-If the reader chose the knowledge base and answered that this task is inside the project they mean for it, create one project doc now: `inbox.md`, a heading and nothing else, and say that it is the capture inbox and that the notes setup will keep it. Do not create `map.md` or `rules.md` here; the `pkm` setup creates them from the folder. Otherwise create nothing and say that the notes setup creates the inbox.
+If the reader chose the knowledge base and answered that this task is inside the project they mean for it, create one project doc now: `inbox.md`, a heading and nothing else, and say that it is the capture inbox and that the notes setup will keep it. Do not create `map.md` or `rules.md` here; the `research` setup creates them from the folder. Otherwise create nothing and say that the notes setup creates the inbox.
 
 ## End
 
@@ -55,4 +55,4 @@ Ask through the app's question control whenever there is a choice, and for every
 
 ## What this skill does not do
 
-It does not set any setting, install any plugin, connect any folder, or create a project. It does not run a project's setup; each project plugin has its own. It does not hand back project instructions; `cowork-new-project` drafts them for a project the kit does not describe.
+It does not set any setting, install any plugin, connect any folder, or create a project. It does not run a project's setup; each project plugin has its own. It does not hand back project instructions; `cowork-new-binder` drafts them for a project the kit does not describe.

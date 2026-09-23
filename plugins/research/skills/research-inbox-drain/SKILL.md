@@ -1,5 +1,5 @@
 ---
-name: pkm-inbox-drain
+name: research-inbox-drain
 description: Processes the capture inbox one item at a time into notes in the notes folder, to map.md conventions. Use for "process the inbox", "drain the inbox", "file my captures".
 ---
 

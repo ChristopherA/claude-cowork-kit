@@ -43,11 +43,11 @@
       "source": "./plugins/medical"
     },
     {
-      "name": "pkm",
-      "displayName": "Personal knowledge",
+      "name": "research",
+      "displayName": "Research",
       "description": "Skills for the Claude Cowork Kit's notes project: set the project up, drain the capture inbox, write a source note, and check the description against the folder.",
       "version": "0.1.0",
-      "source": "./plugins/pkm"
+      "source": "./plugins/research"
     }
   ]
 }

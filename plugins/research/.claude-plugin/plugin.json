@@ -1,12 +1,12 @@
 {
-  "name": "pkm",
+  "name": "research",
   "version": "0.1.0",
   "description": "Skills for the Claude Cowork Kit's notes project: set the project up, drain the capture inbox, write a source note, and check the description against the folder.",
   "author": {
     "name": "Christopher Allen"
   },
   "keywords": [
-    "personal-knowledge",
+    "research",
     "notes",
     "cowork",
     "markdown"

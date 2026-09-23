@@ -2,7 +2,7 @@
 
 Skills for the Claude Cowork Kit's medical project: set it up, prepare a visit and its pack, record a visit into the folder, keep a weekly functional log, and turn a handed article into questions for the clinician.
 
-Each skill expects the medical project the Claude Cowork Kit describes: records in a connected folder that stays on the computer, arranged as the kit's docs/projects/medical.md describes, and project docs holding only a questions list and a bare timeline. Keep the project in the mode that asks (the kit's explainer, under The two approval modes).
+Each skill expects the medical project the Claude Cowork Kit describes: records in a connected folder that stays on the computer, arranged as the kit's docs/binders/medical.md describes, and project docs holding only a questions list and a bare timeline. Keep the project in the mode that asks (the kit's explainer, under The two approval modes).
 
 Version 0.1.0 of the Claude Cowork Kit; every plugin in a release carries the kit's version, and the releases are at https://github.com/ChristopherA/claude-cowork-kit/releases.
 
@@ -16,4 +16,4 @@ Version 0.1.0 of the Claude Cowork Kit; every plugin in a release carries the ki
 
 ## Install
 
-In the Claude desktop app, under Customize, Plugins: install it from the marketplace `ChristopherA/claude-cowork-kit`, or upload `medical.plugin` from a release, then turn it on. The repository's README, Install, has both paths in full and what not to do; `docs/projects/medical.md` there has the setup and the text this plugin's setup hands back.
+In the Claude desktop app, under Customize, Plugins: install it from the marketplace `ChristopherA/claude-cowork-kit`, or upload `medical.plugin` from a release, then turn it on. The repository's README, Install, has both paths in full and what not to do; `docs/binders/medical.md` there has the setup and the text this plugin's setup hands back.

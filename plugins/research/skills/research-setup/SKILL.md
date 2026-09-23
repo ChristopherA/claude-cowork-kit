@@ -1,5 +1,5 @@
 ---
-name: pkm-setup
+name: research-setup
 description: Sets up the notes project: three questions, then rules.md, map.md and inbox.md as project docs and the short instructions to paste. Use for "set up my notes project", "notes setup", "set up my notes".
 ---
 
@@ -7,7 +7,7 @@ description: Sets up the notes project: three questions, then rules.md, map.md a
 
 Build the notes project the Claude Cowork Kit describes, from four answers. Create what a task can create, the three project docs, and hand back what only the reader can paste, the short project instructions. Read the notes folder; do not write into it, except to create empty folders when the reader is starting from nothing and has said yes.
 
-The texts this skill hands back are in `references/`, generated from the kit's docs when the plugin was packaged: `project-instructions.md` (the short text for the Instructions panel), `rules-template.md` (the working rules doc), `map-template.md` (the description), `voices.md` (the three voices), `global-instructions.md` (the account-wide instructions). Use them as they are; do not rewrite them, and do not paraphrase them into the conversation. Fill in only the marked fields.
+The texts this skill hands back are in `references/`, generated from the kit's docs when the plugin was packaged: `research-instructions.md` (the short text for the Instructions panel), `rules-template.md` (the working rules doc), `map-template.md` (the description), `voices.md` (the three voices), `global-instructions.md` (the account-wide instructions). Use them as they are; do not rewrite them, and do not paraphrase them into the conversation. Fill in only the marked fields.
 
 ## What a task can and cannot do
 
@@ -47,11 +47,11 @@ Before the project instructions, read the reader's Account instructions if you c
 
 The project page has two text fields that look alike, a one-line description under the title and an Instructions panel at the side, and readers put the instructions in the description. So hand back two things, in this order, and say which field each goes in. If the project's description already holds the instructions text, say so and tell the reader to move it.
 
-0. **The description**, one line, for the field under the project's title. Offer this: `Personal knowledge base: notes and reading. The rules are in Instructions; the notes are in [folder name].` with the folder name filled in.
+0. **The description**, one line, for the field under the project's title. Offer this: `Research base: notes and reading. The rules are in Instructions; the notes are in [folder name].` with the folder name filled in.
 
 The instructions go into a field only the reader can fill: a task can create project docs and cannot set the project's instructions or description, and the shell a task runs in is a Linux space apart from the reader's computer, so it cannot put text on their clipboard either. Do not try; hand the text back and say where it goes. The text goes in a code block of its own, which carries a copy button in the app.
 
-1. **Project instructions**, from `references/project-instructions.md`, as they are; there is nothing to fill in. It goes in the Instructions panel on the project's page, not in the one-line description under the title, which is a label.
+1. **Project instructions**, from `references/research-instructions.md`, as they are; there is nothing to fill in. It goes in the Instructions panel on the project's page, not in the one-line description under the title, which is a label.
 
 Show the block whole, one code block, and nothing else inside the fence.
 

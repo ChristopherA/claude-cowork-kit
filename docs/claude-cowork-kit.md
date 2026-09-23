@@ -6,7 +6,7 @@ This kit is a set of plugins for Claude Cowork, with the reasoning beside them. 
 
 The kit describes five projects, one for each part of life that files accumulate around: your notes and reading, something you are learning, your week, your money, your medical records. Each is its own plugin, whose setup skill asks a few questions, creates the project's docs, and hands back only what the app still needs from your hands. A core plugin carries routines that work in any project. Every project has the same shape: a folder of plain files on your own computer, a small description of it kept where your phone can read it, and a Claude that begins each conversation already knowing both. The files are ordinary. Open them in any editor, back them up, sync them however you like, or walk away from Claude entirely and still have everything.
 
-This document is the part no plugin can carry: why Cowork, what the connected folder does and does not protect, the two approval modes, and what the kit will not do. Each project has a document of its own under `projects/`, with its use case, its skills, its setup, a check that it works, and the text its setup writes, printed so you can read it before running anything or paste it by hand. The account-wide text every project shares, the account instructions and the voices, is printed here. The repository's README says how to install; this document says why.
+This document is the part no plugin can carry: why Cowork, what the connected folder does and does not protect, the two approval modes, and what the kit will not do. Each project has a document of its own under `binders/`, with its use case, its skills, its setup, a check that it works, and the text its setup writes, printed so you can read it before running anything or paste it by hand. The account-wide text every project shares, the account instructions and the voices, is printed here. The repository's README says how to install; this document says why.
 
 Setup takes about thirty minutes for the first project. You make the decisions; Claude does the typing.
 
@@ -63,7 +63,7 @@ Five separate projects: one for notes and reading, one for running your week, on
 
 Separate, not one assistant that knows everything about you. That's worth saying plainly up front, because "one companion that remembers me" is the natural thing to expect and it isn't what this builds. Claude's memory is scoped to each project and doesn't cross between them, so a single all-knowing assistant isn't really on offer. The separation turns that constraint into something useful: your medical records don't surface while you're planning a work week, and a project you never share can't be shared by accident.
 
-There is a second reason for the separation, beyond what memory allows. A knowledge project that also runs your week fills up with tasks, and the notes drown in them: every conversation starts with what is due rather than what you are thinking about. Keeping the knowledge project quiet is what makes it worth opening. The week, the money, the medical records, and whatever you are learning each get a project of their own, with its own plugin and its own document under `projects/`, and you build those only if you want them.
+There is a second reason for the separation, beyond what memory allows. A knowledge project that also runs your week fills up with tasks, and the notes drown in them: every conversation starts with what is due rather than what you are thinking about. Keeping the knowledge project quiet is what makes it worth opening. The week, the money, the medical records, and whatever you are learning each get a project of their own, with its own plugin and its own document under `binders/`, and you build those only if you want them.
 
 Most people should build one project, live with it for a week, and add the others only if they want them. All five at once is a lot of setup for a system you haven't tried yet.
 
@@ -237,15 +237,15 @@ The instruction blocks are the floor and the plugins are the upgrade: everything
 
 ## The projects
 
-One document each, under `projects/`: the project's use case, its skills and when to reach for each, its setup, a check that it works, and the text its setup writes, printed so you can read it first or paste it by hand. Each shares the account instructions and differs in what is distinctive about the work. Build them when you want them, not all at once.
+One document each, under `binders/`: the project's use case, its skills and when to reach for each, its setup, a check that it works, and the text its setup writes, printed so you can read it first or paste it by hand. Each shares the account instructions and differs in what is distinctive about the work. Build them when you want them, not all at once.
 
-- [Notes](projects/notes.md): notes and reading. Capture from anywhere, file at your desk, answer from what you have read. The first project, and the one the others learn their habits from.
-- [Learning](projects/learning.md): a subject, a skill or an exam, learned on purpose, with a plan and a record of what has clicked.
-- [Your week](projects/week.md): obligations turned into next actions, and a week planned from the time you actually have.
-- [Money](projects/money.md): statements and a monthly close, with account details kept out of everything that syncs.
-- [Medical records](projects/medical.md): a record you can compare across visits, and appointments prepared from it.
+- [Notes](binders/research.md): notes and reading. Capture from anywhere, file at your desk, answer from what you have read. The first project, and the one the others learn their habits from.
+- [Learning](binders/learning.md): a subject, a skill or an exam, learned on purpose, with a plan and a record of what has clicked.
+- [Your week](binders/week.md): obligations turned into next actions, and a week planned from the time you actually have.
+- [Money](binders/money.md): statements and a monthly close, with account details kept out of everything that syncs.
+- [Medical records](binders/medical.md): a record you can compare across visits, and appointments prepared from it.
 
-For a project the kit does not describe, the core plugin's `cowork-new-project` skill designs one with you and hands back its text.
+For a project the kit does not describe, the core plugin's `cowork-new-binder` skill designs one with you and hands back its text.
 
 ---
 

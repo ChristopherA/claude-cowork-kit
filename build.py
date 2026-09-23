@@ -16,7 +16,7 @@ Setup skills hand the reader the kit's own instruction blocks, so their
 references/ are GENERATED here from the kit's docs (docs/, or --kit DIR)
 and never edited by hand: the explainer, docs/claude-cowork-kit.md, carries
 the account block, the voices and the asking convention, and each project's
-document under docs/projects/ carries that project's blocks, so those files
+document under docs/binders/ carries that project's blocks, so those files
 stay the single source. The generated files are written IN PLACE under plugins/ and committed, because
 the repository is also a Cowork marketplace: .claude-plugin/marketplace.json
 at the root lists every plugin by its directory, and Cowork reads the tree
@@ -46,12 +46,12 @@ ROOT = Path(__file__).resolve().parent
 PLUGINS_DIR = ROOT / "plugins"
 DIST = ROOT / "dist"
 MARKETPLACE = ROOT / ".claude-plugin" / "marketplace.json"
-DOCS_DEFAULT = ROOT / "docs"  # the explainer and projects/<name>.md
+DOCS_DEFAULT = ROOT / "docs"  # the explainer and binders/<name>.md
 KIT_VERSION = (ROOT / "VERSION").read_text().strip()  # the one version every plugin carries
 RELEASES = "https://github.com/ChristopherA/claude-cowork-kit/releases"
 SHARED_DOC = ROOT / "docs" / "shared.md"
 TEMPLATE_SKILLS = ROOT / "template" / "skills"
-PROJECT_DOCS_WITH_BLOCK = ("learning", "week", "money", "medical")  # docs/projects/<name>.md carries `## Project instructions`
+BINDER_DOCS_WITH_BLOCK = ("learning", "week", "money", "medical")  # docs/binders/<name>.md carries `## Project instructions`
 AUTHOR = "Christopher Allen"
 DESCRIPTION_LIMIT = 200  # Cowork rejects a longer description on upload
 ALLOWED_KEYS = {"name", "description", "license", "allowed-tools", "metadata", "compatibility"}
@@ -90,7 +90,7 @@ PLUGINS = {
         ),
         "keywords": ["learning", "study", "cowork", "tutor"],
         "setup": "learn-setup",
-        "doc": "docs/projects/learning.md",
+        "doc": "docs/binders/learning.md",
         "references": ["learning-instructions.md", "global-instructions.md", "voices.md"],
         "readme": (
             "Each skill expects the learning project the Claude Cowork Kit describes: a folder of "
@@ -107,7 +107,7 @@ PLUGINS = {
         ),
         "keywords": ["productivity", "planning", "cowork", "week"],
         "setup": "week-setup",
-        "doc": "docs/projects/week.md",
+        "doc": "docs/binders/week.md",
         "references": ["week-instructions.md", "global-instructions.md", "voices.md"],
         "readme": (
             "Each skill expects the week project the Claude Cowork Kit describes: a working folder "
@@ -124,7 +124,7 @@ PLUGINS = {
         ),
         "keywords": ["money", "budget", "cowork", "household"],
         "setup": "money-setup",
-        "doc": "docs/projects/money.md",
+        "doc": "docs/binders/money.md",
         "references": ["money-instructions.md", "global-instructions.md", "voices.md"],
         "readme": (
             "Each skill expects the money project the Claude Cowork Kit describes: statements in a "
@@ -141,25 +141,25 @@ PLUGINS = {
         ),
         "keywords": ["medical", "health", "cowork", "records"],
         "setup": "medical-setup",
-        "doc": "docs/projects/medical.md",
+        "doc": "docs/binders/medical.md",
         "references": ["medical-instructions.md", "global-instructions.md", "voices.md"],
         "readme": (
             "Each skill expects the medical project the Claude Cowork Kit describes: records in a "
-            "connected folder that stays on the computer, arranged as the kit's docs/projects/medical.md "
+            "connected folder that stays on the computer, arranged as the kit's docs/binders/medical.md "
             "describes, and project docs holding only a questions list and a bare timeline. Keep the "
             "project in the mode that asks (the kit's explainer, under The two approval modes)."
         ),
     },
-    "pkm": {
-        "display": "Personal knowledge",
+    "research": {
+        "display": "Research",
         "description": (
             "Skills for the Claude Cowork Kit's notes project: set the project up, drain the "
             "capture inbox, write a source note, and check the description against the folder."
         ),
-        "keywords": ["personal-knowledge", "notes", "cowork", "markdown"],
-        "setup": "pkm-setup",
-        "doc": "docs/projects/notes.md",
-        "references": ["project-instructions.md", "rules-template.md", "map-template.md", "voices.md", "global-instructions.md"],
+        "keywords": ["research", "notes", "cowork", "markdown"],
+        "setup": "research-setup",
+        "doc": "docs/binders/research.md",
+        "references": ["research-instructions.md", "rules-template.md", "map-template.md", "voices.md", "global-instructions.md"],
         "readme": (
             "Each skill expects the notes project the Claude Cowork Kit describes: a notes folder "
             "connected in the desktop app, a project doc `rules.md` with the working rules, a "
@@ -180,10 +180,10 @@ SHARED = {
     "The two fields": SETUPS,
     "Hand the text back": SETUPS,
     "The account block": [g for g in SETUPS if g.startswith("plugins/")],
-    "Running a script": ["plugins/pkm/skills/pkm-description-check/SKILL.md",
-                         "plugins/pkm/skills/pkm-inbox-drain/SKILL.md",
-                         "plugins/pkm/skills/pkm-source-note/SKILL.md"],
-    "The evidence words": ["plugins/pkm/skills/pkm-source-note/SKILL.md",
+    "Running a script": ["plugins/research/skills/research-description-check/SKILL.md",
+                         "plugins/research/skills/research-inbox-drain/SKILL.md",
+                         "plugins/research/skills/research-source-note/SKILL.md"],
+    "The evidence words": ["plugins/research/skills/research-source-note/SKILL.md",
                            "plugins/medical/skills/medical-treatment-questions/SKILL.md"],
 }
 
@@ -273,18 +273,18 @@ def kit_references(docs_dir):
     """Extract every block a setup skill uses, from the kit's docs.
 
     The explainer carries the account instructions, the voices and the
-    asking convention; docs/projects/notes.md carries the project
+    asking convention; docs/binders/research.md carries the project
     instructions, the working rules and the description; every other
     project doc carries its block under `## The project instructions`. A missing file or
     block fails naming the file.
     """
     docs_dir = Path(docs_dir).expanduser()
     explainer = docs_dir / "claude-cowork-kit.md"
-    notes_doc = docs_dir / "projects" / "notes.md"
+    notes_doc = docs_dir / "binders" / "research.md"
     text = read_doc(explainer)
     notes = read_doc(notes_doc)
     explainer_rel = "docs/claude-cowork-kit.md"
-    notes_rel = "docs/projects/notes.md"
+    notes_rel = "docs/binders/research.md"
     block1 = fenced_block_after(text, r"^## The account instructions$", explainer_rel)
     block3a = fenced_block_after(notes, r"^## The project instructions$", notes_rel)
     block3b = fenced_block_after(notes, r"^## The working rules, ", notes_rel)
@@ -298,10 +298,10 @@ def kit_references(docs_dir):
         fail("kit: the working rules have no folder placeholder")
     if "[FULL FOLDER PATH ON MY COMPUTER]" not in block4:
         fail("kit: the description has no folder placeholder")
-    projects = {}
-    for name in PROJECT_DOCS_WITH_BLOCK:
-        rel = f"docs/projects/{name}.md"
-        projects[name] = fenced_block_after(read_doc(docs_dir / "projects" / f"{name}.md"), r"^## The project instructions$", rel)
+    binders = {}
+    for name in BINDER_DOCS_WITH_BLOCK:
+        rel = f"docs/binders/{name}.md"
+        binders[name] = fenced_block_after(read_doc(docs_dir / "binders" / f"{name}.md"), r"^## The project instructions$", rel)
     asking = fenced_block_after(text, r"^### How Claude asks$", explainer_rel).strip()
     for skill_md in sorted(list(PLUGINS_DIR.glob("*/skills/*/SKILL.md")) + list(TEMPLATE_SKILLS.glob("*/SKILL.md"))):
         if asking not in skill_md.read_text():
@@ -309,24 +309,24 @@ def kit_references(docs_dir):
     check_shared_text()
     check_project_sections()
     check_skills_index()
-    for name, body in projects.items():
+    for name, body in binders.items():
         if "[FOLDER PATH ON MY COMPUTER]" not in body:
             fail(f"kit: the {name} project's block has no folder placeholder")
-    refs = {f"{name}-instructions.md": stamp(f"docs/projects/{name}.md") + f"# Project instructions for the {name} project\n\nGoes in that project's Instructions panel, with the folder path filled in.\n\n```\n" + body + "```\n"
-            for name, body in projects.items()}
+    refs = {f"{name}-instructions.md": stamp(f"docs/binders/{name}.md") + f"# Project instructions for the {name} project\n\nGoes in that project's Instructions panel, with the folder path filled in.\n\n```\n" + body + "```\n"
+            for name, body in binders.items()}
     refs.update({
         "global-instructions.md": stamp(explainer_rel) + "# The account instructions\n\nGoes in Settings, Account, \"Instructions for Claude\". Substitute one voice from voices.md where marked.\n\n```\n" + block1 + "```\n",
         "voices.md": stamp(explainer_rel) + "# The voices\n\nOne of these replaces the marked line in global-instructions.md.\n\n"
                      + "".join(f"## {name}\n\n```\n{body}```\n\n" for name, body in voices.items()),
-        "project-instructions.md": stamp(notes_rel) + "# The project instructions\n\nGoes in the project's Instructions panel, not the description. Nothing to fill in.\n\n```\n" + block3a + "```\n",
+        "research-instructions.md": stamp(notes_rel) + "# The project instructions\n\nGoes in the project's Instructions panel, not the description. Nothing to fill in.\n\n```\n" + block3a + "```\n",
         "rules-template.md": stamp(notes_rel) + "# The working rules\n\nCreated as the project doc rules.md, with the folder path filled in.\n\n```markdown\n" + block3b + "```\n",
         "map-template.md": stamp(notes_rel) + "# The description\n\nCreated as the project doc map.md, every bracket filled.\n\n```markdown\n" + block4 + "```\n",
     })
     return refs
 
 
-PROJECT_DOCS = {  # each project plugin's setup docs, which every one of its other skills must name
-    "pkm": ["rules.md", "map.md", "inbox.md"],
+CONTEXT_DOCUMENTS = {  # each project plugin's setup docs, which every one of its other skills must name
+    "research": ["rules.md", "map.md", "inbox.md"],
     "learn": ["mission.md", "curriculum.md", "progress.md"],
     "week": ["priorities.md"],
     "money": ["categories.md", "targets.md"],
@@ -340,7 +340,7 @@ def check_project_sections():
     Plugins installed under Customize reach every project, so a skill that does
     not check its project writes into whatever folder is connected.
     """
-    for plugin, docs in PROJECT_DOCS.items():
+    for plugin, docs in CONTEXT_DOCUMENTS.items():
         for skill_md in sorted((PLUGINS_DIR / plugin / "skills").glob("*/SKILL.md")):
             if skill_md.parent.name.endswith("-setup"):
                 continue

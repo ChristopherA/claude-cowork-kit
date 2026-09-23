@@ -1,5 +1,5 @@
 ---
-name: pkm-description-check
+name: research-description-check
 description: Compares map.md against the notes folder and reports every claim that is no longer true, proposing edits without making them. Use for "check the description", "check map.md against my notes".
 ---
 

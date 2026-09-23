@@ -1,5 +1,5 @@
 ---
-name: pkm-source-note
+name: research-source-note
 description: Writes one source note from a book, paper, article or transcript the reader hands over, the source's claims kept apart from the reader's own. Use for "source note", "save this article to my notes".
 ---
 

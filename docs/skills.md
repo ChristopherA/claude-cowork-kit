@@ -2,7 +2,7 @@
 
 Every skill in every plugin: what it does, in the skill's own words, when to reach for it, and what it hands back. A skill is one routine inside a plugin, picked up when you ask for its job in a phrase; the phrases are at the end of each description. Everything a skill does you could ask for in a sentence, more slowly. Every skill asks its questions through the app's question control, never writes into your folder or a project doc without a yes, and ends with one word for how complete the work was: full, partial or minimal, with what is missing.
 
-The descriptions below are the ones the skills carry, and the build checks that they match; the plugin READMEs carry the same descriptions. The reasoning behind each project is in its document under `projects/`, and the kit's case is in [the explainer](claude-cowork-kit.md).
+The descriptions below are the ones the skills carry, and the build checks that they match; the plugin READMEs carry the same descriptions. The reasoning behind each project is in its document under `binders/`, and the kit's case is in [the explainer](claude-cowork-kit.md).
 
 ## Cowork Kit core, `cowork-kit`
 
@@ -48,7 +48,7 @@ Before a meeting with a professional: a one-page brief for them, a script for th
 
 **What it hands back.** Three documents: a one-page brief the professional can scan, a script you follow, and a capture sheet for whoever takes notes, the asks first; each written on a yes. For a clinician, the medical project's visit prep does this from the record.
 
-### `cowork-new-project`
+### `cowork-new-binder`
 
 Designs a project the kit does not describe: its purpose, boundaries and docs, then the instructions text and a plugin from the kit's template. Use for "new project", "a project for something else".
 
@@ -112,11 +112,11 @@ Writes where this session leaves off, done, open, the first next step and what t
 
 **What it hands back.** A short project doc: done, open, the first next step and what to watch, read back after writing. It records the state of the work, not a summary of the conversation.
 
-## Personal knowledge, `pkm`
+## Research, `research`
 
 The notes project's four skills. All but the setup read `rules.md` and `map.md` first and write into the folder only after a yes; the three that read the folder run at the desk.
 
-### `pkm-description-check`
+### `research-description-check`
 
 Compares map.md against the notes folder and reports every claim that is no longer true, proposing edits without making them. Use for "check the description", "check map.md against my notes".
 
@@ -124,7 +124,7 @@ Compares map.md against the notes folder and reports every claim that is no long
 
 **What it hands back.** Every claim in `map.md` that the folder no longer bears out, with the edit proposed for each. It changes nothing; you decide what to fix.
 
-### `pkm-inbox-drain`
+### `research-inbox-drain`
 
 Processes the capture inbox one item at a time into notes in the notes folder, to map.md conventions. Use for "process the inbox", "drain the inbox", "file my captures".
 
@@ -132,7 +132,7 @@ Processes the capture inbox one item at a time into notes in the notes folder, t
 
 **What it hands back.** Each item placed, an existing note to update, a new note, another project, a source to read, shown, and written into the folder only after a yes; at the end, how many were filed, redirected, deferred and left.
 
-### `pkm-setup`
+### `research-setup`
 
 Sets up the notes project: three questions, then rules.md, map.md and inbox.md as project docs and the short instructions to paste. Use for "set up my notes project", "notes setup", "set up my notes".
 
@@ -140,7 +140,7 @@ Sets up the notes project: three questions, then rules.md, map.md and inbox.md a
 
 **What it hands back.** The three project docs created, `rules.md`, `map.md` and `inbox.md`, and the two things only you can paste: the account instructions if your Settings field is empty, and the short project instructions for the Instructions panel. It then names the day-one checks, the phone check first.
 
-### `pkm-source-note`
+### `research-source-note`
 
 Writes one source note from a book, paper, article or transcript the reader hands over, the source's claims kept apart from the reader's own. Use for "source note", "save this article to my notes".
 
@@ -302,4 +302,4 @@ Before an appointment, drafts the questions from what changed in the record, and
 
 ## The template
 
-`template/` has no skills; it is the skeleton of a project plugin, with the brackets left in, for a contributor or a reader comfortable editing files. A project of your own does not need it: the core's `cowork-new-project` designs one and hands back its text.
+`template/` has no skills; it is the skeleton of a project plugin, with the brackets left in, for a contributor or a reader comfortable editing files. A project of your own does not need it: the core's `cowork-new-binder` designs one and hands back its text.

@@ -14,4 +14,4 @@ The kit has two projects that read things you would mind leaking, a bank stateme
 
 **The kit itself collects nothing.** It is text. Nothing in it phones home, and the scripts in the notes plugin read your folder and write nothing.
 
-The details, with what the kit has and has not yet confirmed in the running app, are in the explainer, `docs/claude-cowork-kit.md`, under What the connected folder does and does not protect, and in the money and medical documents under `docs/projects/`.
+The details, with what the kit has and has not yet confirmed in the running app, are in the explainer, `docs/claude-cowork-kit.md`, under What the connected folder does and does not protect, and in the money and medical documents under `docs/binders/`.

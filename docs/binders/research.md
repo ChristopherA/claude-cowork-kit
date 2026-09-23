@@ -1,6 +1,6 @@
 # The notes project
 
-Notes and reading: capture from anywhere, file at your desk, answer from what you have read. Its plugin is `pkm`, shown as **Personal knowledge** in the app. This is the first project the kit describes and the one the others learn their habits from. The reasoning behind its shape, the three places things can live and why the description is not a copy, is in [the kit's explainer](../claude-cowork-kit.md), and this document assumes it.
+Notes and reading: capture from anywhere, file at your desk, answer from what you have read. Its plugin is `research`, shown as **Research** in the app. This is the first project the kit describes and the one the others learn their habits from. The reasoning behind its shape, the three places things can live and why the description is not a copy, is in [the kit's explainer](../claude-cowork-kit.md), and this document assumes it.
 
 You end up with a set of plain markdown notes in a folder on your own computer, and a Claude that can read them, add to them, and answer from them: at your desk, or from your phone while the computer is closed and in a bag. The notes are ordinary files. Open them in any editor, back them up, sync them however you like, or walk away from Claude entirely and still have everything.
 
@@ -19,18 +19,18 @@ It is not a second brain that thinks for you, and it is not a search engine over
 
 Four skills, each triggered by a phrase; everything they do you could ask for in a sentence, more slowly.
 
-- **`pkm-setup`**, `set up my notes project`. Three questions, then the three project docs and the short instructions to paste. Run it once, in a task inside the project; if the project is already set up it says so and offers the description check instead.
-- **`pkm-inbox-drain`**, `process the inbox`. At your desk, with the folder connected: the captures one at a time, each placed, shown, and written into the folder only after a yes. Reach for it when the inbox has a handful of items, not when it has fifty; a short drain is the habit that keeps the second job away.
-- **`pkm-source-note`**, `source note` or `save this article to my notes`. One note from a book, paper, article or transcript you hand over, the source's claims kept apart from your own, the citation recorded in the form `map.md` gives. You do the fetching; it does the note.
-- **`pkm-description-check`**, `check the description`. Compares `map.md` against the folder and reports every claim that is no longer true, proposing edits without making them. Run it at the two-week sitting and whenever an answer from the phone comes back wrong.
+- **`research-setup`**, `set up my notes project`. Three questions, then the three project docs and the short instructions to paste. Run it once, in a task inside the project; if the project is already set up it says so and offers the description check instead.
+- **`research-inbox-drain`**, `process the inbox`. At your desk, with the folder connected: the captures one at a time, each placed, shown, and written into the folder only after a yes. Reach for it when the inbox has a handful of items, not when it has fifty; a short drain is the habit that keeps the second job away.
+- **`research-source-note`**, `source note` or `save this article to my notes`. One note from a book, paper, article or transcript you hand over, the source's claims kept apart from your own, the citation recorded in the form `map.md` gives. You do the fetching; it does the note.
+- **`research-description-check`**, `check the description`. Compares `map.md` against the folder and reports every claim that is no longer true, proposing edits without making them. Run it at the two-week sitting and whenever an answer from the phone comes back wrong.
 
 ## Setup
 
 The setup creates three project docs: `rules.md`, the working rules; `map.md`, the description of your folder; and `inbox.md`, the capture inbox, a heading and nothing else. The general steps are in the explainer under Setting up a project, and the install paths in the repository's README; for this project:
 
 1. **Back your notes folder up** with whatever you already use, before the first task that is allowed to write.
-2. **Install the notes plugin**, `pkm`, shown as **Personal knowledge**, and turn it on. No other plugin has to come first.
-3. **Create the project and connect the folder.** Make an ordinary project in the app and name it; for the one-line description under the title, something like `Personal knowledge base: notes and reading. The rules are in Instructions; the notes are in my notes folder.` is enough. Connect your notes folder to it from the project's page. Do not create the project *from* the folder.
+2. **Install the notes plugin**, `research`, shown as **Research**, and turn it on. No other plugin has to come first.
+3. **Create the project and connect the folder.** Make an ordinary project in the app and name it; for the one-line description under the title, something like `Research base: notes and reading. The rules are in Instructions; the notes are in my notes folder.` is enough. Connect your notes folder to it from the project's page. Do not create the project *from* the folder.
 4. **Run the setup.** In a task inside the project, say `set up my notes project`. Claude asks where the folder is, who you are and how you work, and what you are working on now; reads the folder if it can reach it; creates the three docs; and hands back what only you can paste: the account instructions, if your Settings, Account, "Instructions for Claude" field does not carry them yet (the account instructions in the explainer, with your voice filled in), and the short project instructions, printed below, for the Instructions panel at the side of the project page, not the description.
 
 ### Without the plugin

@@ -1,5 +1,5 @@
 ---
-name: cowork-new-project
+name: cowork-new-binder
 description: Designs a project the kit does not describe: its purpose, boundaries and docs, then the instructions text and a plugin from the kit's template. Use for "new project", "a project for something else".
 ---
 

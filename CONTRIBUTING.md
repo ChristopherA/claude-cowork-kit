@@ -8,7 +8,7 @@ Open an issue on this repository. Say which plugin and skill, what you said, wha
 
 ## Changing the text
 
-The account instructions and the voices live once, in `docs/claude-cowork-kit.md`; each project's paste blocks live once, in its document under `docs/projects/`; the paragraphs several skills share live once, in `docs/shared.md`. Edit those, not the copies. The skills index, `docs/skills.md`, carries every skill's description word for word; a changed description is changed there too. Then:
+The account instructions and the voices live once, in `docs/claude-cowork-kit.md`; each project's paste blocks live once, in its document under `docs/binders/`; the paragraphs several skills share live once, in `docs/shared.md`. Edit those, not the copies. The skills index, `docs/skills.md`, carries every skill's description word for word; a changed description is changed there too. Then:
 
 ```
 python3 build.py            # regenerate the manifests, READMEs and references in place; build dist/
