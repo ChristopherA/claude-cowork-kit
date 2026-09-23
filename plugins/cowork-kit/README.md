@@ -4,6 +4,8 @@ The Claude Cowork Kit's core: a setup interview that hands back the account inst
 
 Install this plugin first, then start a task and say `set up the kit`. The setup skill asks a few questions, hands back the account-wide instructions to paste, and says which project plugin to install next. The other twelve skills work in any project.
 
+Version 0.1.0 of the Claude Cowork Kit; every plugin in a release carries the kit's version, and the releases are at https://github.com/ChristopherA/claude-cowork-kit/releases.
+
 ## Skills
 
 - `cowork-again`: Says the last answer again in plain words, with the context the reader was missing, and nothing new. Use for "wait, what", "say that again", "I did not follow", "put that more simply".

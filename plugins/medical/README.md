@@ -4,6 +4,8 @@ Skills for the Claude Cowork Kit's medical project: set it up, prepare a visit a
 
 Each skill expects the medical project the Claude Cowork Kit describes: records in a connected folder that stays on the computer, arranged as the explainer's section The medical project describes, and project docs holding only a questions list and a bare timeline. Keep the project in the mode that asks (the explainer, under The two approval modes).
 
+Version 0.1.0 of the Claude Cowork Kit; every plugin in a release carries the kit's version, and the releases are at https://github.com/ChristopherA/claude-cowork-kit/releases.
+
 ## Skills
 
 - `medical-check-in`: A weekly check-in in the reader's own words: what they did, what hurt, what helped, how they feel; a dated entry in the functional log. Use for "check in on how I'm doing", "health check-in".

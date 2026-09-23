@@ -4,6 +4,8 @@ Skills for the Claude Cowork Kit's notes project: set the project up, drain the 
 
 Each skill expects the notes project the Claude Cowork Kit describes: a notes folder connected in the desktop app, a project doc `rules.md` with the working rules, a project doc `map.md` describing the folder, and a project doc `inbox.md` for captures. The three skills with scripts read the folder only; they never write to it without the reader's yes, and each says in its body what to do when code execution is off.
 
+Version 0.1.0 of the Claude Cowork Kit; every plugin in a release carries the kit's version, and the releases are at https://github.com/ChristopherA/claude-cowork-kit/releases.
+
 ## Skills
 
 - `pkm-description-check`: Compares map.md against the notes folder and reports every claim that is no longer true, proposing edits without making them. Use for "check the description", "check map.md against my notes".

@@ -4,6 +4,8 @@ Skills for the Claude Cowork Kit's money project: set it up with the privacy flo
 
 Each skill expects the money project the Claude Cowork Kit describes: statements in a connected folder that stays on the computer, and project docs holding only categories, targets and summaries with no account details. Keep the project in the mode that asks (the explainer, under The two approval modes).
 
+Version 0.1.0 of the Claude Cowork Kit; every plugin in a release carries the kit's version, and the releases are at https://github.com/ChristopherA/claude-cowork-kit/releases.
+
 ## Skills
 
 - `money-close`: Closes a month: categorizes its transactions against categories.md, shows the arithmetic, compares with targets.md, writes a summary with no account details. Use for "close the month".

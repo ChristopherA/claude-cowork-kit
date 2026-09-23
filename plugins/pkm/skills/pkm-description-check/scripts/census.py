@@ -93,6 +93,8 @@ def main():
         rel = os.path.relpath(dirpath, root)
         rel = "." if rel == "." else rel
         md = [f for f in filenames if f.endswith(args.ext) and not f.startswith(".")]
+        if rel == ".":
+            md = [f for f in md if f not in ("CLAUDE.md", "README.md")]  # instructions and a readme are not notes
         folders[rel] = {"files": len([f for f in filenames if not f.startswith(".")]), "md": len(md)}
         naming[rel] = {"pattern": name_pattern(md), "sample": sorted(md)[: args.limit]}
         for name in md:

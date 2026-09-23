@@ -45,6 +45,8 @@ PLUGINS_DIR = ROOT / "plugins"
 DIST = ROOT / "dist"
 MARKETPLACE = ROOT / ".claude-plugin" / "marketplace.json"
 KIT_DEFAULT = ROOT / "docs" / "claude-cowork-kit.md"
+KIT_VERSION = (ROOT / "VERSION").read_text().strip()  # the one version every plugin carries
+RELEASES = "https://github.com/ChristopherA/claude-cowork-kit/releases"
 SHARED_DOC = ROOT / "docs" / "shared.md"
 TEMPLATE_SKILLS = ROOT / "template" / "skills"
 PROJECT_SECTIONS = ("learning", "week", "money", "medical")  # each `## The <name> project` section carries one block
@@ -61,7 +63,6 @@ SKIP_FILES = {".DS_Store"}
 PLUGINS = {
     "cowork-kit": {
         "display": "Cowork Kit core",
-        "version": "0.1.0",
         "description": (
             "The Claude Cowork Kit's core: a setup interview that hands back the account "
             "instructions and says which project plugins to install next, plus twelve routines "
@@ -80,7 +81,6 @@ PLUGINS = {
     },
     "learn": {
         "display": "Learning",
-        "version": "0.1.0",
         "description": (
             "Skills for the Claude Cowork Kit's learning project: set a course, run a lesson, "
             "and quiz yourself on what you have learned or read."
@@ -96,7 +96,6 @@ PLUGINS = {
     },
     "week": {
         "display": "Your week",
-        "version": "0.1.0",
         "description": (
             "Skills for the Claude Cowork Kit's week project: set it up, triage a pile of "
             "obligations into next actions, plan the week, review it, write up a meeting, and "
@@ -114,7 +113,6 @@ PLUGINS = {
     },
     "money": {
         "display": "Money",
-        "version": "0.1.0",
         "description": (
             "Skills for the Claude Cowork Kit's money project: set it up with the privacy floor, "
             "summarize a statement, and close a month against your categories."
@@ -130,7 +128,6 @@ PLUGINS = {
     },
     "medical": {
         "display": "Medical records",
-        "version": "0.1.0",
         "description": (
             "Skills for the Claude Cowork Kit's medical project: set it up, prepare a visit and its "
             "pack, record a visit into the folder, keep a weekly functional log, and turn a handed "
@@ -148,7 +145,6 @@ PLUGINS = {
     },
     "pkm": {
         "display": "Personal knowledge",
-        "version": "0.2.0",
         "description": (
             "Skills for the Claude Cowork Kit's notes project: set the project up, drain the "
             "capture inbox, write a source note, and check the description against the folder."
@@ -360,13 +356,13 @@ def generated_files(refs):
         plugin_dir = PLUGINS_DIR / name
         manifest = {
             "name": name,
-            "version": spec["version"],
+            "version": KIT_VERSION,
             "description": spec["description"],
             "author": {"name": AUTHOR},
             "keywords": spec["keywords"],
         }
         out[plugin_dir / ".claude-plugin" / "plugin.json"] = json.dumps(manifest, indent=2) + "\n"
-        readme = [f"# {name}", "", spec["description"], "", spec["readme"], "", "## Skills", ""]
+        readme = [f"# {name}", "", spec["description"], "", spec["readme"], "", f"Version {KIT_VERSION} of the Claude Cowork Kit; every plugin in a release carries the kit's version, and the releases are at {RELEASES}.", "", "## Skills", ""]
         for folder in plugin_skills(name):
             fm = frontmatter(folder / "SKILL.md")
             readme.append(f"- `{fm['name']}`: {fm['description']}")
@@ -379,7 +375,7 @@ def generated_files(refs):
             "name": name,
             "displayName": spec["display"],
             "description": spec["description"],
-            "version": spec["version"],
+            "version": KIT_VERSION,
             "source": f"./plugins/{name}",
         })
     marketplace = {

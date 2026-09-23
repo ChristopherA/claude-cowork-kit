@@ -4,6 +4,8 @@ Skills for the Claude Cowork Kit's learning project: set a course, run a lesson,
 
 Each skill expects the learning project the Claude Cowork Kit describes: a folder of materials connected in the desktop app and the project docs mission.md, curriculum.md and progress.md, which the setup creates. Turn on the Learning style for the project, in the style menu.
 
+Version 0.1.0 of the Claude Cowork Kit; every plugin in a release carries the kit's version, and the releases are at https://github.com/ChristopherA/claude-cowork-kit/releases.
+
 ## Skills
 
 - `learn-lesson`: Runs one lesson of about thirty minutes on one concept, intuition first, from mission.md and progress.md, and records what clicked. Use for "next lesson", "teach me the next thing", "let's study".

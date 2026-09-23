@@ -1,6 +1,6 @@
 # What a Cowork skill can do
 
-What is known, as of 2026-09-22, about the environment a Claude Cowork skill runs in, what a script inside one can reach, and which personal-knowledge features that makes easier. Sources are named per claim. Nothing here has been run inside a Cowork task; the last section lists what a first task should probe before any skill relies on it.
+What is known, as of 2026-09-22, about the environment a Claude Cowork skill runs in, what a script inside one can reach, and which personal-knowledge features that makes easier. Sources are named per claim. Probes 1, 2 and 4 of the list at the end were run inside Cowork tasks on 2026-09-22 and their results are folded in where they apply; the others are still open.
 
 ## A skill, in three layers
 
@@ -20,7 +20,7 @@ What is inside each sandbox is documented for two environments and inferred for 
 | Cowork cloud sandbox | Not enumerated by Anthropic for Cowork. The Managed Agents cloud sandbox reference, a sibling product on Anthropic infrastructure, lists Ubuntu 24.04 on x86_64, Python 3.10 to 3.13 with uv, Node 20 to 22, git, curl, jq, yq, ripgrep, pandoc, LibreOffice headless, Poppler (`pdftotext`, `pdftoppm`), qpdf, tesseract, ffmpeg, ImageMagick, SQLite via bindings, up to 8 GB memory and 10 GB disk. | Anthropic docs for a different product. Whether Cowork's cloud sandbox is the same image is unverified. |
 | API code execution container | Linux, Python-focused, 5 GiB memory and disk, `rg`, `fd`, `sqlite`, unzip and archive tools; no internet at all | Anthropic API docs. Not Cowork. Included because it is the floor: every Anthropic sandbox documented has ripgrep and sqlite. |
 
-The safe planning assumption before the probe was that ripgrep, jq and sqlite3 are present everywhere Anthropic runs code, pandoc and Poppler in the local VM and likely in the cloud, and `fd` and `yq` in some. The probe of 2026-09-22 (design rules below) found sqlite3 and fd in neither Cowork space and yq only in the cloud, so the documented sandboxes above do not describe Cowork's. Python 3 with pandas is present everywhere. Package installation from PyPI and npm works in the local VM (its proxy allows exactly those two registries plus Anthropic's API) and is documented for skills generally.
+The safe planning assumption before the probe was that ripgrep, jq and sqlite3 are present everywhere Anthropic runs code, pandoc and Poppler in the local VM and likely in the cloud, and `fd` and `yq` in some. The first probe, run in both Cowork spaces on 2026-09-22, found sqlite3 and fd in neither Cowork space and yq only in the cloud, so the documented sandboxes above do not describe Cowork's. Python 3 with pandas is present everywhere. Package installation from PyPI and npm works in the local VM (its proxy allows exactly those two registries plus Anthropic's API) and is documented for skills generally.
 
 ## What a script can and cannot reach
 
@@ -64,7 +64,9 @@ The kit's principle is that structure lives in plain files the reader can read, 
 - **Prerequisite stated.** The skill's description or first line says "needs code execution enabled", so the reader knows why it may not run.
 - **Description written last, and counted.** Cowork rejects a description over 200 characters, and every first draft this project wrote ran over (218 to 323 characters, seven of seven). Write the body first, then the description as one sentence of purpose plus two or three trigger phrases, and count it before packaging.
 
-## To probe in a first Cowork task, before any skill depends on it
+## The probes: three run, four still open
+
+Run on 2026-09-22: 1 (the tool inventories, above), 2 (the mount path, with modification times flattened) and 4 (a skill with `scripts/` uploads and its script runs once copied to the mounted side). Still open: 3, 5, 6 and 7.
 
 1. In a cloud session and in a local session, run `which rg jq yq sqlite3 pandoc pdftotext fd python3 uv node` and record the two inventories.
 2. Confirm the mount path of a connected folder and whether file modification times match the host's.

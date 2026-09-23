@@ -4,6 +4,8 @@ Skills for the Claude Cowork Kit's week project: set it up, triage a pile of obl
 
 Each skill expects the week project the Claude Cowork Kit describes: a working folder connected in the desktop app, a priorities doc the setup creates, and a reviews doc the review creates. Nothing here sends a message or changes a calendar; drafts are handed back.
 
+Version 0.1.0 of the Claude Cowork Kit; every plugin in a release carries the kit's version, and the releases are at https://github.com/ChristopherA/claude-cowork-kit/releases.
+
 ## Skills
 
 - `week-meeting-notes`: After a meeting: notes by topic with decisions first, quotes inline from this transcript only, action items with owners, carry-forward for a series; to the folder on a yes. Use for "meeting notes".
