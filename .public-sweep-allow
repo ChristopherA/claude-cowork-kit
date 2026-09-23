@@ -1,0 +1,29 @@
+# Allowlist for check-public-artifact.sh, the maintainer's pre-publish leak
+# sweep. That script is not part of this repository and nothing here runs it;
+# an adopter can ignore this file.
+#
+# Every entry below names a file the workstream kit installs under .claude/
+# and the fixture identifiers that file carries as examples or self-check
+# strings. Entries are scoped to the file AND the identifier, never to a
+# whole file, so a genuine leak in one of these files still reports. The
+# sweep prints its suppression count on every run.
+
+# The state-file format rule shows a task pointer, a backlog and a gate.
+^\.claude/rules/workstreams-rule\.md:[0-9]+:.*#(DR-[0-9]|G-DR)\b
+^\.claude/rules/workstreams-rule\.md:[0-9]+:.*#MG-2\b
+
+# The workstream template ships the Completion phase as literal tasks.
+^\.claude/skills/workstream-create/templates/workstream\.md:[0-9]+:.*#CL-[123]\b
+
+# The state module's gloss pattern comment names the gate form it must
+# not miss, with the kit workstream's own gate as the example.
+^\.claude/scripts/workstream_state\.py:[0-9]+:.*#G-OG\b
+
+# The record script's docstring and self-check strings quote fixture IDs
+# as examples of the word-boundary and gloss rules.
+^\.claude/scripts/workstream-record\.py:[0-9]+:.*#(G-(BD|OG)|(BD|OL|OG|EX)-[0-9]+[a-z]?)\b
+
+# This file's own entries quote the identifiers they exempt; exempt by
+# shape, a line whose content begins with the anchor every entry starts
+# with. Comments here are not exempt.
+^\.public-sweep-allow:[0-9]+:[-+ ]?\^
