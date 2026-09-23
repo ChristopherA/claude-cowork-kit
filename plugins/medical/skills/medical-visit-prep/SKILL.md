@@ -1,6 +1,6 @@
 ---
 name: medical-visit-prep
-description: Before an appointment, drafts the questions from what changed in the record, and on request a visit pack: a one-page handout, a script and a companion checklist. Use for "prep my visit", "visit pack".
+description: Before an appointment, drafts the questions from what changed in the record, and on request a visit pack: a handout, a script and a companion checklist. Use for "prep my doctor's visit", "visit pack".
 ---
 
 # Visit prep

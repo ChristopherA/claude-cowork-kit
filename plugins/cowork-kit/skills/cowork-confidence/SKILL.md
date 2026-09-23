@@ -1,6 +1,6 @@
 ---
 name: cowork-confidence
-description: Says plainly what Claude is confident about, what it is not, and what would close the gap, then asks whether to proceed. Use for "how sure are you", "confidence check", "what don't we know".
+description: Says plainly what Claude is confident about, what it is not, and what would close the gap, then asks whether to proceed. Use for "how sure are you", "should I trust this", "what don't we know".
 ---
 
 # Confidence

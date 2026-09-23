@@ -1,6 +1,6 @@
 ---
 name: pkm-description-check
-description: Compares map.md against the notes folder and reports every claim that is no longer true, proposing edits without making them. Use for "check the description", "is map.md still right".
+description: Compares map.md against the notes folder and reports every claim that is no longer true, proposing edits without making them. Use for "check the description", "check map.md against my notes".
 ---
 
 # Description check

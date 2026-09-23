@@ -1,6 +1,6 @@
 ---
 name: pkm-inbox-drain
-description: Processes the capture inbox one item at a time into notes in the notes folder, to map.md conventions. Use when the user says "process the inbox", "drain the inbox", or "file my captures".
+description: Processes the capture inbox one item at a time into notes in the notes folder, to map.md conventions. Use for "process the inbox", "drain the inbox", "file my captures".
 ---
 
 # Inbox drain

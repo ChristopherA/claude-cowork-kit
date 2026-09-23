@@ -6,11 +6,11 @@ Each skill expects the medical project the Claude Cowork Kit describes: records 
 
 ## Skills
 
-- `medical-check-in`: A weekly check-in in the reader's own words: what they did, what hurt, what helped, what they avoided, how they feel; a dated entry in the functional log. Use for "check in", "how am I doing".
+- `medical-check-in`: A weekly check-in in the reader's own words: what they did, what hurt, what helped, how they feel; a dated entry in the functional log. Use for "check in on how I'm doing", "health check-in".
 - `medical-record-visit`: After an appointment: a bare timeline line, the visit note from the recording, checklist and portal papers into the folder, the standing files updated, questions struck. Use for "record my visit".
 - `medical-setup`: Sets up the medical project: the privacy floor, three questions, then questions.md and timeline.md as project docs and the instructions to paste. Use for "set up my medical project", "medical setup".
 - `medical-treatment-questions`: From a handed article or a clinician's suggestion, grades the evidence it cites and writes the questions to ask about the treatment, never from recall. Use for "questions about this treatment".
-- `medical-visit-prep`: Before an appointment, drafts the questions from what changed in the record, and on request a visit pack: a one-page handout, a script and a companion checklist. Use for "prep my visit", "visit pack".
+- `medical-visit-prep`: Before an appointment, drafts the questions from what changed in the record, and on request a visit pack: a handout, a script and a companion checklist. Use for "prep my doctor's visit", "visit pack".
 
 ## Install
 

@@ -1,6 +1,6 @@
 ---
 name: cowork-again
-description: Says the last answer again in plain words, with the context the reader was missing, and nothing new. Use for "wait, what", "say that again", "I did not follow", "simpler".
+description: Says the last answer again in plain words, with the context the reader was missing, and nothing new. Use for "wait, what", "say that again", "I did not follow", "put that more simply".
 ---
 
 # Again

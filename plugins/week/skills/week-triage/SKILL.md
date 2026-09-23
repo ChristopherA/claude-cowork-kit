@@ -1,6 +1,6 @@
 ---
 name: week-triage
-description: Turns a dump of half-formed obligations into a short ordered list of next actions, each startable today. Use for "triage this", "what do I actually need to do", "sort this out".
+description: Turns a dump of half-formed obligations into a short ordered list of next actions, each startable today. Use for "triage this", "sort this pile out", "turn this into a to-do list".
 ---
 
 # Triage

@@ -6,10 +6,10 @@ Each skill expects the notes project the Claude Cowork Kit describes: a notes fo
 
 ## Skills
 
-- `pkm-description-check`: Compares map.md against the notes folder and reports every claim that is no longer true, proposing edits without making them. Use for "check the description", "is map.md still right".
-- `pkm-inbox-drain`: Processes the capture inbox one item at a time into notes in the notes folder, to map.md conventions. Use when the user says "process the inbox", "drain the inbox", or "file my captures".
+- `pkm-description-check`: Compares map.md against the notes folder and reports every claim that is no longer true, proposing edits without making them. Use for "check the description", "check map.md against my notes".
+- `pkm-inbox-drain`: Processes the capture inbox one item at a time into notes in the notes folder, to map.md conventions. Use for "process the inbox", "drain the inbox", "file my captures".
 - `pkm-setup`: Sets up the notes project: three questions, then rules.md, map.md and inbox.md as project docs and the short instructions to paste. Use for "set up my notes project", "notes setup", "set up my notes".
-- `pkm-source-note`: Writes one source note from a book, paper, article or transcript the user hands over, citation recorded, source claims kept apart from the user's own. Use for "make a source note", "source note".
+- `pkm-source-note`: Writes one source note from a book, paper, article or transcript the reader hands over, the source's claims kept apart from the reader's own. Use for "source note", "save this article to my notes".
 
 ## Install
 

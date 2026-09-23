@@ -6,9 +6,9 @@ Each skill expects the learning project the Claude Cowork Kit describes: a folde
 
 ## Skills
 
-- `learn-lesson`: Runs one lesson of about thirty minutes on one concept, intuition first, from mission.md and progress.md, and records what clicked. Use for "next lesson", "teach me the next thing", "study".
+- `learn-lesson`: Runs one lesson of about thirty minutes on one concept, intuition first, from mission.md and progress.md, and records what clicked. Use for "next lesson", "teach me the next thing", "let's study".
 - `learn-quiz`: Tests recall one question at a time from the lesson, the progress record or a handed note, grading each answer and raising the difficulty. Use for "quiz me", "test me on this chapter".
-- `learn-setup`: Sets up the learning project: an interview, then mission.md, curriculum.md and progress.md as project docs and the instructions to paste. Use for "set up my learning project", "set my course".
+- `learn-setup`: Sets up the learning project: an interview, then mission.md, curriculum.md and progress.md as project docs and the instructions to paste. Use for "set up my learning project", "I want to learn".
 
 ## Install
 

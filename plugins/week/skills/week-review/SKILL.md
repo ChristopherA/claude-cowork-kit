@@ -1,6 +1,6 @@
 ---
 name: week-review
-description: A weekly review in the reader's words: done, slipped, avoided, what ate the week, energy; compared with recent weeks, carry-forward listed, priorities.md changes on a yes. Use for "review my week".
+description: A weekly review in the reader's words: done, slipped, avoided, what ate the week, energy; compared with recent weeks, priorities.md changes on a yes. Use for "review my week", "how did my week go".
 ---
 
 # Review the week

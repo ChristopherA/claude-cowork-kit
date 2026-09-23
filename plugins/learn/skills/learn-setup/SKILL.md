@@ -1,6 +1,6 @@
 ---
 name: learn-setup
-description: Sets up the learning project: an interview, then mission.md, curriculum.md and progress.md as project docs and the instructions to paste. Use for "set up my learning project", "set my course".
+description: Sets up the learning project: an interview, then mission.md, curriculum.md and progress.md as project docs and the instructions to paste. Use for "set up my learning project", "I want to learn".
 ---
 
 # Setup

@@ -1,6 +1,6 @@
 ---
 name: learn-lesson
-description: Runs one lesson of about thirty minutes on one concept, intuition first, from mission.md and progress.md, and records what clicked. Use for "next lesson", "teach me the next thing", "study".
+description: Runs one lesson of about thirty minutes on one concept, intuition first, from mission.md and progress.md, and records what clicked. Use for "next lesson", "teach me the next thing", "let's study".
 ---
 
 # Lesson

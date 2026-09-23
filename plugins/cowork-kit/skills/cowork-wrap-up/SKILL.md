@@ -1,6 +1,6 @@
 ---
 name: cowork-wrap-up
-description: Writes where this session leaves off, done, open, the first next step and what to watch, into a project doc the next session or the phone reads. Use for "wrap up", "leave a note for next time".
+description: Writes where this session leaves off, done, open, the first next step and what to watch, into a project doc the next session or the phone reads. Use for "wrap up for today", "write down where we are".
 ---
 
 # Wrap up

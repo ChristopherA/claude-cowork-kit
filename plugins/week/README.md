@@ -9,9 +9,9 @@ Each skill expects the week project the Claude Cowork Kit describes: a working f
 - `week-meeting-notes`: After a meeting: notes by topic with decisions first, quotes inline from this transcript only, action items with owners, carry-forward for a series; to the folder on a yes. Use for "meeting notes".
 - `week-plan`: Plans the week from the calendar and priorities.md, assuming less time than stated, and flags a plan that only works if nothing goes wrong. Use for "plan my week", "lay out this week".
 - `week-reply`: Drafts a reply in the reader's voice from the message they hand over and their earlier replies, then stops; never sends. Use for "draft a reply", "answer this for me", "write back to".
-- `week-review`: A weekly review in the reader's words: done, slipped, avoided, what ate the week, energy; compared with recent weeks, carry-forward listed, priorities.md changes on a yes. Use for "review my week".
+- `week-review`: A weekly review in the reader's words: done, slipped, avoided, what ate the week, energy; compared with recent weeks, priorities.md changes on a yes. Use for "review my week", "how did my week go".
 - `week-setup`: Sets up the week project: three questions, then priorities.md as a project doc and the short instructions to paste. Use for "set up my week project", "week setup".
-- `week-triage`: Turns a dump of half-formed obligations into a short ordered list of next actions, each startable today. Use for "triage this", "what do I actually need to do", "sort this out".
+- `week-triage`: Turns a dump of half-formed obligations into a short ordered list of next actions, each startable today. Use for "triage this", "sort this pile out", "turn this into a to-do list".
 
 ## Install
 

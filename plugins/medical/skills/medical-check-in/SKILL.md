@@ -1,6 +1,6 @@
 ---
 name: medical-check-in
-description: A weekly check-in in the reader's own words: what they did, what hurt, what helped, what they avoided, how they feel; a dated entry in the functional log. Use for "check in", "how am I doing".
+description: A weekly check-in in the reader's own words: what they did, what hurt, what helped, how they feel; a dated entry in the functional log. Use for "check in on how I'm doing", "health check-in".
 ---
 
 # Check-in

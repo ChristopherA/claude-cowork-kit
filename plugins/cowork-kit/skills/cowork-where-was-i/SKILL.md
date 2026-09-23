@@ -1,6 +1,6 @@
 ---
 name: cowork-where-was-i
-description: Reads current work, the inbox and the newest notes, and recommends the one next step rather than a menu. Use for "where was I", "what should I do next", "I've lost the thread".
+description: Reads current work, the inbox and the newest notes, and recommends the one next step rather than a menu. Use for "where was I", "what was I in the middle of", "what should I do next".
 ---
 
 # Where was I

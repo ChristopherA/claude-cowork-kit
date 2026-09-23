@@ -1,6 +1,6 @@
 ---
 name: cowork-interview
-description: Draws out what the reader knows before anything is designed: rounds of questions with recommendations, then a write-back of what was understood. Use for "interview me", "stress-test my plan".
+description: Draws out what the reader knows before anything is designed: rounds of questions, then a write-back of what was understood. Use for "ask me questions first", "get it out of my head".
 ---
 
 # Interview

@@ -1,6 +1,6 @@
 ---
 name: money-statement
-description: Summarizes one statement or export from the folder into categories and totals with no account details, every figure traced to a row. Use for "summarize this statement", "read my export".
+description: Summarizes one statement or export from the folder into categories and totals with no account details, every figure traced to a row. Use for "summarize this statement", "read this bank export".
 ---
 
 # Statement summary

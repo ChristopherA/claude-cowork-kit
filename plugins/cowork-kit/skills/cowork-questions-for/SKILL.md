@@ -1,6 +1,6 @@
 ---
 name: cowork-questions-for
-description: Writes the questions for someone who holds what the reader lacks, an accountant, a contractor, a teacher, ordered by what matters, one idea each. Use for "questions for", "what should I ask".
+description: Writes the questions for someone who holds what the reader lacks, an accountant, a contractor, a teacher, ordered by what matters. Use for "questions for my accountant", "what should I ask them".
 ---
 
 # Questions for someone else
