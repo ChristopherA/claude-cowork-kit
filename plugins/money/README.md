@@ -2,7 +2,7 @@
 
 Skills for the Claude Cowork Kit's money project: set it up with the privacy floor, summarize a statement, and close a month against your categories.
 
-Each skill expects the money project the Claude Cowork Kit describes: statements in a connected folder that stays on the computer, and project docs holding only categories, targets and summaries with no account details. Keep the project in the mode that asks (the explainer, under The two approval modes).
+Each skill expects the money project the Claude Cowork Kit describes: statements in a connected folder that stays on the computer, and project docs holding only categories, targets and summaries with no account details. Keep the project in the mode that asks (the kit's explainer, under The two approval modes).
 
 Version 0.1.0 of the Claude Cowork Kit; every plugin in a release carries the kit's version, and the releases are at https://github.com/ChristopherA/claude-cowork-kit/releases.
 
@@ -14,4 +14,4 @@ Version 0.1.0 of the Claude Cowork Kit; every plugin in a release carries the ki
 
 ## Install
 
-In the Claude desktop app, under Customize, Plugins: install it from the marketplace `ChristopherA/claude-cowork-kit`, or upload `money.plugin` from a release, then turn it on. The repository's README, Install, has both paths in full and what not to do.
+In the Claude desktop app, under Customize, Plugins: install it from the marketplace `ChristopherA/claude-cowork-kit`, or upload `money.plugin` from a release, then turn it on. The repository's README, Install, has both paths in full and what not to do; `docs/projects/money.md` there has the setup and the text this plugin's setup hands back.

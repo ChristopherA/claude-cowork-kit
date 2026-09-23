@@ -2,7 +2,7 @@
 
 Skills for the Claude Cowork Kit's learning project: set a course, run a lesson, and quiz yourself on what you have learned or read.
 
-Each skill expects the learning project the Claude Cowork Kit describes: a folder of materials connected in the desktop app and the project docs mission.md, curriculum.md and progress.md, which the setup creates. Turn on the Learning style for the project, in the style menu.
+Each skill expects the learning project the Claude Cowork Kit describes: a folder of materials connected in the desktop app and the project docs mission.md, curriculum.md and progress.md, which the setup creates. Claude's Learning style is optional here: a task cannot turn it on, and the lesson skill does that work inside a task.
 
 Version 0.1.0 of the Claude Cowork Kit; every plugin in a release carries the kit's version, and the releases are at https://github.com/ChristopherA/claude-cowork-kit/releases.
 
@@ -14,4 +14,4 @@ Version 0.1.0 of the Claude Cowork Kit; every plugin in a release carries the ki
 
 ## Install
 
-In the Claude desktop app, under Customize, Plugins: install it from the marketplace `ChristopherA/claude-cowork-kit`, or upload `learn.plugin` from a release, then turn it on. The repository's README, Install, has both paths in full and what not to do.
+In the Claude desktop app, under Customize, Plugins: install it from the marketplace `ChristopherA/claude-cowork-kit`, or upload `learn.plugin` from a release, then turn it on. The repository's README, Install, has both paths in full and what not to do; `docs/projects/learning.md` there has the setup and the text this plugin's setup hands back.

@@ -17,4 +17,4 @@ Version 0.1.0 of the Claude Cowork Kit; every plugin in a release carries the ki
 
 ## Install
 
-In the Claude desktop app, under Customize, Plugins: install it from the marketplace `ChristopherA/claude-cowork-kit`, or upload `week.plugin` from a release, then turn it on. The repository's README, Install, has both paths in full and what not to do.
+In the Claude desktop app, under Customize, Plugins: install it from the marketplace `ChristopherA/claude-cowork-kit`, or upload `week.plugin` from a release, then turn it on. The repository's README, Install, has both paths in full and what not to do; `docs/projects/week.md` there has the setup and the text this plugin's setup hands back.
