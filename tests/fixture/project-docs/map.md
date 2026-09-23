@@ -10,7 +10,7 @@ I read more than I write and I lose what I read. The notes are for finding it ag
 
 ## Where the folder is
 
-/Users/christophera/Library/Mobile Documents/com~apple~CloudDocs/Cowork/pkm
+/Users/sam/Documents/notes
 
 ## What's in each folder
 
