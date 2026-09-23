@@ -11,7 +11,7 @@ description: Compares map.md against the notes folder and reports every claim th
 
 Check that the notes folder is reachable. If it is not, say so and stop; a check from project knowledge alone can only find contradictions inside `map.md`, and the reader wants the folder.
 
-Read `map.md` in full. Note every checkable claim it makes: the folder path; each folder it lists and what it says lives there; the naming rules; the metadata lines a note carries; wrapping; link style; the "not here" list; the settled conventions; the open threads; the current-work section and its date.
+Read `rules.md` and `map.md` in full. Note every checkable claim they make. From `map.md`: the folder path; each folder it lists and what it says lives there; the naming rules; the metadata lines a note carries; wrapping; link style; the "not here" list; the settled conventions; the open threads; the current-work section and its date. From `rules.md`: the folder path again (the two must agree), what the project docs hold, and the rules about notes that the folder can show broken. A claim the two docs make differently is reported first, before any comparison with the folder.
 
 ## Take the census
 
@@ -37,7 +37,7 @@ Treat it separately, because it goes stale fastest and matters most. Say when it
 
 One short report, in this order: what holds (a line), what is stale in the description (each with proposed wording), what has drifted in the folder (each with the files), what is missing from the description, and the current-work question. Then stop, with one word for how complete the check was: full (script census and the description read whole), partial (census by reading only, or the folder partly reachable), and what was not checked.
 
-If the reader says "apply", two kinds of edit are on offer and they are handled differently. Wording changes to `map.md` (a renamed folder, a convention written down, a stale sentence replaced) are safe: make the ones the reader names, one at a time, showing each before writing, then read `map.md` back and confirm what changed. Anything that would change the folder (moving a file, renaming a note, adding a missing metadata line) is not this skill's to do: list those as a proposal for the reader to carry out or to hand to the inbox-drain or source-note skills, and never edit notes in the folder from here.
+If the reader says "apply", two kinds of edit are on offer and they are handled differently. Wording changes to `map.md` or `rules.md` (a renamed folder, a convention written down, a stale sentence replaced, a rule the reader has decided to relax) are safe: make the ones the reader names, one at a time, showing each before writing, then read the doc back and confirm what changed. Offer each through the app's question control, recommended option first. Anything that would change the folder (moving a file, renaming a note, adding a missing metadata line) is not this skill's to do: list those as a proposal for the reader to carry out or to hand to the inbox-drain or source-note skills, and never edit notes in the folder from here.
 
 ## The census script
 
@@ -47,4 +47,4 @@ If the reader says "apply", two kinds of edit are on offer and they are handled 
 python3 scripts/census.py --folder "<notes folder path>" --limit 10
 ```
 
-Treat modification times with care: a sync service can touch every file at once, and the mount may not preserve them. Prefer the `created` lines inside notes for age; the script reports both so you can tell whether they agree. If the script is not available, take the census by reading, as above.
+The plugin's files live in the cloud space of a task, and the notes folder is mounted on the local side; so the script does not run in place: copy it to the side where the folder is (a checksum before and after confirms the copy), run it there, and say that you did. Never rely on the folder's modification times: the mount flattens them. Treat modification times with care in any case: a sync service can touch every file at once. Prefer the `created` lines inside notes for age; the script reports both so you can tell whether they agree. If the script is not available, take the census by reading, as above.

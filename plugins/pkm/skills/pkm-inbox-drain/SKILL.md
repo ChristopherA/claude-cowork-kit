@@ -9,18 +9,18 @@ Work the inbox doc down to empty, one item at a time, writing real notes into th
 
 ## Before starting
 
-Read `map.md` first if you have not this conversation. It says where the folder is, how notes are named and formatted, what the reader is working on, and which conventions are settled. Every note you write follows it.
+Read `rules.md` and then `map.md` first if you have not this conversation. The rules say how captures are drained; the description says where the folder is, how notes are named and formatted, what the reader is working on, and which conventions are settled. Every note you write follows them.
 
 Check that the notes folder is reachable. If it is not, say so and stop; the inbox is drained at the desk, not from the phone. Do not file into project docs as a substitute.
 
-Read `inbox.md`. Count the items and say how many there are. If there are none, say so and stop.
+Read `inbox.md`, and list the files in the folder's `inbox/` if it has one: those are items too, captured from the desk rather than the phone. Count both and say how many there are. If there are none, say so and stop.
 
 ## One item at a time
 
 For each item, in order from the top:
 
 1. Quote the item back, exactly as captured.
-2. Say what you think it is, in one sentence, and where it would go: a new note (one idea, named for its claim), an addition to an existing note or thread, a source to record, something for another project (name which, and stop there for that item), or a discard. Where the candidates script is available, run it for the item first (see below); otherwise search the folder for the item's two or three most distinctive words. Then apply the rule that decides between adding and creating: if an existing note covers the idea and its title still fits with this added, propose adding to it; create a new note only when no note covers it, or when the existing note's title would stop making sense; when the capture is adjacent to a note but distinct, propose a new note that links to the existing one and a line in the existing one linking back. When in doubt, add to the existing note. Two notes on one idea are the failure that makes a folder hard to trust, and it is silent.
+2. Say what you think it is, in one sentence, and where it would go: a new note (one idea, named for its claim), an addition to an existing note or thread, a source to record, something for another project (name which, leave it in the inbox marked with the project name for the reader to move, and stop there for that item), or a discard. Where the candidates script is available, run it for the item first (see below); otherwise search the folder for the item's two or three most distinctive words. Then apply the rule that decides between adding and creating: if an existing note covers the idea and its title still fits with this added, propose adding to it; create a new note only when no note covers it, or when the existing note's title would stop making sense; when the capture is adjacent to a note but distinct, propose a new note that links to the existing one and a line in the existing one linking back. When in doubt, add to the existing note. Two notes on one idea are the failure that makes a folder hard to trust, and it is silent.
 3. Show the note you would write, or the change you would make to an existing note, in full, formatted to `map.md`'s conventions, with a `created` date of today and a `source` line if the capture came from somewhere.
 4. Wait for a yes. A no, an edit, or a redirect changes what you write; silence is not a yes.
 5. On a yes: write the note into the folder, read it back to confirm it landed as shown, then remove the item from `inbox.md`, then confirm in one line what changed and where, with the file name.
@@ -33,7 +33,7 @@ A **note** when the capture is an idea: named for the claim it makes, one idea, 
 
 ## When you cannot tell
 
-Ask one question, the one whose answer decides where it goes. Do not ask two. Do not guess at a folder because the capture is short.
+Ask one question, the one whose answer decides where it goes. Do not ask two. Do not guess at a folder because the capture is short. Every question with a choice in it, and every wait for a yes, goes through the app's question control with the recommended option first, so the reader answers with a tap rather than typing.
 
 ## Ending
 
@@ -46,5 +46,7 @@ When the inbox is empty, or the reader stops, report: how many items were filed 
 ```
 python3 scripts/candidates.py --folder "<notes folder path>" --text "<the capture>" --limit 5
 ```
+
+The plugin's files live in the cloud space of a task, and the notes folder is mounted on the local side; so the script does not run in place: copy it to the side where the folder is (a checksum before and after confirms the copy), run it there, and say that you did. Never rely on the folder's modification times: the mount flattens them.
 
 Use its output as the candidate list in step 2. If it is not available, or code execution is off, search with the folder's own search or by reading the likeliest folder, and say that you did so; the routine is the same.
