@@ -1,5 +1,5 @@
 ---
-name: pkm-postmortem
+name: cowork-postmortem
 description: Works through what went wrong in four questions and ends with one change to the instructions or description, with approval. Use for "what went wrong", "postmortem", "why did that happen".
 ---
 

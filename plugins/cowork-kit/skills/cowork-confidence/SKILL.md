@@ -1,5 +1,5 @@
 ---
-name: pkm-confidence
+name: cowork-confidence
 description: Says plainly what Claude is confident about, what it is not, and what would close the gap, then asks whether to proceed. Use for "how sure are you", "confidence check", "what don't we know".
 ---
 

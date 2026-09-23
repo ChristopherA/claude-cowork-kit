@@ -1,5 +1,5 @@
 ---
-name: pkm-clarify
+name: cowork-clarify
 description: Settles a decision one question at a time, recommending first, reflecting each answer back, ending with a summary and no action. Use for "help me decide", "clarify this", "one note or two".
 ---
 
