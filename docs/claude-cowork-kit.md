@@ -107,6 +107,8 @@ Plain markdown. Folders you can open in any editor. Filenames you can scan. Proj
 
 If you've seen kits that keep a memory file in the folder that Claude writes to as it learns, that's the same idea placed differently. This kit keeps the description where your phone can read it and keeps Claude's own bookkeeping out of your notes on purpose: a file Claude maintains for Claude's benefit is exactly the pile only software can love.
 
+The same test decides whether something earns a file at all, in any of the projects: would it help to have this written down the next time you talk to someone about it or make a decision? A capture, a source you will want again, a condition, a course, a priority: yes. A one-off question, a bad day, something already covered by a file you have: no, and the conversation is enough. Not everything needs tracking, and a folder of files nobody reopens is the second job this kit exists to avoid.
+
 ### Projects don't talk to each other
 
 Claude working in one project cannot read or write another project's docs, and memory doesn't cross over either. Mostly this is the feature described above, but it has a sharp edge: a note filed in the wrong project doesn't get moved later. It sits there with the wrong context attached, and nothing reconciles it but you.
@@ -358,10 +360,10 @@ The `created` date in the note metadata is doing more work than it looks. A proj
 
 **The plugins.** The kit's skills ship as plugins, one per project plus the core, and each installs the same way: Customize, Plugins, add a plugin, choose the `.plugin` file, turn it on. To add one skill on its own instead: Customize, Skills, upload its `.skill` file. What exists now:
 
-- `cowork-kit`, the core: the setup interview, and ten routines for any project — clarify a decision, be interviewed before a plan, hear an answer again in plain words, write the questions for someone who knows what you don't, check confidence, run a premortem or a postmortem, find the thread of where you were, wrap up for next time, and design a project the kit does not describe.
+- `cowork-kit`, the core: the setup interview, and twelve routines for any project — clarify a decision, be interviewed before a plan, hear an answer again in plain words, write the questions for someone who knows what you don't, prepare a meeting pack for a professional, clean a transcript, check confidence, run a premortem or a postmortem, find the thread of where you were, wrap up for next time, and design a project the kit does not describe.
 - `pkm`, the notes project: set the project up, drain the capture inbox, write a source note, and check the description against the folder.
 - `learn`, the learning project: set a course, run a lesson, and quiz yourself on what you have learned or read.
-- `week`, your week: set it up, triage a pile of obligations into next actions, plan the week, and draft a reply without sending it.
+- `week`, your week: set it up, triage a pile of obligations into next actions, plan the week, review it, and draft a reply without sending it.
 - `money`: set it up with the privacy floor, summarize a statement, and close a month against your categories.
 - `medical`: set it up, prepare a visit and its pack, record a visit into the folder, keep a weekly functional log, and turn a handed article into questions for the clinician.
 - A template, for a project the kit does not describe: the core's `cowork-new-project` skill walks you through copying it.

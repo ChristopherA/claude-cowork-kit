@@ -10,7 +10,7 @@
     {
       "name": "cowork-kit",
       "displayName": "Cowork Kit core",
-      "description": "The Claude Cowork Kit's core: a setup interview that hands back the account instructions and says which project plugins to install next, plus ten routines for any project: deciding, interviewing, explaining again, questions for others, confidence, premortem, postmortem, where was I, wrap-up, and a new project.",
+      "description": "The Claude Cowork Kit's core: a setup interview that hands back the account instructions and says which project plugins to install next, plus twelve routines for any project: deciding, interviewing, explaining again, questions for others, a meeting pack, a transcript, confidence, premortem, postmortem, where was I, wrap-up, and a new project.",
       "version": "0.1.0",
       "source": "./plugins/cowork-kit"
     },
@@ -24,7 +24,7 @@
     {
       "name": "week",
       "displayName": "Your week",
-      "description": "Skills for the Claude Cowork Kit's week project: set it up, triage a pile of obligations into next actions, plan the week, and draft a reply without sending it.",
+      "description": "Skills for the Claude Cowork Kit's week project: set it up, triage a pile of obligations into next actions, plan the week, review it, and draft a reply without sending it.",
       "version": "0.1.0",
       "source": "./plugins/week"
     },
