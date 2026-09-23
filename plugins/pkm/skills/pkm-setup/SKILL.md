@@ -5,7 +5,7 @@ description: Sets up the notes project: four questions, then rules.md, map.md an
 
 # Setup
 
-Build the notes project the Personal Knowledge Kit describes, from four answers. Create what a task can create, the three project docs, and hand back what only the reader can paste, the short project instructions. Read the notes folder; do not write into it, except to create empty folders when the reader is starting from nothing and has said yes.
+Build the notes project the Claude Cowork Kit describes, from four answers. Create what a task can create, the three project docs, and hand back what only the reader can paste, the short project instructions. Read the notes folder; do not write into it, except to create empty folders when the reader is starting from nothing and has said yes.
 
 The texts this skill hands back are in `references/`, generated from the kit document when the plugin was packaged: `project-instructions.md` (the short text for the Instructions field), `rules-template.md` (the working rules doc), `map-template.md` (the description), `voices.md` (the three voices), `global-instructions.md` (the account-wide instructions, which the core plugin's setup hands back; this skill only reads it to recognize a voice). Use them as they are; do not rewrite them, and do not paraphrase them into the conversation. Fill in only the marked fields.
 

@@ -52,7 +52,7 @@ The kit's principle is that structure lives in plain files the reader can read, 
 
 **Learning project.** The progress record is markdown by design, so `jq` does not apply to it directly; a script can still parse its three states (settled, shaky, untested) into JSON for a "what should we drill" answer, and can sample a question bank deterministically so grill-me does not always start at the top. Both are marginal; the learning skills are mostly instructions.
 
-**What scripts do not help with.** Filing, writing, deciding what a note is about, and everything in the appendices that is about judgment. The money project's arithmetic is the one place a script is not optional: a total computed by Python from a CSV is checkable in a way a total produced in prose is not, and the kit's accuracy clause ("show the arithmetic") is easier to honour with the calculation in a script's output.
+**What scripts do not help with.** Filing, writing, deciding what a note is about, and everything in the project sections that is about judgment. The money project's arithmetic is the one place a script is not optional: a total computed by Python from a CSV is checkable in a way a total produced in prose is not, and the kit's accuracy clause ("show the arithmetic") is easier to honour with the calculation in a script's output.
 
 ## Design rules for scripts in the kit's skills
 

@@ -4,7 +4,7 @@ Plugins for people who use the Claude desktop and mobile apps with Cowork rather
 
 ## Layout
 
-- `docs/` -- the explainer: why Cowork, what a connected folder does and does not protect, the approval modes, the privacy floor, and the instruction blocks each plugin's setup skill hands back. The explainer is the single source; the blocks in a built plugin are generated from it, never edited by hand.
+- `docs/` -- the explainer, `claude-cowork-kit.md`: why Cowork, what a connected folder does and does not protect, the approval modes, the privacy floor, and the instruction blocks each plugin's setup skill hands back. The explainer is the single source; the blocks in a built plugin are generated from it, never edited by hand.
 - `plugins/<name>/` -- one directory per plugin: its skills (`skills/<skill>/SKILL.md`, with read-only `scripts/` where a skill runs code) and its manifest.
 - `build.py` -- checks every skill the way Cowork's upload does, generates the setup references from the explainer, and writes each plugin as a `.plugin` file and each skill as a `.skill` file under `dist/`, which is not tracked.
 - `tests/fixture/` -- a small notes folder and the project docs a setup run should produce, for exercising the skills in Cowork before a reader's real notes are involved.
