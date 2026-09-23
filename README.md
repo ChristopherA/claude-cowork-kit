@@ -11,7 +11,7 @@ Plugins for people who use the Claude desktop and mobile apps with Cowork rather
 
 ## Status
 
-Pre-release. The knowledge project's plugin has had one run in Cowork; the core plugin and the other project plugins are not yet built.
+Pre-release. Two plugins build: `cowork-kit`, the core, and `pkm`, the knowledge project. The knowledge plugin has had one run in Cowork; the core has not run yet, and the other project plugins are not yet built.
 
 ## License
 
