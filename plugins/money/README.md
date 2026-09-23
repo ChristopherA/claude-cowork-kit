@@ -12,4 +12,4 @@ Each skill expects the money project the Claude Cowork Kit describes: statements
 
 ## Install
 
-In the Claude desktop app, either add this repository as a marketplace (Customize, Plugins, Add marketplace, `ChristopherA/claude-cowork-kit`) and install the plugin from it, or download the `.plugin` file from a release and upload it (Customize, Plugins, the upload option), then turn it on. A plugin dragged into a task's composer is attached to that task only. To add one skill instead of the set: Customize, Skills, upload the matching `.skill` file.
+In the Claude desktop app, under Customize, Plugins: install it from the marketplace `ChristopherA/claude-cowork-kit`, or upload `money.plugin` from a release, then turn it on. The repository's README, Install, has both paths in full and what not to do.

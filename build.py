@@ -308,7 +308,7 @@ def generated_files(refs):
             fm = frontmatter(folder / "SKILL.md")
             readme.append(f"- `{fm['name']}`: {fm['description']}")
         readme += ["", "## Install", "",
-                   "In the Claude desktop app, either add this repository as a marketplace (Customize, Plugins, Add marketplace, `ChristopherA/claude-cowork-kit`) and install the plugin from it, or download the `.plugin` file from a release and upload it (Customize, Plugins, the upload option), then turn it on. A plugin dragged into a task's composer is attached to that task only. To add one skill instead of the set: Customize, Skills, upload the matching `.skill` file.", ""]
+                   f"In the Claude desktop app, under Customize, Plugins: install it from the marketplace `ChristopherA/claude-cowork-kit`, or upload `{name}.plugin` from a release, then turn it on. The repository's README, Install, has both paths in full and what not to do.", ""]
         out[plugin_dir / "README.md"] = "\n".join(readme)
         for ref in spec["references"]:
             out[plugin_dir / "skills" / spec["setup"] / "references" / ref] = refs[ref]

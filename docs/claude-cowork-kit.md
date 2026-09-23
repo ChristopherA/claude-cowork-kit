@@ -361,7 +361,7 @@ The `created` date in the note metadata is doing more work than it looks. A proj
 
 **Scheduled tasks are where this starts paying off,** with one shape to keep in mind. A scheduled task runs in the cloud, on its own, whether or not your computer is on — and for the same reason it cannot be tied to a folder on your computer at all. So a scheduled task works from project knowledge and connected services: a weekly pass that reads the inbox doc and the description, pulls the reading list out of the captures, and lists what's changed since last week. Anything that needs the folder itself — surfacing notes untouched in six months, finding where last week's thinking contradicts something from March — is a task you start at your desk, or a saved prompt you run there. Don't schedule anything that touches sensitive records or sends messages on your behalf; nobody is watching a scheduled run.
 
-**The plugins.** The kit's skills ship as plugins, one per project plus the core, and each installs the same way: Customize, Plugins, add a plugin, choose the `.plugin` file, turn it on. To add one skill on its own instead: Customize, Skills, upload its `.skill` file. What exists now:
+**The plugins.** The kit's skills ship as plugins, one per project plus the core; the repository's README says how to install them, from the marketplace or from a file. What exists now:
 
 - `cowork-kit`, the core: the setup interview, and twelve routines for any project — clarify a decision, be interviewed before a plan, hear an answer again in plain words, write the questions for someone who knows what you don't, prepare a meeting pack for a professional, clean a transcript, check confidence, run a premortem or a postmortem, find the thread of where you were, wrap up for next time, and design a project the kit does not describe.
 - `pkm`, the notes project: set the project up, drain the capture inbox, write a source note, and check the description against the folder.
@@ -371,7 +371,7 @@ The `created` date in the note metadata is doing more work than it looks. A proj
 - `medical`: set it up, prepare a visit and its pack, record a visit into the folder, keep a weekly functional log, and turn a handed article into questions for the clinician.
 - A template, for a project the kit does not describe: the core's `cowork-new-project` skill walks you through copying it.
 
-Two ways to get them. Add the kit's repository as a marketplace in the desktop app (Customize, Plugins, Add marketplace, then `ChristopherA/claude-cowork-kit`) and install each plugin from it, which also brings updates; or download a `.plugin` file from the kit's releases and upload it.
+Install them one at a time, and run each plugin's setup before installing the next.
 
 The instruction blocks are the floor and the plugins are the upgrade: everything a skill does, you can ask for in a sentence, more slowly. Skills trigger from their description rather than needing a command you have to remember. They run in Cowork tasks, not in plain chat, and whether the phone app runs them is something the kit is still confirming; the instruction blocks work from the phone regardless, which is why they are the floor. When you write your own, three good ones beat fifteen half-finished.
 
