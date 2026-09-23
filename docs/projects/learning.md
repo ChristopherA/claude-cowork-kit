@@ -18,7 +18,7 @@ The setup creates three project docs: `mission.md` (what you're learning, why, b
 
 1. **Install the learning plugin**, `learn`, shown as **Learning**, and turn it on.
 2. **Create the project and connect the folder** that holds your materials, the book, the papers, the course files, from the project's page. If there are no materials yet, an ordinary project with no folder is fine. Do not create the project *from* the folder.
-3. **Run the setup.** In a task inside the project, say `set up my learning project`. Claude asks what you are learning, why and by when, how you will know, where you stand, how you like to learn, and where the materials are; drafts the curriculum for your yes; creates the three docs; and hands back what only you can paste: the account instructions, if your Settings, Account, "Instructions for Claude" field does not carry them yet (Block 1 in the explainer), and the project instructions below, for the Instructions panel at the side of the project page, not the description.
+3. **Run the setup.** In a task inside the project, say `set up my learning project`. Claude asks what you are learning, why and by when, how you will know, where you stand, how you like to learn, and where the materials are; drafts the curriculum for your yes; creates the three docs; and hands back what only you can paste: the account instructions, if your Settings, Account, "Instructions for Claude" field does not carry them yet (the account instructions in the explainer), and the project instructions below, for the Instructions panel at the side of the project page, not the description.
 
 Without the plugin: paste the account instructions as the explainer says, create the project, then in a task ask Claude to interview you and write the three docs from the block below, and paste the block, with the subject and the folder path filled in, into the Instructions panel.
 
@@ -32,7 +32,7 @@ Flashcards synced to a scheduler are one of the things this kit won't do; that n
 
 ---
 
-## Project instructions
+## The project instructions
 
 Paste into the project's Instructions panel, with the subject and the folder path filled in. The setup hands this back with both filled.
 

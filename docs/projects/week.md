@@ -19,7 +19,7 @@ The setup creates one project doc, `priorities.md`, the two or three things that
 
 1. **Install the week plugin**, `week`, shown as **Your week**, and turn it on.
 2. **Create the project and connect the folder** that holds your working files, drafts, lists, threads you are keeping, earlier replies, from the project's page. Do not create the project *from* the folder.
-3. **Run the setup.** In a task inside the project, say `set up my week project`. Claude asks where the folder is, what your current priorities are, and which of the kit's other projects you have; creates the priorities doc; and hands back what only you can paste: the account instructions, if your Settings, Account, "Instructions for Claude" field does not carry them yet (Block 1 in the explainer), and the project instructions below, for the Instructions panel at the side of the project page, not the description.
+3. **Run the setup.** In a task inside the project, say `set up my week project`. Claude asks where the folder is, what your current priorities are, and which of the kit's other projects you have; creates the priorities doc; and hands back what only you can paste: the account instructions, if your Settings, Account, "Instructions for Claude" field does not carry them yet (the account instructions in the explainer), and the project instructions below, for the Instructions panel at the side of the project page, not the description.
 
 Without the plugin: paste the account instructions as the explainer says, create the project, ask Claude in a task to create `priorities.md` from your answers, and paste the block below, with the folder path filled in, into the Instructions panel.
 
@@ -31,7 +31,7 @@ Without the plugin: paste the account instructions as the explainer says, create
 
 ---
 
-## Project instructions
+## The project instructions
 
 Paste into the project's Instructions panel, with the folder path filled in. The setup hands this back with it filled.
 

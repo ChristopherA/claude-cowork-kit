@@ -22,7 +22,7 @@ The setup creates two project docs: `questions.md`, the running list of question
 
 1. **Install the medical plugin**, `medical`, shown as **Medical records**, and turn it on.
 2. **Create the project and connect the folder** that holds your records, from the project's page. Do not create the project *from* the folder.
-3. **Run the setup.** In a task inside the project, say `set up my medical project`. Claude says what the folder does and does not protect; asks where the folder is, which clinicians you see by role, and when the next appointment is; creates the two docs; offers the standing files if the folder has none; and hands back what only you can paste: the account instructions, if your Settings, Account, "Instructions for Claude" field does not carry them yet (Block 1 in the explainer), and the project instructions below, for the Instructions panel at the side of the project page, not the description.
+3. **Run the setup.** In a task inside the project, say `set up my medical project`. Claude says what the folder does and does not protect; asks where the folder is, which clinicians you see by role, and when the next appointment is; creates the two docs; offers the standing files if the folder has none; and hands back what only you can paste: the account instructions, if your Settings, Account, "Instructions for Claude" field does not carry them yet (the account instructions in the explainer), and the project instructions below, for the Instructions panel at the side of the project page, not the description.
 4. **In the app,** check that the mode that asks before acting is on, and block patient portals and health apps from screen use if screen use is on.
 
 Without the plugin: paste the account instructions as the explainer says, create the project, ask Claude in a task to create `questions.md` and `timeline.md`, and paste the block below, with the folder path filled in, into the Instructions panel.
@@ -35,7 +35,7 @@ Without the plugin: paste the account instructions as the explainer says, create
 
 ---
 
-## Project instructions
+## The project instructions
 
 Paste into the project's Instructions panel, with the folder path filled in. The setup hands this back with it filled.
 

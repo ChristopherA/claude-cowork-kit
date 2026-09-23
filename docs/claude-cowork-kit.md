@@ -6,7 +6,7 @@ This kit is a set of plugins for Claude Cowork, with the reasoning beside them. 
 
 The kit describes five projects, one for each part of life that files accumulate around: your notes and reading, something you are learning, your week, your money, your medical records. Each is its own plugin, whose setup skill asks a few questions, creates the project's docs, and hands back only what the app still needs from your hands. A core plugin carries routines that work in any project. Every project has the same shape: a folder of plain files on your own computer, a small description of it kept where your phone can read it, and a Claude that begins each conversation already knowing both. The files are ordinary. Open them in any editor, back them up, sync them however you like, or walk away from Claude entirely and still have everything.
 
-This document is the part no plugin can carry: why Cowork, what the connected folder does and does not protect, the two approval modes, and what the kit will not do. Each project has a document of its own under `projects/`, with its use case, its skills, its setup, a check that it works, and the text its setup writes, printed so you can read it before running anything or paste it by hand. The account-wide text every project shares is printed here, as Blocks 1 and 2. The repository's README says how to install; this document says why.
+This document is the part no plugin can carry: why Cowork, what the connected folder does and does not protect, the two approval modes, and what the kit will not do. Each project has a document of its own under `projects/`, with its use case, its skills, its setup, a check that it works, and the text its setup writes, printed so you can read it before running anything or paste it by hand. The account-wide text every project shares, the account instructions and the voices, is printed here. The repository's README says how to install; this document says why.
 
 Setup takes about thirty minutes for the first project. You make the decisions; Claude does the typing.
 
@@ -146,24 +146,24 @@ Every project is built the same way. The repository's README, under Install and 
 1. **Back the folder up** if you have not already; the section above says why.
 2. **Install the project's plugin,** by either path the README gives, and turn it on. No plugin is a prerequisite for another: start with whichever project you want, though the notes project is the one the others learn their habits from.
 3. **Create the project and connect the folder.** Make an ordinary project in the app and name it; the one-line description under the title is a label, and a sentence is enough. Then connect the folder to it from the project's page in the desktop app. Do not create the project *from* the folder: a project created from a folder lives on that computer and doesn't sync, which breaks the phone half of this entirely. If unsure, make an ordinary project and connect the folder to it.
-4. **Run the setup.** In a task inside the project, say the phrase the project's document gives. Claude asks its questions, creates the project docs, and hands back what only you can paste: the account instructions, Block 1 below with your voice filled in, if your Settings, Account, "Instructions for Claude" field does not carry them yet; and the project instructions, for the Instructions panel at the side of the project page, not the one-line description under the title.
+4. **Run the setup.** In a task inside the project, say the phrase the project's document gives. Claude asks its questions, creates the project docs, and hands back what only you can paste: the account instructions, printed below, with your voice filled in, if your Settings, Account, "Instructions for Claude" field does not carry them yet; and the project instructions, for the Instructions panel at the side of the project page, not the one-line description under the title.
 
-That is the whole gap between this and a one-click install: one install and two pastes, the first time, and one paste for each project after. A task can create project docs and read your folder, but it cannot write Settings, create a project, connect a folder, or install a plugin. Those are yours, and the steps above are exactly them. The core plugin, whose routines work in any project, is installed when you want them; its own setup, `set up the kit`, hands back Block 1 for a reader who starts there instead.
+That is the whole gap between this and a one-click install: one install and two pastes, the first time, and one paste for each project after. A task can create project docs and read your folder, but it cannot write Settings, create a project, connect a folder, or install a plugin. Those are yours, and the steps above are exactly them. The core plugin, whose routines work in any project, is installed when you want them; its own setup, `set up the kit`, hands back the account instructions for a reader who starts there instead.
 
 ### Without the plugins
 
 Everything a setup does can be done by hand from the printed blocks, in this order:
 
-1. **Settings, Account, "Instructions for Claude".** Paste the account instructions (Block 1), with your chosen voice from Block 2 substituted in. The app's own label on this field says it reaches chats and Cowork alike; it is not the Cowork entry in the Settings sidebar.
+1. **Settings, Account, "Instructions for Claude".** Paste the account instructions printed below, with your chosen voice substituted in. The app's own label on this field says it reaches chats and Cowork alike; it is not the Cowork entry in the Settings sidebar.
 2. **Create the project and connect the folder,** as in step 3 above.
 3. **Ask Claude to create the project docs** the project's document names, from the texts printed there. The app has no way to create a project doc by hand, and a task can.
 4. **Paste the project instructions** from the project's document into the Instructions panel at the side of the project page, not into the description.
 
 ---
 
-## Block 1 — Global instructions
+## The account instructions
 
-Paste into Settings, Account, "Instructions for Claude", with a voice from Block 2 substituted where marked. These apply to every conversation, in every project, in chat as well as in tasks. Every project's setup hands this block back when the field does not carry it yet, and the core plugin's setup hands it back on its own.
+Paste into Settings, Account, "Instructions for Claude", with one of the voices below substituted where marked. These apply to every conversation, in every project, in chat as well as in tasks. Every project's setup hands this block back when the field does not carry it yet, and the core plugin's setup hands it back on its own.
 
 ```
 I am not a programmer. Don't suggest code, scripts, or terminal commands unless I explicitly ask.
@@ -185,7 +185,7 @@ When you tell me you've changed something I'll look at, read it back and confirm
 When you finish something, tell me what changed and where it is — the folder and file name, or which project doc. One or two sentences.
 ```
 
-The Account field reaches every conversation you have with Claude anywhere, casual chat included, and a task reads it as chat does; Cowork also has global instructions of its own under Settings, Cowork, reaching only tasks, and what that entry adds is something the kit is still confirming, so Block 1 goes in the Account field either way.
+The Account field reaches every conversation you have with Claude anywhere, casual chat included, and a task reads it as chat does; Cowork also has global instructions of its own under Settings, Cowork, reaching only tasks, and what that entry adds is something the kit is still confirming, so the account instructions go in the Account field either way.
 
 **A trap worth naming.** Whatever goes in the Account field hits everything, including casual chat and every other project. "No bullet lists" is right for knowledge notes and actively wrong for a productivity project whose job is handing back ordered lists. Only universal preferences go global. Anything right in one project and wrong in another stays local, even at the cost of a little duplication; duplication you chose beats a rule that silently fights you in half your work.
 
@@ -193,9 +193,9 @@ The block above is at about the length where adding more starts diluting what's 
 
 ---
 
-## Block 2 — Pick a voice
+## The voices
 
-One of these goes into Block 1 where marked. They differ in warmth, not in honesty: all three keep Claude from flattering you, which is the part worth protecting.
+One of these goes into the account instructions where marked. They differ in warmth, not in honesty: all three keep Claude from flattering you, which is the part worth protecting.
 
 **Plain.** Direct and unadorned.
 
@@ -235,7 +235,7 @@ The instruction blocks are the floor and the plugins are the upgrade: everything
 
 ## The projects
 
-One document each, under `projects/`: the project's use case, its skills and when to reach for each, its setup, a check that it works, and the text its setup writes, printed so you can read it first or paste it by hand. Each shares Block 1 and differs in what is distinctive about the work. Build them when you want them, not all at once.
+One document each, under `projects/`: the project's use case, its skills and when to reach for each, its setup, a check that it works, and the text its setup writes, printed so you can read it first or paste it by hand. Each shares the account instructions and differs in what is distinctive about the work. Build them when you want them, not all at once.
 
 - [Notes](projects/notes.md): notes and reading. Capture from anywhere, file at your desk, answer from what you have read. The first project, and the one the others learn their habits from.
 - [Learning](projects/learning.md): a subject, a skill or an exam, learned on purpose, with a plan and a record of what has clicked.

@@ -272,9 +272,10 @@ def stamp(source):
 def kit_references(docs_dir):
     """Extract every block a setup skill uses, from the kit's docs.
 
-    The explainer carries Block 1, the voices and the asking convention;
-    docs/projects/notes.md carries Blocks 3a, 3b and 4; every other project
-    doc carries its block under `## Project instructions`. A missing file or
+    The explainer carries the account instructions, the voices and the
+    asking convention; docs/projects/notes.md carries the project
+    instructions, the working rules and the description; every other
+    project doc carries its block under `## The project instructions`. A missing file or
     block fails naming the file.
     """
     docs_dir = Path(docs_dir).expanduser()
@@ -284,23 +285,23 @@ def kit_references(docs_dir):
     notes = read_doc(notes_doc)
     explainer_rel = "docs/claude-cowork-kit.md"
     notes_rel = "docs/projects/notes.md"
-    block1 = fenced_block_after(text, r"^## Block 1 ", explainer_rel)
-    block3a = fenced_block_after(notes, r"^## Block 3a ", notes_rel)
-    block3b = fenced_block_after(notes, r"^## Block 3b ", notes_rel)
-    block4 = fenced_block_after(notes, r"^## Block 4 ", notes_rel)
+    block1 = fenced_block_after(text, r"^## The account instructions$", explainer_rel)
+    block3a = fenced_block_after(notes, r"^## The project instructions$", notes_rel)
+    block3b = fenced_block_after(notes, r"^## The working rules, ", notes_rel)
+    block4 = fenced_block_after(notes, r"^## The description, ", notes_rel)
     voices = {name: fenced_block_after(text, rf"^\*\*{name}\.\*\*", explainer_rel) for name in ("Plain", "Warm", "Archivist")}
     if "[PASTE YOUR CHOSEN VOICE HERE]" not in block1:
-        fail("kit: Block 1 has no voice placeholder")
+        fail("kit: the account instructions have no voice placeholder")
     if "[FOLDER PATH ON MY COMPUTER]" in block3a:
-        fail("kit: Block 3a carries the folder placeholder, which belongs in Block 3b")
+        fail("kit: the project instructions carry the folder placeholder, which belongs in the working rules")
     if "[FOLDER PATH ON MY COMPUTER]" not in block3b:
-        fail("kit: Block 3b has no folder placeholder")
+        fail("kit: the working rules have no folder placeholder")
     if "[FULL FOLDER PATH ON MY COMPUTER]" not in block4:
-        fail("kit: Block 4 has no folder placeholder")
+        fail("kit: the description has no folder placeholder")
     projects = {}
     for name in PROJECT_DOCS_WITH_BLOCK:
         rel = f"docs/projects/{name}.md"
-        projects[name] = fenced_block_after(read_doc(docs_dir / "projects" / f"{name}.md"), r"^## Project instructions$", rel)
+        projects[name] = fenced_block_after(read_doc(docs_dir / "projects" / f"{name}.md"), r"^## The project instructions$", rel)
     asking = fenced_block_after(text, r"^### How Claude asks$", explainer_rel).strip()
     for skill_md in sorted(list(PLUGINS_DIR.glob("*/skills/*/SKILL.md")) + list(TEMPLATE_SKILLS.glob("*/SKILL.md"))):
         if asking not in skill_md.read_text():
@@ -314,12 +315,12 @@ def kit_references(docs_dir):
     refs = {f"{name}-instructions.md": stamp(f"docs/projects/{name}.md") + f"# Project instructions for the {name} project\n\nGoes in that project's Instructions panel, with the folder path filled in.\n\n```\n" + body + "```\n"
             for name, body in projects.items()}
     refs.update({
-        "global-instructions.md": stamp(explainer_rel) + "# Account instructions (the kit's Block 1)\n\nGoes in Settings, Account, \"Instructions for Claude\". Substitute one voice from voices.md where marked.\n\n```\n" + block1 + "```\n",
-        "voices.md": stamp(explainer_rel) + "# The three voices (the kit's Block 2)\n\nOne of these replaces the marked line in global-instructions.md.\n\n"
+        "global-instructions.md": stamp(explainer_rel) + "# The account instructions\n\nGoes in Settings, Account, \"Instructions for Claude\". Substitute one voice from voices.md where marked.\n\n```\n" + block1 + "```\n",
+        "voices.md": stamp(explainer_rel) + "# The voices\n\nOne of these replaces the marked line in global-instructions.md.\n\n"
                      + "".join(f"## {name}\n\n```\n{body}```\n\n" for name, body in voices.items()),
-        "project-instructions.md": stamp(notes_rel) + "# Project instructions (the kit's Block 3a)\n\nGoes in the project's Instructions panel, not the description. Nothing to fill in.\n\n```\n" + block3a + "```\n",
-        "rules-template.md": stamp(notes_rel) + "# The working rules (the kit's Block 3b)\n\nCreated as the project doc rules.md, with the folder path filled in.\n\n```markdown\n" + block3b + "```\n",
-        "map-template.md": stamp(notes_rel) + "# The description (the kit's Block 4)\n\nCreated as the project doc map.md, every bracket filled.\n\n```markdown\n" + block4 + "```\n",
+        "project-instructions.md": stamp(notes_rel) + "# The project instructions\n\nGoes in the project's Instructions panel, not the description. Nothing to fill in.\n\n```\n" + block3a + "```\n",
+        "rules-template.md": stamp(notes_rel) + "# The working rules\n\nCreated as the project doc rules.md, with the folder path filled in.\n\n```markdown\n" + block3b + "```\n",
+        "map-template.md": stamp(notes_rel) + "# The description\n\nCreated as the project doc map.md, every bracket filled.\n\n```markdown\n" + block4 + "```\n",
     })
     return refs
 
