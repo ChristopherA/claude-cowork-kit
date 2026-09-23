@@ -56,21 +56,21 @@ The project page has two text fields that look alike, a one-line description und
 
 The instructions go into a field only the reader can fill: a task can create project docs and cannot set the project's instructions or description, and the shell a task runs in is a Linux space apart from the reader's computer, so it cannot put text on their clipboard either. Do not try; hand the text back and say where it goes. The text goes in a code block of its own, which carries a copy button in the app.
 
-1. **Project instructions**, from `references/learning-instructions.md`, with the subject and the folder path filled in where the brackets are and nothing else changed. It goes in the Instructions panel on the project's page, not in the project's description; the description is visible to a task too, but it is a label, and the reader should not have to know that it happens to work.
+1. **Project instructions**, from `references/learning-instructions.md`, with the subject and the folder path filled in where the brackets are and nothing else changed. It goes in the Instructions panel on the project's page, not in the one-line description under the title, which is a label.
 
 Show the block whole, one code block, and nothing else inside the fence.
 
 ## The Learning style
 
-Say that Claude has a built-in Learning style, in the style menu, that makes it ask questions rather than hand over answers, and that the reader should turn it on for this project: it does most of what the instructions ask for and does it more reliably than a paragraph can. A task cannot turn it on. Say also that whether the style carries into a Cowork task is something to check on day one, below.
+Say, once, that Claude has a Learning style in the style menu that makes it ask rather than answer. It is optional: a task cannot turn it on, whether it carries into a Cowork task is untested, and nothing in this project depends on it, since the lesson skill does that work inside a task.
 
 ## End
 
-Report what exists now: the three project docs by name, and the two fields waiting for a paste, the description and Instructions. Then name the day-one checks, in order: in this project, with the style turned on, ask Claude a direct question about the subject and see whether it answers or asks; from the phone with the computer closed, ask where the progress record says you are. Do not run them; the reader does. Say that the first lesson is `next lesson`, and that `quiz me` works once there is something to quiz.
+Report what exists now: the three project docs by name, and the two fields waiting for a paste, the one-line description under the title and the Instructions panel. Then name the day-one checks, in order: in this project, with the style turned on, ask Claude a direct question about the subject and see whether it answers or asks; from the phone with the computer closed, ask where the progress record says you are. Do not run them; the reader does. Say that the first lesson is `next lesson`, and that `quiz me` works once there is something to quiz. End with one word for completeness: full, partial (with what is missing), or minimal (stopped early).
 
 ## Asking
 
-Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said.
+Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said. Silence is never a yes: a yes is a tap on the control or a word.
 
 ## What this skill does not do
 

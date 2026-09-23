@@ -36,11 +36,11 @@ Ask the question the loop cannot ask itself: does the premise still hold? Should
 
 ## Ending
 
-When the dimensions are settled, or the reader stops, write a short summary of what was decided, each decision in one line with the reason, and what was left open. Do not start doing any of it. If something decided should be recorded, say where it would go (a convention in `map.md`, a line in a thread) and wait to be asked.
+When the dimensions are settled, or the reader stops, write a short summary of what was decided, each decision in one line with the reason, and what was left open. Do not start doing any of it. If something decided should be recorded, say where it would go (a convention in `map.md`, a line in a thread) and wait to be asked. End with one word for completeness: full, partial (with what is missing), or minimal (stopped early).
 
 ## Asking
 
-Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said.
+Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said. Silence is never a yes: a yes is a tap on the control or a word.
 
 ## What this skill does not do
 

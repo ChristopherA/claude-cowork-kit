@@ -51,17 +51,17 @@ The project page has two text fields that look alike, a one-line description und
 
 The instructions go into a field only the reader can fill: a task can create project docs and cannot set the project's instructions or description, and the shell a task runs in is a Linux space apart from the reader's computer, so it cannot put text on their clipboard either. Do not try; hand the text back and say where it goes. The text goes in a code block of its own, which carries a copy button in the app.
 
-1. **Project instructions**, from `references/medical-instructions.md`, with the folder path filled in where it is marked and nothing else changed. It goes in the Instructions panel on the project's page, not in the project's description.
+1. **Project instructions**, from `references/medical-instructions.md`, with the folder path filled in where it is marked and nothing else changed. It goes in the Instructions panel on the project's page, not in the one-line description under the title, which is a label.
 
 Show the block whole, one code block, and nothing else inside the fence.
 
 ## End
 
-Report what exists now: the two project docs by name and the two fields waiting for a paste, the description and Instructions. Then name the three things only the reader can do, in order: paste the instructions; check that the project is in the mode that asks before acting; and, if Claude can use the screen, block patient portals and health apps from it in Cowork's settings. Then name the day-one check: from the phone with the computer closed, open the project and ask for the questions list; it should come back empty, with no record in it.
+Report what exists now: the two project docs by name and the two fields waiting for a paste, the one-line description under the title and the Instructions panel. Then name the three things only the reader can do, in order: paste the instructions; check that the mode that asks before acting is on, wherever the app sets it; and, if Claude can use the screen, block patient portals and health apps from it in Cowork's settings. Then name the day-one check: from the phone with the computer closed, open the project and ask for the questions list; it should come back empty, with no record in it. End with one word for completeness: full, partial (with what is missing), or minimal (stopped early).
 
 ## Asking
 
-Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said.
+Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said. Silence is never a yes: a yes is a tap on the control or a word.
 
 ## What this skill does not do
 

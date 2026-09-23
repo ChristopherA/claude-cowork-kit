@@ -39,7 +39,7 @@ Where the transcript holds candid remarks about named people, say so before show
 
 ## Write on a yes
 
-Show the note in full and wait for a yes. On a yes, write it into the folder beside the meeting's other files, named by date and who the meeting was with, read it back, and confirm by file name. Then offer, on its own yes, the reader's own action items as lines in `priorities.md`, in the shape that doc uses; the other people's items stay in the note. If the reader means to share the note, offer a short cover message in their voice with a subject line, in plain text, handed back and never sent.
+Show the note in full and wait for a yes. On a yes, write it into the folder beside the meeting's other files, named by date, `YYYY-MM-DD`, and who the meeting was with, read it back, and confirm by file name. Then offer, on its own yes, the reader's own action items as lines in `priorities.md`, in the shape that doc uses; the other people's items stay in the note. If the reader means to share the note, offer a short cover message in their voice with a subject line, in plain text, handed back and never sent.
 
 ## Ending
 
@@ -49,7 +49,7 @@ This skill is learned from the kit author's own meeting-notes practice under Cla
 
 ## Asking
 
-Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said.
+Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said. Silence is never a yes: a yes is a tap on the control or a word.
 
 ## What this skill does not do
 

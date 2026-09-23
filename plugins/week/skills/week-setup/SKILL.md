@@ -43,17 +43,17 @@ The project page has two text fields that look alike, a one-line description und
 
 The instructions go into a field only the reader can fill: a task can create project docs and cannot set the project's instructions or description, and the shell a task runs in is a Linux space apart from the reader's computer, so it cannot put text on their clipboard either. Do not try; hand the text back and say where it goes. The text goes in a code block of its own, which carries a copy button in the app.
 
-1. **Project instructions**, from `references/week-instructions.md`, with the folder path from question 1 in place of the bracket and nothing else changed. It goes in the Instructions panel on the project's page, not in the project's description; the description is visible to a task too, but it is a label, and the reader should not have to know that it happens to work.
+1. **Project instructions**, from `references/week-instructions.md`, with the folder path from question 1 in place of the bracket and nothing else changed. It goes in the Instructions panel on the project's page, not in the one-line description under the title, which is a label.
 
 Show the block whole, one code block, and nothing else inside the fence.
 
 ## End
 
-Report what exists now: the project doc by name, and the two fields waiting for a paste, the description and Instructions. Then name the three day-one checks, in order: at the desk, dump a mess of obligations into a task and see whether a short ordered list comes back with nothing around it; from the phone with the computer closed, ask what the current priorities are, which the doc alone can answer; hand over a message and see whether a draft comes back and the task stops there. Do not run them; the reader does.
+Report what exists now: the project doc by name, and the two fields waiting for a paste, the one-line description under the title and the Instructions panel. Then name the three day-one checks, in order: at the desk, dump a mess of obligations into a task and see whether a short ordered list comes back with nothing around it; from the phone with the computer closed, ask what the current priorities are, which the doc alone can answer; hand over a message and see whether a draft comes back and the task stops there. Do not run them; the reader does. End with one word for completeness: full, partial (with what is missing), or minimal (stopped early).
 
 ## Asking
 
-Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said.
+Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said. Silence is never a yes: a yes is a tap on the control or a word.
 
 ## What this skill does not do
 

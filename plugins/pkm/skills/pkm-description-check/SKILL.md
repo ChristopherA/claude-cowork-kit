@@ -6,9 +6,7 @@ description: Compares map.md against the notes folder and reports every claim th
 # Description check
 
 `map.md` is what Claude knows about the notes when it cannot see them, and at the desk it is the only memory it has. It drifts. This skill reads the folder and the description side by side and reports where they disagree. It changes nothing; the reader decides what to fix.
-
-## Where this runs
-
+\nIf the reader means the one-line description under the project's title, say that it is a label and that this skill checks `map.md`, the description of the notes.\n\1
 This skill belongs to the notes project, whose project docs are `rules.md`, `map.md` and `inbox.md`. Before anything else, check that they are here. If not, this is another project: say which project this skill is for and stop, so nothing is written into the wrong folder or the wrong docs; if this is the right project and it is not set up yet, offer its setup, `set up my notes project`.
 
 ## Before starting
@@ -41,7 +39,7 @@ Treat it separately, because it goes stale fastest and matters most. Say when it
 
 One short report, in this order: what holds (a line), what is stale in the description (each with proposed wording), what has drifted in the folder (each with the files), what is missing from the description, and the current-work question. Then stop, with one word for how complete the check was: full (script census and the description read whole), partial (census by reading only, or the folder partly reachable), and what was not checked.
 
-If the reader says "apply", two kinds of edit are on offer and they are handled differently. Wording changes to `map.md` or `rules.md` (a renamed folder, a convention written down, a stale sentence replaced, a rule the reader has decided to relax) are safe: make the ones the reader names, one at a time, showing each before writing, then read the doc back and confirm what changed. Offer each through the app's question control, recommended option first. Anything that would change the folder (moving a file, renaming a note, adding a missing metadata line) is not this skill's to do: list those as a proposal for the reader to carry out or to hand to the inbox-drain or source-note skills, and never edit notes in the folder from here.
+If the reader chooses, through the control, to apply them, two kinds of edit are on offer and they are handled differently. Wording changes to `map.md` or `rules.md` (a renamed folder, a convention written down, a stale sentence replaced, a rule the reader has decided to relax) are safe: make the ones the reader names, one at a time, showing each before writing, then read the doc back and confirm what changed. Offer each through the app's question control, recommended option first. Anything that would change the folder (moving a file, renaming a note, adding a missing metadata line) is not this skill's to do: list those as a proposal for the reader to carry out or to hand to the inbox-drain or source-note skills, and never edit notes in the folder from here.
 
 ## The census script
 
@@ -53,6 +51,10 @@ python3 scripts/census.py --folder "<notes folder path>" --limit 10
 
 The script runs inside the task, in the task's own working space on the side where the notes folder is mounted; it never runs on the reader's computer and never goes into the notes folder or any folder of theirs. The plugin's files live in the task's cloud space, so copy the script into that working space first and run it there. Then say in one plain sentence that a script read the folder; the reader is not a programmer and does not need the mechanics, but is never left unaware that something ran. If the task cannot run scripts, do the same work by reading, as this skill says, and say that you did. Never rely on the folder's modification times: the mount flattens them. Prefer the `created` lines inside notes for age; the script reports both, and its modification times are there only so you can see that they disagree. If the script is not available, take the census by reading, as above.
 
+## Ending
+
+Report what was done and what is left open. End with one word for completeness: full, partial (with what is missing), or minimal (stopped early).
+
 ## Asking
 
-Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said.
+Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said. Silence is never a yes: a yes is a tap on the control or a word.

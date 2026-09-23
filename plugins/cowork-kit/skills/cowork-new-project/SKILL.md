@@ -33,9 +33,13 @@ Say the hand steps the app needs: create the project, connect the folder, paste 
 
 The project is complete without a plugin: the Instructions text and the project docs are the project, and a task does everything a setup skill would. Say so first. Then say, once and without pushing it, that a reader who is comfortable editing files can turn the design into a plugin of their own, so its setup runs from a phrase like the kit's: the kit's repository carries a template folder, a copy of it with the bracketed lines filled in from the text drafted above is the plugin, and Anthropic's plugin-management plugin packages a folder as a `.plugin` file from inside a Cowork task. That path needs the repository downloaded, a text editor and the filled-in folder; if the reader would rather not, nothing is lost.
 
+## Ending
+
+Report what was done and what is left open. End with one word for completeness: full, partial (with what is missing), or minimal (stopped early).
+
 ## Asking
 
-Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said.
+Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said. Silence is never a yes: a yes is a tap on the control or a word.
 
 ## What this skill does not do
 
