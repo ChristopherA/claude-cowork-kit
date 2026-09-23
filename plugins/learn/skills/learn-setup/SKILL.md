@@ -17,7 +17,7 @@ A task can create project docs in the project it runs in and read a connected fo
 
 ## Before the first question
 
-Check whether a project doc named `mission.md` already exists. If it does, this project is already set up: say so, offer to read `progress.md` back and pick up from there, and stop. Do not run setup twice.
+Check which of `mission.md`, `curriculum.md` and `progress.md` already exist. If `mission.md` does, this project is already set up: say so, offer to read `progress.md` back and pick up from there, and stop. Do not run setup twice. A doc that exists is kept and read back, never recreated; say which you kept.
 
 ## The interview, one question at a time
 

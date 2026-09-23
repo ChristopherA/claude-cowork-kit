@@ -84,7 +84,7 @@ PLUGINS = {
         "readme": (
             "Each skill expects the learning project the Claude Cowork Kit describes: a folder of "
             "materials connected in the desktop app and the project docs mission.md, curriculum.md "
-            "and progress.md, which the setup creates. Turn on the Learning style for the project."
+            "and progress.md, which the setup creates. Turn on the Learning style for the project, in the style menu."
         ),
     },
     "week": {
@@ -118,7 +118,7 @@ PLUGINS = {
         "readme": (
             "Each skill expects the money project the Claude Cowork Kit describes: statements in a "
             "connected folder that stays on the computer, and project docs holding only categories, "
-            "targets and summaries with no account details. Keep the project in the mode that asks."
+            "targets and summaries with no account details. Keep the project in the mode that asks (the explainer, under The two approval modes)."
         ),
     },
     "medical": {
@@ -134,9 +134,9 @@ PLUGINS = {
         "references": ["medical-instructions.md"],
         "readme": (
             "Each skill expects the medical project the Claude Cowork Kit describes: records in a "
-            "connected folder that stays on the computer, arranged as the explainer's medical section "
-            "describes, and project docs holding only a questions list and a bare timeline. Keep the "
-            "project in the mode that asks."
+            "connected folder that stays on the computer, arranged as the explainer's section The medical "
+            "project describes, and project docs holding only a questions list and a bare timeline. Keep the "
+            "project in the mode that asks (the explainer, under The two approval modes)."
         ),
     },
     "pkm": {

@@ -1,6 +1,6 @@
 ---
 name: pkm-source-note
-description: Writes one source note from a book, paper, article or transcript the user hands over, citation recorded, source claims kept apart from the user's own. Use for "make a source note" or "file this".
+description: Writes one source note from a book, paper, article or transcript the user hands over, citation recorded, source claims kept apart from the user's own. Use for "make a source note", "source note".
 ---
 
 # Source note
@@ -47,7 +47,7 @@ Do not summarize the whole source when three passages will do; the note is for f
 python3 scripts/pdf_info.py "<path to pdf>" --pages 3
 ```
 
-The plugin's files live in the cloud space of a task, and the notes folder is mounted on the local side; so the script does not run in place: copy it to the side where the folder is (a checksum before and after confirms the copy), run it there, and say that you did. Never rely on the folder's modification times: the mount flattens them.
+The plugin's files live in the cloud space of a task, and the notes folder is mounted on the local side; so the script does not run in place. Copy it into the task's own working space on that side, never into the notes folder or any folder of the reader's, run it there, and say in one plain sentence that you did; do not describe the copy or its checks to the reader, who is not a programmer. Never rely on the folder's modification times: the mount flattens them.
 
 Use the metadata to fill the citation and the text to read the opening; then read the rest of the PDF as needed. If the script reports that `pdftotext` is not available, read the PDF directly and say the citation fields came from the document's own front matter.
 

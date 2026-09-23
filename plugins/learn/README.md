@@ -2,7 +2,7 @@
 
 Skills for the Claude Cowork Kit's learning project: set a course, run a lesson, and quiz yourself on what you have learned or read.
 
-Each skill expects the learning project the Claude Cowork Kit describes: a folder of materials connected in the desktop app and the project docs mission.md, curriculum.md and progress.md, which the setup creates. Turn on the Learning style for the project.
+Each skill expects the learning project the Claude Cowork Kit describes: a folder of materials connected in the desktop app and the project docs mission.md, curriculum.md and progress.md, which the setup creates. Turn on the Learning style for the project, in the style menu.
 
 ## Skills
 

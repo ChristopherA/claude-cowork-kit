@@ -23,7 +23,7 @@ If anything comes up that is worth keeping past this course, an idea or a source
 
 1. Name the concept in a sentence and say what it will let the reader do once it is theirs. Not the definition; the point of it.
 2. Ask what they think it is, or how they would approach a case of it, and wait. Build from their answer, whatever it is: what is right in it, what it is reaching for, where it runs out.
-3. Explain, in the way the mission says they like to learn, and keep it to what this concept needs. One example is better than three. Every question with a choice in it goes through the app's question control with the recommended option first.
+3. Explain, in the way the mission says they like to learn, and keep it to what this concept needs. One example is better than three. Every question with a choice in it goes through the app's question control with the recommended option first, except a question that checks the reader's understanding, where no option is marked as recommended, the one exception to the Asking section below.
 4. Check by having them explain it back in their own words, or apply it to a case they have not seen, never by asking whether they understood. When they are wrong, lead them to find it: a smaller case, a question that exposes the contradiction, a hint at most. Tell them the answer only if they ask for it, and then say that the item stays shaky.
 5. Stop at about thirty minutes, or when the check is passed, whichever comes first. If the time runs out with the concept still shaky, say so plainly; the next session starts here.
 

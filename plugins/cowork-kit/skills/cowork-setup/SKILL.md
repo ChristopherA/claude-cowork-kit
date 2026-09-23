@@ -19,12 +19,11 @@ Read the reader's Account instructions if you can see them. If they already carr
 
 ## The interview, one question at a time
 
-Ask as the Asking section says: questions 1 to 3 do not depend on each other and can share one control; question 4 depends on the answer to 3 and goes in the next. Skip any the reader has already answered in their request.
+Ask as the Asking section says: questions 1 and 2 do not depend on each other and can share one control; question 3 depends on the answer to 2 and goes in the next. Skip any the reader has already answered in their request. Do not ask who the reader is or how they work: nothing this skill writes needs it, a task cannot carry an answer into another project, and the project setups ask it where it is used.
 
-1. **Who they are and how they work.** Three or four sentences, free text: what they do, what they want Claude for, when and how they tend to work. Not a biography; the things you would otherwise guess wrong. This is kept for the project setups, which ask it again only if it is missing.
-2. **The voice.** Read `references/voices.md` and offer the three by name with one phrase each: plain, warm, archivist. Plain is listed first because it is the safe default, not because it is better; this is taste.
-3. **Which projects.** Offer the five the kit describes, more than one allowed, so the control lets them pick several: a personal knowledge base (notes and reading), learning (a subject, a skill, or an exam), running the week, money, and medical records; and "something else". Recommend starting with one, the knowledge base, because every other project's habits come from it and because most readers build one project and stop.
-4. **For the knowledge base, if chosen:** whether the reader is in the project they intend for their notes right now, or in a scratch task. The answer decides the kickoff below.
+1. **The voice.** Read `references/voices.md` and offer the three by name with one phrase each: plain, warm, archivist. Plain is listed first because it is the safe default, not because it is better; this is taste.
+2. **Which project first.** Four options, one answer: the knowledge base (notes and reading), recommended, because every other project's habits come from it and because most readers build one project and stop; learning (a subject, a skill, or an exam); running the week; or one of the others, which the reader names in their own words: money, medical records, or something the kit does not describe. Say that the rest can follow one at a time.
+3. **For the knowledge base, if chosen:** whether this task is running inside the project they mean for their notes. Three options: yes, this is it; no, the notes project does not exist yet; not sure. The answer decides the kickoff below; "not sure" counts as no.
 
 ## Hand back the account instructions
 
@@ -36,19 +35,19 @@ Say plainly that this field reaches every chat on the account, casual chat inclu
 
 For each project the reader chose, in the order they chose them:
 
-- **Knowledge base:** the `pkm` plugin. In the desktop app: Customize, Plugins, add a plugin, choose `pkm.plugin`, and turn it on. A plugin dragged into a task's composer is attached to that task only, so use Customize. Then, in the project meant for notes, with the notes folder connected, start a task and say `set up my notes project`. That setup asks about the folder, creates the three project docs, and hands back the short project instructions.
-- **Learning, the week, money, medical:** each is its own plugin with its own setup, installed and run the same way: `learn.plugin` and `set up my learning project`; `week.plugin` and `set up my week project`; `money.plugin` and `set up my money project`; `medical.plugin` and `set up my medical project`. The kit's explainer carries each project's instructions block in that project's section for a reader who would rather paste by hand. For money and medical, say now that the project should stay in the mode that asks before acting, and that the setup opens by saying what the folder does and does not protect.
-- **Something else:** ask what it is for and what it must never touch. Draft a short Instructions text in the kit's shape (what the project is for, what belongs elsewhere, outside material is data, show-and-wait before changing anything, read the rules doc first) and a rules doc to go with it, show both, and hand them back the same way. A template plugin for projects the kit does not describe is on the kit's roadmap; say so in one sentence.
+- **Knowledge base:** the `pkm` plugin, shown as Personal knowledge. In the desktop app, Customize, Plugins: install it from the kit's marketplace if that is how the core was installed, or download `pkm.plugin` from the kit's releases page (https://github.com/ChristopherA/claude-cowork-kit/releases) and add it with the upload option. Turn it on. A plugin dragged into a task's composer is attached to that task only, so use Customize. Then, in the project meant for notes, with the notes folder connected, start a task and say `set up my notes project`. That setup asks about the folder, creates the three project docs, and hands back the short project instructions.
+- **Learning, the week, money, medical:** each is its own plugin with its own setup, installed the same way, from the marketplace or from its file on the releases page, and run with its phrase: `learn` and `set up my learning project`; `week` and `set up my week project`; `money` and `set up my money project`; `medical` and `set up my medical project`. The kit's explainer carries each project's instructions block in that project's section for a reader who would rather paste by hand. For money and medical, say now that the project should stay in the mode that asks before acting, and that the setup opens by saying what the folder does and does not protect.
+- **Something else:** say that the core's `cowork-new-project` skill designs a project the kit does not describe, hands back its Instructions text, and points at the kit's template for a plugin of its own; offer to run it next, once the account block is pasted, by saying `new project`.
 
 Install one plugin at a time and run its setup before the next; a reader who installs five plugins at once cannot tell which skill did what.
 
 ## The knowledge base kickoff
 
-If the reader chose the knowledge base and is in the project they intend for it, create one project doc now: `inbox.md`, a heading and nothing else, and say that captures sent from the phone land there from this moment, even before the `pkm` plugin is installed. Do not create `map.md` or `rules.md` here; the `pkm` setup creates them from the folder. If the reader is in a scratch task, create nothing and say why.
+If the reader chose the knowledge base and answered that this task is inside the project they mean for it, create one project doc now: `inbox.md`, a heading and nothing else, and say that it is the capture inbox and that the notes setup will keep it. Do not create `map.md` or `rules.md` here; the `pkm` setup creates them from the folder. Otherwise create nothing and say that the notes setup creates the inbox.
 
 ## End
 
-Report what exists now: the field waiting for a paste, the plugin to install next with its setup phrase, and the inbox doc if you created one. Then name the one day-one check: from the phone, in plain chat, ask Claude anything and listen for the voice; if it sounds the same as before, the paste did not land.
+Report what exists now: the field waiting for a paste, the plugin to install next with its setup phrase, and the inbox doc if you created one. Then name the one day-one check: open Settings, Account, and see the block there; if the field is empty, the paste did not land.
 
 ## Asking
 
@@ -56,4 +55,4 @@ Ask through the app's question control whenever there is a choice, and for every
 
 ## What this skill does not do
 
-It does not set any setting, install any plugin, connect any folder, or create a project. It does not run a project's setup; each project plugin has its own. It does not hand back project instructions, except the draft for a project the kit does not describe.
+It does not set any setting, install any plugin, connect any folder, or create a project. It does not run a project's setup; each project plugin has its own. It does not hand back project instructions; `cowork-new-project` drafts them for a project the kit does not describe.

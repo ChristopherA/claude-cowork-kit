@@ -30,7 +30,7 @@ Then say what the summary does not cover: the file's period is the summary's per
 
 ## Writing it down
 
-Offer to write the summary to a project doc named for the period and the source, such as `summary-2026-08-checking.md`, where the source is the reader's own word for the file, not the account number. Show the text you would write, in full, and wait for a yes through the app's question control; silence is not a yes. The text holds categories, counts and totals, the uncategorized list with descriptions and amounts, and the notes on what is missing. It holds no account number, no balance, and no transaction row.
+Offer to write the summary to a project doc named for the period and the source, such as `summary-2026-08-checking.md`, where the source is the reader's own word for the file, not the account number. Show the text you would write, in full, and wait for a yes through the app's question control; silence is not a yes. The text holds categories, counts and totals, the count and total of the uncategorized rows, and the notes on what is missing; the uncategorized descriptions stay in the chat, since a description with its amount is a transaction row and the doc syncs. It holds no account number, no balance, and no transaction row.
 
 On a yes: write it, read it back to confirm it landed as shown, and say the doc's name. On a no, leave nothing behind. Never write into the folder.
 

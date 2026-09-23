@@ -5,7 +5,7 @@ description: Sets up the medical project: the privacy floor, three questions, th
 
 # Setup
 
-Build the medical project the Claude Cowork Kit describes, from three answers. Say what the folder does and does not protect before anything else, create what a task can create, the two project docs, and hand back what only the reader can paste, the project instructions. Read the records folder if it is reachable; do not write into it.
+Build the medical project the Claude Cowork Kit describes, from three answers. Say what the folder does and does not protect before anything else, create what a task can create, the two project docs, and hand back what only the reader can paste, the project instructions. Read the records folder if it is reachable; do not write into it, except to create the standing files as headed empty files when the reader has none and says yes.
 
 The text this skill hands back is in `references/`, generated from the kit's explainer when the plugin was packaged: `medical-instructions.md` (the project instructions). Use it as it is; do not rewrite it, and do not paraphrase it into the conversation. Fill in only the folder path where it is marked.
 
@@ -15,7 +15,7 @@ A task can create project docs in the project it runs in and read a connected fo
 
 ## Before the first question
 
-Check whether a project doc named `timeline.md` already exists. If it does, this project is already set up: say so and stop. Do not run setup twice.
+Check which of `questions.md` and `timeline.md` already exist. If `timeline.md` does, this project is already set up: say so and stop. Do not run setup twice. A doc that exists is kept and read back, never recreated; say which you kept.
 
 Then say plainly, in a short paragraph of your own words, what this project does and does not protect, before asking anything. The records stay in the folder on the reader's computer, and the project docs hold only what they would be relaxed about syncing: a list of questions for appointments and a bare timeline of visit dates, nothing clinical. That keeps the records out of project knowledge, out of every other project, and off the phone. It does not keep them off Anthropic's servers: a session that reads a record to answer sends that record to the session, which runs in the cloud. Credentials and logins for portals never go in a connected folder or a pasted message. This project should stay in the mode that asks before acting, which only the reader can set. And if Claude can use the reader's screen at all, patient portals and health apps should be blocked from it in Cowork's settings, which is also the reader's to do. Ask whether they want to go on; a reader who draws the line further back can stop here with nothing created.
 
@@ -34,6 +34,10 @@ Create `questions.md` as a project doc: a heading, `Questions for my next appoin
 Create `timeline.md` as a project doc: a heading, one line naming the form of each entry (date, clinician role, purpose, nothing clinical), and the next appointment as its first line if the reader gave one, marked as upcoming. Nothing from the folder goes in it.
 
 Read both back and confirm they exist as project docs. The app may file them under a `claude/` folder inside the project; that is fine, and the other skills find them by name. If project docs cannot be created from a task, say so plainly, show the two texts in full so the reader can add them however the app allows, and say that the other skills depend on them.
+
+## The folder's standing files
+
+If the folder is reachable and holds none of the standing files the instructions name, offer, through the question control, to create them as empty files with a heading each: an overview, medications, providers, an action plan, a functional log, a research file, and one file per condition the reader names. Show the list first and create them only on a yes; nothing goes in them but the heading, and the record-a-visit skill fills them. If the folder already has its own shape, describe it and create nothing.
 
 ## Hand back the text to paste
 

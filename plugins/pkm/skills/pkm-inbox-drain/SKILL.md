@@ -47,7 +47,7 @@ When the inbox is empty, or the reader stops, report: how many items were filed 
 python3 scripts/candidates.py --folder "<notes folder path>" --text "<the capture>" --limit 5
 ```
 
-The plugin's files live in the cloud space of a task, and the notes folder is mounted on the local side; so the script does not run in place: copy it to the side where the folder is (a checksum before and after confirms the copy), run it there, and say that you did. Never rely on the folder's modification times: the mount flattens them.
+The plugin's files live in the cloud space of a task, and the notes folder is mounted on the local side; so the script does not run in place. Copy it into the task's own working space on that side, never into the notes folder or any folder of the reader's, run it there, and say in one plain sentence that you did; do not describe the copy or its checks to the reader, who is not a programmer. Never rely on the folder's modification times: the mount flattens them.
 
 Use its output as the candidate list in step 2. If it is not available, or code execution is off, search with the folder's own search or by reading the likeliest folder, and say that you did so; the routine is the same.
 

@@ -22,16 +22,16 @@ Where the census script is available, run it and read its output (see below). Ot
 For each claim in `map.md`, say one of three things:
 
 - **Holds.** The folder agrees. Say it in a word; do not list evidence for what is fine.
-- **Stale.** The folder disagrees, and the description is what is wrong: a folder that no longer exists or has been renamed, a convention the newest notes do not follow, a naming rule the files do not match, an open thread whose note has not changed in months, a current-work section older than its date suggests. Quote the claim, say what the folder shows, and propose the replacement wording.
+- **Stale.** The folder disagrees, and the description is what is wrong: a folder that no longer exists or has been renamed, a convention the newest notes do not follow, a naming rule the files do not match, an open thread whose note carries no date newer than months ago, a current-work section older than its date suggests. Quote the claim, say what the folder shows, and propose the replacement wording.
 - **Drift in the folder.** The folder disagrees, and the folder is what is wrong: notes without the metadata line, a file in the wrong folder by its own content, mixed wrapping, a note named for a topic rather than a claim where the convention says claim. Name the files, at most ten per finding, and say what would bring them into line. Do not fix them; the reader may prefer to change the convention.
 
 Then look for what `map.md` does not say: a folder it never mentions; a pattern in the newest notes (a metadata line, a naming habit, a kind of link) that has become a convention without being written down; something on the "deliberately not here" list that is, in fact, there.
 
-Check the open threads against the files, not against the description: for each thread `map.md` names, confirm a note for it exists and say when it last changed. A thread listed as open whose note is missing, or untouched for months, is reported as such; a claim that something exists is checked by the thing existing.
+Check the open threads against the files, not against the description: for each thread `map.md` names, confirm a note for it exists and say the newest date inside it. A thread listed as open whose note is missing, or untouched for months, is reported as such; a claim that something exists is checked by the thing existing.
 
 ## The current-work section
 
-Treat it separately, because it goes stale fastest and matters most. Say when it was last updated if the file records that, name the notes and threads changed most recently, and ask whether the section still describes what the reader is chewing on. Propose wording only if the reader says what has changed; do not guess at their current work from file activity.
+Treat it separately, because it goes stale fastest and matters most. Say when it was last updated if the file records that, name the notes and threads with the newest dates inside them (the file's modification time is not reliable on the mount), and ask whether the section still describes what the reader is chewing on. Propose wording only if the reader says what has changed; do not guess at their current work from file activity.
 
 ## Report
 
@@ -47,7 +47,7 @@ If the reader says "apply", two kinds of edit are on offer and they are handled 
 python3 scripts/census.py --folder "<notes folder path>" --limit 10
 ```
 
-The plugin's files live in the cloud space of a task, and the notes folder is mounted on the local side; so the script does not run in place: copy it to the side where the folder is (a checksum before and after confirms the copy), run it there, and say that you did. Never rely on the folder's modification times: the mount flattens them. Treat modification times with care in any case: a sync service can touch every file at once. Prefer the `created` lines inside notes for age; the script reports both so you can tell whether they agree. If the script is not available, take the census by reading, as above.
+The plugin's files live in the cloud space of a task, and the notes folder is mounted on the local side; so the script does not run in place. Copy it into the task's own working space on that side, never into the notes folder or any folder of the reader's, run it there, and say in one plain sentence that you did; do not describe the copy or its checks to the reader, who is not a programmer. Never rely on the folder's modification times: the mount flattens them. Prefer the `created` lines inside notes for age; the script reports both, and its modification times are there only so you can see that they disagree. If the script is not available, take the census by reading, as above.
 
 ## Asking
 

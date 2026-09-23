@@ -15,7 +15,7 @@ A task can read the project docs, create project docs in the project it runs in,
 
 ## Before the first question
 
-Check whether a project doc named `categories.md` already exists. If it does, this project is already set up: say so and stop. Do not run setup twice.
+Check which of `categories.md` and `targets.md` already exist. If `categories.md` does, this project is already set up: say so and stop. Do not run setup twice. A doc that exists is kept and read back, never recreated; say which you kept.
 
 Then, before asking anything, say plainly what the folder does and does not protect, in a short paragraph of your own words that keeps every point of this one. The statements and exports stay in the folder on the reader's computer, and the project docs hold only what they would be relaxed about syncing: categories, targets, and summaries with no account details. That keeps the records out of project knowledge, out of every other project, and off the phone. It does not keep them off the cloud: when a session reads a statement to answer a question, that statement goes to the session, which runs in the cloud, and the reader decides whether that is acceptable. One floor holds for everyone: credentials, logins and card numbers never go in a connected folder or a pasted message. Keep this project in the mode that asks before acting; that is set by the reader, in the app, and a task cannot set it. And if Claude can use the computer's screen and apps at all, block the banking apps and sites from it in Cowork's settings, so a task in some other project never wanders into them.
 

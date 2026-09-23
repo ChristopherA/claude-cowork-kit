@@ -13,6 +13,7 @@ Output keys:
   wrapping: {"hard_wrapped": N, "unwrapped": N, "hard_wrapped_files": [...]}
   links: {"relative_markdown": N, "wikilinks": N, "urls": N}
   newest, oldest: [{"path", "mtime", "created"}] by modification time
+    (mtime is unreliable on a mounted folder; prefer created)
   created_range: {"earliest", "latest"} from created lines
 Exit 0 on success, 2 on bad arguments, 3 if the folder is unreadable.
 """

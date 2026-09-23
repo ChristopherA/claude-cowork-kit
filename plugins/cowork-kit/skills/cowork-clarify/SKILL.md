@@ -13,7 +13,7 @@ Facts are your job; decisions are the reader's. When a question turns on somethi
 
 ## Before the first question
 
-Look for what already decides this. Read `map.md`'s settled conventions and current work, the inbox if the decision is about a capture, and any note or thread the reader names. If something there already answers the question, say so and ask only what it leaves open. A dialogue that starts cold re-derives, worse, what the reader wrote down last month.
+Look for what already decides this. Read `wrap-up.md` if one exists, then the project's own docs: in the notes project `map.md`'s settled conventions and current work and the inbox if the decision is about a capture; elsewhere the priorities, mission, categories or questions doc; and any note or thread the reader names. If something there already answers the question, say so and ask only what it leaves open. A dialogue that starts cold re-derives, worse, what the reader wrote down last month.
 
 If the reader has already said what they want on one dimension, do not ask about it. Skip anything the request answered.
 

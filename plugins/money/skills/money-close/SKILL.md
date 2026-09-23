@@ -28,7 +28,7 @@ Do not batch across months. Do not carry a figure from one month's close into an
 
 ## Writing it down
 
-Offer to write the month's summary to a project doc named for the month, such as `close-2026-08.md`. Show the text you would write, in full: the files read by the reader's own names for them and the periods they covered, what was missing, the category lines with counts and totals, the uncategorized list, the transfers, the month's totals, and the target comparison if there was one. It holds no account number, no balance, and no transaction row. Wait for a yes through the app's question control; silence is not a yes.
+Offer to write the month's summary to a project doc named for the month, such as `close-2026-08.md`. Show the text you would write, in full: the files read by the reader's own names for them and the periods they covered, what was missing, the category lines with counts and totals, the uncategorized count and total (the descriptions stay in the chat), the transfers, the month's totals, and the target comparison if there was one. It holds no account number, no balance, and no transaction row. Wait for a yes through the app's question control; silence is not a yes.
 
 On a yes: write it, read it back to confirm it landed as shown, and say the doc's name. On a no, leave nothing behind. Never write into the folder, and do not edit `categories.md` or `targets.md` during a close; if the month showed a category is missing or a definition is unclear, say so in one sentence at the end and let the reader change the doc in its own step.
 

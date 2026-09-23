@@ -1,6 +1,6 @@
 ---
 name: pkm-setup
-description: Sets up the notes project: four questions, then rules.md, map.md and inbox.md as project docs and the short instructions to paste. Use for "set up my notes project", "install the kit", "run setup".
+description: Sets up the notes project: four questions, then rules.md, map.md and inbox.md as project docs and the short instructions to paste. Use for "set up my notes project", "notes setup", "set up my notes".
 ---
 
 # Setup
@@ -11,13 +11,13 @@ The texts this skill hands back are in `references/`, generated from the kit doc
 
 ## Before the first question
 
-Check whether a project doc named `map.md` already exists. If it does, this project is already set up: say so, offer the description check instead, and stop. Do not run setup twice.
+Check which of the three project docs already exist: `rules.md`, `map.md`, `inbox.md`. If `map.md` exists, this project is already set up: say so, offer the description check instead, and stop. Do not run setup twice. If `inbox.md` exists alone, the core setup created it and captures may already be in it: keep it exactly as it is, and say so. A doc that exists is never recreated.
 
 ## Four questions, one at a time
 
 Ask each, wait for the answer, and reflect it back in a phrase before the next. Skip any the reader has already answered in their request.
 
-1. **The folder.** Where the notes folder is on their computer, or whether they need to start one. If they name a folder, confirm you can reach it; if you cannot, say so and continue from their description, marking in `map.md` that the folder section is to be checked at the desk. If they are starting one, propose the default layout from the description template (inbox, sources, notes, threads, archive), show it, and create the empty folders only after a yes.
+1. **The folder.** Where the notes folder is on their computer, or whether they need to start one. If they name a folder, confirm you can reach it; if you cannot, say so and continue from their description, marking in `map.md` that the folder section is to be checked at the desk. If they are starting one, propose the default layout from the description template (inbox, sources, notes, threads, archive), show it, say that the folder should be backed up before anything writes into it, and create the empty folders only after a yes.
 2. **The voice.** Read `references/voices.md` and offer the three by name with one phrase each: plain, warm, archivist. Do not recommend one; this is taste. If the account instructions already carry the kit's block with one of the voices in it, say which and skip the question.
 3. **Who they are and how they work.** Three or four sentences: what they do, what the notes are for, when and how they work with them. Not a biography; the things you would otherwise guess wrong.
 4. **Current work.** Two or three sentences: the open questions, the thing eating their attention this month. Ask for the open threads by name if they have any.
@@ -32,7 +32,7 @@ Create `rules.md` as a project doc from `references/rules-template.md`, with the
 
 Create `map.md` as a project doc from `references/map-template.md`, with every bracket filled from the answers and from what the folder showed. The folder sections describe the real folder. The conventions section holds what the folder shows plus anything the reader said is settled. Set the date. Leave nothing in brackets; where an answer is missing, ask rather than invent.
 
-Create `inbox.md` as a project doc: a heading and nothing else.
+Create `inbox.md` as a project doc, a heading and nothing else, unless it already exists, in which case leave it untouched.
 
 Read all three back and confirm they exist as project docs. The app may file them under a `claude/` folder inside the project; that is fine, and the other skills find them by name. If project docs cannot be created from a task, say so plainly, show the three texts in full so the reader can add them however the app allows, and say that the rest of the kit depends on them.
 

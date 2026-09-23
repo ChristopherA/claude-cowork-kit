@@ -15,7 +15,7 @@ Find the live thing: the note being drafted, the filing decision in progress, th
 
 Not a table, not a score. Three short paragraphs:
 
-**Confident about.** What you have seen directly: the file you read, the sentence in `map.md`, the source the reader handed you, the arithmetic you showed. Name the evidence for each item in the same sentence, so the reader can check it rather than trust it.
+**Confident about.** What you have seen directly: the file you read, the sentence in a project doc, the source the reader handed you, the arithmetic you showed. Name the evidence for each item in the same sentence, so the reader can check it rather than trust it.
 
 **Less confident about.** What you inferred, remembered from earlier in the conversation, or filled in because it seemed likely. Say which of those it is. If a claim came from memory of an earlier session rather than from a file, say so; at the desk you have no such memory, and the reader should know when you are working from the description alone.
 

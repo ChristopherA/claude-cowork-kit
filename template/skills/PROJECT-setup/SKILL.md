@@ -1,6 +1,6 @@
 ---
 name: PROJECT-setup
-description: Sets up the [PROJECT] project: a short interview, the project docs, and the instructions to paste. Use for "set up my [PROJECT] project", "run setup".
+description: Sets up the [PROJECT] project: a short interview, the project docs, and the instructions to paste. Use for "set up my [PROJECT] project", "[PROJECT] setup".
 ---
 
 # Setup
