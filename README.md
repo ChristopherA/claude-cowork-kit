@@ -8,6 +8,8 @@ You use Claude Cowork: the desktop app with a folder connected, and the phone ap
 
 It is not for Claude Code, the command-line tool developers use, and it is not for plain chat. Most published advice for working with Claude on your own files is written for one of those two, and where this kit disagrees with it, that is usually the difference. If you are comfortable in a terminal, [Claude Code](https://docs.anthropic.com/en/docs/claude-code) will do more than this kit can, and the folder this kit builds works unchanged under it when you get there.
 
+**Four words the rest of this page uses.** A *task* is a conversation in Cowork: inside a project, the composer has a Chat and a Cowork toggle, and a task is what you start with the Cowork side on. A *skill* is a routine Claude runs when what you say matches its description; there is no command to remember. A *plugin* is a set of skills installed once, under Customize in the desktop app, that then works in every project. A *marketplace* is a place the app can install plugins from; this repository is one.
+
 ## Why Cowork
 
 You could keep notes with Claude other ways, and each one costs something.
@@ -36,7 +38,7 @@ Six plugins and a template. Install the core, then only the projects you want; m
 | `medical`, **Medical records** | A record you can compare across visits, and appointments prepared from it. | `medical-setup`, `medical-visit-prep` (the questions from what changed, and a visit pack when someone is coming with you), `medical-record-visit`, `medical-check-in` (a weekly functional log in your own words), `medical-treatment-questions` (grades the evidence an article cites and writes the questions). |
 | `template/` | For contributors and readers comfortable editing files: a project plugin with the brackets left in. A project of your own does not need it; the core's `cowork-new-project` designs one and hands back its text. | None; it is a skeleton. |
 
-Each plugin's README lists its skills with the phrases that trigger them. A skill is a routine Claude runs when what you say matches its description; there is no command to remember, and everything a skill does you could ask for in a sentence, more slowly. The setup skills hand back only what the app still needs from your hands: a task can create project docs and read your folder, but it cannot change your settings, create a project, connect a folder or install a plugin.
+Each plugin's README lists its skills with the phrases that trigger them. Everything a skill does you could ask for in a sentence, more slowly; the skills are the upgrade and the instruction blocks are the floor. The setup skills hand back only what the app still needs from your hands: a task can create project docs and read your folder, but it cannot change your settings, create a project, connect a folder or install a plugin.
 
 ## Install
 
@@ -45,18 +47,21 @@ Everything installs from the Claude desktop app, under Customize, then Plugins. 
 - **From the marketplace.** Choose **Add marketplace**, enter `ChristopherA/claude-cowork-kit`, and install a plugin from the list it shows. Installing this way also brings updates.
 - **From a file.** Download the plugin's `.plugin` file from the [releases page](https://github.com/ChristopherA/claude-cowork-kit/releases) and add it with the upload option on the same Plugins page. The release notes carry each file's checksum.
 
-Turn the plugin on after installing it. Do not drag a `.plugin` file into a task's composer: a plugin dropped there is attached to that one task only and is gone with it. To add a single skill instead of a whole plugin, download its `.skill` file from the same release and upload it under Customize, Skills.
+Turn the plugin on after installing it. Do not drag a `.plugin` file into a task's composer: a plugin dropped there is attached to that one task only and is gone with it. The releases carry whole plugins. A single skill can be added on its own, as a `.skill` file the kit's build writes, under Customize, Skills; that is for someone building from the repository.
 
 Install one plugin at a time, and run its setup before installing the next.
 
 ## First run
 
-1. Install **Cowork Kit core** and turn it on.
-2. Start a task and say `set up the kit`. Claude asks which voice you want and which project first, hands back one block of text for you to paste into Settings, Account, "Instructions for Claude", and names the plugin to install next.
-3. Before you connect a folder, read the explainer's section on what the connected folder does and does not protect. It is the one thing worth knowing in advance: everything Claude can reach in a connected folder it may read, and a file in that folder can carry instructions Claude will follow.
-4. Install the project plugin Claude named, create the project in the app, connect its folder, and in a task inside it say `set up my notes project` (or the project's own phrase, in its README). That setup creates the project docs and hands back the short instructions to paste into the project's Instructions panel.
+1. **Back up your notes folder** with whatever you already use. Do it before the first task that is allowed to write, not after.
+2. **Install the notes plugin**, shown as **Personal knowledge** (its file name is `pkm`), by either path above, and turn it on. It is the project the others learn their habits from, and no other plugin has to come first.
+3. **Create the project and connect the folder.** Make an ordinary project in the app and name it, then connect your notes folder to it from the project's page. Do not create the project *from* the folder: a project created that way lives on that computer and does not sync, which silently breaks the phone half of this.
+4. **Run the setup.** In a task inside that project, say `set up my notes project`. Claude asks three questions, creates the project docs, and hands back what only you can paste: the account instructions, if your Settings, Account, "Instructions for Claude" field does not carry them yet, and the short project instructions for the Instructions panel at the side of the project page. It then names the day-one checks, the phone check first.
+5. **Install the core plugin** (`cowork-kit`, shown as **Cowork Kit core**) when you want its routines; they work in every project. Its own setup, `set up the kit`, is for a reader who starts there instead.
 
-Setup takes about thirty minutes for the first project. You make the decisions; Claude does the typing.
+Before you connect a folder, read what the connected folder does and does not protect: `PRIVACY.md` here, and the explainer's What you need and Maintenance sections. Everything Claude can reach in a connected folder it may read, and a file in that folder can carry instructions Claude will follow.
+
+Setup takes about thirty minutes for the first project. You make the decisions; Claude does the typing. Where Customize and Settings sit in the app's layout is one of the things the kit is still confirming; both are in the desktop app.
 
 ## Status
 
@@ -67,6 +72,7 @@ Release candidate. The notes plugin has had one run in Cowork; the core and the 
 - [The explainer](docs/claude-cowork-kit.md): why Cowork, how the three places things can live differ, why the description is not a copy, the two approval modes, the privacy floor for money and medical records, and what the kit will not do. It prints every block a setup hands back, so you can read what a setup will write before running it, or paste it by hand with no plugin at all.
 - Each plugin's README, `plugins/<name>/README.md`: its skills and the phrases that trigger them.
 - `docs/skill-capabilities.md`: what a Cowork skill can and cannot reach, measured in the app.
+- `PRIVACY.md`: what leaves your computer and what does not. `CHANGELOG.md`: what each release changed. `CONTRIBUTING.md`: how to report a problem or change the text.
 
 ## For contributors
 
