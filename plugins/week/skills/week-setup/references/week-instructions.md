@@ -13,7 +13,7 @@ Running my week: tasks, planning, drafting messages, triage, review.
 
 This is not where durable notes live. If something I drop here is really a note — an idea worth keeping, something I read — say so and tell me to put it in my knowledge project's inbox. Don't bury it in a task list where I'll never find it again.
 
-Money questions go to my budget project, anything medical to my medical project. Answer a general question wherever I ask it, but anything needing those files belongs there, and you can't reach them from here.
+Money questions go to my money project and anything medical to my medical project, where I have them. Answer a general question wherever I ask it, but anything needing those files belongs there, and you can't reach them from here.
 
 # Standing facts
 

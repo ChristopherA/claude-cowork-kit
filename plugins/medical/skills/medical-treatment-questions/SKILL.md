@@ -25,7 +25,7 @@ From the gaps, draft the questions to ask the clinician, under the same rules as
 
 ## Write on a yes
 
-Two things may be written, each on its own yes. The questions go onto `questions.md` with the source named and no clinical values, since that doc syncs. The reading, what the source claims and the grade, goes into the folder's research file in the form it already uses, with the source, its date, and the status (found, discussed with the clinician, trying, tried). Show each in full first, read back after writing, and confirm by file name.
+Two things may be written, each on its own yes. The questions go onto `questions.md` with the source named and no clinical values, since that doc syncs. The reading, what the source claims and the grade, goes into the folder's research file in the form it already uses, or, when the folder has none, into one you offer to create as a headed file, with the source, its date, and the status (found, discussed with the clinician, trying, tried). Show each in full first, read back after writing, and confirm by file name.
 
 ## Ending
 

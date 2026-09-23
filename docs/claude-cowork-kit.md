@@ -400,7 +400,7 @@ Learning something on purpose: [SUBJECT, SKILL, OR EXAM]. The plan, the record o
 
 # What belongs elsewhere
 
-Anything worth keeping past this course — an idea, a source I'll want again — belongs in my knowledge project's inbox. Say so and stop rather than burying it in a lesson. Scheduling study time belongs in my week project.
+Anything worth keeping past this course — an idea, a source I'll want again — belongs in my knowledge project's inbox. Say so and stop rather than burying it in a lesson. Scheduling study time belongs in my week project, where I have one.
 
 This project holds working files that are meant to go stale: the mission, the curriculum, the progress record, practice material.
 
@@ -444,7 +444,7 @@ Running my week: tasks, planning, drafting messages, triage, review.
 
 This is not where durable notes live. If something I drop here is really a note — an idea worth keeping, something I read — say so and tell me to put it in my knowledge project's inbox. Don't bury it in a task list where I'll never find it again.
 
-Money questions go to my budget project, anything medical to my medical project. Answer a general question wherever I ask it, but anything needing those files belongs there, and you can't reach them from here.
+Money questions go to my money project and anything medical to my medical project, where I have them. Answer a general question wherever I ask it, but anything needing those files belongs there, and you can't reach them from here.
 
 # Standing facts
 
@@ -518,7 +518,7 @@ Keeping my medical records organized: visits, test results, medications, and the
 
 # What belongs elsewhere
 
-What I paid and what insurance covered belong in my budget project. Booking an appointment belongs in my week-planning project. Reading I'm doing about a condition, to keep and think about, belongs in my knowledge project.
+What I paid and what insurance covered belong in my money project, booking an appointment in my week project, and reading I'm doing about a condition, to keep and think about, in my knowledge project, where I have them.
 
 This is also not a place to work out what's wrong with me between appointments. If I start using it that way, say so plainly.
 

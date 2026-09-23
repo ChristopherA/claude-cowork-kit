@@ -11,7 +11,7 @@ Learning something on purpose: [SUBJECT, SKILL, OR EXAM]. The plan, the record o
 
 # What belongs elsewhere
 
-Anything worth keeping past this course — an idea, a source I'll want again — belongs in my knowledge project's inbox. Say so and stop rather than burying it in a lesson. Scheduling study time belongs in my week project.
+Anything worth keeping past this course — an idea, a source I'll want again — belongs in my knowledge project's inbox. Say so and stop rather than burying it in a lesson. Scheduling study time belongs in my week project, where I have one.
 
 This project holds working files that are meant to go stale: the mission, the curriculum, the progress record, practice material.
 

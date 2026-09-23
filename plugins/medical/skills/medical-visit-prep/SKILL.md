@@ -17,11 +17,9 @@ Read the project instructions if you have not this conversation, and hold to the
 
 Check that the records folder is reachable. If it is not, say so and stop; visit prep reads the record, and the record is at the desk. Do not draft questions from memory of an earlier conversation, and do not ask the reader to type in what the folder already holds.
 
-Read `timeline.md` for the last visit and the next one, and `questions.md` for what is already on the list. If the reader has not said which appointment this is for, ask through the app's question control, the next visit on the timeline first.
+Read `timeline.md` for the last visit and the next one, and `questions.md` for what is already on the list. If the reader has not said which appointment this is for and the timeline lists one upcoming visit, take that one and say so; ask only when it lists several or none.
 
-## Read what changed
-
-Read the record for the period since the last visit with the same clinician, or since the last visit of any kind if this clinician is new: results, medication changes, notes from other visits, anything the reader added. Do not re-ask what the record already says; if it is not there, ask one question, not a list.
+\1**The first visit.** When the timeline holds no earlier visit, the record has nothing to compare against, and this section does not apply. Ask once, in one control: what this visit is for, and what the reader most wants to understand from it; the reader's own words outrank the options. Draft the questions from those answers, from whatever is already on `questions.md`, and from whatever the folder holds (an overview or a condition file the reader has filled), quoting exactly what is there and inventing nothing. Say that once this visit is recorded, the next prep starts from the record.\n\nRead the record for the period since the last visit with the same clinician, or since the last visit of any kind if this clinician is new: results, medication changes, notes from other visits, anything the reader added. Do not re-ask what the record already says; if it is not there, ask one question, not a list.
 
 Say in a few lines what changed, quoting each value, dosage and date exactly as it appears in the record, with the two figures side by side where a value moved between visits. Never round, convert, paraphrase, or reconstruct one. If a value cannot be read clearly, say so instead of guessing. Say what moved; do not say what it means.
 

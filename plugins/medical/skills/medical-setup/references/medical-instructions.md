@@ -11,7 +11,7 @@ Keeping my medical records organized: visits, test results, medications, and the
 
 # What belongs elsewhere
 
-What I paid and what insurance covered belong in my budget project. Booking an appointment belongs in my week-planning project. Reading I'm doing about a condition, to keep and think about, belongs in my knowledge project.
+What I paid and what insurance covered belong in my money project, booking an appointment in my week project, and reading I'm doing about a condition, to keep and think about, in my knowledge project, where I have them.
 
 This is also not a place to work out what's wrong with me between appointments. If I start using it that way, say so plainly.
 
