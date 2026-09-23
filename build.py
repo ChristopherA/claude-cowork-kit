@@ -307,6 +307,7 @@ def kit_references(docs_dir):
             fail(f"{skill_md.relative_to(ROOT)}: does not carry the explainer's asking convention (docs/claude-cowork-kit.md, How Claude asks) word for word (## Asking)")
     check_shared_text()
     check_project_sections()
+    check_skills_index()
     for name, body in projects.items():
         if "[FOLDER PATH ON MY COMPUTER]" not in body:
             fail(f"kit: the {name} project's block has no folder placeholder")
@@ -347,6 +348,40 @@ def check_project_sections():
                 fail(f"{skill_md.relative_to(ROOT)}: no '## Where this runs' section (the project check)")
             if not any(f"`{d}`" in text for d in docs):
                 fail(f"{skill_md.relative_to(ROOT)}: names none of the {plugin} project's docs {docs}")
+
+
+SKILLS_INDEX = ROOT / "docs" / "skills.md"
+
+
+def check_skills_index():
+    """docs/skills.md lists every skill under its plugin with the description its SKILL.md carries.
+
+    A missing skill, a listed skill that no longer exists, and a description
+    that drifted each fail by name, so the public index cannot go stale.
+    """
+    if not SKILLS_INDEX.exists():
+        fail(f"{SKILLS_INDEX.relative_to(ROOT)}: missing (the public skills index)")
+    lines = SKILLS_INDEX.read_text().splitlines()
+    listed = {}
+    for i, line in enumerate(lines):
+        m = re.fullmatch(r"### `([a-z0-9-]+)`", line)
+        if m:
+            after = [l for l in lines[i + 1:i + 4] if l.strip()]
+            listed[m.group(1)] = after[0] if after else ""
+    expected = set()
+    for name, spec in PLUGINS.items():
+        heading = f"## {spec['display']}, `{name}`"
+        if heading not in lines:
+            fail(f"docs/skills.md: no heading '{heading}'")
+        for folder in plugin_skills(name):
+            fm = frontmatter(folder / "SKILL.md")
+            expected.add(fm["name"])
+            if fm["name"] not in listed:
+                fail(f"docs/skills.md: {fm['name']} ({name}) is not listed")
+            if listed[fm["name"]] != fm["description"]:
+                fail(f"docs/skills.md: {fm['name']}'s description differs from its SKILL.md")
+    for stale in sorted(set(listed) - expected):
+        fail(f"docs/skills.md: lists {stale}, which no plugin carries")
 
 
 def check_shared_text():
