@@ -5,11 +5,11 @@ description: After a meeting: notes by topic with decisions first, quotes inline
 
 # Meeting notes
 
-After a meeting, turn what the reader has, a cleaned transcript, the capture sheet from the meeting pack, their own memory, into one note that someone who was not there could act on: what was decided, who does what, and what the discussion settled or left open, by topic rather than in the order it was said. The note goes into the working folder, since a candid meeting is not for a synced doc; what the reader owes from it is offered to the priorities doc.
+After a meeting, turn what the reader has, a cleaned transcript, the capture sheet from the meeting pack, their own memory, into one note that someone who was not there could act on: what was decided, who does what, and what the discussion settled or left open, by topic rather than in the order it was said. The note goes into the working folder, since a candid meeting is not for a synced Context document; what the reader owes from it is offered to the priorities document.
 
 ## Where this runs
 
-This skill belongs to the week project, whose project docs are `priorities.md`. Before anything else, check that it is here. If not, this is another project: say which project this skill is for and stop, so nothing is written into the wrong folder or the wrong docs; if this is the right project and it is not set up yet, offer its setup, `set up my week project`.
+This skill belongs to the week binder, whose Context document is `priorities.md`. Before anything else, check that it is here. If not, this is another binder: say which binder this skill is for and stop, so nothing is written into the wrong folder or the wrong Context documents; if this is the right binder and it is not set up yet, offer its setup, `set up my week binder`.
 
 ## Take stock
 
@@ -39,7 +39,7 @@ Where the transcript holds candid remarks about named people, say so before show
 
 ## Write on a yes
 
-Show the note in full and wait for a yes. On a yes, write it into the folder beside the meeting's other files, named by date, `YYYY-MM-DD`, and who the meeting was with, read it back, and confirm by file name. Then offer, on its own yes, the reader's own action items as lines in `priorities.md`, in the shape that doc uses; the other people's items stay in the note. If the reader means to share the note, offer a short cover message in their voice with a subject line, in plain text, handed back and never sent.
+Show the note in full and wait for a yes. On a yes, write it into the folder beside the meeting's other files, named by date, `YYYY-MM-DD`, and who the meeting was with, read it back, and confirm by file name. Then offer, on its own yes, the reader's own action items as lines in `priorities.md`, in the shape that document uses; the other people's items stay in the note. If the reader means to share the note, offer a short cover message in their voice with a subject line, in plain text, handed back and never sent.
 
 ## Ending
 

@@ -1,23 +1,23 @@
 ---
 name: learn-setup
-description: Sets up the learning project: an interview, then mission.md, curriculum.md and progress.md as project docs and the instructions to paste. Use for "set up my learning project", "I want to learn".
+description: Sets up the learning binder: an interview, then mission.md, curriculum.md and progress.md as Context documents and the instructions to paste. Use for "set up my learning binder", "I want to learn".
 ---
 
 # Setup
 
-Build the learning project the Claude Cowork Kit describes, from a short interview. Create what a task can create, the three project docs, and hand back what only the reader can paste, the project instructions. Read the materials folder if it is connected; do not write into it.
+Build the learning binder the Claude Cowork Kit describes, from a short interview. Create what a task can create, the three Context documents, and hand back what only the reader can paste, the project instructions. Read the materials folder if it is connected; do not write into it.
 
 The texts this skill hands back are in `references/`, generated from the kit's docs when the plugin was packaged: `learning-instructions.md` (the project instructions), `global-instructions.md` (the account-wide instructions) and `voices.md` (the three voices). Use them as they are; do not rewrite them, and do not paraphrase them into the conversation. Fill in only the marked brackets.
 
-The shape of the interview, a mission and a curriculum with an intuition target per lesson, is learned from Matt Pocock's teach skill and derwells's learn skill, both written for Claude Code with tooling; only the shapes are taken, and the docs here are plain markdown the reader can read on a phone.
+The shape of the interview, a mission and a curriculum with an intuition target per lesson, is learned from Matt Pocock's teach skill and derwells's learn skill, both written for Claude Code with tooling; only the shapes are taken, and the documents here are plain markdown the reader can read on a phone.
 
 ## What a task can and cannot do
 
-A task can read the project docs, create project docs in the project it runs in, read a connected folder, and read the reader's Account instructions. It cannot change Settings, set the project's approval mode, create a project, connect a folder, install a plugin, or send anything; those are the reader's, in the app. Say which is which as you go, so the reader never waits for something that will not happen.
+A task can read the project's Context documents, create Context documents in the project it runs in, read a connected folder, and read the reader's Account instructions. It cannot change Settings, set the project's approval mode, create a project, connect a folder, install a plugin, or send anything; those are the reader's, in the app. Say which is which as you go, so the reader never waits for something that will not happen.
 
 ## Before the first question
 
-Check which of `mission.md`, `curriculum.md` and `progress.md` already exist. If `mission.md` does, this project is already set up: say so, offer to read `progress.md` back and pick up from there, and stop. Do not run setup twice. A doc that exists is kept and read back, never recreated; say which you kept.
+Check which of `mission.md`, `curriculum.md` and `progress.md` already exist. If `mission.md` does, this binder is already set up: say so, offer to read `progress.md` back and pick up from there, and stop. Do not run setup twice. A document that exists is kept and read back, never recreated; say which you kept.
 
 ## The interview, one question at a time
 
@@ -34,19 +34,19 @@ Ask as the Asking section says, grouping the questions whose answers do not depe
 
 If the folder is reachable, read it before drafting the curriculum: the top-level folders, a sample of file names in each, a table of contents if there is one. Describe what is there in a few sentences. If it is not reachable, or there are no materials, build the curriculum from the subject and the reader's answers and say that it will be revised once the materials are in view.
 
-## Create the three project docs
+## Create the three Context documents
 
-Create `mission.md` as a project doc: what they are learning, why, by when, how they will know, where they stand today, how they like to learn, and where the materials are. Short enough to read on a phone; a screen at most.
+Create `mission.md` as a Context document: what they are learning, why, by when, how they will know, where they stand today, how they like to learn, and where the materials are. Short enough to read on a phone; a screen at most.
 
-Draft `curriculum.md` before creating it: units, and under each unit its lessons, one line per lesson naming the one idea that lesson is meant to make intuitive. Aim for lessons of about thirty minutes each. Show the draft whole and wait for a yes; a no or an edit changes the draft. Then create it as a project doc.
+Draft `curriculum.md` before creating it: units, and under each unit its lessons, one line per lesson naming the one idea that lesson is meant to make intuitive. Aim for lessons of about thirty minutes each. Show the draft whole and wait for a yes; a no or an edit changes the draft. Then create it as a Context document.
 
-Create `progress.md` as a project doc: a heading, the three states as sections in this order, settled, shaky, untested, and every lesson from the curriculum listed under untested. Nothing is settled on day one.
+Create `progress.md` as a Context document: a heading, the three states as sections in this order, settled, shaky, untested, and every lesson from the curriculum listed under untested. Nothing is settled on day one.
 
-Read all three back and confirm they exist as project docs. The app may file them under a `claude/` folder inside the project; that is fine, and the other skills find them by name. If project docs cannot be created from a task, say so plainly, show the three texts in full so the reader can add them however the app allows, and say that the lesson and quiz skills depend on them.
+Read all three back and confirm they exist as Context documents. The app may file them under a `claude/` folder inside the project; that is fine, and the other skills find them by name. If Context documents cannot be created from a task, say so plainly, show the three texts in full so the reader can add them however the app allows, and say that the lesson and quiz skills depend on them.
 
 ## The account block
 
-Before the project instructions, read the reader's Account instructions if you can see them. If they carry the kit's block, say so and name the voice in it; do not ask the voice again. If they do not, or you cannot see them, ask which voice they want, plain, warm or archivist, one phrase each from `references/voices.md`, plain first as the safe default, and hand back `references/global-instructions.md` with that voice substituted where marked, in a code block of its own: it goes in Settings, Account, "Instructions for Claude", reaches every chat on the account, casual chat included, and is pasted once for all the kit's projects. If the field already holds text of the reader's own, say to add the block below it and cut whatever the two say twice. No plugin has to be installed before this one.
+Before the project instructions, read the reader's Account instructions if you can see them. If they carry the kit's block, say so and name the voice in it; do not ask the voice again. If they do not, or you cannot see them, ask which voice they want, plain, warm or archivist, one phrase each from `references/voices.md`, plain first as the safe default, and hand back `references/global-instructions.md` with that voice substituted where marked, in a code block of its own: it goes in Settings, Account, "Instructions for Claude", reaches every chat on the account, casual chat included, and is pasted once for all the kit's binders. If the field already holds text of the reader's own, say to add the block below it and cut whatever the two say twice. No plugin has to be installed before this one.
 
 ## Hand back the text to paste
 
@@ -54,7 +54,7 @@ The project page has two text fields that look alike, a one-line description und
 
 0. **The description**, one line, for the field under the project's title. Offer this: `Learning [subject]: the plan, the progress record, and the practice. The rules are in Instructions; the materials are in [folder name].` with the subject and the folder name filled in.
 
-The instructions go into a field only the reader can fill: a task can create project docs and cannot set the project's instructions or description, and the shell a task runs in is a Linux space apart from the reader's computer, so it cannot put text on their clipboard either. Do not try; hand the text back and say where it goes. The text goes in a code block of its own, which carries a copy button in the app.
+The instructions go into a field only the reader can fill: a task can create Context documents and cannot set the project's Instructions or description, and the shell a task runs in is a Linux space apart from the reader's computer, so it cannot put text on their clipboard either. Do not try; hand the text back and say where it goes. The text goes in a code block of its own, which carries a copy button in the app.
 
 1. **Project instructions**, from `references/learning-instructions.md`, with the subject and the folder path filled in where the brackets are and nothing else changed. It goes in the Instructions panel on the project's page, not in the one-line description under the title, which is a label.
 
@@ -62,11 +62,11 @@ Show the block whole, one code block, and nothing else inside the fence.
 
 ## The Learning style
 
-Say, once, that Claude has a Learning style in the style menu that makes it ask rather than answer. It is optional: a task cannot turn it on, whether it carries into a Cowork task is untested, and nothing in this project depends on it, since the lesson skill does that work inside a task.
+Say, once, that Claude has a Learning style in the style menu that makes it ask rather than answer. It is optional: a task cannot turn it on, whether it carries into a Cowork task is untested, and nothing in this binder depends on it, since the lesson skill does that work inside a task.
 
 ## End
 
-Report what exists now: the three project docs by name, and the two fields waiting for a paste, the one-line description under the title and the Instructions panel. Then name the day-one checks, in order: in this project, with the style turned on, ask Claude a direct question about the subject and see whether it answers or asks; from the phone with the computer closed, ask where the progress record says you are. Do not run them; the reader does. Say that the first lesson is `next lesson`, and that `quiz me` works once there is something to quiz. End with one word for completeness: full, partial (with what is missing), or minimal (stopped early).
+Report what exists now: the three Context documents by name, and the two fields waiting for a paste, the one-line description under the title and the Instructions panel. Then name the day-one checks, in order: in this project, with the style turned on, ask Claude a direct question about the subject and see whether it answers or asks; from the phone with the computer closed, ask where the progress record says you are. Do not run them; the reader does. Say that the first lesson is `next lesson`, and that `quiz me` works once there is something to quiz. End with one word for completeness: full, partial (with what is missing), or minimal (stopped early).
 
 ## Asking
 

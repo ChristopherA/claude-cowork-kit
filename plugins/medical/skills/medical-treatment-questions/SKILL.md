@@ -5,11 +5,11 @@ description: From a handed article or a clinician's suggestion, grades the evide
 
 # Questions about a treatment
 
-The reader has been offered or has found a treatment and wants to weigh it. This project is not the place to work out what is wrong, and a task cannot reach the web, so this skill does not research; it reads what the reader hands over, an article, a study, a page from the portal, a clinician's suggestion as the reader recorded it, says what that source claims and on what evidence, and turns the gaps into questions for the clinician. Nothing here comes from Claude's own recall of the medical literature; a claim the source does not carry is not made.
+The reader has been offered or has found a treatment and wants to weigh it. This binder is not the place to work out what is wrong, and a task cannot reach the web, so this skill does not research; it reads what the reader hands over, an article, a study, a page from the portal, a clinician's suggestion as the reader recorded it, says what that source claims and on what evidence, and turns the gaps into questions for the clinician. Nothing here comes from Claude's own recall of the medical literature; a claim the source does not carry is not made.
 
 ## Where this runs
 
-This skill belongs to the medical project, whose project docs are `questions.md` and `timeline.md`. Before anything else, check that they are here. If not, this is another project: say which project this skill is for and stop, so nothing is written into the wrong folder or the wrong docs; if this is the right project and it is not set up yet, offer its setup, `set up my medical project`.
+This skill belongs to the medical binder, whose Context documents are `questions.md` and `timeline.md`. Before anything else, check that they are here. If not, this is another binder: say which binder this skill is for and stop, so nothing is written into the wrong folder or the wrong Context documents; if this is the right binder and it is not set up yet, offer its setup, `set up my medical binder`.
 
 ## Before starting
 
@@ -25,7 +25,7 @@ From the gaps, draft the questions to ask the clinician, under the same rules as
 
 ## Write on a yes
 
-Two things may be written, each on its own yes. The questions go onto `questions.md` with the source named and no clinical values, since that doc syncs. The reading, what the source claims and the grade, goes into the folder's research file in the form it already uses, or, when the folder has none, into one you offer to create as a headed file, with the source, its date, and the status (found, discussed with the clinician, trying, tried). Show each in full first, read back after writing, and confirm by file name.
+Two things may be written, each on its own yes. The questions go onto `questions.md` with the source named and no clinical values, since that document syncs. The reading, what the source claims and the grade, goes into the folder's research file in the form it already uses, or, when the folder has none, into one you offer to create as a headed file, with the source, its date, and the status (found, discussed with the clinician, trying, tried). Show each in full first, read back after writing, and confirm by file name.
 
 ## Ending
 

@@ -1,6 +1,6 @@
 ---
 name: research-description-check
-description: Compares map.md against the notes folder and reports every claim that is no longer true, proposing edits without making them. Use for "check the description", "check map.md against my notes".
+description: Compares map.md against the research folder and reports every claim that is no longer true, proposing edits without making them. Use for "check the description", "check map.md against my notes".
 ---
 
 # Description check
@@ -11,13 +11,13 @@ If the reader means the one-line description under the project's title, say that
 
 ## Where this runs
 
-This skill belongs to the notes project, whose project docs are `rules.md`, `map.md` and `inbox.md`. Before anything else, check that they are here. If not, this is another project: say which project this skill is for and stop, so nothing is written into the wrong folder or the wrong docs; if this is the right project and it is not set up yet, offer its setup, `set up my notes project`.
+This skill belongs to the research binder, whose Context documents are `rules.md`, `map.md` and `inbox.md`. Before anything else, check that they are here. If not, this project belongs to another binder: say which binder this skill is for and stop, so nothing is written into the wrong folder or the wrong documents; if this is the right binder and it is not set up yet, offer its setup, `set up my research binder`.
 
 ## Before starting
 
-Check that the notes folder is reachable. If it is not, say so and stop; a check from project knowledge alone can only find contradictions inside `map.md`, and the reader wants the folder.
+Check that the research folder is reachable. If it is not, say so and stop; a check from the project's Context alone can only find contradictions inside `map.md`, and the reader wants the folder.
 
-Read `rules.md` and `map.md` in full. Note every checkable claim they make. From `map.md`: the folder path; each folder it lists and what it says lives there; the naming rules; the metadata lines a note carries; wrapping; link style; the "not here" list; the settled conventions; the open threads; the current-work section and its date. From `rules.md`: the folder path again (the two must agree), what the project docs hold, and the rules about notes that the folder can show broken. A claim the two docs make differently is reported first, before any comparison with the folder.
+Read `rules.md` and `map.md` in full. Note every checkable claim they make. From `map.md`: the folder path; each folder it lists and what it says lives there; the naming rules; the metadata lines a note carries; wrapping; link style; the "not here" list; the settled conventions; the open threads; the current-work section and its date. From `rules.md`: the folder path again (the two must agree), what the Context documents hold, and the rules about notes that the folder can show broken. A claim the two documents make differently is reported first, before any comparison with the folder.
 
 ## Take the census
 
@@ -43,17 +43,17 @@ Treat it separately, because it goes stale fastest and matters most. Say when it
 
 One short report, in this order: what holds (a line), what is stale in the description (each with proposed wording), what has drifted in the folder (each with the files), what is missing from the description, and the current-work question. Then stop, with one word for how complete the check was: full (script census and the description read whole), partial (census by reading only, or the folder partly reachable), and what was not checked.
 
-If the reader chooses, through the control, to apply them, two kinds of edit are on offer and they are handled differently. Wording changes to `map.md` or `rules.md` (a renamed folder, a convention written down, a stale sentence replaced, a rule the reader has decided to relax) are safe: make the ones the reader names, one at a time, showing each before writing, then read the doc back and confirm what changed. Offer each through the app's question control, recommended option first. Anything that would change the folder (moving a file, renaming a note, adding a missing metadata line) is not this skill's to do: list those as a proposal for the reader to carry out or to hand to the inbox-drain or source-note skills, and never edit notes in the folder from here.
+If the reader chooses, through the control, to apply them, two kinds of edit are on offer and they are handled differently. Wording changes to `map.md` or `rules.md` (a renamed folder, a convention written down, a stale sentence replaced, a rule the reader has decided to relax) are safe: make the ones the reader names, one at a time, showing each before writing, then read the document back and confirm what changed. Offer each through the app's question control, recommended option first. Anything that would change the folder (moving a file, renaming a note, adding a missing metadata line) is not this skill's to do: list those as a proposal for the reader to carry out or to hand to the inbox-drain or source-note skills, and never edit notes in the folder from here.
 
 ## The census script
 
-`scripts/census.py` walks the notes folder and prints, as JSON, the folder tree with counts, per-folder file naming patterns, which files carry a `created` line and a `source` line at the top, how many have paragraphs longer than one line (hard-wrapped), the link styles found, and the newest and oldest files by modification time with their dates. It reads only; it needs code execution enabled.
+`scripts/census.py` walks the research folder and prints, as JSON, the folder tree with counts, per-folder file naming patterns, which files carry a `created` line and a `source` line at the top, how many have paragraphs longer than one line (hard-wrapped), the link styles found, and the newest and oldest files by modification time with their dates. It reads only; it needs code execution enabled.
 
 ```
-python3 scripts/census.py --folder "<notes folder path>" --limit 10
+python3 scripts/census.py --folder "<research folder path>" --limit 10
 ```
 
-The script runs inside the task, in the task's own working space on the side where the notes folder is mounted; it never runs on the reader's computer and never goes into the notes folder or any folder of theirs. The plugin's files live in the task's cloud space, so copy the script into that working space first and run it there. Then say in one plain sentence that a script read the folder; the reader is not a programmer and does not need the mechanics, but is never left unaware that something ran. If the task cannot run scripts, do the same work by reading, as this skill says, and say that you did. Never rely on the folder's modification times: the mount flattens them. Prefer the `created` lines inside notes for age; the script reports both, and its modification times are there only so you can see that they disagree. If the script is not available, take the census by reading, as above.
+The script runs inside the task, in the task's own working space on the side where the research folder is mounted; it never runs on the reader's computer and never goes into the research folder or any folder of theirs. The plugin's files live in the task's cloud space, so copy the script into that working space first and run it there. Then say in one plain sentence that a script read the folder; the reader is not a programmer and does not need the mechanics, but is never left unaware that something ran. If the task cannot run scripts, do the same work by reading, as this skill says, and say that you did. Never rely on the folder's modification times: the mount flattens them. Prefer the `created` lines inside notes for age; the script reports both, and its modification times are there only so you can see that they disagree. If the script is not available, take the census by reading, as above.
 
 ## Ending
 

@@ -2,28 +2,28 @@
 
 # The working rules
 
-Created as the project doc rules.md, with the folder path filled in.
+Created as the Context document rules.md, with the folder path filled in.
 
 ```markdown
 # Rules for this project
 
-The Instructions panel says what this project is for and what never changes. This doc holds the working rules. When one of them turns out wrong, propose the change here and wait for a yes; never rewrite this doc unasked.
+The Instructions panel says what this project is for and what never changes. This document holds the working rules. When one of them turns out wrong, propose the change here and wait for a yes; never rewrite this document unasked.
 
 # Where things live
 
 My notes are in [FOLDER PATH ON MY COMPUTER]. That folder holds every note and is the canonical copy of everything.
 
-This project's docs hold the description (map.md), these rules, my capture inbox (inbox.md), and writing I've asked you for. They do not hold copies of notes. If you find yourself pasting a note's body into a project doc, stop and put a pointer to the file instead.
+This project's Context documents hold the description (map.md), these rules, my capture inbox (inbox.md), and writing I've asked you for. They do not hold copies of notes. If you find yourself pasting a note's body into a Context document, stop and put a pointer to the file instead.
 
 # Capture and filing are different
 
-When I throw something at you without context, append it to the inbox doc as I gave it, dated, and stop. Don't file it, don't expand it, don't ask me where it goes, and don't refuse it because it belongs to another project — the inbox takes everything, and sorting is the drain's job.
+When I throw something at you without context, append it to the inbox document as I gave it, dated, and stop. Don't file it, don't expand it, don't ask me where it goes, and don't refuse it because it belongs to another binder — the inbox takes everything, and sorting is the drain's job.
 
-When I say I'm processing the inbox, work through it one item at a time: for each, say where it belongs — an existing note to update, a new note, another project, a source to read — show me what you'd write, and write it into the folder only after a yes. An item that belongs to another project is named and left for me to move; an item you can't place is kept with the reason.
+When I say I'm processing the inbox, work through it one item at a time: for each, say where it belongs — an existing note to update, a new note, another binder, a source to read — show me what you'd write, and write it into the folder only after a yes. An item that belongs to another binder is named and left for me to move; an item you can't place is kept with the reason.
 
 # When you can't reach my folder
 
-Say so plainly and work from project knowledge instead. Don't guess at what's in my notes, and don't reconstruct one from memory of an earlier conversation.
+Say so plainly and work from the project's Context instead. Don't guess at what's in my notes, and don't reconstruct one from memory of an earlier conversation.
 
 # Notes you write for me
 
@@ -35,5 +35,5 @@ Plain prose. Short paragraphs. No headers on anything under a page, no bullets w
 
 # Reporting
 
-When you finish something in the folder, read it back before reporting, and tell me what changed and where — the folder and file name, or which project doc. Say what you couldn't do and why.
+When you finish something in the folder, read it back before reporting, and tell me what changed and where — the folder and file name, or which Context document. Say what you couldn't do and why.
 ```

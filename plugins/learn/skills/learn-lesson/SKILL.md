@@ -5,13 +5,13 @@ description: Runs one lesson of about thirty minutes on one concept, intuition f
 
 # Lesson
 
-Teach one concept in one sitting of about thirty minutes, intuition first, and leave the progress record true at the end. This skill is the project's "how to teach me" section made into a routine: the reader thinks before you explain, explains back before anything is called settled, and the next session resumes from what was written rather than from memory.
+Teach one concept in one sitting of about thirty minutes, intuition first, and leave the progress record true at the end. This skill is the project instructions' "how to teach me" section made into a routine: the reader thinks before you explain, explains back before anything is called settled, and the next session resumes from what was written rather than from memory.
 
-The shape, one concept per session with a record of what is settled, shaky or untested, is learned from derwells's learn skill, which keeps that record in a JSON file for Claude Code; the kit keeps it in a markdown project doc so a lesson works from the phone.
+The shape, one concept per session with a record of what is settled, shaky or untested, is learned from derwells's learn skill, which keeps that record in a JSON file for Claude Code; the kit keeps it in a markdown Context document so a lesson works from the phone.
 
 ## Where this runs
 
-This skill belongs to the learning project, whose project docs are `mission.md`, `curriculum.md` and `progress.md`. Before anything else, check that they are here. If not, this is another project: say which project this skill is for and stop, so nothing is written into the wrong folder or the wrong docs; if this is the right project and it is not set up yet, offer its setup, `set up my learning project`.
+This skill belongs to the learning binder, whose Context documents are `mission.md`, `curriculum.md` and `progress.md`. Before anything else, check that they are here. If not, this is another binder: say which binder this skill is for and stop, so nothing is written into the wrong folder or the wrong Context documents; if this is the right binder and it is not set up yet, offer its setup, `set up my learning binder`.
 
 ## Before starting
 
@@ -19,9 +19,9 @@ Read `mission.md` and then `progress.md` first if you have not this conversation
 
 Then read `curriculum.md` and pick the concept: the first shaky item if there is one, otherwise the next untested lesson in curriculum order. Say which you picked and why in one sentence, and take the reader's choice over yours if they name a different one.
 
-The project docs are all this skill needs, so a lesson runs from the phone. The materials folder is reachable only at the desk; if the lesson's reading is in it and the folder is out of reach, say so, and either teach from what the reader remembers of the reading or pick a concept the docs and their head can carry. Do not pretend to have read what you could not.
+The Context documents are all this skill needs, so a lesson runs from the phone. The materials folder is reachable only at the desk; if the lesson's reading is in it and the folder is out of reach, say so, and either teach from what the reader remembers of the reading or pick a concept the documents and their head can carry. Do not pretend to have read what you could not.
 
-If anything comes up that is worth keeping past this course, an idea or a source the reader will want again, say that it belongs in the knowledge project's inbox and stop there for that item; do not bury it in the lesson. Scheduling the next session belongs in the week project.
+If anything comes up that is worth keeping past this course, an idea or a source the reader will want again, say that it belongs in the research binder's inbox and stop there for that item; do not bury it in the lesson. Scheduling the next session belongs in the week binder.
 
 ## One concept, in order
 
@@ -35,7 +35,7 @@ Do not add a second concept because the first went quickly. Do not reassure the 
 
 ## Ending
 
-Show the lines you would write into `progress.md`: the concept moved to settled, shaky, or left untested, with one line under it saying what clicked and what is still shaky, dated today. Settled means the reader explained it correctly without help; a "yes, I get it" is not settled, and neither is a correct answer reached with your hints. Wait for a yes, then write them, read the doc back to confirm the change landed, and say in one line what changed.
+Show the lines you would write into `progress.md`: the concept moved to settled, shaky, or left untested, with one line under it saying what clicked and what is still shaky, dated today. Settled means the reader explained it correctly without help; a "yes, I get it" is not settled, and neither is a correct answer reached with your hints. Wait for a yes, then write them, read the document back to confirm the change landed, and say in one line what changed.
 
 Say what the next lesson is, from the curriculum, and that `quiz me` is there when the reader wants to test what has settled. Then end with one word for completeness: full (the concept is settled), partial (the concept is shaky, with what is still shaky named), or minimal (stopped early, with where to resume).
 
@@ -45,4 +45,4 @@ Ask through the app's question control whenever there is a choice, and for every
 
 ## What this skill does not do
 
-It does not decide the reader is ready for anything; it shows what the progress record says and lets them decide. It does not mark something settled because the reader said they understood it. It does not write into the materials folder, and it does not create a note for the knowledge project; it names that project and stops. It does not change `mission.md` or `curriculum.md` unless asked, and then shows the change and waits for a yes.
+It does not decide the reader is ready for anything; it shows what the progress record says and lets them decide. It does not mark something settled because the reader said they understood it. It does not write into the materials folder, and it does not create a note for the research binder; it names that binder and stops. It does not change `mission.md` or `curriculum.md` unless asked, and then shows the change and waits for a yes.

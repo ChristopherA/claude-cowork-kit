@@ -1,27 +1,27 @@
 ---
 name: research-setup
-description: Sets up the notes project: three questions, then rules.md, map.md and inbox.md as project docs and the short instructions to paste. Use for "set up my notes project", "notes setup", "set up my notes".
+description: Sets up the research binder: three questions, then rules.md, map.md and inbox.md as Context documents and the text to paste. Use for "set up my research binder", "notes setup", "set up my notes".
 ---
 
 # Setup
 
-Build the notes project the Claude Cowork Kit describes, from four answers. Create what a task can create, the three project docs, and hand back what only the reader can paste, the short project instructions. Read the notes folder; do not write into it, except to create empty folders when the reader is starting from nothing and has said yes.
+Build the research binder the Claude Cowork Kit describes, from four answers. Create what a task can create, the three Context documents, and hand back what only the reader can paste, the short project instructions. Read the research folder; do not write into it, except to create empty folders when the reader is starting from nothing and has said yes.
 
-The texts this skill hands back are in `references/`, generated from the kit's docs when the plugin was packaged: `research-instructions.md` (the short text for the Instructions panel), `rules-template.md` (the working rules doc), `map-template.md` (the description), `voices.md` (the three voices), `global-instructions.md` (the account-wide instructions). Use them as they are; do not rewrite them, and do not paraphrase them into the conversation. Fill in only the marked fields.
+The texts this skill hands back are in `references/`, generated from the kit's docs when the plugin was packaged: `research-instructions.md` (the short text for the Instructions panel), `rules-template.md` (the working rules document), `map-template.md` (the description), `voices.md` (the three voices), `global-instructions.md` (the account-wide instructions). Use them as they are; do not rewrite them, and do not paraphrase them into the conversation. Fill in only the marked fields.
 
 ## What a task can and cannot do
 
-A task can read the project docs, create project docs in the project it runs in, read a connected folder, and read the reader's Account instructions. It cannot change Settings, set the project's approval mode, create a project, connect a folder, install a plugin, or send anything; those are the reader's, in the app. Say which is which as you go, so the reader never waits for something that will not happen.
+A task can read the project's Context documents, create Context documents in the project it runs in, read a connected folder, and read the reader's Account instructions. It cannot change Settings, set the project's approval mode, create a project, connect a folder, install a plugin, or send anything; those are the reader's, in the app. Say which is which as you go, so the reader never waits for something that will not happen.
 
 ## Before the first question
 
-Check which of the three project docs already exist: `rules.md`, `map.md`, `inbox.md`. If `map.md` exists, this project is already set up: say so, offer the description check instead, and stop. Do not run setup twice. If `inbox.md` exists alone, the core setup created it and captures may already be in it: keep it exactly as it is, and say so. A doc that exists is never recreated.
+Check which of the three Context documents already exist: `rules.md`, `map.md`, `inbox.md`. If `map.md` exists, this binder is already set up: say so, offer the description check instead, and stop. Do not run setup twice. If `inbox.md` exists alone, the core setup created it and captures may already be in it: keep it exactly as it is, and say so. A document that exists is never recreated.
 
 ## Three questions
 
 Ask as the Asking section says, grouping the questions whose answers do not depend on each other in one control and putting the dependent ones after. Skip any the reader has already answered in their request. Reflect each answer back in a phrase before going on.
 
-1. **The folder.** Where the notes folder is on their computer, or whether they need to start one. If they name a folder, confirm you can reach it; if you cannot, say so and continue from their description, marking in `map.md` that the folder section is to be checked at the desk. If they are starting one, propose the default layout from the description template (inbox, sources, notes, threads, archive), show it, say that the folder should be backed up before anything writes into it, and create the empty folders only after a yes.
+1. **The folder.** Where the research folder is on their computer, or whether they need to start one. If they name a folder, confirm you can reach it; if you cannot, say so and continue from their description, marking in `map.md` that the folder section is to be checked at the desk. If they are starting one, propose the default layout from the description template (inbox, sources, notes, threads, archive), show it, say that the folder should be backed up before anything writes into it, and create the empty folders only after a yes.
 2. **Who they are and how they work.** Three or four sentences: what they do, what the notes are for, when and how they work with them. Not a biography; the things you would otherwise guess wrong.
 3. **Current work.** Two or three sentences: the open questions, the thing eating their attention this month. Ask for the open threads by name if they have any.
 
@@ -29,19 +29,19 @@ Ask as the Asking section says, grouping the questions whose answers do not depe
 
 If the folder is reachable, read it before writing anything: the top-level folders, a sample of file names in each, roughly how many files, whether notes carry a `created` line, whether paragraphs are wrapped, and how notes link. Describe what is there. The template's folder layout is a default for an empty folder, not a description of theirs.
 
-## Create the three project docs
+## Create the three Context documents
 
-Create `rules.md` as a project doc from `references/rules-template.md`, with the folder path filled in and nothing else changed; the reader revises it later, with you, one rule at a time.
+Create `rules.md` as a Context document from `references/rules-template.md`, with the folder path filled in and nothing else changed; the reader revises it later, with you, one rule at a time.
 
-Create `map.md` as a project doc from `references/map-template.md`, with every bracket filled from the answers and from what the folder showed. The folder sections describe the real folder. The conventions section holds what the folder shows plus anything the reader said is settled. Set the date. Leave nothing in brackets; where an answer is missing, ask rather than invent.
+Create `map.md` as a Context document from `references/map-template.md`, with every bracket filled from the answers and from what the folder showed. The folder sections describe the real folder. The conventions section holds what the folder shows plus anything the reader said is settled. Set the date. Leave nothing in brackets; where an answer is missing, ask rather than invent.
 
-Create `inbox.md` as a project doc, a heading and nothing else, unless it already exists, in which case leave it untouched.
+Create `inbox.md` as a Context document, a heading and nothing else, unless it already exists, in which case leave it untouched.
 
-Read all three back and confirm they exist as project docs. The app may file them under a `claude/` folder inside the project; that is fine, and the other skills find them by name. If project docs cannot be created from a task, say so plainly, show the three texts in full so the reader can add them however the app allows, and say that the rest of the kit depends on them.
+Read all three back and confirm they exist as Context documents. The app may file them under a `claude/` folder inside the project; that is fine, and the other skills find them by name. If Context documents cannot be created from a task, say so plainly, show the three texts in full so the reader can add them however the app allows, and say that the rest of the kit depends on them.
 
 ## The account block
 
-Before the project instructions, read the reader's Account instructions if you can see them. If they carry the kit's block, say so and name the voice in it; do not ask the voice again. If they do not, or you cannot see them, ask which voice they want, plain, warm or archivist, one phrase each from `references/voices.md`, plain first as the safe default, and hand back `references/global-instructions.md` with that voice substituted where marked, in a code block of its own: it goes in Settings, Account, "Instructions for Claude", reaches every chat on the account, casual chat included, and is pasted once for all the kit's projects. If the field already holds text of the reader's own, say to add the block below it and cut whatever the two say twice. No plugin has to be installed before this one.
+Before the project instructions, read the reader's Account instructions if you can see them. If they carry the kit's block, say so and name the voice in it; do not ask the voice again. If they do not, or you cannot see them, ask which voice they want, plain, warm or archivist, one phrase each from `references/voices.md`, plain first as the safe default, and hand back `references/global-instructions.md` with that voice substituted where marked, in a code block of its own: it goes in Settings, Account, "Instructions for Claude", reaches every chat on the account, casual chat included, and is pasted once for all the kit's binders. If the field already holds text of the reader's own, say to add the block below it and cut whatever the two say twice. No plugin has to be installed before this one.
 
 ## Hand back the text to paste
 
@@ -49,7 +49,7 @@ The project page has two text fields that look alike, a one-line description und
 
 0. **The description**, one line, for the field under the project's title. Offer this: `Research base: notes and reading. The rules are in Instructions; the notes are in [folder name].` with the folder name filled in.
 
-The instructions go into a field only the reader can fill: a task can create project docs and cannot set the project's instructions or description, and the shell a task runs in is a Linux space apart from the reader's computer, so it cannot put text on their clipboard either. Do not try; hand the text back and say where it goes. The text goes in a code block of its own, which carries a copy button in the app.
+The instructions go into a field only the reader can fill: a task can create Context documents and cannot set the project's Instructions or description, and the shell a task runs in is a Linux space apart from the reader's computer, so it cannot put text on their clipboard either. Do not try; hand the text back and say where it goes. The text goes in a code block of its own, which carries a copy button in the app.
 
 1. **Project instructions**, from `references/research-instructions.md`, as they are; there is nothing to fill in. It goes in the Instructions panel on the project's page, not in the one-line description under the title, which is a label.
 
@@ -57,7 +57,7 @@ Show the block whole, one code block, and nothing else inside the fence.
 
 ## End
 
-Report what exists now: the three project docs by name, the folders created if any, and the two fields waiting for a paste, the one-line description under the title and the Instructions panel. Then name the three day-one checks from the kit, in order: at the desk, ask what is in the notes; from the phone with the computer closed, ask something the description alone can answer; send a capture from the phone and check it lands in the inbox doc. Do not run them; the reader does. End with one word for completeness: full, partial (with what is missing), or minimal (stopped early).
+Report what exists now: the three Context documents by name, the folders created if any, and the two fields waiting for a paste, the one-line description under the title and the Instructions panel. Then name the three day-one checks from the kit, in order: at the desk, ask what is in the notes; from the phone with the computer closed, ask something the description alone can answer; send a capture from the phone and check it lands in the inbox document. Do not run them; the reader does. End with one word for completeness: full, partial (with what is missing), or minimal (stopped early).
 
 ## Asking
 
@@ -65,4 +65,4 @@ Ask through the app's question control whenever there is a choice, and for every
 
 ## What this skill does not do
 
-It does not write or change any note. It does not set any setting. It does not paste anything anywhere; it hands text back. It does not run twice on a project that already has a description.
+It does not write or change any note. It does not set any setting. It does not paste anything anywhere; it hands text back. It does not run twice on a binder that already has a description.

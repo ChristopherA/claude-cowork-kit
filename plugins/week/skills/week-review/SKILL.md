@@ -5,15 +5,15 @@ description: A weekly review in the reader's words: done, slipped, avoided, what
 
 # Review the week
 
-Once a week, look back before planning forward. A week reviewed in a few honest lines shows what a day cannot: the thing that has slipped three weeks running, the priority that has gone quiet, the kind of week that leaves the reader flat. This skill asks a few questions, writes a dated entry to a reviews doc, lists what was carried forward from the last review and not touched, and proposes the change to `priorities.md` the week earned.
+Once a week, look back before planning forward. A week reviewed in a few honest lines shows what a day cannot: the thing that has slipped three weeks running, the priority that has gone quiet, the kind of week that leaves the reader flat. This skill asks a few questions, writes a dated entry to a reviews document, lists what was carried forward from the last review and not touched, and proposes the change to `priorities.md` the week earned.
 
 ## Where this runs
 
-This skill belongs to the week project, whose project docs are `priorities.md`. Before anything else, check that it is here. If not, this is another project: say which project this skill is for and stop, so nothing is written into the wrong folder or the wrong docs; if this is the right project and it is not set up yet, offer its setup, `set up my week project`.
+This skill belongs to the week binder, whose Context document is `priorities.md`. Before anything else, check that it is here. If not, this is another binder: say which binder this skill is for and stop, so nothing is written into the wrong folder or the wrong Context documents; if this is the right binder and it is not set up yet, offer its setup, `set up my week binder`.
 
 ## Before starting
 
-Read `priorities.md` and the last two or three entries in `reviews.md`, a project doc created the first time this runs, so the review compares against something. Both are project docs, so this works from the phone. If a plan for the week was handed back by the planning skill, read it too; the review measures the week against the plan the reader chose, not against an ideal.
+Read `priorities.md` and the last two or three entries in `reviews.md`, a Context document created the first time this runs, so the review compares against something. Both are Context documents, so this works from the phone. If a plan for the week was handed back by the planning skill, read it too; the review measures the week against the plan the reader chose, not against an ideal.
 
 ## The questions
 

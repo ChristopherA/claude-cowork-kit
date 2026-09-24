@@ -5,15 +5,15 @@ description: Settles a decision one question at a time, finding what already dec
 
 # Clarify
 
-Reach a decision the reader can act on, and then stop. This skill asks; it does not build. It fits any project, and it fits the knowledge project most, where the questions are small and recur: one note or three, which thread this belongs to, whether a source deserves a note at all. It also fits the reader who has been handed a decision without the information to make it and wants options and a recommendation: most of the work then is finding what already decides it.
+Reach a decision the reader can act on, and then stop. This skill asks; it does not build. It fits any binder, and it fits the research binder most, where the questions are small and recur: one note or three, which thread this belongs to, whether a source deserves a note at all. It also fits the reader who has been handed a decision without the information to make it and wants options and a recommendation: most of the work then is finding what already decides it.
 
 This skill runs one direction: you hold the information, or find it, and the reader decides. When it is the other way round, the reader holds what is needed and it has to be drawn out of them before anything is designed, that is the interview skill, not this one; say so and switch.
 
-Facts are your job; decisions are the reader's. When a question turns on something you could find out, the folder's contents, what a project doc says, whether a note already exists, look it up and say what you found; never ask the reader for what you can read. Ask only for what is theirs to decide: what they want, what they will tolerate, which of two goods matters more.
+Facts are your job; decisions are the reader's. When a question turns on something you could find out, the folder's contents, what a Context document says, whether a note already exists, look it up and say what you found; never ask the reader for what you can read. Ask only for what is theirs to decide: what they want, what they will tolerate, which of two goods matters more.
 
 ## Before the first question
 
-Look for what already decides this. Read `wrap-up.md` if one exists, then the project's own docs: in the notes project `map.md`'s settled conventions and current work and the inbox if the decision is about a capture; elsewhere the priorities, mission, categories or questions doc; and any note or thread the reader names. If something there already answers the question, say so and ask only what it leaves open. A dialogue that starts cold re-derives, worse, what the reader wrote down last month.
+Look for what already decides this. Read `wrap-up.md` if one exists, then the binder's own Context documents: in the research binder `map.md`'s settled conventions and current work and the inbox if the decision is about a capture; elsewhere the priorities, mission, categories or questions document; and any note or thread the reader names. If something there already answers the question, say so and ask only what it leaves open. A dialogue that starts cold re-derives, worse, what the reader wrote down last month.
 
 If the reader has already said what they want on one dimension, do not ask about it. Skip anything the request answered.
 
@@ -32,7 +32,7 @@ Never bundle two independent choices into one question; the reader cannot answer
 
 ## Every few decisions
 
-Ask the question the loop cannot ask itself: does the premise still hold? Should this note, thread, or project exist at all? A run of consistent answers is not the same as a good decision; it is a sign nobody has re-opened the first one.
+Ask the question the loop cannot ask itself: does the premise still hold? Should this note, thread, or binder exist at all? A run of consistent answers is not the same as a good decision; it is a sign nobody has re-opened the first one.
 
 ## Ending
 

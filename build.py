@@ -15,8 +15,8 @@ create-cowork-plugin skill produces.
 Setup skills hand the reader the kit's own instruction blocks, so their
 references/ are GENERATED here from the kit's docs (docs/, or --kit DIR)
 and never edited by hand: the explainer, docs/claude-cowork-kit.md, carries
-the account block, the voices and the asking convention, and each project's
-document under docs/binders/ carries that project's blocks, so those files
+the account block, the voices and the asking convention, and each binder's
+document under docs/binders/ carries that binder's blocks, so those files
 stay the single source. The generated files are written IN PLACE under plugins/ and committed, because
 the repository is also a Cowork marketplace: .claude-plugin/marketplace.json
 at the root lists every plugin by its directory, and Cowork reads the tree
@@ -67,10 +67,10 @@ PLUGINS = {
         "display": "Cowork Kit core",
         "description": (
             "The Claude Cowork Kit's core: a setup interview that hands back the account "
-            "instructions and says which project plugins to install next, plus twelve routines "
-            "for any project: deciding, interviewing, explaining again, questions for others, a "
+            "instructions and says which binder plugins to install next, plus twelve routines "
+            "for any binder: deciding, interviewing, explaining again, questions for others, a "
             "meeting pack, a transcript, confidence, premortem, postmortem, where was I, wrap-up, "
-            "and a new project."
+            "and a new binder."
         ),
         "keywords": ["cowork", "setup", "personal", "non-programmer"],
         "setup": "cowork-setup",
@@ -79,13 +79,13 @@ PLUGINS = {
         "readme": (
             "Install this plugin first, then start a task and say `set up the kit`. The setup "
             "skill asks a few questions, hands back the account-wide instructions to paste, and "
-            "says which project plugin to install next. The other twelve skills work in any project."
+            "says which binder plugin to install next. The other twelve skills work in any binder."
         ),
     },
     "learn": {
         "display": "Learning",
         "description": (
-            "Skills for the Claude Cowork Kit's learning project: set a course, run a lesson, "
+            "Skills for the Claude Cowork Kit's learning binder: set a course, run a lesson, "
             "and quiz yourself on what you have learned or read."
         ),
         "keywords": ["learning", "study", "cowork", "tutor"],
@@ -93,15 +93,15 @@ PLUGINS = {
         "doc": "docs/binders/learning.md",
         "references": ["learning-instructions.md", "global-instructions.md", "voices.md"],
         "readme": (
-            "Each skill expects the learning project the Claude Cowork Kit describes: a folder of "
-            "materials connected in the desktop app and the project docs mission.md, curriculum.md "
+            "Each skill expects the learning binder the Claude Cowork Kit describes: a folder of "
+            "materials connected in the desktop app and the Context documents mission.md, curriculum.md "
             "and progress.md, which the setup creates. Claude's Learning style is optional here: a task cannot turn it on, and the lesson skill does that work inside a task."
         ),
     },
     "week": {
         "display": "Your week",
         "description": (
-            "Skills for the Claude Cowork Kit's week project: set it up, triage a pile of "
+            "Skills for the Claude Cowork Kit's week binder: set it up, triage a pile of "
             "obligations into next actions, plan the week, review it, write up a meeting, and "
             "draft a reply without sending it."
         ),
@@ -110,8 +110,8 @@ PLUGINS = {
         "doc": "docs/binders/week.md",
         "references": ["week-instructions.md", "global-instructions.md", "voices.md"],
         "readme": (
-            "Each skill expects the week project the Claude Cowork Kit describes: a working folder "
-            "connected in the desktop app, a priorities doc the setup creates, and a reviews doc the "
+            "Each skill expects the week binder the Claude Cowork Kit describes: a working folder "
+            "connected in the desktop app, a priorities document the setup creates, and a reviews document the "
             "review creates. Nothing here sends "
             "a message or changes a calendar; drafts are handed back."
         ),
@@ -119,7 +119,7 @@ PLUGINS = {
     "money": {
         "display": "Money",
         "description": (
-            "Skills for the Claude Cowork Kit's money project: set it up with the privacy floor, "
+            "Skills for the Claude Cowork Kit's money binder: set it up with the privacy floor, "
             "summarize a statement, and close a month against your categories."
         ),
         "keywords": ["money", "budget", "cowork", "household"],
@@ -127,15 +127,15 @@ PLUGINS = {
         "doc": "docs/binders/money.md",
         "references": ["money-instructions.md", "global-instructions.md", "voices.md"],
         "readme": (
-            "Each skill expects the money project the Claude Cowork Kit describes: statements in a "
-            "connected folder that stays on the computer, and project docs holding only categories, "
+            "Each skill expects the money binder the Claude Cowork Kit describes: statements in a "
+            "connected folder that stays on the computer, and Context documents holding only categories, "
             "targets and summaries with no account details. Keep the project in the mode that asks (the kit's explainer, under The two approval modes)."
         ),
     },
     "medical": {
         "display": "Medical records",
         "description": (
-            "Skills for the Claude Cowork Kit's medical project: set it up, prepare a visit and its "
+            "Skills for the Claude Cowork Kit's medical binder: set it up, prepare a visit and its "
             "pack, record a visit into the folder, keep a weekly functional log, and turn a handed "
             "article into questions for the clinician."
         ),
@@ -144,16 +144,16 @@ PLUGINS = {
         "doc": "docs/binders/medical.md",
         "references": ["medical-instructions.md", "global-instructions.md", "voices.md"],
         "readme": (
-            "Each skill expects the medical project the Claude Cowork Kit describes: records in a "
+            "Each skill expects the medical binder the Claude Cowork Kit describes: records in a "
             "connected folder that stays on the computer, arranged as the kit's docs/binders/medical.md "
-            "describes, and project docs holding only a questions list and a bare timeline. Keep the "
+            "describes, and Context documents holding only a questions list and a bare timeline. Keep the "
             "project in the mode that asks (the kit's explainer, under The two approval modes)."
         ),
     },
     "research": {
         "display": "Research",
         "description": (
-            "Skills for the Claude Cowork Kit's notes project: set the project up, drain the "
+            "Skills for the Claude Cowork Kit's research binder: set it up, drain the "
             "capture inbox, write a source note, and check the description against the folder."
         ),
         "keywords": ["research", "notes", "cowork", "markdown"],
@@ -161,9 +161,9 @@ PLUGINS = {
         "doc": "docs/binders/research.md",
         "references": ["research-instructions.md", "rules-template.md", "map-template.md", "voices.md", "global-instructions.md"],
         "readme": (
-            "Each skill expects the notes project the Claude Cowork Kit describes: a notes folder "
-            "connected in the desktop app, a project doc `rules.md` with the working rules, a "
-            "project doc `map.md` describing the folder, and a project doc `inbox.md` for captures. "
+            "Each skill expects the research binder the Claude Cowork Kit describes: a research folder "
+            "connected in the desktop app, a Context document `rules.md` with the working rules, a "
+            "Context document `map.md` describing the folder, and a Context document `inbox.md` for captures. "
             "The three skills with scripts read the folder only; they never write to it without "
             "the reader's yes, and each says in its body what to do when code execution is off."
         ),
@@ -275,7 +275,7 @@ def kit_references(docs_dir):
     The explainer carries the account instructions, the voices and the
     asking convention; docs/binders/research.md carries the project
     instructions, the working rules and the description; every other
-    project doc carries its block under `## The project instructions`. A missing file or
+    binder document carries its block under `## The project instructions`. A missing file or
     block fails naming the file.
     """
     docs_dir = Path(docs_dir).expanduser()
@@ -311,21 +311,21 @@ def kit_references(docs_dir):
     check_skills_index()
     for name, body in binders.items():
         if "[FOLDER PATH ON MY COMPUTER]" not in body:
-            fail(f"kit: the {name} project's block has no folder placeholder")
-    refs = {f"{name}-instructions.md": stamp(f"docs/binders/{name}.md") + f"# Project instructions for the {name} project\n\nGoes in that project's Instructions panel, with the folder path filled in.\n\n```\n" + body + "```\n"
+            fail(f"kit: the {name} binder's block has no folder placeholder")
+    refs = {f"{name}-instructions.md": stamp(f"docs/binders/{name}.md") + f"# Project instructions for the {name} binder\n\nGoes in that project's Instructions panel, with the folder path filled in.\n\n```\n" + body + "```\n"
             for name, body in binders.items()}
     refs.update({
         "global-instructions.md": stamp(explainer_rel) + "# The account instructions\n\nGoes in Settings, Account, \"Instructions for Claude\". Substitute one voice from voices.md where marked.\n\n```\n" + block1 + "```\n",
         "voices.md": stamp(explainer_rel) + "# The voices\n\nOne of these replaces the marked line in global-instructions.md.\n\n"
                      + "".join(f"## {name}\n\n```\n{body}```\n\n" for name, body in voices.items()),
         "research-instructions.md": stamp(notes_rel) + "# The project instructions\n\nGoes in the project's Instructions panel, not the description. Nothing to fill in.\n\n```\n" + block3a + "```\n",
-        "rules-template.md": stamp(notes_rel) + "# The working rules\n\nCreated as the project doc rules.md, with the folder path filled in.\n\n```markdown\n" + block3b + "```\n",
-        "map-template.md": stamp(notes_rel) + "# The description\n\nCreated as the project doc map.md, every bracket filled.\n\n```markdown\n" + block4 + "```\n",
+        "rules-template.md": stamp(notes_rel) + "# The working rules\n\nCreated as the Context document rules.md, with the folder path filled in.\n\n```markdown\n" + block3b + "```\n",
+        "map-template.md": stamp(notes_rel) + "# The description\n\nCreated as the Context document map.md, every bracket filled.\n\n```markdown\n" + block4 + "```\n",
     })
     return refs
 
 
-CONTEXT_DOCUMENTS = {  # each project plugin's setup docs, which every one of its other skills must name
+CONTEXT_DOCUMENTS = {  # each binder plugin's setup Context documents, which every one of its other skills must name
     "research": ["rules.md", "map.md", "inbox.md"],
     "learn": ["mission.md", "curriculum.md", "progress.md"],
     "week": ["priorities.md"],
@@ -335,7 +335,7 @@ CONTEXT_DOCUMENTS = {  # each project plugin's setup docs, which every one of it
 
 
 def check_project_sections():
-    """Every non-setup skill of a project plugin says where it runs and names its docs.
+    """Every non-setup skill of a binder plugin says where it runs and names its Context documents.
 
     Plugins installed under Customize reach every project, so a skill that does
     not check its project writes into whatever folder is connected.
@@ -348,7 +348,7 @@ def check_project_sections():
             if "## Where this runs" not in text:
                 fail(f"{skill_md.relative_to(ROOT)}: no '## Where this runs' section (the project check)")
             if not any(f"`{d}`" in text for d in docs):
-                fail(f"{skill_md.relative_to(ROOT)}: names none of the {plugin} project's docs {docs}")
+                fail(f"{skill_md.relative_to(ROOT)}: names none of the {plugin} binder's Context documents {docs}")
 
 
 SKILLS_INDEX = ROOT / "docs" / "skills.md"

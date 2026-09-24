@@ -1,12 +1,12 @@
 # The kit's skills
 
-Every skill in every plugin: what it does, in the skill's own words, when to reach for it, and what it hands back. A skill is one routine inside a plugin, picked up when you ask for its job in a phrase; the phrases are at the end of each description. Everything a skill does you could ask for in a sentence, more slowly. Every skill asks its questions through the app's question control, never writes into your folder or a project doc without a yes, and ends with one word for how complete the work was: full, partial or minimal, with what is missing.
+Every skill in every plugin: what it does, in the skill's own words, when to reach for it, and what it hands back. A skill is one routine inside a plugin, picked up when you ask for its job in a phrase; the phrases are at the end of each description. Everything a skill does you could ask for in a sentence, more slowly. Every skill asks its questions through the app's question control, never writes into your folder or a Context document without a yes, and ends with one word for how complete the work was: full, partial or minimal, with what is missing.
 
-The descriptions below are the ones the skills carry, and the build checks that they match; the plugin READMEs carry the same descriptions. The reasoning behind each project is in its document under `binders/`, and the kit's case is in [the explainer](claude-cowork-kit.md).
+The descriptions below are the ones the skills carry, and the build checks that they match; the plugin READMEs carry the same descriptions. The reasoning behind each binder is in its document under `binders/`, and the kit's case is in [the explainer](claude-cowork-kit.md).
 
 ## Cowork Kit core, `cowork-kit`
 
-The setup, and twelve routines that work in any project. None of them needs a particular folder or project doc; each reads what the project it runs in has. The ones that write, write only a project doc, and only on a yes.
+The setup, and twelve routines that work in any binder. None of them needs a particular folder or Context document; each reads what the project it runs in has. The ones that write, write only a Context document, and only on a yes.
 
 ### `cowork-again`
 
@@ -36,9 +36,9 @@ Says plainly what Claude is confident about, what it is not, and what would clos
 
 Draws out what the reader knows before anything is designed: rounds of questions, then a write-back of what was understood. Use for "ask me questions first", "get it out of my head".
 
-**When to reach for it.** The knowledge is in your head and has to come out before anything is designed: a plan with branches, a new project's scope, a piece of writing you have not yet said the point of. The opposite direction from clarify.
+**When to reach for it.** The knowledge is in your head and has to come out before anything is designed: a plan with branches, a new binder's scope, a piece of writing you have not yet said the point of. The opposite direction from clarify.
 
-**What it hands back.** Rounds of questions until nothing is left silently assumed, then a written note of what Claude understood, offered for a project doc or a thread on a yes. Nothing is built from it until you ask.
+**What it hands back.** Rounds of questions until nothing is left silently assumed, then a written note of what Claude understood, offered for a Context document or a thread on a yes. Nothing is built from it until you ask.
 
 ### `cowork-meeting-pack`
 
@@ -46,15 +46,15 @@ Before a meeting with a professional: a one-page brief for them, a script for th
 
 **When to reach for it.** A short meeting with a professional where the slot is expensive and the preamble would eat it, and especially when someone is coming with you to take notes.
 
-**What it hands back.** Three documents: a one-page brief the professional can scan, a script you follow, and a capture sheet for whoever takes notes, the asks first; each written on a yes. For a clinician, the medical project's visit prep does this from the record.
+**What it hands back.** Three documents: a one-page brief the professional can scan, a script you follow, and a capture sheet for whoever takes notes, the asks first; each written on a yes. For a clinician, the medical binder's visit prep does this from the record.
 
 ### `cowork-new-binder`
 
-Designs a project the kit does not describe: its purpose, boundaries and docs, then the instructions text and a plugin from the kit's template. Use for "new project", "a project for something else".
+Designs a binder the kit does not describe: its purpose, limits and Context documents, then its instructions and a plugin from the kit's template. Use for "new binder", "a binder for something else".
 
 **When to reach for it.** You want a project for something the kit does not describe, with the same shape as the ones it does.
 
-**What it hands back.** The project's purpose, boundaries, folder and docs designed with you in rounds, then the Instructions text in the kit's form to paste. It creates no project and installs nothing; for a plugin, it points at the template and Anthropic's plugin builder.
+**What it hands back.** The binder's purpose, boundaries, folder and Context documents designed with you in rounds, then the Instructions text in the kit's form to paste. It creates no project and installs nothing; for a plugin, it points at the template and Anthropic's plugin builder.
 
 ### `cowork-postmortem`
 
@@ -78,19 +78,19 @@ Writes the questions for someone who holds what the reader lacks, an accountant,
 
 **When to reach for it.** Someone else holds what you need, an accountant, a contractor, a landlord, a teacher, a lawyer, and you want to arrive with the right questions rather than think of them afterwards.
 
-**What it hands back.** A short document of questions ordered by what matters, one idea each, offered as a dated project doc on a yes. You send it or take it; the skill contacts no one.
+**What it hands back.** A short document of questions ordered by what matters, one idea each, offered as a dated Context document on a yes. You send it or take it; the skill contacts no one.
 
 ### `cowork-setup`
 
-Sets up the Claude Cowork Kit: a short interview, the account instructions to paste, and which project plugin to install next. Use for "set up the kit", "get started", "install the cowork kit".
+Sets up the Claude Cowork Kit: a short interview, the account instructions to paste, and which binder plugin to install next. Use for "set up the kit", "get started", "install the cowork kit".
 
-**When to reach for it.** You are starting with the kit itself rather than with a project, or you want the account instructions without any project plugin installed yet. A project's own setup hands the same block back when the field is empty, so most readers never need this one.
+**When to reach for it.** You are starting with the kit itself rather than with a binder, or you want the account instructions without any binder plugin installed yet. A project's own setup hands the same block back when the field is empty, so most readers never need this one.
 
-**What it hands back.** The account instructions with your chosen voice filled in, for Settings, Account, "Instructions for Claude", and the name of the project plugin to install next with its setup phrase.
+**What it hands back.** The account instructions with your chosen voice filled in, for Settings, Account, "Instructions for Claude", and the name of the binder plugin to install next with its setup phrase.
 
 ### `cowork-transcript`
 
-Cleans a raw transcript at a stated level: speakers named, filler trimmed, terms fixed, nothing paraphrased, saved beside the raw one for the project's next step. Use for "clean up this transcript".
+Cleans a raw transcript at a stated level: speakers named, filler trimmed, terms fixed, nothing paraphrased, saved beside the raw one for the binder's next step. Use for "clean up this transcript".
 
 **When to reach for it.** You have a raw transcript from a meeting tool, a dictation app or a recording someone transcribed, and the notes built on it would inherit its errors.
 
@@ -106,19 +106,19 @@ Reads current work, the inbox and the newest notes, and recommends the one next 
 
 ### `cowork-wrap-up`
 
-Writes where this session leaves off, done, open, the first next step and what to watch, into a project doc the next session or the phone reads. Use for "wrap up for today", "write down where we are".
+Writes where this session leaves off, done, open, the next step and what to watch, into a Context document the next session or the phone reads. Use for "wrap up for today", "write down where we are".
 
 **When to reach for it.** The session is ending and the next one, or the phone at 11pm, should start from where this one stopped.
 
-**What it hands back.** A short project doc: done, open, the first next step and what to watch, read back after writing. It records the state of the work, not a summary of the conversation.
+**What it hands back.** A short Context document: done, open, the first next step and what to watch, read back after writing. It records the state of the work, not a summary of the conversation.
 
 ## Research, `research`
 
-The notes project's four skills. All but the setup read `rules.md` and `map.md` first and write into the folder only after a yes; the three that read the folder run at the desk.
+The research binder's four skills. All but the setup read `rules.md` and `map.md` first and write into the folder only after a yes; the three that read the folder run at the desk.
 
 ### `research-description-check`
 
-Compares map.md against the notes folder and reports every claim that is no longer true, proposing edits without making them. Use for "check the description", "check map.md against my notes".
+Compares map.md against the research folder and reports every claim that is no longer true, proposing edits without making them. Use for "check the description", "check map.md against my notes".
 
 **When to reach for it.** At the two-week sitting, and whenever an answer from the phone comes back wrong.
 
@@ -126,19 +126,19 @@ Compares map.md against the notes folder and reports every claim that is no long
 
 ### `research-inbox-drain`
 
-Processes the capture inbox one item at a time into notes in the notes folder, to map.md conventions. Use for "process the inbox", "drain the inbox", "file my captures".
+Processes the capture inbox one item at a time into notes in the research folder, to map.md conventions. Use for "process the inbox", "drain the inbox", "file my captures".
 
 **When to reach for it.** At your desk with the folder connected, when the inbox has a handful of captures. A short drain often is the habit that keeps the second job away.
 
-**What it hands back.** Each item placed, an existing note to update, a new note, another project, a source to read, shown, and written into the folder only after a yes; at the end, how many were filed, redirected, deferred and left.
+**What it hands back.** Each item placed, an existing note to update, a new note, another binder, a source to read, shown, and written into the folder only after a yes; at the end, how many were filed, redirected, deferred and left.
 
 ### `research-setup`
 
-Sets up the notes project: three questions, then rules.md, map.md and inbox.md as project docs and the short instructions to paste. Use for "set up my notes project", "notes setup", "set up my notes".
+Sets up the research binder: three questions, then rules.md, map.md and inbox.md as Context documents and the text to paste. Use for "set up my research binder", "notes setup", "set up my notes".
 
-**When to reach for it.** Once, in a task inside the new notes project, after the folder is connected.
+**When to reach for it.** Once, in a task inside the new project for the research binder, after the folder is connected.
 
-**What it hands back.** The three project docs created, `rules.md`, `map.md` and `inbox.md`, and the two things only you can paste: the account instructions if your Settings field is empty, and the short project instructions for the Instructions panel. It then names the day-one checks, the phone check first.
+**What it hands back.** The three Context documents created, `rules.md`, `map.md` and `inbox.md`, and the two things only you can paste: the account instructions if your Settings field is empty, and the short project instructions for the Instructions panel. It then names the day-one checks, the phone check first.
 
 ### `research-source-note`
 
@@ -150,7 +150,7 @@ Writes one source note from a book, paper, article or transcript the reader hand
 
 ## Learning, `learn`
 
-The learning project's three skills. The lesson and the quiz run from the project docs, so they work from the phone with the computer closed; only the setup looks at the materials folder.
+The learning binder's three skills. The lesson and the quiz run from the Context documents, so they work from the phone with the computer closed; only the setup looks at the materials folder.
 
 ### `learn-lesson`
 
@@ -170,15 +170,15 @@ Tests recall one question at a time from the lesson, the progress record or a ha
 
 ### `learn-setup`
 
-Sets up the learning project: an interview, then mission.md, curriculum.md and progress.md as project docs and the instructions to paste. Use for "set up my learning project", "I want to learn".
+Sets up the learning binder: an interview, then mission.md, curriculum.md and progress.md as Context documents and the instructions to paste. Use for "set up my learning binder", "I want to learn".
 
-**When to reach for it.** Once, in a task inside the new learning project.
+**When to reach for it.** Once, in a task inside the new project for the learning binder.
 
 **What it hands back.** An interview of six questions, the curriculum drafted whole for your yes, then `mission.md`, `curriculum.md` and `progress.md` created, and the two things only you can paste: the account instructions if your Settings field is empty, and the project instructions with the subject and folder filled in.
 
 ## Your week, `week`
 
-The week project's six skills. Nothing here sends a message or touches a calendar; drafts and plans come back in the chat, and the folder and `priorities.md` change only on a yes.
+The week binder's six skills. Nothing here sends a message or touches a calendar; drafts and plans come back in the chat, and the folder and `priorities.md` change only on a yes.
 
 ### `week-meeting-notes`
 
@@ -210,13 +210,13 @@ A weekly review in the reader's words: done, slipped, avoided, what ate the week
 
 **When to reach for it.** At the end of the week, before planning the next one.
 
-**What it hands back.** A dated entry in a reviews doc in your own words, done, slipped, avoided, what ate the week, energy, compared with recent weeks, with what was carried forward untouched, and the change to `priorities.md` the week earned, on a yes.
+**What it hands back.** A dated entry in a reviews document in your own words, done, slipped, avoided, what ate the week, energy, compared with recent weeks, with what was carried forward untouched, and the change to `priorities.md` the week earned, on a yes.
 
 ### `week-setup`
 
-Sets up the week project: three questions, then priorities.md as a project doc and the short instructions to paste. Use for "set up my week project", "week setup".
+Sets up the week binder: three questions, then priorities.md as a Context document and the short instructions to paste. Use for "set up my week binder", "week setup".
 
-**When to reach for it.** Once, in a task inside the new week project.
+**When to reach for it.** Once, in a task inside the new project for the week binder.
 
 **What it hands back.** `priorities.md` created from your answers, and the two things only you can paste: the account instructions if your Settings field is empty, and the project instructions with the folder filled in.
 
@@ -230,7 +230,7 @@ Turns a dump of half-formed obligations into a short ordered list of next action
 
 ## Money, `money`
 
-The money project's three skills. Every figure traces to a row in a file in the folder, nothing that identifies an account reaches a project doc, and none of them logs in anywhere.
+The money binder's three skills. Every figure traces to a row in a file in the folder, nothing that identifies an account reaches a Context document, and none of them logs in anywhere.
 
 ### `money-close`
 
@@ -238,13 +238,13 @@ Closes a month: categorizes its transactions against categories.md, shows the ar
 
 **When to reach for it.** At the end of a month, when its files are in the folder.
 
-**What it hands back.** The month's transactions categorized against `categories.md`, the arithmetic shown, the month compared with each target in `targets.md`, and a summary with no account details written to a project doc on a yes. It stops at a missing file rather than working around it.
+**What it hands back.** The month's transactions categorized against `categories.md`, the arithmetic shown, the month compared with each target in `targets.md`, and a summary with no account details written to a Context document on a yes. It stops at a missing file rather than working around it.
 
 ### `money-setup`
 
-Sets up the money project: the privacy floor, three questions, then categories.md and targets.md as project docs and the instructions to paste. Use for "set up my money project", "money setup".
+Sets up the money binder: the privacy floor, three questions, then categories.md and targets.md as Context documents and the instructions to paste. Use for "set up my money binder", "money setup".
 
-**When to reach for it.** Once, in a task inside the new money project. It opens by saying what the folder does and does not protect and asks whether to go on.
+**When to reach for it.** Once, in a task inside the new project for the money binder. It opens by saying what the folder does and does not protect and asks whether to go on.
 
 **What it hands back.** `categories.md` and `targets.md` created from your answers with no account details or figures from a statement in either, and the two things only you can paste: the account instructions if your Settings field is empty, and the project instructions with the folder filled in.
 
@@ -254,11 +254,11 @@ Summarizes one statement or export from the folder into categories and totals wi
 
 **When to reach for it.** At your desk with the folder connected, one statement or export at a time.
 
-**What it hands back.** Categories and totals with every figure traced to a row and the arithmetic shown, what did not fit named rather than forced, nothing that identifies an account; written to a project doc on a yes.
+**What it hands back.** Categories and totals with every figure traced to a row and the arithmetic shown, what did not fit named rather than forced, nothing that identifies an account; written to a Context document on a yes.
 
 ## Medical records, `medical`
 
-The medical project's five skills. The folder holds the clinical record and the project docs hold only the questions list and the bare timeline; none of them diagnoses, interprets, or reassures.
+The medical binder's five skills. The folder holds the clinical record and the Context documents hold only the questions list and the bare timeline; none of them diagnoses, interprets, or reassures.
 
 ### `medical-check-in`
 
@@ -266,7 +266,7 @@ A weekly check-in in the reader's own words: what they did, what hurt, what help
 
 **When to reach for it.** Once a week or so, in your own words.
 
-**What it hands back.** A dated entry in the functional log in the folder, what you did, what hurt, what helped, how you feel, and the one or two things that moved against the last few entries. Nothing clinical reaches a project doc.
+**What it hands back.** A dated entry in the functional log in the folder, what you did, what hurt, what helped, how you feel, and the one or two things that moved against the last few entries. Nothing clinical reaches a Context document.
 
 ### `medical-record-visit`
 
@@ -278,9 +278,9 @@ After an appointment: a bare timeline line, the visit note from the recording, c
 
 ### `medical-setup`
 
-Sets up the medical project: the privacy floor, three questions, then questions.md and timeline.md as project docs and the instructions to paste. Use for "set up my medical project", "medical setup".
+Sets up the medical binder: the privacy floor, three questions, questions.md and timeline.md as Context documents and the instructions to paste. Use for "set up my medical binder", "medical setup".
 
-**When to reach for it.** Once, in a task inside the new medical project. It opens by saying what the folder does and does not protect.
+**When to reach for it.** Once, in a task inside the new project for the medical binder. It opens by saying what the folder does and does not protect.
 
 **What it hands back.** `questions.md` and `timeline.md` created with nothing clinical in them, the folder's standing files offered as headed empty files if it has none, and the two things only you can paste: the account instructions if your Settings field is empty, and the project instructions with the folder filled in.
 
@@ -302,4 +302,4 @@ Before an appointment, drafts the questions from what changed in the record, and
 
 ## The template
 
-`template/` has no skills; it is the skeleton of a project plugin, with the brackets left in, for a contributor or a reader comfortable editing files. A project of your own does not need it: the core's `cowork-new-binder` designs one and hands back its text.
+`template/` has no skills; it is the skeleton of a binder plugin, with the brackets left in, for a contributor or a reader comfortable editing files. A binder of your own does not need it: the core's `cowork-new-binder` designs one and hands back its text.

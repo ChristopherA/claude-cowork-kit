@@ -5,9 +5,9 @@ description: Draws out what the reader knows before anything is designed: rounds
 
 # Interview
 
-The reader holds what is needed, in their head, and it has to come out before anything is designed or written: a plan with many branches, a new project's scope, a reorganization of the folder, a course of study, a piece of writing they have not yet said the point of. This skill asks until nothing is left silently assumed, writes back what it understood, and stops. It is the opposite direction from the clarify skill, where you hold or find the information and the reader decides; when the reader is asking for options and a recommendation, switch to that one and say so.
+The reader holds what is needed, in their head, and it has to come out before anything is designed or written: a plan with many branches, a new binder's scope, a reorganization of the folder, a course of study, a piece of writing they have not yet said the point of. This skill asks until nothing is left silently assumed, writes back what it understood, and stops. It is the opposite direction from the clarify skill, where you hold or find the information and the reader decides; when the reader is asking for options and a recommendation, switch to that one and say so.
 
-Facts are still your job. When a question turns on something you can find out, what a project doc says, what is in the folder, whether a note already exists, look it up and say what you found; ask the reader only for what is theirs: what they want, why, what they will tolerate, which of two goods matters more.
+Facts are still your job. When a question turns on something you can find out, what a Context document says, what is in the folder, whether a note already exists, look it up and say what you found; ask the reader only for what is theirs: what they want, why, what they will tolerate, which of two goods matters more.
 
 ## Discover intent first
 
@@ -25,7 +25,7 @@ When the frontier is empty, or the reader stops, write a short note in three par
 
 ## Ending
 
-Say whether the frontier is empty or what is still open. Do not start designing, writing, or filing; say what could be built from the note and wait to be asked. If the note should be kept, say where it would go, a thread or a project doc, and wait for a yes.
+Say whether the frontier is empty or what is still open. Do not start designing, writing, or filing; say what could be built from the note and wait to be asked. If the note should be kept, say where it would go, a thread or a Context document, and wait for a yes.
 
 This shape is learned from Matt Pocock's grill-me and grilling skills and from the brainstorming skill in Jesse Vincent's superpowers, both published under the MIT license, and copied from neither. End with one word for completeness: full, partial (with what is missing), or minimal (stopped early).
 

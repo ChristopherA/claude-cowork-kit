@@ -5,11 +5,11 @@ description: Before a meeting with a professional: a one-page brief for them, a 
 
 # Meeting pack
 
-A short meeting with a professional, an accountant, a lawyer, a contractor, a teacher, an advisor, goes better when three things are written beforehand for three readers: a one-page brief the professional can scan in a minute, a script the reader follows so a twenty-minute slot is not spent on preamble, and a capture sheet for whoever takes notes, so the professional's exact words survive the visit. For a clinician, the medical project's visit prep does this from the record; this is the same pack for everyone else.
+A short meeting with a professional, an accountant, a lawyer, a contractor, a teacher, an advisor, goes better when three things are written beforehand for three readers: a one-page brief the professional can scan in a minute, a script the reader follows so a twenty-minute slot is not spent on preamble, and a capture sheet for whoever takes notes, so the professional's exact words survive the visit. For a clinician, the medical binder's visit prep does this from the record; this is the same pack for everyone else.
 
 ## Take stock
 
-Ask in one control what does not depend on the rest: who the meeting is with (role, and whether this is a first meeting or an established one), when, and what the reader most needs to leave with (an answer, a decision, a document, a referral, a price). Then, in a second control: whether a companion is coming, and what the reader will bring or send ahead. Read whatever the project holds on the matter first, the priorities doc, an open thread, the folder's file on this person or this matter, and do not ask for what it already says.
+Ask in one control what does not depend on the rest: who the meeting is with (role, and whether this is a first meeting or an established one), when, and what the reader most needs to leave with (an answer, a decision, a document, a referral, a price). Then, in a second control: whether a companion is coming, and what the reader will bring or send ahead. Read whatever the binder holds on the matter first, the priorities document, an open thread, the folder's file on this person or this matter, and do not ask for what it already says.
 
 ## The questions first
 
@@ -29,7 +29,7 @@ Name the three files by date and role, such as `2026-10-02 accountant brief.md`,
 
 ## Ending
 
-Report the three files by name and the number of asks on page one. End with one word for completeness: full (three documents written), partial (some written, with what is missing), or minimal (stopped early). Say that the capture sheet comes back to the project after the meeting, for the notes.
+Report the three files by name and the number of asks on page one. End with one word for completeness: full (three documents written), partial (some written, with what is missing), or minimal (stopped early). Say that the capture sheet comes back to the binder after the meeting, for the notes.
 
 This skill is learned from the kit author's own appointment-preparation practice, generalized to any professional and rewritten with nothing of that situation in it.
 

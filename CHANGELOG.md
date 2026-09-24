@@ -11,7 +11,8 @@ Every release is listed here, newest first, with what changed since the one befo
 - Trigger phrases carry the project's noun and no two collide on an ordinary sentence; every skill ends with a completeness word; silence is never a yes.
 - One version, from `VERSION`, in every manifest; `build.py --check` fails on a generated file left uncommitted.
 - The README is the kit's first page; a changelog, contributing notes and a privacy statement exist.
-- The explainer is the kit's case with no project in it; each project has its own document under `docs/projects/` with its use case, skills, setup, check and paste blocks; `docs/skills.md` indexes every skill and the build checks it against the skills.
+- The explainer is the kit's case with no project in it; each binder has its own document under `docs/binders/` with its use case, skills, setup, check and paste blocks; `docs/skills.md` indexes every skill and the build checks it against the skills.
+- The kit speaks the app's words: each part of life is a *binder*, one project in the app plus its folder and its *Context documents*; *project* means only the app's container, and the documents Claude reads from the phone are the project's Context. The notes plugin is `research` (shown as Research) with `research-*` skills and the trigger `set up my research binder`; `cowork-new-project` is `cowork-new-binder`; the per-binder documents are under `docs/binders/`. An existing install of `pkm` is replaced, not upgraded.
 - A folder in iCloud Drive, directly or through Desktop & Documents sync, needs Optimize Mac Storage and Time Machine turned on: Claude cannot read a file iCloud has moved off the Mac, and a reorganizing task has been reported losing such files.
 
 ## 0.1.0-rc.5 (2026-09-23)

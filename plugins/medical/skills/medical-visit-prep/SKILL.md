@@ -5,11 +5,11 @@ description: Before an appointment, drafts the questions from what changed in th
 
 # Visit prep
 
-Walk into the appointment with clear questions. This skill is the project's Appointments clause made into a routine: a short list drawn from what has actually changed in the record since the last visit, values quoted exactly as they appear, and not a generic checklist. The questions are drafted first because they are the leverage; a question that is well framed gets an answer.
+Walk into the appointment with clear questions. This skill is the Appointments clause of the project instructions made into a routine: a short list drawn from what has actually changed in the record since the last visit, values quoted exactly as they appear, and not a generic checklist. The questions are drafted first because they are the leverage; a question that is well framed gets an answer.
 
 ## Where this runs
 
-This skill belongs to the medical project, whose project docs are `questions.md` and `timeline.md`. Before anything else, check that they are here. If not, this is another project: say which project this skill is for and stop, so nothing is written into the wrong folder or the wrong docs; if this is the right project and it is not set up yet, offer its setup, `set up my medical project`.
+This skill belongs to the medical binder, whose Context documents are `questions.md` and `timeline.md`. Before anything else, check that they are here. If not, this is another binder: say which binder this skill is for and stop, so nothing is written into the wrong folder or the wrong Context documents; if this is the right binder and it is not set up yet, offer its setup, `set up my medical binder`.
 
 ## Before starting
 
@@ -33,7 +33,7 @@ Draft the questions from the changes, and show them as a list, most important fi
 
 1. It helps the reader understand. Prefer "can you help me understand" and "I'd welcome your thinking on".
 2. It never presupposes the doctor is wrong. Avoid "why is it not X", which invites defensiveness.
-3. It leads with the reader's own history where it questions a plan or what the reader was told: the value, the date, what was said last time, then the ask. In the chat, quote the value exactly; in the copy written to `questions.md`, name the result and its date and point at the record ("the March result") without the value, since that doc syncs and holds nothing clinical.
+3. It leads with the reader's own history where it questions a plan or what the reader was told: the value, the date, what was said last time, then the ask. In the chat, quote the value exactly; in the copy written to `questions.md`, name the result and its date and point at the record ("the March result") without the value, since that document syncs and holds nothing clinical.
 4. It is specific enough that a vague answer would be obviously inadequate; a question that "fine" could answer is not finished.
 5. It carries one idea. Two ideas are two questions.
 
@@ -41,7 +41,7 @@ Keep the list short, the handful the visit has time for. Add a one-line why-this
 
 ## The visit pack
 
-When the reader asks for it, when a companion is coming, or when the clinician is new, the questions become three documents with three readers, written into the folder and not into any project doc, since all three are clinical. Draft the questions first, as above, and get the yes on them; the pack is built from them and from the record, never the other way round.
+When the reader asks for it, when a companion is coming, or when the clinician is new, the questions become three documents with three readers, written into the folder and not into any Context document, since all three are clinical. Draft the questions first, as above, and get the yes on them; the pack is built from them and from the record, never the other way round.
 
 1. **The handout**, one page the clinician can scan in a minute, handed over at the start. In this order: a header (name, date of birth, allergies, who else is present, the referring clinician if any); the reason for the visit in one bold sentence with a line of context; anything enclosed (an imaging disc, printed reports); findings from earlier visits, by whom and when; results, with anything still pending; current medications as a table; what the reader can and cannot do now, and what has helped; then "what I need from this visit", the questions as numbered asks, and only after that the timeline, which may run to a second page. The asks stay on page one.
 2. **The script**, for the reader, read before and glanced at on the phone during. One sentence at the top saying who this clinician is and what the reader's job is in this visit. On arrival: hand over the handout; if the reader means to record, ask first, since the rules on recording differ from place to place. An opening statement of three or four sentences, as a quoted block, flagging anything that has changed since the last visit, because that is new to the clinician. Then the questions, each as a heading with a listen-for line and a follow-up prompt if the answer leaves a gap. Then "who do you know": the clinician's own network for any referral the reader is seeking. Last, "if time runs short": what must be settled before leaving and what can follow by phone.
@@ -55,7 +55,7 @@ Name the three files by date and role, such as `2026-10-02 orthopedist handout.m
 
 Show the list you would write to `questions.md` in full, then wait for a yes. A no, an edit, or a reordering changes what you write; silence is not a yes. Every wait for a yes goes through the app's question control with the recommended option first.
 
-On a yes, write `questions.md`, read it back to confirm it landed as shown, and confirm in one line. The doc syncs, so it holds the questions with their pointers into the record and no values, results or notes from the folder; the reader brings the record, or the values live in the chat at the desk. Say that the list can be read from the phone in the waiting room.
+On a yes, write `questions.md`, read it back to confirm it landed as shown, and confirm in one line. The document syncs, so it holds the questions with their pointers into the record and no values, results or notes from the folder; the reader brings the record, or the values live in the chat at the desk. Say that the list can be read from the phone in the waiting room.
 
 ## Ending
 

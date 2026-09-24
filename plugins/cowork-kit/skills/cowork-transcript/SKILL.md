@@ -1,17 +1,17 @@
 ---
 name: cowork-transcript
-description: Cleans a raw transcript at a stated level: speakers named, filler trimmed, terms fixed, nothing paraphrased, saved beside the raw one for the project's next step. Use for "clean up this transcript".
+description: Cleans a raw transcript at a stated level: speakers named, filler trimmed, terms fixed, nothing paraphrased, saved beside the raw one for the binder's next step. Use for "clean up this transcript".
 ---
 
 # Transcript
 
-A raw transcript, from a meeting tool, a dictation app, or a recording the reader had transcribed, is hard to read and full of small errors, and the notes built on it inherit both. This skill turns it into a clean, readable copy without changing what anyone said, saves it beside the raw one, and hands it to whatever the project does next: a visit note in the medical project, a source note in the notes project, meeting notes in the week project. It starts from text; a task cannot transcribe a recording, so a recording is transcribed first with whatever the reader uses, and the text comes here.
+A raw transcript, from a meeting tool, a dictation app, or a recording the reader had transcribed, is hard to read and full of small errors, and the notes built on it inherit both. This skill turns it into a clean, readable copy without changing what anyone said, saves it beside the raw one, and hands it to whatever the binder does next: a visit note in the medical binder, a source note in the research binder, meeting notes in the week binder. It starts from text; a task cannot transcribe a recording, so a recording is transcribed first with whatever the reader uses, and the text comes here.
 
 ## Take stock
 
 Ask in one control, skipping what the reader has said: where the transcript is (pasted, or a file in the folder); who was on the call, so the speakers can be named; and which level of cleaning they want, medium first as the recommendation. If the folder is out of reach and the transcript is pasted, the cleaned copy comes back in the chat for the reader to save.
 
-Look at the first lines for what produced it: timestamps and speaker names from a meeting tool, numbered subtitle blocks, or unlabelled prose from a dictation model. Each has its own debris (join and leave notices, duplicated labels, split sentences, phonetic spellings of names and terms), and each is cleaned before the general pass. If the project keeps a doc of names and terms, read it first and use its spellings; if it does not, offer to create one from this transcript's corrections at the end, so the next transcript starts ahead.
+Look at the first lines for what produced it: timestamps and speaker names from a meeting tool, numbered subtitle blocks, or unlabelled prose from a dictation model. Each has its own debris (join and leave notices, duplicated labels, split sentences, phonetic spellings of names and terms), and each is cleaned before the general pass. If the binder keeps a Context document of names and terms, read it first and use its spellings; if it does not, offer to create one from this transcript's corrections at the end, so the next transcript starts ahead.
 
 ## Three levels
 
@@ -33,9 +33,9 @@ Past a few thousand words, work in pieces at natural breaks, with a few sentence
 
 ## Before saving
 
-Check: speakers named as above; the level applied and not exceeded, since a medium clean that removes every filler reads as a different person; unclear passages still marked; no debris from the tool left; names and terms spelled as the terms doc says. Show the reader the first few paragraphs and any uncertain attributions, and wait for a yes.
+Check: speakers named as above; the level applied and not exceeded, since a medium clean that removes every filler reads as a different person; unclear passages still marked; no debris from the tool left; names and terms spelled as the terms document says. Show the reader the first few paragraphs and any uncertain attributions, and wait for a yes.
 
-On a yes, save the cleaned copy beside the raw one, named as the raw one with "(cleaned)" added, or in the place the project's rules name; read it back and confirm by file name. Then say what comes next in this project and offer it: the visit note, the source note, the meeting notes. If new spellings were fixed, offer the terms doc update, on its own yes.
+On a yes, save the cleaned copy beside the raw one, named as the raw one with "(cleaned)" added, or in the place the binder's rules name; read it back and confirm by file name. Then say what comes next in this binder and offer it: the visit note, the source note, the meeting notes. If new spellings were fixed, offer the terms document update, on its own yes.
 
 ## Ending
 
@@ -45,7 +45,7 @@ This skill is learned from the kit author's own transcript-cleanup practice for 
 
 ## What this skill does not do
 
-It does not transcribe audio; it starts from text. It does not summarize; the project's next routine does. It does not paraphrase or add a word, and it does not write over the raw transcript. It does not write anywhere without a yes.
+It does not transcribe audio; it starts from text. It does not summarize; the binder's next routine does. It does not paraphrase or add a word, and it does not write over the raw transcript. It does not write anywhere without a yes.
 
 ## Asking
 

@@ -9,7 +9,7 @@ The reader is about to send something, decide something, or commit to something,
 
 ## Read what is on the table
 
-Read the draft, the plan, or the decision as the reader hands it over, and whatever project docs bear on it: the current work in the description, an open thread, the priorities doc. Do not ask the reader to summarize it; the point is that a second reading catches what the writer cannot.
+Read the draft, the plan, or the decision as the reader hands it over, and whatever Context documents bear on it: the current work in the description, an open thread, the priorities document. Do not ask the reader to summarize it; the point is that a second reading catches what the writer cannot.
 
 ## Four questions
 
@@ -24,7 +24,7 @@ Answer each in a sentence or two, from what is in front of you, and mark a guess
 
 The smallest change that closes the most likely failure: a sentence cut or added, a question asked first, a date moved, a person told. Show the exact change. If the honest answer is that the thing is fine, say go, in one word, and stop; a premortem that always finds something is noise.
 
-Ask through the question control whether to apply the change where you can, a project doc or a draft in the chat, and apply it only on a yes. Anything the reader sends or decides is theirs to send or decide.
+Ask through the question control whether to apply the change where you can, a Context document or a draft in the chat, and apply it only on a yes. Anything the reader sends or decides is theirs to send or decide.
 
 ## Ending
 

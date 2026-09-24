@@ -5,11 +5,11 @@ description: Closes a month: categorizes its transactions against categories.md,
 
 # Monthly close
 
-Close one month: gather the files in the folder that cover it, categorize every transaction against `categories.md`, show the arithmetic, compare with `targets.md` where it has content, and write the month's summary to a project doc with no account details in it. This is the statement summary run across a whole month, with the comparison the reader set up the project for.
+Close one month: gather the files in the folder that cover it, categorize every transaction against `categories.md`, show the arithmetic, compare with `targets.md` where it has content, and write the month's summary to a Context document with no account details in it. This is the statement summary run across a whole month, with the comparison the reader set up the binder for.
 
 ## Where this runs
 
-This skill belongs to the money project, whose project docs are `categories.md` and `targets.md`. Before anything else, check that they are here. If not, this is another project: say which project this skill is for and stop, so nothing is written into the wrong folder or the wrong docs; if this is the right project and it is not set up yet, offer its setup, `set up my money project`.
+This skill belongs to the money binder, whose Context documents are `categories.md` and `targets.md`. Before anything else, check that they are here. If not, this is another binder: say which binder this skill is for and stop, so nothing is written into the wrong folder or the wrong Context documents; if this is the right binder and it is not set up yet, offer its setup, `set up my money binder`.
 
 ## Before starting
 
@@ -32,9 +32,9 @@ Do not batch across months. Do not carry a figure from one month's close into an
 
 ## Writing it down
 
-Offer to write the month's summary to a project doc named for the month, such as `close-2026-08.md`. Show the text you would write, in full: the files read by the reader's own names for them and the periods they covered, what was missing, the category lines with counts and totals, the uncategorized count and total (the descriptions stay in the chat), the transfers, the month's totals, and the target comparison if there was one. It holds no account number, no balance, and no transaction row. Wait for a yes through the app's question control; silence is not a yes.
+Offer to write the month's summary to a Context document named for the month, such as `close-2026-08.md`. Show the text you would write, in full: the files read by the reader's own names for them and the periods they covered, what was missing, the category lines with counts and totals, the uncategorized count and total (the descriptions stay in the chat), the transfers, the month's totals, and the target comparison if there was one. It holds no account number, no balance, and no transaction row. Wait for a yes through the app's question control; silence is not a yes.
 
-On a yes: write it, read it back to confirm it landed as shown, and say the doc's name. On a no, leave nothing behind. Never write into the folder, and do not edit `categories.md` or `targets.md` during a close; if the month showed a category is missing or a definition is unclear, say so in one sentence at the end and let the reader change the doc in its own step.
+On a yes: write it, read it back to confirm it landed as shown, and say the document's name. On a no, leave nothing behind. Never write into the folder, and do not edit `categories.md` or `targets.md` during a close; if the month showed a category is missing or a definition is unclear, say so in one sentence at the end and let the reader change the document in its own step.
 
 ## Ending
 
@@ -46,4 +46,4 @@ Ask through the app's question control whenever there is a choice, and for every
 
 ## What this skill does not do
 
-It does not change `categories.md` or `targets.md`. It does not write into the folder, and it does not write to a project doc without a yes. It does not close a month from anything but files in the folder, and it does not carry figures between months. It does not advise on investments or tax, log into or connect to any account, or supply a number the reader did not give.
+It does not change `categories.md` or `targets.md`. It does not write into the folder, and it does not write to a Context document without a yes. It does not close a month from anything but files in the folder, and it does not carry figures between months. It does not advise on investments or tax, log into or connect to any account, or supply a number the reader did not give.

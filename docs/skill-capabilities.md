@@ -24,11 +24,11 @@ The safe planning assumption before the probe was that ripgrep, jq and sqlite3 a
 
 ## What a script can and cannot reach
 
-**Files.** Connected folders are mounted into the session. In the local VM, Vieito found them under `/sessions/<session-name>/mnt/<Folder>/`, with the desktop app translating paths back to `~/Folder/` in what the user sees. A script therefore sees the notes folder as an ordinary directory tree and can walk it, search it and read file metadata. Writes go back through the same mount, which is why the kit's show-and-wait rule matters for anything a script would change. The project's docs (map.md, inbox.md) are project knowledge, not files in that tree; how they appear to a script, if at all, is a probe item.
+**Files.** Connected folders are mounted into the session. In the local VM, Vieito found them under `/sessions/<session-name>/mnt/<Folder>/`, with the desktop app translating paths back to `~/Folder/` in what the user sees. A script therefore sees the notes folder as an ordinary directory tree and can walk it, search it and read file metadata. Writes go back through the same mount, which is why the kit's show-and-wait rule matters for anything a script would change. The Context documents (map.md, inbox.md) are the project's Context, not files in that tree; how they appear to a script, if at all, is a probe item.
 
 **Network.** "No access to your network by default" in the architecture article: no private, link-local or cloud-metadata addresses, and egress only through a mandatory proxy. The local VM's proxy allowlists Anthropic's API, PyPI and npm and returns 403 for everything else. So a script cannot fetch a web page, call an API of the reader's, or use the reader's browser session. Web reading is done by Claude's own tools, and the results arrive as text the script can be handed, never fetched by the script.
 
-**Persistence.** Each session's sandbox is destroyed at the end (cloud) or its session directory is isolated and its user retired (local). Nothing a script installs or caches survives to the next session. Vieito noted the local VM's `/tmp` is shared across sessions, which is a leak to avoid, not a feature to use. Anything a skill wants to keep goes into the notes folder or a project doc, through Claude, as content the reader can read.
+**Persistence.** Each session's sandbox is destroyed at the end (cloud) or its session directory is isolated and its user retired (local). Nothing a script installs or caches survives to the next session. Vieito noted the local VM's `/tmp` is shared across sessions, which is a leak to avoid, not a feature to use. Anything a skill wants to keep goes into the research folder or a Context document, through Claude, as content the reader can read.
 
 **The reader's own machine.** Local mode is a VM with the connected folders mounted, not the reader's shell. A script cannot open the reader's apps, read their keychain, or see files outside the connected folders. The Cloud Security Alliance's July 2026 note on the SharedRoot escape is the caveat: a chain from an unprivileged agent to root inside that VM to a writable host mount was demonstrated, Anthropic rated it informative and made cloud execution the default, and local mode was reported unpatched at that date. That is a reason to keep the kit's skills read-mostly and to prefer cloud sessions for untrusted content; its current status is a claim-check item.
 
@@ -52,7 +52,7 @@ The kit's principle is that structure lives in plain files the reader can read, 
 
 **Learning project.** The progress record is markdown by design, so `jq` does not apply to it directly; a script can still parse its three states (settled, shaky, untested) into JSON for a "what should we drill" answer, and can sample a question bank deterministically so grill-me does not always start at the top. Both are marginal; the learning skills are mostly instructions.
 
-**What scripts do not help with.** Filing, writing, deciding what a note is about, and everything in the project documents that is about judgment. The money project's arithmetic is the one place a script is not optional: a total computed by Python from a CSV is checkable in a way a total produced in prose is not, and the kit's accuracy clause ("show the arithmetic") is easier to honour with the calculation in a script's output.
+**What scripts do not help with.** Filing, writing, deciding what a note is about, and everything in the Context documents that is about judgment. The money binder's arithmetic is the one place a script is not optional: a total computed by Python from a CSV is checkable in a way a total produced in prose is not, and the kit's accuracy clause ("show the arithmetic") is easier to honour with the calculation in a script's output.
 
 ## Design rules for scripts in the kit's skills
 
@@ -70,7 +70,7 @@ Run on 2026-09-22: 1 (the tool inventories, above), 2 (the mount path, with modi
 
 1. In a cloud session and in a local session, run `which rg jq yq sqlite3 pandoc pdftotext fd python3 uv node` and record the two inventories.
 2. Confirm the mount path of a connected folder and whether file modification times match the host's.
-3. Check whether project docs (map.md, inbox.md) are visible to a script at all, and where.
+3. Check whether Context documents (map.md, inbox.md) are visible to a script at all, and where.
 4. Confirm a skill with a `scripts/` directory uploads as a ZIP and its script runs by relative path.
 5. Confirm where the code execution toggle is and its default for a Pro account.
 6. Try `uv run` on a PEP 723 script in both modes to see whether package installation from PyPI works in the cloud sandbox as it does in the local VM.

@@ -1,7 +1,7 @@
 {
   "name": "medical",
   "version": "0.1.0",
-  "description": "Skills for the Claude Cowork Kit's medical project: set it up, prepare a visit and its pack, record a visit into the folder, keep a weekly functional log, and turn a handed article into questions for the clinician.",
+  "description": "Skills for the Claude Cowork Kit's medical binder: set it up, prepare a visit and its pack, record a visit into the folder, keep a weekly functional log, and turn a handed article into questions for the clinician.",
   "author": {
     "name": "Christopher Allen"
   },

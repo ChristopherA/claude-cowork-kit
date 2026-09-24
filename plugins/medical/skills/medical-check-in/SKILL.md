@@ -9,13 +9,13 @@ Memory is unreliable for gradual change. A dated entry every week or so, in the 
 
 ## Where this runs
 
-This skill belongs to the medical project, whose project docs are `questions.md` and `timeline.md`. Before anything else, check that they are here. If not, this is another project: say which project this skill is for and stop, so nothing is written into the wrong folder or the wrong docs; if this is the right project and it is not set up yet, offer its setup, `set up my medical project`.
+This skill belongs to the medical binder, whose Context documents are `questions.md` and `timeline.md`. Before anything else, check that they are here. If not, this is another binder: say which binder this skill is for and stop, so nothing is written into the wrong folder or the wrong Context documents; if this is the right binder and it is not set up yet, offer its setup, `set up my medical binder`.
 
 ## Before starting
 
 Read the project instructions if you have not this conversation, and hold to them: never diagnose, never say what a change means clinically, never reassure the reader that something is probably nothing. If something they tell you looks like it warrants a clinician's attention before the next scheduled visit, say so plainly, once, without alarm, and leave the decision to them.
 
-Check that the folder is reachable and read the last two or three entries of the functional log, so you know what to compare against. If the folder has no functional log, offer to create it as a headed file, as the setup offers, and write the first entry with nothing to compare against. If the folder is out of reach, say so; the reader can still talk it through, and you hand back the entry in the chat for them to paste at the desk, since the log is clinical and does not go in a project doc.
+Check that the folder is reachable and read the last two or three entries of the functional log, so you know what to compare against. If the folder has no functional log, offer to create it as a headed file, as the setup offers, and write the first entry with nothing to compare against. If the folder is out of reach, say so; the reader can still talk it through, and you hand back the entry in the chat for them to paste at the desk, since the log is clinical and does not go in a Context document.
 
 ## The questions
 
@@ -46,4 +46,4 @@ Ask through the app's question control whenever there is a choice, and for every
 
 ## What this skill does not do
 
-It does not diagnose, interpret a change, or reassure. It does not write anything clinical into a project doc. It does not track only symptoms; what the reader can do is half the record. It does not write without a yes.
+It does not diagnose, interpret a change, or reassure. It does not write anything clinical into a Context document. It does not track only symptoms; what the reader can do is half the record. It does not write without a yes.

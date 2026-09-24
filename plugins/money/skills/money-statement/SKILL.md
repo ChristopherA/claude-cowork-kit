@@ -5,11 +5,11 @@ description: Summarizes one statement or export from the folder into categories 
 
 # Statement summary
 
-Turn one statement or export the reader placed in the folder into a summary fit for a project doc: categories and totals, no account numbers, no balances, no transaction rows. This skill is the project's accuracy clause made into a routine: every figure traces to a row in a file the reader gave, the arithmetic is shown, and what is missing is named rather than filled in.
+Turn one statement or export the reader placed in the folder into a summary fit for a Context document: categories and totals, no account numbers, no balances, no transaction rows. This skill is the accuracy clause of the project instructions made into a routine: every figure traces to a row in a file the reader gave, the arithmetic is shown, and what is missing is named rather than filled in.
 
 ## Where this runs
 
-This skill belongs to the money project, whose project docs are `categories.md` and `targets.md`. Before anything else, check that they are here. If not, this is another project: say which project this skill is for and stop, so nothing is written into the wrong folder or the wrong docs; if this is the right project and it is not set up yet, offer its setup, `set up my money project`.
+This skill belongs to the money binder, whose Context documents are `categories.md` and `targets.md`. Before anything else, check that they are here. If not, this is another binder: say which binder this skill is for and stop, so nothing is written into the wrong folder or the wrong Context documents; if this is the right binder and it is not set up yet, offer its setup, `set up my money binder`.
 
 ## Before starting
 
@@ -34,9 +34,9 @@ Then say what the summary does not cover: the file's period is the summary's per
 
 ## Writing it down
 
-Offer to write the summary to a project doc named for the period and the source, such as `summary-2026-08-checking.md`, where the source is the reader's own word for the file, not the account number. Show the text you would write, in full, and wait for a yes through the app's question control; silence is not a yes. The text holds categories, counts and totals, the count and total of the uncategorized rows, and the notes on what is missing; the uncategorized descriptions stay in the chat, since a description with its amount is a transaction row and the doc syncs. It holds no account number, no balance, and no transaction row.
+Offer to write the summary to a Context document named for the period and the source, such as `summary-2026-08-checking.md`, where the source is the reader's own word for the file, not the account number. Show the text you would write, in full, and wait for a yes through the app's question control; silence is not a yes. The text holds categories, counts and totals, the count and total of the uncategorized rows, and the notes on what is missing; the uncategorized descriptions stay in the chat, since a description with its amount is a transaction row and the document syncs. It holds no account number, no balance, and no transaction row.
 
-On a yes: write it, read it back to confirm it landed as shown, and say the doc's name. On a no, leave nothing behind. Never write into the folder.
+On a yes: write it, read it back to confirm it landed as shown, and say the document's name. On a no, leave nothing behind. Never write into the folder.
 
 ## Ending
 
@@ -48,4 +48,4 @@ Ask through the app's question control whenever there is a choice, and for every
 
 ## What this skill does not do
 
-It does not read more than one file at a time, and it does not combine files; the close does that for a month. It does not compare against targets. It does not write into the folder, and it does not write to a project doc without a yes. It does not advise on investments or tax, log into or connect to any account, or supply a number the reader did not give.
+It does not read more than one file at a time, and it does not combine files; the close does that for a month. It does not compare against targets. It does not write into the folder, and it does not write to a Context document without a yes. It does not advise on investments or tax, log into or connect to any account, or supply a number the reader did not give.

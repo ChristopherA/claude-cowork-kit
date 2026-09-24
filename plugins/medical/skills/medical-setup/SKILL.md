@@ -1,23 +1,23 @@
 ---
 name: medical-setup
-description: Sets up the medical project: the privacy floor, three questions, then questions.md and timeline.md as project docs and the instructions to paste. Use for "set up my medical project", "medical setup".
+description: Sets up the medical binder: the privacy floor, three questions, questions.md and timeline.md as Context documents and the instructions to paste. Use for "set up my medical binder", "medical setup".
 ---
 
 # Setup
 
-Build the medical project the Claude Cowork Kit describes, from three answers. Say what the folder does and does not protect before anything else, create what a task can create, the two project docs, and hand back what only the reader can paste, the project instructions. Read the records folder if it is reachable; do not write into it, except to create the standing files as headed empty files when the reader has none and says yes.
+Build the medical binder the Claude Cowork Kit describes, from three answers. Say what the folder does and does not protect before anything else, create what a task can create, the two Context documents, and hand back what only the reader can paste, the project instructions. Read the records folder if it is reachable; do not write into it, except to create the standing files as headed empty files when the reader has none and says yes.
 
 The texts this skill hands back are in `references/`, generated from the kit's docs when the plugin was packaged: `medical-instructions.md` (the project instructions), `global-instructions.md` (the account-wide instructions) and `voices.md` (the three voices). Use them as they are; do not rewrite them, and do not paraphrase them into the conversation. Fill in only the folder path where it is marked.
 
 ## What a task can and cannot do
 
-A task can read the project docs, create project docs in the project it runs in, read a connected folder, and read the reader's Account instructions. It cannot change Settings, set the project's approval mode, create a project, connect a folder, install a plugin, or send anything; those are the reader's, in the app. Say which is which as you go, so the reader never waits for something that will not happen.
+A task can read the project's Context documents, create Context documents in the project it runs in, read a connected folder, and read the reader's Account instructions. It cannot change Settings, set the project's approval mode, create a project, connect a folder, install a plugin, or send anything; those are the reader's, in the app. Say which is which as you go, so the reader never waits for something that will not happen.
 
 ## Before the first question
 
-Check which of `questions.md` and `timeline.md` already exist. If `timeline.md` does, this project is already set up: say so and stop. Do not run setup twice. A doc that exists is kept and read back, never recreated; say which you kept.
+Check which of `questions.md` and `timeline.md` already exist. If `timeline.md` does, this binder is already set up: say so and stop. Do not run setup twice. A Context document that exists is kept and read back, never recreated; say which you kept.
 
-Then say plainly, in a short paragraph of your own words, what this project does and does not protect, before asking anything. The records stay in the folder on the reader's computer, and the project docs hold only what they would be relaxed about syncing: a list of questions for appointments and a bare timeline of visit dates, nothing clinical. That keeps the records out of project knowledge, out of every other project, and off the phone. It does not keep them off Anthropic's servers: a session that reads a record to answer sends that record to the session, which runs in the cloud. Credentials and logins for portals never go in a connected folder or a pasted message. This project should stay in the mode that asks before acting, which only the reader can set. And if Claude can use the reader's screen at all, patient portals and health apps should be blocked from it in Cowork's settings, which is also the reader's to do. Ask whether they want to go on; a reader who draws the line further back can stop here with nothing created.
+Then say plainly, in a short paragraph of your own words, what this binder does and does not protect, before asking anything. The records stay in the folder on the reader's computer, and the Context documents hold only what they would be relaxed about syncing: a list of questions for appointments and a bare timeline of visit dates, nothing clinical. That keeps the records out of the project's Context, out of every other binder, and off the phone. It does not keep them off Anthropic's servers: a session that reads a record to answer sends that record to the session, which runs in the cloud. Credentials and logins for portals never go in a connected folder or a pasted message. This project should stay in the mode that asks before acting, which only the reader can set. And if Claude can use the reader's screen at all, patient portals and health apps should be blocked from it in Cowork's settings, which is also the reader's to do. Ask whether they want to go on; a reader who draws the line further back can stop here with nothing created.
 
 ## Three questions, one at a time
 
@@ -27,13 +27,13 @@ Ask as the Asking section says, grouping the questions whose answers do not depe
 2. **Their clinicians, by role.** The roles they see, such as a primary care doctor, a specialist by specialty, a dentist; no names are needed, and the timeline uses roles, not names. Do not ask about conditions, medications, or results; those are in the folder, and this skill does not read them.
 3. **The next appointment.** The date and the clinician's role, if known. If there is none scheduled, say that is fine and leave the timeline's next-visit line out.
 
-## Create the two project docs
+## Create the two Context documents
 
-Create `questions.md` as a project doc: a heading, `Questions for my next appointment`, and nothing else. The visit-prep skill fills it, and the reader reads it from the phone in the waiting room.
+Create `questions.md` as a Context document: a heading, `Questions for my next appointment`, and nothing else. The visit-prep skill fills it, and the reader reads it from the phone in the waiting room.
 
-Create `timeline.md` as a project doc: a heading, one line naming the form of each entry (date, clinician role, purpose, nothing clinical), and the next appointment as its first line if the reader gave one, marked as upcoming. Nothing from the folder goes in it.
+Create `timeline.md` as a Context document: a heading, one line naming the form of each entry (date, clinician role, purpose, nothing clinical), and the next appointment as its first line if the reader gave one, marked as upcoming. Nothing from the folder goes in it.
 
-Read both back and confirm they exist as project docs. The app may file them under a `claude/` folder inside the project; that is fine, and the other skills find them by name. If project docs cannot be created from a task, say so plainly, show the two texts in full so the reader can add them however the app allows, and say that the other skills depend on them.
+Read both back and confirm they exist as Context documents. The app may file them under a `claude/` folder inside the project; that is fine, and the other skills find them by name. If Context documents cannot be created from a task, say so plainly, show the two texts in full so the reader can add them however the app allows, and say that the other skills depend on them.
 
 ## The folder's standing files
 
@@ -41,7 +41,7 @@ If the folder is reachable and holds none of the standing files the instructions
 
 ## The account block
 
-Before the project instructions, read the reader's Account instructions if you can see them. If they carry the kit's block, say so and name the voice in it; do not ask the voice again. If they do not, or you cannot see them, ask which voice they want, plain, warm or archivist, one phrase each from `references/voices.md`, plain first as the safe default, and hand back `references/global-instructions.md` with that voice substituted where marked, in a code block of its own: it goes in Settings, Account, "Instructions for Claude", reaches every chat on the account, casual chat included, and is pasted once for all the kit's projects. If the field already holds text of the reader's own, say to add the block below it and cut whatever the two say twice. No plugin has to be installed before this one.
+Before the project instructions, read the reader's Account instructions if you can see them. If they carry the kit's block, say so and name the voice in it; do not ask the voice again. If they do not, or you cannot see them, ask which voice they want, plain, warm or archivist, one phrase each from `references/voices.md`, plain first as the safe default, and hand back `references/global-instructions.md` with that voice substituted where marked, in a code block of its own: it goes in Settings, Account, "Instructions for Claude", reaches every chat on the account, casual chat included, and is pasted once for all the kit's binders. If the field already holds text of the reader's own, say to add the block below it and cut whatever the two say twice. No plugin has to be installed before this one.
 
 ## Hand back the text to paste
 
@@ -49,7 +49,7 @@ The project page has two text fields that look alike, a one-line description und
 
 0. **The description**, one line, for the field under the project's title. Offer this: `Medical records: visits, results, and questions for appointments. The rules are in Instructions; the records are in [folder name] and stay there.` with the folder name filled in.
 
-The instructions go into a field only the reader can fill: a task can create project docs and cannot set the project's instructions or description, and the shell a task runs in is a Linux space apart from the reader's computer, so it cannot put text on their clipboard either. Do not try; hand the text back and say where it goes. The text goes in a code block of its own, which carries a copy button in the app.
+The instructions go into a field only the reader can fill: a task can create Context documents and cannot set the project's Instructions or description, and the shell a task runs in is a Linux space apart from the reader's computer, so it cannot put text on their clipboard either. Do not try; hand the text back and say where it goes. The text goes in a code block of its own, which carries a copy button in the app.
 
 1. **Project instructions**, from `references/medical-instructions.md`, with the folder path filled in where it is marked and nothing else changed. It goes in the Instructions panel on the project's page, not in the one-line description under the title, which is a label.
 
@@ -57,7 +57,7 @@ Show the block whole, one code block, and nothing else inside the fence.
 
 ## End
 
-Report what exists now: the two project docs by name and the two fields waiting for a paste, the one-line description under the title and the Instructions panel. Then name the three things only the reader can do, in order: paste the instructions; check that the mode that asks before acting is on, wherever the app sets it; and, if Claude can use the screen, block patient portals and health apps from it in Cowork's settings. Then name the day-one check: from the phone with the computer closed, open the project and ask for the questions list; it should come back empty, with no record in it. End with one word for completeness: full, partial (with what is missing), or minimal (stopped early).
+Report what exists now: the two Context documents by name and the two fields waiting for a paste, the one-line description under the title and the Instructions panel. Then name the three things only the reader can do, in order: paste the instructions; check that the mode that asks before acting is on, wherever the app sets it; and, if Claude can use the screen, block patient portals and health apps from it in Cowork's settings. Then name the day-one check: from the phone with the computer closed, open the project and ask for the questions list; it should come back empty, with no record in it. End with one word for completeness: full, partial (with what is missing), or minimal (stopped early).
 
 ## Asking
 
@@ -65,4 +65,4 @@ Ask through the app's question control whenever there is a choice, and for every
 
 ## What this skill does not do
 
-It does not read or quote a record. It writes into the folder only the headed standing files the reader said yes to, and nothing into them but the heading. It does not set any setting, set the approval mode, create a project, connect a folder, or install a plugin. It does not paste anything anywhere; it hands text back. It does not hand back the account-wide instructions; the core plugin's setup does. It does not run twice on a project that already has a timeline.
+It does not read or quote a record. It writes into the folder only the headed standing files the reader said yes to, and nothing into them but the heading. It does not set any setting, set the approval mode, create a project, connect a folder, or install a plugin. It does not paste anything anywhere; it hands text back. It does not hand back the account-wide instructions; the core plugin's setup does. It does not run twice on a binder that already has a timeline.

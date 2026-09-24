@@ -9,11 +9,11 @@ Lay out the week the reader can actually have: what is fixed, what is in flight,
 
 ## Where this runs
 
-This skill belongs to the week project, whose project docs are `priorities.md`. Before anything else, check that it is here. If not, this is another project: say which project this skill is for and stop, so nothing is written into the wrong folder or the wrong docs; if this is the right project and it is not set up yet, offer its setup, `set up my week project`.
+This skill belongs to the week binder, whose Context document is `priorities.md`. Before anything else, check that it is here. If not, this is another binder: say which binder this skill is for and stop, so nothing is written into the wrong folder or the wrong Context documents; if this is the right binder and it is not set up yet, offer its setup, `set up my week binder`.
 
 ## Before starting
 
-Read `priorities.md` first if you have not this conversation; a plan that ignores it is a to-do list. This skill needs the project doc and not the working folder, so it works from the phone. If the reader has a connected calendar, read it and never write to it; if not, the calendar is what the reader tells you, which is why the first question is about it.
+Read `priorities.md` first if you have not this conversation; a plan that ignores it is a to-do list. This skill needs the Context document and not the working folder, so it works from the phone. If the reader has a connected calendar, read it and never write to it; if not, the calendar is what the reader tells you, which is why the first question is about it.
 
 ## The routine
 
@@ -22,12 +22,12 @@ Read `priorities.md` first if you have not this conversation; a plan that ignore
 3. Count the time honestly. Take the hours the reader says are free, plan for fewer, and say how much you took off and why: a day is shorter than it looks, and the reader has less time than they think. Do not plan into the margin.
 4. Propose the week: the two or three things from `priorities.md` that this week can move, each placed on a day and given a first concrete step, with the fixed commitments around them. Name what will not happen this week. Do not pad the plan to look complete; three real things beat eight, and an empty afternoon in a plan is not a gap.
 5. Say whether the plan is fragile. If it only works when nothing goes wrong, say so in one sentence at the top of the plan and name what breaks first, so the reader chooses it with eyes open rather than finding out on Wednesday.
-6. Check the priorities against the week. If the plan shows they have changed, something new is eating the month or a listed priority has gone quiet, propose the edit to `priorities.md`: show the new text, wait for a yes, then write it and read it back. A no, an edit, or silence leaves the doc as it was.
+6. Check the priorities against the week. If the plan shows they have changed, something new is eating the month or a listed priority has gone quiet, propose the edit to `priorities.md`: show the new text, wait for a yes, then write it and read it back. A no, an edit, or silence leaves the document as it was.
 7. Hand back the plan and stop. Every question with a choice in it, and every wait for a yes, goes through the app's question control with the recommended option first.
 
 ## Ending
 
-Report in a few lines: the things the plan moves, the fragility sentence if there was one, what was deliberately left out, and whether `priorities.md` changed. End with one word for completeness: full (calendar and in-flight both known), partial (planned around a gap, named), or minimal (stopped early). Offer to save the plan as a project doc only if the reader wants it from the phone; by default it lives in the chat.
+Report in a few lines: the things the plan moves, the fragility sentence if there was one, what was deliberately left out, and whether `priorities.md` changed. End with one word for completeness: full (calendar and in-flight both known), partial (planned around a gap, named), or minimal (stopped early). Offer to save the plan as a Context document only if the reader wants it from the phone; by default it lives in the chat.
 
 ## Asking
 

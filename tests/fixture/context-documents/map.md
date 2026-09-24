@@ -2,7 +2,7 @@
 
 Last updated: 2026-09-22
 
-This describes what's in my notes folder and how it's organized. It lives in project knowledge so it's readable when my computer isn't connected. It's a description, not a copy — it never contains note bodies.
+This describes what's in my research folder and how it's organized. It lives in the project's Context so it's readable when my computer isn't connected. It's a description, not a copy — it never contains note bodies.
 
 ## Who I am and how I work
 
@@ -39,7 +39,7 @@ Whether a personal notes system can be kept going without becoming a second job.
 
 ## What is deliberately not here
 
-Work and client material. Anything medical or financial; those have their own projects.
+Work and client material. Anything medical or financial; those have their own binders.
 
 ## Conventions I've settled
 

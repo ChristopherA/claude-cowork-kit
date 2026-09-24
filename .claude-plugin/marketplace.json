@@ -10,42 +10,42 @@
     {
       "name": "cowork-kit",
       "displayName": "Cowork Kit core",
-      "description": "The Claude Cowork Kit's core: a setup interview that hands back the account instructions and says which project plugins to install next, plus twelve routines for any project: deciding, interviewing, explaining again, questions for others, a meeting pack, a transcript, confidence, premortem, postmortem, where was I, wrap-up, and a new project.",
+      "description": "The Claude Cowork Kit's core: a setup interview that hands back the account instructions and says which binder plugins to install next, plus twelve routines for any binder: deciding, interviewing, explaining again, questions for others, a meeting pack, a transcript, confidence, premortem, postmortem, where was I, wrap-up, and a new binder.",
       "version": "0.1.0",
       "source": "./plugins/cowork-kit"
     },
     {
       "name": "learn",
       "displayName": "Learning",
-      "description": "Skills for the Claude Cowork Kit's learning project: set a course, run a lesson, and quiz yourself on what you have learned or read.",
+      "description": "Skills for the Claude Cowork Kit's learning binder: set a course, run a lesson, and quiz yourself on what you have learned or read.",
       "version": "0.1.0",
       "source": "./plugins/learn"
     },
     {
       "name": "week",
       "displayName": "Your week",
-      "description": "Skills for the Claude Cowork Kit's week project: set it up, triage a pile of obligations into next actions, plan the week, review it, write up a meeting, and draft a reply without sending it.",
+      "description": "Skills for the Claude Cowork Kit's week binder: set it up, triage a pile of obligations into next actions, plan the week, review it, write up a meeting, and draft a reply without sending it.",
       "version": "0.1.0",
       "source": "./plugins/week"
     },
     {
       "name": "money",
       "displayName": "Money",
-      "description": "Skills for the Claude Cowork Kit's money project: set it up with the privacy floor, summarize a statement, and close a month against your categories.",
+      "description": "Skills for the Claude Cowork Kit's money binder: set it up with the privacy floor, summarize a statement, and close a month against your categories.",
       "version": "0.1.0",
       "source": "./plugins/money"
     },
     {
       "name": "medical",
       "displayName": "Medical records",
-      "description": "Skills for the Claude Cowork Kit's medical project: set it up, prepare a visit and its pack, record a visit into the folder, keep a weekly functional log, and turn a handed article into questions for the clinician.",
+      "description": "Skills for the Claude Cowork Kit's medical binder: set it up, prepare a visit and its pack, record a visit into the folder, keep a weekly functional log, and turn a handed article into questions for the clinician.",
       "version": "0.1.0",
       "source": "./plugins/medical"
     },
     {
       "name": "research",
       "displayName": "Research",
-      "description": "Skills for the Claude Cowork Kit's notes project: set the project up, drain the capture inbox, write a source note, and check the description against the folder.",
+      "description": "Skills for the Claude Cowork Kit's research binder: set it up, drain the capture inbox, write a source note, and check the description against the folder.",
       "version": "0.1.0",
       "source": "./plugins/research"
     }

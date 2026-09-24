@@ -2,14 +2,14 @@
 
 # The description
 
-Created as the project doc map.md, every bracket filled.
+Created as the Context document map.md, every bracket filled.
 
 ```markdown
 # What's in my notes
 
 Last updated: [DATE]
 
-This describes what's in my notes folder and how it's organized. It lives in project knowledge so it's readable when my computer isn't connected. It's a description, not a copy — it never contains note bodies.
+This describes what's in my research folder and how it's organized. It lives in the project's Context so it's readable when my computer isn't connected. It's a description, not a copy — it never contains note bodies.
 
 ## Who I am and how I work
 

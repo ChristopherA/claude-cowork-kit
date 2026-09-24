@@ -1,7 +1,7 @@
 {
   "name": "cowork-kit",
   "version": "0.1.0",
-  "description": "The Claude Cowork Kit's core: a setup interview that hands back the account instructions and says which project plugins to install next, plus twelve routines for any project: deciding, interviewing, explaining again, questions for others, a meeting pack, a transcript, confidence, premortem, postmortem, where was I, wrap-up, and a new project.",
+  "description": "The Claude Cowork Kit's core: a setup interview that hands back the account instructions and says which binder plugins to install next, plus twelve routines for any binder: deciding, interviewing, explaining again, questions for others, a meeting pack, a transcript, confidence, premortem, postmortem, where was I, wrap-up, and a new binder.",
   "author": {
     "name": "Christopher Allen"
   },

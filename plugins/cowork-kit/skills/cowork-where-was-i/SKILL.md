@@ -12,8 +12,8 @@ Give the reader one next step, chosen from where things actually stand, and say 
 In this order, and say which of them you could reach:
 
 1. `wrap-up.md`, if it exists: the note the last session left, with its first next step. Read it first; it is the reader's own statement of where they stopped.
-2. The project's own docs, whichever this project has: in the notes project, `map.md`'s "what I'm working on now" and "open threads" sections and `inbox.md` (how many items are waiting, and how old the oldest looks); in the week project, `priorities.md`; in the learning project, `mission.md` and `progress.md`; in the money project, `categories.md` and the newest summary; in the medical project, `questions.md` and `timeline.md`. Say which you found.
-3. If the folder is reachable, the notes and threads with the newest dates inside them (a `created` or dated line; the file's modification time is not reliable on the mount): their names and, for the top few, their first lines. If the folder is not reachable, say so; the recommendation then comes from the docs, which is enough for a phone.
+2. The binder's own Context documents, whichever this binder has: in the research binder, `map.md`'s "what I'm working on now" and "open threads" sections and `inbox.md` (how many items are waiting, and how old the oldest looks); in the week binder, `priorities.md`; in the learning binder, `mission.md` and `progress.md`; in the money binder, `categories.md` and the newest summary; in the medical binder, `questions.md` and `timeline.md`. Say which you found.
+3. If the folder is reachable, the notes and threads with the newest dates inside them (a `created` or dated line; the file's modification time is not reliable on the mount): their names and, for the top few, their first lines. If the folder is not reachable, say so; the recommendation then comes from the Context documents, which is enough for a phone.
 
 Do not ask the reader what they were doing. The point of this skill is that they do not remember, and the files do.
 
@@ -22,9 +22,9 @@ Do not ask the reader what they were doing. The point of this skill is that they
 Weigh, in this order:
 
 - **The wrap-up's next step.** If `wrap-up.md` names a first next step and nothing since contradicts it, that is the recommendation.
-- **An open thread with fresh movement.** A thread named in the docs whose note carries a date in the last few days is the most likely place the reader's attention was. Continuing it is the default recommendation.
+- **An open thread with fresh movement.** A thread named in the Context documents whose note carries a date in the last few days is the most likely place the reader's attention was. Continuing it is the default recommendation.
 - **A full inbox.** More than a handful of items, or anything more than a couple of weeks old, means the next step is to drain it, because captures that sit stop meaning anything. Recommend the drain and say how many items.
-- **A stale description.** If the newest notes and threads do not match what the docs say the reader is working on, the next step is to fix the description, because every session after this one starts from it.
+- **A stale description.** If the newest notes and threads do not match what the Context documents say the reader is working on, the next step is to fix the description, because every session after this one starts from it.
 - **Nothing in motion.** If threads are quiet and the inbox is empty, say so plainly and recommend the reader pick a thread or read something; do not manufacture urgency.
 
 ## Say it
