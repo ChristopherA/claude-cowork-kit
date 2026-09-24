@@ -6,6 +6,8 @@ Plugins for people who use Claude in the desktop and mobile apps rather than in 
 
 You use Claude Cowork: the desktop app with a folder connected, and the phone app for everything that does not need the folder. You are not a programmer and do not want to become one to keep notes with Claude.
 
+You need a Claude plan that includes Cowork and the Claude desktop app on the computer where your files live. Cowork tasks draw on the plan's usage allowance much faster than chat does, so a plan that feels roomy for conversation can feel tight for work on files.
+
 It is not for Claude Code, the command-line tool developers use, and it is not for plain chat. Most published advice for working with Claude on your own files is written for one of those two, and where this kit disagrees with it, that is usually the difference. If you are comfortable in a terminal, [Claude Code](https://docs.anthropic.com/en/docs/claude-code) will do more than this kit can, and the folder this kit builds works unchanged under it when you get there.
 
 **Seven words the rest of this page uses.** A *project* is the app's own container: its page has Instructions, Context, a Folder and Scheduled tasks, and a *Context document* is one of the documents in its Context, which Claude reads in every task there and your phone can reach. A *binder* is one part of your life as the kit sets it up: one project, one folder on your computer, and the Context documents that describe it. A *task* is a conversation in Cowork: inside a project, the composer has a Chat and a Cowork toggle, and a task is what you start with the Cowork side on. A *skill* is a routine Claude runs when what you say matches its description; there is no command to remember. A *plugin* is a set of skills installed once, under Customize in the desktop app, that then works in every project. A *marketplace* is a place the app can install plugins from; this repository is one.
@@ -26,7 +28,7 @@ The phone column of the last row is the whole trick: from the phone, Claude work
 
 ## What is in the kit
 
-Six plugins and a template. No plugin has to come first: install the binder you want, and the core when you want its routines; most people should live with the research binder for a week before adding another.
+Six plugins. No plugin has to come first: install the binder you want, and the core when you want its routines; most people should live with the research binder for a week before adding another.
 
 | Plugin | What it is for | Its skills |
 |---|---|---|
@@ -36,7 +38,6 @@ Six plugins and a template. No plugin has to come first: install the binder you 
 | `week`, **Your week** | Obligations turned into next actions, and a week planned from the time you actually have. | `week-setup`, `week-triage`, `week-plan`, `week-review`, `week-meeting-notes`, `week-reply` (a draft in your voice; it never sends). |
 | `money`, **Money** | Statements and a monthly close, with account details kept out of everything that syncs. | `money-setup` (the privacy floor first), `money-statement`, `money-close`. |
 | `medical`, **Medical records** | A record you can compare across visits, and appointments prepared from it. | `medical-setup`, `medical-visit-prep` (the questions from what changed, and a visit pack when someone is coming with you), `medical-record-visit`, `medical-check-in` (a weekly functional log in your own words), `medical-treatment-questions` (grades the evidence an article cites and writes the questions). |
-| `template/` | For contributors and readers comfortable editing files: a binder plugin with the brackets left in. A binder of your own does not need it; the core's `cowork-new-binder` designs one and hands back its text. | None; it is a skeleton. |
 
 Each plugin's README lists its skills with the phrases that trigger them. Everything a skill does you could ask for in a sentence, more slowly; the skills are the upgrade and the instruction blocks are the floor. The setup skills hand back only what the app still needs from your hands: a task can create Context documents and read your folder, but it cannot change your settings, create a project, connect a folder or install a plugin.
 
@@ -47,19 +48,19 @@ Everything installs from the Claude desktop app, under Customize, then Plugins. 
 - **From the marketplace.** Choose **Add marketplace**, enter `ChristopherA/claude-cowork-kit`, and install a plugin from the list it shows. Installing this way also brings updates.
 - **From a file.** Download the plugin's `.plugin` file from the [releases page](https://github.com/ChristopherA/claude-cowork-kit/releases) and add it with the upload option on the same Plugins page. The release notes carry each file's checksum.
 
-Turn the plugin on after installing it. Do not drag a `.plugin` file into a task's composer: a plugin dropped there is attached to that one task only and is gone with it. The releases carry whole plugins. A single skill can be added on its own, as a `.skill` file the kit's build writes, under Customize, Skills; that is for someone building from the repository.
+Turn the plugin on after installing it. Do not drag a `.plugin` file into a task's composer: a plugin dropped there is attached to that one task only and is gone with it.
 
 Install one plugin at a time, and run its setup before installing the next.
 
 ## First run
+
+Before you connect a folder, read what the connected folder does and does not protect: `PRIVACY.md` here, and the explainer's section What the connected folder does and does not protect. Everything Claude can reach in a connected folder it may read, and a file in that folder can carry instructions Claude will follow.
 
 1. **Back up your research folder** with whatever you already use. Do it before the first task that is allowed to write, not after. If the folder is in iCloud Drive, turn Optimize Mac Storage off and Time Machine on as well; the explainer's section What the connected folder does and does not protect says why.
 2. **Install the research plugin**, shown as **Research** (its file name is `research`), by either path above, and turn it on. It is the binder the others learn their habits from, and no other plugin has to come first.
 3. **Create the project and connect the folder.** Make an ordinary project in the app and name it, then connect your research folder to it from the project's page. Do not create the project *from* the folder: a project created that way lives on that computer and does not sync, which silently breaks the phone half of this.
 4. **Run the setup.** In a task inside that project, say `set up my research binder`. Claude asks three questions, creates the Context documents, and hands back what only you can paste: the account instructions, if your Settings, Account, "Instructions for Claude" field does not carry them yet, and the short project instructions for the Instructions panel at the side of the project page. It then names the day-one checks, the phone check among them.
 5. **Install the core plugin** (`cowork-kit`, shown as **Cowork Kit core**) when you want its routines; they work in every binder. Its own setup, `set up the kit`, is for a reader who starts there instead.
-
-Before you connect a folder, read what the connected folder does and does not protect: `PRIVACY.md` here, and the explainer's section What the connected folder does and does not protect. Everything Claude can reach in a connected folder it may read, and a file in that folder can carry instructions Claude will follow.
 
 Setup takes about thirty minutes for the first binder. You make the decisions; Claude does the typing. Where Customize and Settings sit in the app's layout is one of the things the kit is still confirming; both are in the desktop app.
 
@@ -73,7 +74,6 @@ Release candidate. The research plugin has had one run in Cowork; the core and t
 - One document per binder under [`docs/binders/`](docs/binders/): [research](docs/binders/research.md), [learning](docs/binders/learning.md), [your week](docs/binders/week.md), [money](docs/binders/money.md) and [medical records](docs/binders/medical.md), each with the binder's use case, its skills and when to reach for each, its setup, a check that it works, and the text its setup writes, printed so you can read it first or paste it by hand with no plugin at all.
 - [The skills index](docs/skills.md): every skill in every plugin, what it does, when to reach for it, and what it hands back.
 - Each plugin's README, `plugins/<name>/README.md`: its skills and the phrases that trigger them.
-- `docs/skill-capabilities.md`: what a Cowork skill can and cannot reach, measured in the app.
 - `PRIVACY.md`: what leaves your computer and what does not. `CHANGELOG.md`: what each release changed. `CONTRIBUTING.md`: how to report a problem or change the text.
 
 ## For contributors
@@ -81,7 +81,7 @@ Release candidate. The research plugin has had one run in Cowork; the core and t
 - `docs/` holds the explainer and, under `docs/binders/`, one document per binder; the blocks in every built plugin are generated from those files and never edited by hand. `docs/shared.md` holds the paragraphs several skills carry word for word, and `docs/skills.md` is the public skills index; the build fails when a copy differs or the index does not match the skills.
 - `plugins/<name>/` is one directory per plugin: its skills (`skills/<skill>/SKILL.md`, with read-only `scripts/` where a skill runs code), its manifest and README, and the setup skill's `references/`, the last three generated by the build and committed so the tree serves as a marketplace (`.claude-plugin/marketplace.json` lists them).
 - `build.py` checks every skill the way Cowork's upload does, generates the manifests, READMEs and setup references from the docs in place (`--check` fails when they drift, or when a generated file is uncommitted in a git checkout), and writes each plugin as a `.plugin` file and each skill as a `.skill` file under `dist/`, which is not tracked.
-- `template/` is a binder plugin with the brackets left in. `tests/fixture/` is a small research folder and the Context documents a setup run should produce.
+- `template/` is a binder plugin with the brackets left in, for someone comfortable editing files; a reader who wants a binder of their own asks the core's `cowork-new-binder` instead. A single skill can be added on its own, as a `.skill` file the build writes, under Customize, Skills. `docs/skill-capabilities.md` records what a Cowork skill can and cannot reach, measured in the app. `tests/fixture/` is a small research folder and the Context documents a setup run should produce.
 
 ## License
 
