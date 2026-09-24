@@ -15,7 +15,7 @@ I read more than I write and I lose what I read. The notes are for finding it ag
 ## What's in each folder
 
 - `inbox/` — raw captures, not yet processed. Nothing here is finished.
-- `sources/` — one note per book, paper, talk, or article I've read. Named `author-year-short-title.md`.
+- `sources/` — one note per book, paper, talk, or article I've read. Named `author-year-short-title.md`. A source file kept beside its note (a PDF, say) carries the note's name.
 - `notes/` — one idea each. Named for the claim they make, not the topic they're about.
 - `threads/` — things I'm actively thinking about. Longer and messier than a note, and they change often.
 - `archive/` — done, superseded, or abandoned. Read it, don't write to it.
@@ -27,6 +27,10 @@ Plain markdown. The only metadata at the top of a note is a `created` date in YY
 Don't hard-wrap. One paragraph is one line, and the editor wraps it for display.
 
 Links between notes are relative markdown links. No tags, no wiki syntax, no generated index files.
+
+## Citation form
+
+One reference line at the top of a source note, markdown-friendly: the title in bold italics, the year, the type in brackets, the author family-name first in italics, the publisher or journal with volume and pages, the locator (chapter, section, page), then the DOI or "Available from:" and the link. Each passage I keep goes under it as an indented blockquote.
 
 ## What I'm working on now
 

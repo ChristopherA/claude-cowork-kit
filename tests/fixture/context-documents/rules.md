@@ -1,6 +1,6 @@
 # Rules for this project
 
-The Instructions field says what this project is for and what never changes. This document holds the working rules. When one of them turns out wrong, propose the change here and wait for a yes; never rewrite this document unasked.
+The Instructions panel says what this project is for and what never changes. This document holds the working rules. When one of them turns out wrong, propose the change here and wait for a yes; never rewrite this document unasked.
 
 # Where things live
 
