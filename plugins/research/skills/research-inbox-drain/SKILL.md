@@ -45,7 +45,7 @@ When the inbox is empty, or the reader stops, report: how many items were filed 
 
 ## The candidates script
 
-`scripts/candidates.py` searches the research folder for the distinctive words of a capture and prints the notes that mention them, most matches first, as JSON. It reads only; it needs code execution enabled and the folder path. Run it once per item:
+`scripts/candidates.py` searches the research folder for the distinctive words of a capture and prints the notes that share them, the most distinctive matches first, as JSON; it leaves out the `inbox/` and `archive/` folders, so a capture never matches its own file. It reads only; it needs code execution enabled and the folder path. Run it once per item:
 
 ```
 python3 scripts/candidates.py --folder "<research folder path>" --text "<the capture>" --limit 5
