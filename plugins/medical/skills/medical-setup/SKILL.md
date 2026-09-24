@@ -15,7 +15,9 @@ A task can read the project's Context documents, create Context documents in the
 
 ## Before the first question
 
-Check which of `questions.md` and `timeline.md` already exist. If `timeline.md` does, this binder is already set up: say so and stop. Do not run setup twice. A Context document that exists is kept and read back, never recreated; say which you kept.
+Before anything else, check whether this project already holds another binder: `map.md` is the research binder's, `mission.md` the learning binder's, `priorities.md` the week binder's, `categories.md` the money binder's and `timeline.md` the medical binder's. If one of them is here and it is not this binder's own, say which binder this project holds, that each binder needs a project and a folder of its own, and stop; this binder's documents created here would mix the two.
+
+Check which of `questions.md` and `timeline.md` already exist. If both do, this binder is already set up: say so and stop. Do not run setup twice. A Context document that exists is kept and read back, never recreated; say which you kept.
 
 Then say plainly, in a short paragraph of your own words, what this binder does and does not protect, before asking anything. The records stay in the folder on the reader's computer, and the Context documents hold only what they would be relaxed about syncing: a list of questions for appointments and a bare timeline of visit dates, nothing clinical. That keeps the records out of the project's Context, out of every other binder, and off the phone. It does not keep them off Anthropic's servers: a session that reads a record to answer sends that record to Claude on Anthropic's servers, whichever kind of session it is. Credentials and logins for portals never go in a connected folder or a pasted message. This project should stay in the mode that asks before acting, which only the reader can set. And if Claude can use the reader's screen at all, patient portals and health apps should be blocked from it in Cowork's settings, which is also the reader's to do. Ask whether they want to go on; a reader who draws the line further back can stop here with nothing created.
 
@@ -65,4 +67,4 @@ Ask through the app's question control whenever there is a choice, and for every
 
 ## What this skill does not do
 
-It does not read or quote a record. It writes into the folder only the headed standing files the reader said yes to, and nothing into them but the heading. It does not set any setting, set the approval mode, create a project, connect a folder, or install a plugin. It does not paste anything anywhere; it hands text back. It hands back the account-wide instructions only when the Account field does not carry them already. It does not run twice on a binder that already has a timeline.
+It does not read or quote a record. It writes into the folder only the headed standing files the reader said yes to, and nothing into them but the heading. It does not set any setting, set the approval mode, create a project, connect a folder, or install a plugin. It does not paste anything anywhere; it hands text back. It hands back the account-wide instructions only when the Account field does not carry them already. It does not run twice on a binder whose two Context documents both exist.

@@ -15,9 +15,11 @@ A task can read the project's Context documents, create Context documents in the
 
 ## Before the first question
 
-Check whether the Context documents already exist. If they do, say so and stop; do not run setup twice.
+Before anything else, check whether this project already holds another binder: `map.md` is the research binder's, `mission.md` the learning binder's, `priorities.md` the week binder's, `categories.md` the money binder's and `timeline.md` the medical binder's. If one of them is here and it is not this binder's own, say which binder this project holds, that each binder needs a project and a folder of its own, and stop; this binder's documents created here would mix the two.
 
-## The interview, one question at a time
+Check whether the Context documents already exist. If all of them do, say so and stop; do not run setup twice. If some do and not all, an earlier setup stopped partway: keep them, and create only the missing ones.
+
+## The interview
 
 Ask as the Asking section says, grouping the questions whose answers do not depend on each other in one control and putting the dependent ones after. Skip any the reader has already answered in their request. Reflect each answer back in a phrase before going on.
 

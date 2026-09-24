@@ -176,6 +176,7 @@ PLUGINS = {
 SETUPS = [f"plugins/{n}/skills/{s['setup']}/SKILL.md" for n, s in PLUGINS.items() if n != "cowork-kit"] + ["template/skills/*-setup/SKILL.md"]
 SHARED = {
     "What a task can and cannot do": SETUPS + ["plugins/cowork-kit/skills/cowork-setup/SKILL.md"],
+    "Another binder's project": SETUPS,
     "Grouping the questions": SETUPS,
     "The two fields": SETUPS,
     "Hand the text back": SETUPS,

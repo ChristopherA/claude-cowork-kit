@@ -15,7 +15,9 @@ A task can read the project's Context documents, create Context documents in the
 
 ## Before the first question
 
-Check which of the three Context documents already exist: `rules.md`, `map.md`, `inbox.md`. If `map.md` exists, this binder is already set up: say so, offer the description check instead, and stop. Do not run setup twice. If `inbox.md` exists alone, the core setup created it and captures may already be in it: keep it exactly as it is, and say so. A document that exists is never recreated.
+Before anything else, check whether this project already holds another binder: `map.md` is the research binder's, `mission.md` the learning binder's, `priorities.md` the week binder's, `categories.md` the money binder's and `timeline.md` the medical binder's. If one of them is here and it is not this binder's own, say which binder this project holds, that each binder needs a project and a folder of its own, and stop; this binder's documents created here would mix the two.
+
+Check which of the three Context documents already exist: `rules.md`, `map.md`, `inbox.md`. If all three exist, this binder is already set up: say so, offer the description check instead, and stop. Do not run setup twice. If `map.md` exists without the others, an earlier setup stopped partway: say so, skip the questions, and create only the missing ones, as below. If `inbox.md` exists alone, the core setup created it and captures may already be in it: keep it exactly as it is, and say so. A document that exists is never recreated.
 
 ## Three questions
 
@@ -65,4 +67,4 @@ Ask through the app's question control whenever there is a choice, and for every
 
 ## What this skill does not do
 
-It does not write or change any note. It does not set any setting. It does not paste anything anywhere; it hands text back. It does not run twice on a binder that already has a description.
+It does not write or change any note. It does not set any setting. It does not paste anything anywhere; it hands text back. It does not run twice on a binder whose three Context documents all exist.

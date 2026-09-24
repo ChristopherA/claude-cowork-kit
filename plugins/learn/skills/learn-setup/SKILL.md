@@ -17,7 +17,9 @@ A task can read the project's Context documents, create Context documents in the
 
 ## Before the first question
 
-Check which of `mission.md`, `curriculum.md` and `progress.md` already exist. If `mission.md` does, this binder is already set up: say so, offer to read `progress.md` back and pick up from there, and stop. Do not run setup twice. A document that exists is kept and read back, never recreated; say which you kept.
+Before anything else, check whether this project already holds another binder: `map.md` is the research binder's, `mission.md` the learning binder's, `priorities.md` the week binder's, `categories.md` the money binder's and `timeline.md` the medical binder's. If one of them is here and it is not this binder's own, say which binder this project holds, that each binder needs a project and a folder of its own, and stop; this binder's documents created here would mix the two.
+
+Check which of `mission.md`, `curriculum.md` and `progress.md` already exist. If all three do, this binder is already set up: say so, offer to read `progress.md` back and pick up from there, and stop. Do not run setup twice. A document that exists is kept and read back, never recreated; say which you kept. If some exist and not all, an earlier setup stopped partway: say so, ask only what the missing ones need, and take the rest from the ones kept.
 
 ## The interview, one question at a time
 
@@ -74,4 +76,4 @@ Ask through the app's question control whenever there is a choice, and for every
 
 ## What this skill does not do
 
-It does not teach; the lesson skill does. It does not write into the materials folder. It does not set any setting, turn on a style, connect a folder, create a project, or install a plugin. It does not paste anything anywhere; it hands text back. It hands back the account-wide instructions only when the Account field does not carry them already. It does not run twice on a project that already has a mission.
+It does not teach; the lesson skill does. It does not write into the materials folder. It does not set any setting, turn on a style, connect a folder, create a project, or install a plugin. It does not paste anything anywhere; it hands text back. It hands back the account-wide instructions only when the Account field does not carry them already. It does not run twice on a binder whose three Context documents all exist.
