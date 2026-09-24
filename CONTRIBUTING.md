@@ -17,6 +17,8 @@ python3 build.py --check    # what a pull request must pass: skills valid, gener
 
 `--check` fails on a skill description over 200 characters, a copy of a shared paragraph that differs from its source, a binder skill without its "Where this runs" section, a generated file that differs from what the docs would produce, a skills index that does not match the skills, a literal `\1` or `\n` outside a code fence (what a scripted regex edit leaves behind), and, in a git checkout, a generated file left uncommitted. It reports every failure it finds before it exits, so one run shows the whole list. Commit the generated files with the change that caused them.
 
+The check guards paragraphs, not claims. A sentence that states an order, a count, or what a skill does and does not do is often said in several files, in different words: which plugin comes first, how many questions a setup asks, what a setup hands back. When you change one, search the tree for the claim in its own words, the README, the docs, the skills and the plugin READMEs' generator in `build.py` included, and change every copy in the same commit.
+
 ## Adding a skill
 
 One folder under the plugin's `skills/`, one `SKILL.md`, with `name` equal to the folder and a `description` of at most 200 characters ending in the phrases that should trigger it. Every skill carries the asking convention from the explainer word for word under `## Asking`, and a binder skill carries `## Where this runs` naming its binder's Context documents. Read two of the plugin's existing skills first; the shape is the convention.
