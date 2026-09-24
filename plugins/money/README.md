@@ -4,7 +4,7 @@ Skills for the Claude Cowork Kit's money binder: set it up with the privacy floo
 
 Each skill expects the money binder the Claude Cowork Kit describes: statements in a connected folder that stays on the computer, and Context documents holding only categories, targets and summaries with no account details. Keep the project in the mode that asks (the kit's explainer, under The two approval modes).
 
-Version 0.1.0 of the Claude Cowork Kit; every plugin in a release carries the kit's version, and the releases are at https://github.com/ChristopherA/claude-cowork-kit/releases.
+Version 0.1.0-rc.7 of the Claude Cowork Kit; every plugin in a release carries the kit's version, and the releases are at https://github.com/ChristopherA/claude-cowork-kit/releases.
 
 ## Skills
 

@@ -23,4 +23,4 @@ One folder under the plugin's `skills/`, one `SKILL.md`, with `name` equal to th
 
 ## Versions
 
-`VERSION` holds the kit's version and every plugin carries it. A release is a signed tag `v<version>` with the six `.plugin` files and their checksums attached, and a line in `CHANGELOG.md`.
+`VERSION` holds the kit's version, a release candidate's suffix included (`0.1.0-rc.7`), and every plugin carries it, so an installed plugin names the release it came from; it is set before the release is built. A release is a signed tag `v<version>` with the six `.plugin` files and their checksums attached, and a line in `CHANGELOG.md`.

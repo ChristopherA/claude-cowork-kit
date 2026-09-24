@@ -4,7 +4,7 @@ The Claude Cowork Kit's core: a setup interview that hands back the account inst
 
 No plugin has to come first. Install this one when you want its routines, or start here: in a task, say `set up the kit`, and the setup skill asks a few questions, hands back the account-wide instructions to paste, and says which binder plugin to install next. The other twelve skills work in any binder.
 
-Version 0.1.0 of the Claude Cowork Kit; every plugin in a release carries the kit's version, and the releases are at https://github.com/ChristopherA/claude-cowork-kit/releases.
+Version 0.1.0-rc.7 of the Claude Cowork Kit; every plugin in a release carries the kit's version, and the releases are at https://github.com/ChristopherA/claude-cowork-kit/releases.
 
 ## Skills
 

@@ -1,10 +1,13 @@
 {
   "name": "money",
-  "version": "0.1.0",
+  "version": "0.1.0-rc.7",
   "description": "Skills for the Claude Cowork Kit's money binder: set it up with the privacy floor, summarize a statement, and close a month against your categories.",
   "author": {
     "name": "Christopher Allen"
   },
+  "homepage": "https://github.com/ChristopherA/claude-cowork-kit",
+  "repository": "https://github.com/ChristopherA/claude-cowork-kit",
+  "license": "BSD-2-Clause-Patent",
   "keywords": [
     "money",
     "budget",

@@ -4,7 +4,7 @@ Skills for the Claude Cowork Kit's learning binder: set a course, run a lesson, 
 
 Each skill expects the learning binder the Claude Cowork Kit describes: a folder of materials connected in the desktop app and the Context documents mission.md, curriculum.md and progress.md, which the setup creates. Claude's Learning style is optional here: a task cannot turn it on, and the lesson skill does that work inside a task.
 
-Version 0.1.0 of the Claude Cowork Kit; every plugin in a release carries the kit's version, and the releases are at https://github.com/ChristopherA/claude-cowork-kit/releases.
+Version 0.1.0-rc.7 of the Claude Cowork Kit; every plugin in a release carries the kit's version, and the releases are at https://github.com/ChristopherA/claude-cowork-kit/releases.
 
 ## Skills
 

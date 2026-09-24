@@ -48,7 +48,8 @@ DIST = ROOT / "dist"
 MARKETPLACE = ROOT / ".claude-plugin" / "marketplace.json"
 DOCS_DEFAULT = ROOT / "docs"  # the explainer and binders/<name>.md
 KIT_VERSION = (ROOT / "VERSION").read_text().strip()  # the one version every plugin carries
-RELEASES = "https://github.com/ChristopherA/claude-cowork-kit/releases"
+HOMEPAGE = "https://github.com/ChristopherA/claude-cowork-kit"
+RELEASES = f"{HOMEPAGE}/releases"
 SHARED_DOC = ROOT / "docs" / "shared.md"
 TEMPLATE_SKILLS = ROOT / "template" / "skills"
 BINDER_DOCS_WITH_BLOCK = ("learning", "week", "money", "medical")  # docs/binders/<name>.md carries `## Project instructions`
@@ -426,6 +427,9 @@ def generated_files(refs):
             "version": KIT_VERSION,
             "description": spec["description"],
             "author": {"name": AUTHOR},
+            "homepage": HOMEPAGE,
+            "repository": HOMEPAGE,
+            "license": "BSD-2-Clause-Patent",
             "keywords": spec["keywords"],
         }
         out[plugin_dir / ".claude-plugin" / "plugin.json"] = json.dumps(manifest, indent=2) + "\n"
@@ -482,6 +486,12 @@ def git_uncommitted(generated):
 
 
 def build():
+    if "-h" in sys.argv or "--help" in sys.argv:
+        print(__doc__[__doc__.index("Usage:"):].rstrip())
+        return
+    unknown = [a for a in sys.argv[1:] if a.startswith("-") and a not in ("--check", "--kit")]
+    if unknown:
+        fail(f"unknown option {unknown[0]}; see build.py --help")
     on_disk = sorted(d.name for d in PLUGINS_DIR.iterdir() if d.is_dir() and not d.name.startswith("."))
     if on_disk != sorted(PLUGINS):
         fail(f"plugins/ holds {on_disk} but build.py knows {sorted(PLUGINS)}")
@@ -538,12 +548,14 @@ def build():
         with zipfile.ZipFile(plugin_zip, "w", zipfile.ZIP_DEFLATED) as z:
             for src, rel in files_of(plugin_dir):
                 z.write(src, str(rel))
+            z.write(ROOT / "LICENSE", "LICENSE")
         print(f"\nwrote {plugin_zip.relative_to(ROOT)}  {plugin_zip.stat().st_size} bytes  sha256 {sha256(plugin_zip)}")
         for folder in plugin_skills(name):
             skill_zip = DIST / f"{folder.name}.skill"
             with zipfile.ZipFile(skill_zip, "w", zipfile.ZIP_DEFLATED) as z:
                 for src, rel in files_of(folder):
                     z.write(src, str(Path(folder.name) / rel))
+                z.write(ROOT / "LICENSE", str(Path(folder.name) / "LICENSE"))
             print(f"wrote {skill_zip.relative_to(ROOT)}  {skill_zip.stat().st_size} bytes  sha256 {sha256(skill_zip)}")
 
 

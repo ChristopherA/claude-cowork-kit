@@ -4,7 +4,7 @@ Skills for the Claude Cowork Kit's medical binder: set it up, prepare a visit an
 
 Each skill expects the medical binder the Claude Cowork Kit describes: records in a connected folder that stays on the computer, arranged as the kit's docs/binders/medical.md describes, and Context documents holding only a questions list and a bare timeline. Keep the project in the mode that asks (the kit's explainer, under The two approval modes).
 
-Version 0.1.0 of the Claude Cowork Kit; every plugin in a release carries the kit's version, and the releases are at https://github.com/ChristopherA/claude-cowork-kit/releases.
+Version 0.1.0-rc.7 of the Claude Cowork Kit; every plugin in a release carries the kit's version, and the releases are at https://github.com/ChristopherA/claude-cowork-kit/releases.
 
 ## Skills
 
