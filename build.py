@@ -418,7 +418,8 @@ def check_residue():
     A regex replacement that writes its backreference or an escaped newline
     literally, `\\1` or `\\n` in running text, reads as a stray character to a
     person and as a broken instruction to Claude, and every other check passes
-    it. Fenced blocks are skipped, since code may carry either legitimately.
+    it. Fenced blocks and inline code are skipped, since code, and text
+    naming the residue, may carry either legitimately.
     """
     docs = [p for p in ROOT.glob("*.md")] + list((ROOT / "docs").rglob("*.md"))
     skills = list(PLUGINS_DIR.rglob("*.md")) + list(TEMPLATE_SKILLS.parent.rglob("*.md"))
@@ -428,7 +429,7 @@ def check_residue():
             if line.startswith("```"):
                 inside = not inside
                 continue
-            if not inside and RESIDUE.search(line):
+            if not inside and RESIDUE.search(re.sub(r"`[^`]*`", "", line)):
                 fail(f"{path.relative_to(ROOT)}:{n}: a literal backreference or escaped newline outside a code fence, left by a scripted edit")
 
 
