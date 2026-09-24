@@ -15,7 +15,7 @@ python3 build.py            # regenerate the manifests, READMEs and references i
 python3 build.py --check    # what a pull request must pass: skills valid, generated files current and committed
 ```
 
-`--check` fails on a skill description over 200 characters, a copy of a shared paragraph that differs from its source, a binder skill without its "Where this runs" section, a generated file that differs from what the docs would produce, a skills index that does not match the skills, and, in a git checkout, a generated file left uncommitted. Commit the generated files with the change that caused them.
+`--check` fails on a skill description over 200 characters, a copy of a shared paragraph that differs from its source, a binder skill without its "Where this runs" section, a generated file that differs from what the docs would produce, a skills index that does not match the skills, a literal `\1` or `\n` outside a code fence (what a scripted regex edit leaves behind), and, in a git checkout, a generated file left uncommitted. It reports every failure it finds before it exits, so one run shows the whole list. Commit the generated files with the change that caused them.
 
 ## Adding a skill
 

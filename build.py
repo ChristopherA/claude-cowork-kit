@@ -190,9 +190,20 @@ SHARED = {
 }
 
 
+FAILURES = []
+
+
 def fail(msg):
+    """Record a failure and go on, so one run reports every failure it can see."""
     print(f"FAIL: {msg}", file=sys.stderr)
-    sys.exit(1)
+    FAILURES.append(msg)
+
+
+def stop_if_failed():
+    """Exit once, after every check that could run has run."""
+    if FAILURES:
+        print(f"{len(FAILURES)} failure(s); nothing written", file=sys.stderr)
+        sys.exit(1)
 
 
 def frontmatter(path):
@@ -200,6 +211,7 @@ def frontmatter(path):
     m = re.match(r"^---\n(.*?)\n---\n", text, re.DOTALL)
     if not m:
         fail(f"{path}: no frontmatter")
+        return {}
     fm = {}
     for line in m.group(1).splitlines():
         if not line.strip() or line.startswith(" "):
@@ -213,6 +225,7 @@ def check_skill(folder):
     skill_md = folder / "SKILL.md"
     if not skill_md.exists():
         fail(f"{folder.name}: SKILL.md missing (the file name is upper case)")
+        return folder.name, 0
     fm = frontmatter(skill_md)
     extra = set(fm) - ALLOWED_KEYS
     if extra:
@@ -230,7 +243,10 @@ def check_skill(folder):
     if len(desc) > DESCRIPTION_LIMIT:
         fail(f"{folder.name}: description is {len(desc)} characters, limit {DESCRIPTION_LIMIT}")
     for script in (folder / "scripts").glob("*.py") if (folder / "scripts").is_dir() else []:
-        compile(script.read_text(), str(script), "exec")
+        try:
+            compile(script.read_text(), str(script), "exec")
+        except SyntaxError as e:
+            fail(f"{script.relative_to(ROOT)}: does not compile: {e}")
     return name, len(desc)
 
 
@@ -249,14 +265,17 @@ def fenced_block_after(text, heading_regex, source):
     m = re.search(heading_regex, text, re.M)
     if not m:
         fail(f"{source}: heading not found: {heading_regex}")
+        return ""
     rest = text[m.end():]
     start = re.search(r"^```(?:markdown)?\n", rest, re.M)
     if not start:
         fail(f"{source}: no fenced block after {heading_regex}")
+        return ""
     body = rest[start.end():]
     end = re.search(r"^```$", body, re.M)
     if not end:
         fail(f"{source}: unterminated fence after {heading_regex}")
+        return ""
     return body[:end.start()].rstrip("\n") + "\n"
 
 
@@ -264,6 +283,7 @@ def read_doc(path):
     """The text of one kit document, or a failure naming the file."""
     if not path.exists():
         fail(f"kit document not found: {path} (pass --kit DIR, the docs directory)")
+        return ""
     return path.read_text()
 
 
@@ -309,6 +329,7 @@ def kit_references(docs_dir):
         if asking not in skill_md.read_text():
             fail(f"{skill_md.relative_to(ROOT)}: does not carry the explainer's asking convention (docs/claude-cowork-kit.md, How Claude asks) word for word (## Asking)")
     check_shared_text()
+    check_residue()
     check_project_sections()
     check_skills_index()
     for name, body in binders.items():
@@ -364,6 +385,7 @@ def check_skills_index():
     """
     if not SKILLS_INDEX.exists():
         fail(f"{SKILLS_INDEX.relative_to(ROOT)}: missing (the public skills index)")
+        return
     lines = SKILLS_INDEX.read_text().splitlines()
     listed = {}
     for i, line in enumerate(lines):
@@ -378,19 +400,43 @@ def check_skills_index():
             fail(f"docs/skills.md: no heading '{heading}'")
         for folder in plugin_skills(name):
             fm = frontmatter(folder / "SKILL.md")
-            expected.add(fm["name"])
-            if fm["name"] not in listed:
-                fail(f"docs/skills.md: {fm['name']} ({name}) is not listed")
-            if listed[fm["name"]] != fm["description"]:
+            expected.add(fm.get("name"))
+            if fm.get("name") not in listed:
+                fail(f"docs/skills.md: {fm.get('name')} ({name}) is not listed")
+            elif listed[fm["name"]] != fm["description"]:
                 fail(f"docs/skills.md: {fm['name']}'s description differs from its SKILL.md")
     for stale in sorted(set(listed) - expected):
         fail(f"docs/skills.md: lists {stale}, which no plugin carries")
+
+
+RESIDUE = re.compile(r"\\[0-9n]")
+
+
+def check_residue():
+    """No skill or doc carries what a scripted edit leaves behind.
+
+    A regex replacement that writes its backreference or an escaped newline
+    literally, `\\1` or `\\n` in running text, reads as a stray character to a
+    person and as a broken instruction to Claude, and every other check passes
+    it. Fenced blocks are skipped, since code may carry either legitimately.
+    """
+    docs = [p for p in ROOT.glob("*.md")] + list((ROOT / "docs").rglob("*.md"))
+    skills = list(PLUGINS_DIR.rglob("*.md")) + list(TEMPLATE_SKILLS.parent.rglob("*.md"))
+    for path in sorted(set(docs + skills)):
+        inside = False
+        for n, line in enumerate(path.read_text().splitlines(), 1):
+            if line.startswith("```"):
+                inside = not inside
+                continue
+            if not inside and RESIDUE.search(line):
+                fail(f"{path.relative_to(ROOT)}:{n}: a literal backreference or escaped newline outside a code fence, left by a scripted edit")
 
 
 def check_shared_text():
     """Every skill listed for a block in docs/shared.md carries it word for word."""
     if not SHARED_DOC.exists():
         fail(f"shared text not found: {SHARED_DOC.relative_to(ROOT)}")
+        return
     shared = SHARED_DOC.read_text()
     for heading, globs in SHARED.items():
         block = fenced_block_after(shared, rf"^## {re.escape(heading)}$", "docs/shared.md").strip()
@@ -410,6 +456,7 @@ def plugin_skills(name):
     skills_dir = PLUGINS_DIR / name / "skills"
     if not skills_dir.is_dir():
         fail(f"plugins/{name}/skills/ missing")
+        return []
     skills = sorted(d for d in skills_dir.iterdir() if d.is_dir() and not d.name.startswith("."))
     if not skills:
         fail(f"no skill folders under plugins/{name}/skills/")
@@ -492,6 +539,7 @@ def build():
     unknown = [a for a in sys.argv[1:] if a.startswith("-") and a not in ("--check", "--kit")]
     if unknown:
         fail(f"unknown option {unknown[0]}; see build.py --help")
+        stop_if_failed()
     on_disk = sorted(d.name for d in PLUGINS_DIR.iterdir() if d.is_dir() and not d.name.startswith("."))
     if on_disk != sorted(PLUGINS):
         fail(f"plugins/ holds {on_disk} but build.py knows {sorted(PLUGINS)}")
@@ -514,6 +562,7 @@ def build():
         missing = [r for r in spec["references"] if r not in refs]
         if missing:
             fail(f"{name}: unknown references {missing}")
+    stop_if_failed()
     generated = generated_files(refs)
     stale = [p for p in generated if not p.exists() or p.read_text() != generated[p]]
     stray = [p for p in PLUGINS_DIR.glob("*/skills/*/references/*") if p not in generated]
@@ -529,6 +578,7 @@ def build():
             for status, rel in uncommitted:
                 print(f"{status:6s} {rel}", file=sys.stderr)
             fail("generated files are not committed; git add them and commit before the push")
+        stop_if_failed()
         state = "current" if uncommitted is None else "current and committed"
         print(f"{len(checked)} skills in {len(PLUGINS)} plugins valid; generated files {state}; nothing written")
         return

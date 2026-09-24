@@ -16,7 +16,7 @@ A reply is drafted in any binder, since a draft writes nothing. The inbox drain 
 
 The inbox drain's candidate script matches whole words, ranks the rarer shared words higher, and no longer searches the inbox, the archive or `CLAUDE.md`, so a capture stops matching itself.
 
-`VERSION` carries the release candidate's suffix, so an installed plugin says which candidate it is; every manifest names the license, the homepage and the repository, and every `.plugin` and `.skill` file carries `LICENSE`. `build.py --help` prints its usage, and an unknown option fails instead of running a build.
+`VERSION` carries the release candidate's suffix, so an installed plugin says which candidate it is; every manifest names the license, the homepage and the repository, and every `.plugin` and `.skill` file carries `LICENSE`. `build.py --help` prints its usage, and an unknown option fails instead of running a build. `build.py --check` reports every failure in one run rather than stopping at the first, and fails on a literal backreference or escaped newline left in running text by a scripted edit.
 
 ## 0.1.0-rc.6 (2026-09-23)
 
