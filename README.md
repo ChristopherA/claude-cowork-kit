@@ -1,6 +1,6 @@
 # Claude Cowork Kit
 
-Plugins for people who use Claude in the desktop and mobile apps rather than in a terminal. Install one, start a task, and Claude sets up a binder with you: it asks what you want, creates the binder's Context documents, and hands back the one block of text only you can paste. Each binder keeps its material as plain files in a folder on your own computer, so nothing you build depends on Claude, and the plugins add the routines that make the binder worth opening: a decision worked through one question at a time, an inbox of captures filed to your own conventions, a visit prepared from what changed in your record, a week planned from what is actually on the calendar.
+Plugins for people who use Claude in the desktop and mobile apps rather than in a terminal. Install one, start a task, and Claude sets up a binder with you: it asks what you want, creates the binder's Context documents, and hands back the text only you can paste. Each binder keeps its material as plain files in a folder on your own computer, so nothing you build depends on Claude, and the plugins add the routines that make the binder worth opening: a decision worked through one question at a time, an inbox of captures filed to your own conventions, a visit prepared from what changed in your record, a week planned from what is actually on the calendar.
 
 ## Who it is for
 
@@ -8,7 +8,7 @@ You use Claude Cowork: the desktop app with a folder connected, and the phone ap
 
 It is not for Claude Code, the command-line tool developers use, and it is not for plain chat. Most published advice for working with Claude on your own files is written for one of those two, and where this kit disagrees with it, that is usually the difference. If you are comfortable in a terminal, [Claude Code](https://docs.anthropic.com/en/docs/claude-code) will do more than this kit can, and the folder this kit builds works unchanged under it when you get there.
 
-**Six words the rest of this page uses.** A *project* is the app's own container: its page has Instructions, Context, a Folder and Scheduled tasks, and a *Context document* is one of the documents in its Context, which Claude reads in every task there and your phone can reach. A *binder* is one part of your life as the kit sets it up: one project, one folder on your computer, and the Context documents that describe it. A *task* is a conversation in Cowork: inside a project, the composer has a Chat and a Cowork toggle, and a task is what you start with the Cowork side on. A *skill* is a routine Claude runs when what you say matches its description; there is no command to remember. A *plugin* is a set of skills installed once, under Customize in the desktop app, that then works in every project. A *marketplace* is a place the app can install plugins from; this repository is one.
+**Seven words the rest of this page uses.** A *project* is the app's own container: its page has Instructions, Context, a Folder and Scheduled tasks, and a *Context document* is one of the documents in its Context, which Claude reads in every task there and your phone can reach. A *binder* is one part of your life as the kit sets it up: one project, one folder on your computer, and the Context documents that describe it. A *task* is a conversation in Cowork: inside a project, the composer has a Chat and a Cowork toggle, and a task is what you start with the Cowork side on. A *skill* is a routine Claude runs when what you say matches its description; there is no command to remember. A *plugin* is a set of skills installed once, under Customize in the desktop app, that then works in every project. A *marketplace* is a place the app can install plugins from; this repository is one.
 
 ## Why Cowork
 
@@ -26,7 +26,7 @@ The phone column of the last row is the whole trick: from the phone, Claude work
 
 ## What is in the kit
 
-Six plugins and a template. Install the core, then only the binders you want; most people should live with the research binder for a week before adding another.
+Six plugins and a template. No plugin has to come first: install the binder you want, and the core when you want its routines; most people should live with the research binder for a week before adding another.
 
 | Plugin | What it is for | Its skills |
 |---|---|---|
@@ -56,7 +56,7 @@ Install one plugin at a time, and run its setup before installing the next.
 1. **Back up your research folder** with whatever you already use. Do it before the first task that is allowed to write, not after. If the folder is in iCloud Drive, turn Optimize Mac Storage off and Time Machine on as well; the explainer's section What the connected folder does and does not protect says why.
 2. **Install the research plugin**, shown as **Research** (its file name is `research`), by either path above, and turn it on. It is the binder the others learn their habits from, and no other plugin has to come first.
 3. **Create the project and connect the folder.** Make an ordinary project in the app and name it, then connect your research folder to it from the project's page. Do not create the project *from* the folder: a project created that way lives on that computer and does not sync, which silently breaks the phone half of this.
-4. **Run the setup.** In a task inside that project, say `set up my research binder`. Claude asks three questions, creates the Context documents, and hands back what only you can paste: the account instructions, if your Settings, Account, "Instructions for Claude" field does not carry them yet, and the short project instructions for the Instructions panel at the side of the project page. It then names the day-one checks, the phone check first.
+4. **Run the setup.** In a task inside that project, say `set up my research binder`. Claude asks three questions, creates the Context documents, and hands back what only you can paste: the account instructions, if your Settings, Account, "Instructions for Claude" field does not carry them yet, and the short project instructions for the Instructions panel at the side of the project page. It then names the day-one checks, the phone check among them.
 5. **Install the core plugin** (`cowork-kit`, shown as **Cowork Kit core**) when you want its routines; they work in every binder. Its own setup, `set up the kit`, is for a reader who starts there instead.
 
 Before you connect a folder, read what the connected folder does and does not protect: `PRIVACY.md` here, and the explainer's section What the connected folder does and does not protect. Everything Claude can reach in a connected folder it may read, and a file in that folder can carry instructions Claude will follow.

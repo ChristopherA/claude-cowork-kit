@@ -77,9 +77,9 @@ PLUGINS = {
         "doc": "docs/claude-cowork-kit.md",
         "references": ["global-instructions.md", "voices.md"],
         "readme": (
-            "Install this plugin first, then start a task and say `set up the kit`. The setup "
-            "skill asks a few questions, hands back the account-wide instructions to paste, and "
-            "says which binder plugin to install next. The other twelve skills work in any binder."
+            "No plugin has to come first. Install this one when you want its routines, or start "
+            "here: in a task, say `set up the kit`, and the setup skill asks a few questions, hands "
+            "back the account-wide instructions to paste, and says which binder plugin to install next. The other twelve skills work in any binder."
         ),
     },
     "learn": {

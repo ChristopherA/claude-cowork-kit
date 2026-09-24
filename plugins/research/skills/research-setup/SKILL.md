@@ -5,7 +5,7 @@ description: Sets up the research binder: three questions, then rules.md, map.md
 
 # Setup
 
-Build the research binder the Claude Cowork Kit describes, from four answers. Create what a task can create, the three Context documents, and hand back what only the reader can paste, the short project instructions. Read the research folder; do not write into it, except to create empty folders when the reader is starting from nothing and has said yes.
+Build the research binder the Claude Cowork Kit describes, from three answers, and a fourth, the voice, when the account instructions are missing. Create what a task can create, the three Context documents, and hand back what only the reader can paste, the short project instructions. Read the research folder; do not write into it, except to create empty folders when the reader is starting from nothing and has said yes.
 
 The texts this skill hands back are in `references/`, generated from the kit's docs when the plugin was packaged: `research-instructions.md` (the short text for the Instructions panel), `rules-template.md` (the working rules document), `map-template.md` (the description), `voices.md` (the three voices), `global-instructions.md` (the account-wide instructions). Use them as they are; do not rewrite them, and do not paraphrase them into the conversation. Fill in only the marked fields.
 

@@ -17,7 +17,7 @@ Read `categories.md` first if you have not this conversation; it says what the c
 
 Check that the financial files folder is reachable. If it is not, say so and stop; statements are read at the desk, not from the phone. Do not ask the reader to paste a statement into the conversation as a substitute, and do not work from memory of an earlier one.
 
-Ask which file, if the reader did not name it, through the app's question control listing the files in the folder by name and date, newest first. Work one file at a time. Say before reading it that its contents will go to the session, which runs in the cloud; if the reader would rather not, stop.
+Ask which file, if the reader did not name it, through the app's question control listing the files in the folder by name and date, newest first. Work one file at a time. Say before reading it that its contents will go to Claude on Anthropic's servers; if the reader would rather not, stop.
 
 ## Reading the file
 

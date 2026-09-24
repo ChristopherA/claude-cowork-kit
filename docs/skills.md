@@ -138,7 +138,7 @@ Sets up the research binder: three questions, then rules.md, map.md and inbox.md
 
 **When to reach for it.** Once, in a task inside the new project for the research binder, after the folder is connected.
 
-**What it hands back.** The three Context documents created, `rules.md`, `map.md` and `inbox.md`, and the two things only you can paste: the account instructions if your Settings field is empty, and the short project instructions for the Instructions panel. It then names the day-one checks, the phone check first.
+**What it hands back.** The three Context documents created, `rules.md`, `map.md` and `inbox.md`, and the two things only you can paste: the account instructions if your Settings field is empty, and the short project instructions for the Instructions panel. It then names the day-one checks, the phone check among them.
 
 ### `research-source-note`
 

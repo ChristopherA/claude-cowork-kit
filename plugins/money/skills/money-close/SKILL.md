@@ -17,7 +17,7 @@ Read `categories.md` and then `targets.md` first if you have not this conversati
 
 Check that the financial files folder is reachable. If it is not, say so and stop; a month is closed at the desk, not from the phone. Do not close a month from the reader's description of it, from a pasted statement, or from memory of an earlier session.
 
-Ask which month, if the reader did not say, through the app's question control, the most recent complete month first. Then list the files in the folder that cover any part of it, by name and period, and ask the reader to confirm the list; a month with an account missing from it closes as partial, and you cannot tell which accounts they hold from the folder alone. Say before reading that the files' contents go to the session, which runs in the cloud; if the reader would rather not, stop.
+Ask which month, if the reader did not say, through the app's question control, the most recent complete month first. Then list the files in the folder that cover any part of it, by name and period, and ask the reader to confirm the list; a month with an account missing from it closes as partial, and you cannot tell which accounts they hold from the folder alone. Say before reading that the files' contents go to Claude on Anthropic's servers; if the reader would rather not, stop.
 
 ## Working the month
 

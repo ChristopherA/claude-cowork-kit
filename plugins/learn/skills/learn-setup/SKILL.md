@@ -74,4 +74,4 @@ Ask through the app's question control whenever there is a choice, and for every
 
 ## What this skill does not do
 
-It does not teach; the lesson skill does. It does not write into the materials folder. It does not set any setting, turn on a style, connect a folder, create a project, or install a plugin. It does not paste anything anywhere; it hands text back. It does not hand back the account-wide instructions; the core plugin's setup does. It does not run twice on a project that already has a mission.
+It does not teach; the lesson skill does. It does not write into the materials folder. It does not set any setting, turn on a style, connect a folder, create a project, or install a plugin. It does not paste anything anywhere; it hands text back. It hands back the account-wide instructions only when the Account field does not carry them already. It does not run twice on a project that already has a mission.
