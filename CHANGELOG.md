@@ -2,18 +2,9 @@
 
 Every release is listed here, newest first, with what changed since the one before. The version is the kit's, in `VERSION`; every plugin in a release carries it.
 
-## Unreleased
+## 0.1.0-rc.6 (2026-09-23)
 
-- Every project setup hands back the account instructions when the Account field lacks them, so no plugin has to be installed before another; the first run is one install and two pastes.
-- Every project skill checks it is running in its own project and stops otherwise, since plugins reach every project.
-- The paragraphs several skills share are single-sourced in `docs/shared.md` and the build fails on a copy that differs; the template carries the asking convention.
-- The medical plugin's first visit can be prepped before any visit is recorded; the check-in and the treatment questions create their files when missing.
-- Trigger phrases carry the project's noun and no two collide on an ordinary sentence; every skill ends with a completeness word; silence is never a yes.
-- One version, from `VERSION`, in every manifest; `build.py --check` fails on a generated file left uncommitted.
-- The README is the kit's first page; a changelog, contributing notes and a privacy statement exist.
-- The explainer is the kit's case with no project in it; each binder has its own document under `docs/binders/` with its use case, skills, setup, check and paste blocks; `docs/skills.md` indexes every skill and the build checks it against the skills.
-- The kit speaks the app's words: each part of life is a *binder*, one project in the app plus its folder and its *Context documents*; *project* means only the app's container, and the documents Claude reads from the phone are the project's Context. The notes plugin is `research` (shown as Research) with `research-*` skills and the trigger `set up my research binder`; `cowork-new-project` is `cowork-new-binder`; the per-binder documents are under `docs/binders/`. An existing install of `pkm` is replaced, not upgraded.
-- A folder in iCloud Drive, directly or through Desktop & Documents sync, needs Optimize Mac Storage and Time Machine turned on: Claude cannot read a file iCloud has moved off the Mac, and a reorganizing task has been reported losing such files.
+The kit speaks the app's words: each part of life is a *binder*, one project in the app plus its folder and its *Context documents*, and *project* means only the app's container. The notes plugin is now `research` (shown as Research) with `research-*` skills, every setup's phrase is `set up my <name> binder`, and `cowork-new-project` is `cowork-new-binder`; an installed `pkm` is replaced, not upgraded. Every binder setup hands back the account instructions when the Account field lacks them, so no plugin has to come first, and every binder skill checks that it runs in its own project. The explainer is the kit's case with no binder in it; each binder has its own document under `docs/binders/`, and `docs/skills.md` indexes every skill, checked by the build. A folder in iCloud Drive needs Optimize Mac Storage and Time Machine turned on. The medical plugin's first visit can be prepped before any visit is recorded, and visit prep's section on what changed is whole again. Shared paragraphs are single-sourced and checked by the build, trigger phrases no longer collide, silence is never a yes, every manifest carries the one version in `VERSION`, and a changelog, contributing notes and a privacy statement sit beside the README.
 
 ## 0.1.0-rc.5 (2026-09-23)
 
