@@ -2,7 +2,7 @@
 
 Every release is listed here, newest first, with what changed since the one before. The version is the kit's, in `VERSION`; every plugin in a release carries it.
 
-## Unreleased
+## 0.1.0-rc.7 (2026-09-23)
 
 The iCloud Drive guidance is corrected: Optimize Mac Storage goes off, not on, since on is what lets iCloud move files off the Mac, and off is the best iCloud allows rather than a guarantee, so Time Machine stays on.
 
