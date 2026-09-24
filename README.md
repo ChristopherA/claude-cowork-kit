@@ -53,7 +53,7 @@ Install one plugin at a time, and run its setup before installing the next.
 
 ## First run
 
-1. **Back up your research folder** with whatever you already use. Do it before the first task that is allowed to write, not after. If the folder is in iCloud Drive, turn on Optimize Mac Storage and Time Machine as well; the explainer's section What the connected folder does and does not protect says why.
+1. **Back up your research folder** with whatever you already use. Do it before the first task that is allowed to write, not after. If the folder is in iCloud Drive, turn Optimize Mac Storage off and Time Machine on as well; the explainer's section What the connected folder does and does not protect says why.
 2. **Install the research plugin**, shown as **Research** (its file name is `research`), by either path above, and turn it on. It is the binder the others learn their habits from, and no other plugin has to come first.
 3. **Create the project and connect the folder.** Make an ordinary project in the app and name it, then connect your research folder to it from the project's page. Do not create the project *from* the folder: a project created that way lives on that computer and does not sync, which silently breaks the phone half of this.
 4. **Run the setup.** In a task inside that project, say `set up my research binder`. Claude asks three questions, creates the Context documents, and hands back what only you can paste: the account instructions, if your Settings, Account, "Instructions for Claude" field does not carry them yet, and the short project instructions for the Instructions panel at the side of the project page. It then names the day-one checks, the phone check first.

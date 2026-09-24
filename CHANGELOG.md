@@ -2,6 +2,10 @@
 
 Every release is listed here, newest first, with what changed since the one before. The version is the kit's, in `VERSION`; every plugin in a release carries it.
 
+## Unreleased
+
+The iCloud Drive guidance is corrected: Optimize Mac Storage goes off, not on, since on is what lets iCloud move files off the Mac, and off is the best iCloud allows rather than a guarantee, so Time Machine stays on.
+
 ## 0.1.0-rc.6 (2026-09-23)
 
 The kit speaks the app's words: each part of life is a *binder*, one project in the app plus its folder and its *Context documents*, and *project* means only the app's container. The notes plugin is now `research` (shown as Research) with `research-*` skills, every setup's phrase is `set up my <name> binder`, and `cowork-new-project` is `cowork-new-binder`; an installed `pkm` is replaced, not upgraded. Every binder setup hands back the account instructions when the Account field lacks them, so no plugin has to come first, and every binder skill checks that it runs in its own project. The explainer is the kit's case with no binder in it; each binder has its own document under `docs/binders/`, and `docs/skills.md` indexes every skill, checked by the build. A folder in iCloud Drive needs Optimize Mac Storage and Time Machine turned on. The medical plugin's first visit can be prepped before any visit is recorded, and visit prep's section on what changed is whole again. Shared paragraphs are single-sourced and checked by the build, trigger phrases no longer collide, silence is never a yes, every manifest carries the one version in `VERSION`, and a changelog, contributing notes and a privacy statement sit beside the README.
