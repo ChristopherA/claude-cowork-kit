@@ -12,7 +12,7 @@ The README names the plan and the usage cost, asks for the privacy read before t
 
 Every binder setup stops in a project that already holds another binder, and a setup that stopped partway resumes, creating only the missing Context documents, where the learning and money setups used to call such a binder set up while their other skills refused to run in it.
 
-A reply is drafted in any binder, since a draft writes nothing. The inbox drain offers to delete a desk capture's file once it is filed, the first weekly review says there is nothing earlier to compare, questions-for offers the folder rather than a Context document where the questions carry figures or results, and the learning binder's first check no longer depends on the optional Learning style.
+A reply is drafted in any binder, since a draft writes nothing. The inbox drain offers to delete a desk capture's file once it is filed, the first weekly review says there is nothing earlier to compare, questions-for offers the folder rather than a Context document where the questions carry figures or results, and the learning setup names its first checks in the order its binder document gives them, testing the project instructions rather than the optional Learning style.
 
 The inbox drain's candidate script matches whole words, ranks the rarer shared words higher, and no longer searches the inbox, the archive or `CLAUDE.md`, so a capture stops matching itself.
 
