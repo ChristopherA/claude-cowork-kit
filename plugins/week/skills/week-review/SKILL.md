@@ -13,7 +13,7 @@ This skill belongs to the week binder, whose Context document is `priorities.md`
 
 ## Before starting
 
-Read `priorities.md` and the last two or three entries in `reviews.md`, a Context document created the first time this runs, so the review compares against something. Both are Context documents, so this works from the phone. If a plan for the week was handed back by the planning skill, read it too; the review measures the week against the plan the reader chose, not against an ideal.
+Read `priorities.md` and the last two or three entries in `reviews.md`, a Context document created the first time this runs, so the review compares against something. On the first run there are no earlier entries: say so, measure the week against the plan alone, and leave the pattern in question 3 until there are weeks to compare. Both are Context documents, so this works from the phone. If a plan for the week was handed back by the planning skill, read it too; the review measures the week against the plan the reader chose, not against an ideal.
 
 ## The questions
 

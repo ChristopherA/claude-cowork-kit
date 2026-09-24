@@ -9,7 +9,7 @@ Draft the reply the reader would write, from the message they hand over and from
 
 ## Where this runs
 
-This skill belongs to the week binder, whose Context document is `priorities.md`. Before anything else, check that it is here. If not, this is another binder: say which binder this skill is for and stop, so nothing is written into the wrong folder or the wrong Context documents; if this is the right binder and it is not set up yet, offer its setup, `set up my week binder`.
+This skill belongs to the week binder, whose Context document is `priorities.md`, but a draft writes nothing, so it runs in any binder. Outside the week binder, take the voice from the thread and from replies the reader hands over, not from this binder's folder, and if the reader asks to save the draft, say that saved replies belong in the week binder and hand the draft back in the chat instead.
 
 ## Before starting
 
@@ -35,4 +35,4 @@ Ask through the app's question control whenever there is a choice, and for every
 
 ## What this skill does not do
 
-It never sends a message or reply, from any account, by any route. It does not create or change a calendar event. It does not write the draft into the folder or a Context document unless asked. It does not answer for the reader on anything they have not decided; it leaves the bracket.
+It never sends a message or reply, from any account, by any route. It does not create or change a calendar event. It does not write the draft into the folder or a Context document unless asked, and never outside the week binder. It does not answer for the reader on anything they have not decided; it leaves the bracket.

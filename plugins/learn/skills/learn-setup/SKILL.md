@@ -68,7 +68,7 @@ Say, once, that Claude has a Learning style in the style menu that makes it ask 
 
 ## End
 
-Report what exists now: the three Context documents by name, and the two fields waiting for a paste, the one-line description under the title and the Instructions panel. Then name the day-one checks, in order: in this project, with the style turned on, ask Claude a direct question about the subject and see whether it answers or asks; from the phone with the computer closed, ask where the progress record says you are. Do not run them; the reader does. Say that the first lesson is `next lesson`, and that `quiz me` works once there is something to quiz. End with one word for completeness: full, partial (with what is missing), or minimal (stopped early).
+Report what exists now: the three Context documents by name, and the two fields waiting for a paste, the one-line description under the title and the Instructions panel. Then name the day-one checks, in order: in this project, say `next lesson` and see whether it opens with one concept rather than a survey; if they turned the Learning style on, ask a direct question about the subject and see whether it answers or asks; from the phone with the computer closed, ask where the progress record says you are. Do not run them; the reader does. Say that the first lesson is `next lesson`, and that `quiz me` works once there is something to quiz. End with one word for completeness: full, partial (with what is missing), or minimal (stopped early).
 
 ## Asking
 
