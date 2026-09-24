@@ -47,7 +47,7 @@ You could do this other ways, and it is worth saying what each one costs.
 
 A Claude plan that includes Cowork, and the Claude desktop app installed on the computer where your files live.
 
-A folder for the binder's files. An existing one is fine; an Obsidian or Logseq vault works as-is, and you should not reorganize it to match anything here. Connect that folder and only that folder: not Documents, not your home folder, not the parent it sits in. Everything Claude can reach it may read, and everything it reads goes to the session.
+A folder for the binder's files. An existing one is fine; an Obsidian or Logseq vault works as-is, and you should not reorganize it to match anything here. Connect that folder and only that folder: not Documents, not your home folder, not the parent it sits in. Everything Claude can reach it may read, and everything it reads goes to Claude on Anthropic's servers.
 
 About thirty minutes, and a second sitting a couple of weeks later to trim what didn't work.
 

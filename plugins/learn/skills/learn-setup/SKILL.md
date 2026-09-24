@@ -21,7 +21,7 @@ Before anything else, check whether this project already holds another binder: `
 
 Check which of `mission.md`, `curriculum.md` and `progress.md` already exist. If all three do, this binder is already set up: say so, offer to read `progress.md` back and pick up from there, and stop. Do not run setup twice. A document that exists is kept and read back, never recreated; say which you kept. If some exist and not all, an earlier setup stopped partway: say so, ask only what the missing ones need, and take the rest from the ones kept.
 
-## The interview, one question at a time
+## The interview
 
 Ask as the Asking section says, grouping the questions whose answers do not depend on each other in one control and putting the dependent ones after. Skip any the reader has already answered in their request.
 

@@ -17,7 +17,7 @@ A task can read the project's Context documents, create Context documents in the
 
 Read the reader's Account instructions if you can see them. If they already carry the kit's block, say so, name the voice in it, and skip the voice question.
 
-## The interview, one question at a time
+## The interview
 
 Ask as the Asking section says: questions 1 and 2 do not depend on each other and can share one control; question 3 depends on the answer to 2 and goes in the next. Skip any the reader has already answered in their request. Do not ask who the reader is or how they work: nothing this skill writes needs it, a task cannot carry an answer into another project, and the binder setups ask it where it is used.
 
