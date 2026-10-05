@@ -30,7 +30,7 @@ This describes what's in my research folder and how it's organized. It lives in 
 
 ## Note format
 
-Plain markdown. The metadata at the top of a note is a `created` date in YYYY-MM-DD form and, where the note came from something, a `source` line with the link or citation; a source note carries a `level` line instead of `source`, and its citation line follows. A source note is structured: each part is a labeled block, and its key points are bullets.
+Plain markdown. The metadata at the top of a note is a `created` date in YYYY-MM-DD form and, where the note came from something, a `source` line with the link or citation; a source note carries a `level` line instead of `source`, then its citation fields (`kind`, `authors`, `year`, `title`, `container`, `volume`, `issue`, `pages`, `publisher`, `doi`, `url`, `retrieved` or `available`), and its citation line follows. A source note is structured: each part is a labeled block, and its key points are bullets.
 
 Don't hard-wrap. One paragraph is one line, and the editor wraps it for display.
 
@@ -38,7 +38,7 @@ Links between notes are relative markdown links. No tags, no generated index fil
 
 ## Citation form
 
-One reference line at the top of a source note:
+One reference line at the top of a source note, made from its citation fields:
 
 * _**Title**_ (Year). [web article]. _Family, Given._ Publication, volume(issue), pages. Retrieved YYYY-MM-DD from: <URL>
 

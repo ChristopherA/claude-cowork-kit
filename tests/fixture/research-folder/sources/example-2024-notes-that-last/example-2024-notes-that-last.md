@@ -1,7 +1,14 @@
 created: 2026-10-04
 level: read
+kind: preprint
+authors: Example, Ada
+year: 2024
+title: Notes That Last
+publisher: Invented for the Claude Cowork Kit's test fixture
+url: https://example.org/notes-that-last.pdf
+retrieved: 2026-10-04
 
-* _**Notes That Last**_ (2024). [preprint]. _Example, Ada._ Invented for the Claude Cowork Kit's test fixture, 2 pp. Retrieved 2026-10-04 from: <https://example.org/notes-that-last.pdf>
+* _**Notes That Last**_ (2024). [preprint]. _Example, Ada._ Invented for the Claude Cowork Kit's test fixture. Retrieved 2026-10-04 from: <https://example.org/notes-that-last.pdf>
 
 BRIEF
 

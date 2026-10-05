@@ -1,7 +1,12 @@
 created: 2026-09-12
 level: minimal
+kind: book
+authors: Ahrens, Sönke
+year: 2017
+title: How to Take Smart Notes
+publisher: Self-published
 
-* _**How to Take Smart Notes**_ (2017). [book]. _Ahrens, Sönke._ Self-published; second edition 2022.
+* _**How to Take Smart Notes**_ (2017). [book]. _Ahrens, Sönke._ Self-published.
 
 BRIEF
 

@@ -414,7 +414,9 @@ def check_research_scripts():
     The fixture's compound source carries two quotes that must pass the quote
     check against its rendition, and a copy with one word changed must fail;
     the census must find the planted lead-only folder and the two topic notes
-    that cite no source.
+    that cite no source; every fixture source note's citation line must be
+    the one cite.py makes from its fields, and its BibTeX and CSL must hold
+    one entry per note.
     A script that breaks then fails the build instead of reaching a reader.
     """
     scripts = PLUGINS_DIR / "research" / "skills"
@@ -452,6 +454,27 @@ def check_research_scripts():
     for key, value in want.items():
         if sources.get(key) != value:
             fail(f"census.py: on the fixture, sources.{key} is {sources.get(key)!r}, expected {value!r}")
+    cite = scripts / "research-source-note" / "scripts" / "cite.py"
+    notes = sorted(p for p in (folder / "sources").rglob("*.md") if "renditions" not in p.parts)
+    out = run([cite, *notes, "--check"])
+    if out.returncode != 0:
+        fail(f"cite.py: a fixture note's citation line differs from its fields (exit {out.returncode}): {out.stdout[-400:]}{out.stderr[-200:]}")
+    out = run([cite, *notes, "--style", "csl"])
+    try:
+        if len(json.loads(out.stdout)) != len(notes):
+            fail("cite.py: the CSL JSON does not hold one item per fixture note")
+    except ValueError:
+        fail(f"cite.py: the CSL JSON does not parse: {out.stderr[-200:]}")
+    out = run([cite, *notes, "--style", "bibtex"])
+    if out.stdout.count("\n@") + out.stdout.startswith("@") != len(notes):
+        fail("cite.py: the BibTeX does not hold one entry per fixture note")
+    altered = ROOT / "dist" / "cite-control.md"
+    altered.write_text(notes[0].read_text().replace("year: ", "year: 1", 1))
+    out = run([cite, altered, "--check"])
+    altered.unlink()
+    if out.returncode != 1:
+        fail(f"cite.py: a note whose year field disagrees with its line was not caught (exit {out.returncode})")
+
     expected = ["topics/Reading.md", "topics/how-a-note-should-open.md"]
     if topics.get("cite_nothing") != expected:
         fail(f"census.py: on the fixture, topics.cite_nothing is {topics.get('cite_nothing')!r}, expected {expected!r}")
