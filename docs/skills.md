@@ -114,7 +114,7 @@ Writes where this session leaves off, done, open, the next step and what to watc
 
 ## CWK Research Binder, `research`
 
-The research binder's six skills. All but the setup read `rules.md` and `map.md` first and write into the folder only after a yes; the five that read the folder run in a Cowork task at your desk.
+The research binder's seven skills. All but the setup read `rules.md` and `map.md` first and write into the folder only after a yes; the six that read the folder run in a Cowork task at your desk.
 
 ### `research-description-check`
 
@@ -155,6 +155,14 @@ Writes or updates one living topic note, what the reader currently thinks first,
 **When to reach for it.** After a source note, when you named the topic it bears on; when something you read changes your mind; or when you want to see what you think about a topic in one place.
 
 **What it hands back.** One topic note, updated rather than duplicated: what you currently think, first, in your words, then each source linked with what it supports or challenges. It writes your thinking only from what you say, and offers to give a source cited from here a fuller note.
+
+### `research-import`
+
+Files the works cited in a pile of the reader's own writing: each citation checked against its work, filed in one batch, with a corrections report. Use for "import the sources from my drafts".
+
+**When to reach for it.** When you have drafts, a blog series or published pieces of your own whose citations you want kept, too many to file one at a time.
+
+**What it hands back.** A citation-level source note for every work the pieces cite, each checked against the work itself and filed after one approval for the batch, routed to its topic note or to a waiting line in `map.md`; and, apart from the notes, a corrections report listing every citation in your writing that differs from its work and every claim a work does not make.
 
 ### `research-write-up`
 

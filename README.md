@@ -38,6 +38,7 @@ Notes and reading: capture from anywhere, file at your desk, answer from what yo
 - `research-inbox-drain`: files your captures one at a time into your notes. "Process the inbox."
 - `research-source-note`: turns an article, paper or transcript you hand over into one note. "Save this article to my notes."
 - `research-topic-note`: keeps one note per topic, what you think now and the sources behind it. "Update my note on cooperation."
+- `research-import`: files every work your own drafts cite, each citation checked, and lists the errors it found. "Import the sources from my drafts."
 - `research-write-up`: builds a paper, review, brief or post from your topic notes, with co-authors if you have them. "Start a paper from my note on cooperation."
 - `research-description-check`: finds what the binder's description says that your folder no longer bears out. "Check the description."
 
