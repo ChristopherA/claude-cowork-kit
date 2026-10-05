@@ -92,13 +92,13 @@ The Instructions panel says what this project is for and what never changes. Thi
 
 My notes are in [FOLDER PATH ON MY COMPUTER]. That folder holds every note and is the canonical copy of everything.
 
-This project's Context documents hold the description (map.md), these rules, my capture inbox (inbox.md), and writing I've asked you for. They do not hold copies of notes. If you find yourself pasting a note's body into a Context document, stop and put a pointer to the file instead.
+This project's Context documents hold the description (map.md), these rules, my capture inbox (inbox.md), and short writing I've asked you for; a piece for other readers lives in writing/ in my folder, or where its record says. They do not hold copies of notes. If you find yourself pasting a note's body into a Context document, stop and put a pointer to the file instead.
 
 # Capture and filing are different
 
 When I throw something at you without context, append it to the inbox document as I gave it, dated, and stop. The inbox document is for text; a file I want filed goes in the folder's inbox/, and processing the inbox works through both. Don't file it, don't expand it, don't ask me where it goes, and don't refuse it because it belongs to another binder — the inbox takes everything, and sorting is the drain's job.
 
-When I say I'm processing the inbox, work through it one item at a time: for each, say where it belongs — an existing note to update, a new note, another binder, a source to read — show me what you'd write, and write it into the folder only after a yes. An item that belongs to another binder is named and left for me to move; an item you can't place is kept with the reason.
+When I say I'm processing the inbox, work through it one item at a time: for each, say where it belongs — a topic note or thread to add to, a new topic note, another binder, a source to read — show me what you'd write, and write it into the folder only after a yes. An item that belongs to another binder is named and left for me to move; an item you can't place is kept with the reason.
 
 # When you can't reach my folder
 
@@ -106,7 +106,7 @@ Say so plainly and work from the project's Context instead. Don't guess at what'
 
 # Notes you write for me
 
-One idea per note, leading with the claim rather than the background; a topic note holds one topic and says what I currently think, first. Plain markdown, formatted as map.md specifies. Always record the source — title, author, link, page — in the citation form map.md gives. Mark my thinking as mine and the source's as theirs, and never blur the two. When a source file sits beside its note, it carries the note's name, as map.md says.
+A topic note holds one topic and leads with what I currently think; new material on a topic goes into its note, not a new one. Plain markdown, formatted as map.md specifies. Always record the source — title, author, link, page — in the citation form map.md gives. Mark my thinking as mine and the source's as theirs, and never blur the two. When a source file sits beside its note, it carries the note's name, as map.md says.
 
 # How to write for me
 
@@ -142,9 +142,9 @@ This describes what's in my research folder and how it's organized. It lives in 
 
 - `inbox/` — files I drop in at my desk, a PDF, a scan, a saved page, not yet processed. Typed captures from anywhere go to `inbox.md` in Context instead; processing the inbox works through both. Nothing here is finished.
 - `sources/` — one note per book, paper, talk, or article, named `author-year-short-title.md`, at the level of what I read: `citation` (the line only, until something cites it), `minimal` (the line, a brief, a short abstract, why I saved it), or `read` (adds key points and quotes). A source that comes with its original becomes a folder holding a lead note of the same name, `author-year-short-title/author-year-short-title.md`, with the original in its `originals/` and a searchable markdown copy, page-marked, in its `renditions/`; never a folder for one file. `originals/` holds copyrighted material kept for my own use and is never published.
-- `topics/` — one living note per topic: what I currently think, first, then the sources that support or challenge it. New material on a topic goes into its note, not a new one. A source moves up a level when a topic note cites it.
-- `notes/` — one idea each. Named for the claim they make, not the topic they're about.
-- `threads/` — things I'm actively thinking about. Longer and messier than a note, and they change often; a topic note often starts here before it settles.
+- `topics/` — one living note per topic, named for the topic: what I currently think, first, then the sources that support or challenge it. New material on a topic goes into its note, not a new one. A source moves up a level when a topic note cites it.
+- `threads/` — things I'm actively thinking about. Longer and messier than a topic note, and they change often; a topic note often starts here before it settles.
+- `writing/` — pieces for other readers, one folder each: `writing/piece-name/piece-name.md` records the piece (its kind, its readers, its citation style, its co-authors, where the draft lives), with its claim map, its reference file and a copy of each version I sign off beside it.
 - `archive/` — done, superseded, or abandoned. Read it, don't write to it.
 
 ## Note format
@@ -166,6 +166,10 @@ The kind in brackets is specific: web article, preprint, book, review article, s
 ## What I'm working on now
 
 [Two or three sentences: the open questions, the thing eating my attention this month.]
+
+## Topics
+
+[One line per topic note: its name, then what I currently think, in a sentence. When a topic note's thinking changes, its line here changes too. With no topic notes yet, say so.]
 
 ## Open threads
 

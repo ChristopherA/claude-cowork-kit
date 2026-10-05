@@ -130,7 +130,7 @@ Processes the capture inbox one item at a time into notes in the research folder
 
 **When to reach for it.** At your desk with the folder connected, when the inbox has a handful of captures. A short drain often is the habit that keeps the second job away.
 
-**What it hands back.** Each item placed, an existing note to update, a new note, another binder, a source to read, shown, and written into the folder only after a yes; at the end, how many were filed, redirected, deferred and left.
+**What it hands back.** Each item placed, a topic note or thread to add to, a new topic note, another binder, a source to read, shown, and written into the folder only after a yes; at the end, how many were filed, redirected, deferred and left.
 
 ### `research-setup`
 

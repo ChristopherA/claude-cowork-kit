@@ -29,7 +29,7 @@ For each claim in `map.md`, say one of three things:
 
 - **Holds.** The folder agrees. Say it in a word; do not list evidence for what is fine.
 - **Stale.** The folder disagrees, and the description is what is wrong: a folder that no longer exists or has been renamed, a convention the newest notes do not follow, a naming rule the files do not match, an open thread whose note carries no date newer than months ago, a current-work section older than its date suggests. Quote the claim, say what the folder shows, and propose the replacement wording.
-- **Drift in the folder.** The folder disagrees, and the folder is what is wrong: notes without the metadata line, a file in the wrong folder by its own content, mixed wrapping, a note named for a topic rather than a claim where the convention says claim. Name the files, at most ten per finding, and say what would bring them into line. Do not fix them; the reader may prefer to change the convention.
+- **Drift in the folder.** The folder disagrees, and the folder is what is wrong: notes without the metadata line, a file in the wrong folder by its own content, mixed wrapping, a note named against `map.md`'s naming rule. Name the files, at most ten per finding, and say what would bring them into line. Do not fix them; the reader may prefer to change the convention.
 
 Then look for what `map.md` does not say: a folder it never mentions; a pattern in the newest notes (a metadata line, a naming habit, a kind of link) that has become a convention without being written down; something on the "deliberately not here" list that is, in fact, there.
 
@@ -41,6 +41,7 @@ Check the conventions `map.md` sets for sources and topic notes, from the census
 - Every original that is a PDF or a saved web page has its rendition beside it, in `renditions/` under the same name.
 - Every source note's `level` matches what it contains: `citation` is the line alone, `minimal` has a brief and a short abstract and no key points or quotes, `read` has key points or key quotes.
 - Which source notes nothing outside the sources folder cites, and which topic notes cite no source.
+- `map.md`'s Topics section against the topic notes: a note with no line, a line with no note, and a line whose thinking no longer matches the note's current thinking. The last is stale wording in the description, reported with the note's current thinking as the proposed line.
 
 The first three are drift in the folder, reported with the files as above. The last two are not faults: an uncited source is a candidate for the inbox drain to revisit or for a topic note to take up, and a topic note that cites nothing is the reader's thinking without its sources. List them under their own heading, at most ten each, and say what each could become. Pass `--sources` and `--topics` to the census when `map.md` names other folders for them.
 

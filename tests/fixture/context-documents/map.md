@@ -16,9 +16,9 @@ I read more than I write and I lose what I read. The notes are for finding it ag
 
 - `inbox/` — files I drop in at my desk, a PDF, a scan, a saved page, not yet processed. Typed captures from anywhere go to `inbox.md` in Context instead; processing the inbox works through both. Nothing here is finished.
 - `sources/` — one note per book, paper, talk, or article, named `author-year-short-title.md`, at the level of what I read: `citation` (the line only, until something cites it), `minimal` (the line, a brief, a short abstract, why I saved it), or `read` (adds key points and quotes). A source that comes with its original becomes a folder holding a lead note of the same name, `author-year-short-title/author-year-short-title.md`, with the original in its `originals/` and a searchable markdown copy, page-marked, in its `renditions/`; never a folder for one file. `originals/` holds copyrighted material kept for my own use and is never published.
-- `topics/` — one living note per topic: what I currently think, first, then the sources that support or challenge it. New material on a topic goes into its note, not a new one. A source moves up a level when a topic note cites it.
-- `notes/` — one idea each. Named for the claim they make, not the topic they're about.
-- `threads/` — things I'm actively thinking about. Longer and messier than a note, and they change often; a topic note often starts here before it settles.
+- `topics/` — one living note per topic, named for the topic: what I currently think, first, then the sources that support or challenge it. New material on a topic goes into its note, not a new one. A source moves up a level when a topic note cites it.
+- `threads/` — things I'm actively thinking about. Longer and messier than a topic note, and they change often; a topic note often starts here before it settles.
+- `writing/` — pieces for other readers, one folder each: `writing/piece-name/piece-name.md` records the piece (its kind, its readers, its citation style, its co-authors, where the draft lives), with its claim map, its reference file and a copy of each version I sign off beside it.
 - `archive/` — done, superseded, or abandoned. Read it, don't write to it.
 
 ## Note format
@@ -40,6 +40,12 @@ The kind in brackets is specific: web article, preprint, book, review article, s
 ## What I'm working on now
 
 Whether a personal notes system can be kept going without becoming a second job. Reading Ahrens and Simon against each other on attention.
+
+## Topics
+
+- attention — attention, not information, is the scarce resource, so a system is judged by the attention it saves.
+- how a note should open — lead with the claim, and name the file for its subject.
+- what makes a collection useful — finding what I think about a topic in one note; writing from sources, not saving more.
 
 ## Open threads
 

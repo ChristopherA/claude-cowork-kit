@@ -413,7 +413,8 @@ def check_research_scripts():
 
     The fixture's compound source carries two quotes that must pass the quote
     check against its rendition, and a copy with one word changed must fail;
-    the census must find the planted lead-only folder and the uncited source.
+    the census must find the planted lead-only folder and the two topic notes
+    that cite no source.
     A script that breaks then fails the build instead of reaching a reader.
     """
     scripts = PLUGINS_DIR / "research" / "skills"
@@ -440,16 +441,20 @@ def check_research_scripts():
 
     out = run([census, "--folder", folder])
     try:
-        sources = json.loads(out.stdout)["sources"]
+        report = json.loads(out.stdout)
+        sources, topics = report["sources"], report["topics"]
     except (ValueError, KeyError):
         fail(f"census.py: no sources report from the fixture (exit {out.returncode}): {out.stderr[-300:]}")
         return
     want = {"lead_only": ["sources/simon-1971-designing-organizations"],
-            "uncited": ["sources/simon-1971-designing-organizations/simon-1971-designing-organizations.md"],
+            "uncited": [],
             "no_lead": [], "no_rendition": [], "level_mismatch": []}
     for key, value in want.items():
         if sources.get(key) != value:
             fail(f"census.py: on the fixture, sources.{key} is {sources.get(key)!r}, expected {value!r}")
+    expected = ["topics/Reading.md", "topics/how-a-note-should-open.md"]
+    if topics.get("cite_nothing") != expected:
+        fail(f"census.py: on the fixture, topics.cite_nothing is {topics.get('cite_nothing')!r}, expected {expected!r}")
 
 
 def check_residue():

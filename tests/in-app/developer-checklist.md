@@ -74,8 +74,8 @@ Run each in a new project created with its own test folder. Pass for every one: 
 
 ## The research skills, on the fixture
 
-- [ ] **Description check.** `Check the description against my folder.` Pass: it finds all four planted defects, reports the Simon source as cited by nothing without calling it a fault, and proposes edits without making them.
-- [ ] **Inbox drain.** `Process the inbox.` Pass: four items, one at a time; the attention capture goes to the existing note, the bookmark line becomes a new note, the dentist line is named as another binder's, the Bush article is a source to read; nothing is written without a yes.
+- [ ] **Description check.** `Check the description against my folder.` Pass: it finds all five planted defects, reports the two topic notes that cite no source without calling it a fault, and proposes edits without making them.
+- [ ] **Inbox drain.** `Process the inbox.` Pass: four items, one at a time; the attention capture is added to `topics/attention.md`, the bookmark line joins the open thread on what makes a note worth keeping, the dentist line is named as another binder's, the Bush article is a source to read; nothing is written without a yes.
 - [ ] **Source note.** Paste a short article and say `Save this article to my notes.` Pass: it asks the filing questions through the control and recommends a level; one note in the sources folder, its citation line in the kit's form, the article's claims kept apart from yours, no "My take" placeholder, written on a yes.
 - [ ] **Source note from a public page.** Give the link to a public web article and say `Save this to my notes.` Pass: it reads the page itself, keeps the text it read as a rendition in a folder with the note, and says it ran the quote check and what it found.
 - [ ] **Source note from a PDF.** Put a PDF of a paper in the folder's `inbox/` and say `Make a source note from the PDF in my inbox.` Pass: the pdf-info script writes a rendition with page markers numbered as the paper prints them; the note, the original and the rendition land in one folder of the note's name on a yes; every quote shown has passed the quote check.
@@ -89,7 +89,7 @@ Run each in a new project created with its own test folder. Pass for every one: 
 Use a second copy of the fixture inside iCloud Drive, in its own project.
 
 - [ ] **Picking it.** *desk.* At Use a folder, choose iCloud Drive in the sidebar and the folder. Pass: the explainer's steps match.
-- [ ] **An evicted file.** *desk.* In Finder, right-click one note and choose Remove Download, then ask `Read notes/attention-is-the-scarce-resource.md and quote its first line.` Record what Claude says. Then choose Keep Downloaded on the folder and ask again. Pass: the explainer's iCloud paragraph describes both.
+- [ ] **An evicted file.** *desk.* In Finder, right-click one note and choose Remove Download, then ask `Read topics/attention.md and quote its first line.` Record what Claude says. Then choose Keep Downloaded on the folder and ask again. Pass: the explainer's iCloud paragraph describes both.
 - [ ] **An edit from the phone.** *phone, then desk.* Edit a note in the Files app; on the Mac ask Claude to quote the changed line. Pass: the change is seen, and you record how soon.
 
 ## After the run

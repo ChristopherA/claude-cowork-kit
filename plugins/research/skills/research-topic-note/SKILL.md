@@ -13,7 +13,7 @@ This skill belongs to the research binder, whose Context documents are `rules.md
 
 ## Before starting
 
-Read `rules.md` and then `map.md` if you have not this conversation: the folder path, where topic notes live (`topics/`, or `notes/` when the reader chose one topic per note there), the link style (relative links or wikilinks), the metadata a note carries, and wrapping. If `map.md` names no home for topic notes, say so, offer the setup's default, a `topics/` folder, and write nothing until the reader has chosen and `map.md` says so.
+Read `rules.md` and then `map.md` if you have not this conversation: the folder path, where topic notes live (`topics/` by default, or the folder `map.md` names), the link style (relative links or wikilinks), the metadata a note carries, and wrapping. If `map.md` names no home for topic notes, say so, offer the setup's default, a `topics/` folder, and write nothing until the reader has chosen and `map.md` says so.
 
 Check that the research folder is reachable. If it is not, say so and stop; a topic note is written at the desk, and its current thinking cannot be checked against a note you cannot read.
 
@@ -49,7 +49,7 @@ Citing a source from a topic note is what earns it a fuller note. When the note 
 
 ## Show, then write
 
-Show the whole note, or for an update the note as it would read after the change with the change named, and wait for a yes. On a yes, write it, read it back to confirm it landed as shown, and confirm the file name and folder in one line. End with one word for completeness: full, or partial with what is missing (a source cited without a source note, a challenge not yet answered in the current thinking).
+Show the whole note, or for an update the note as it would read after the change with the change named, and wait for a yes. On a yes, write it, read it back to confirm it landed as shown, and confirm the file name and folder in one line. Then, if the current thinking is new or changed, offer the matching line in `map.md`'s Topics section, the note's name and its current thinking in a sentence, and change `map.md` only on a yes; that line is what answers from the phone, where the folder cannot be read. End with one word for completeness: full, or partial with what is missing (a source cited without a source note, a challenge not yet answered in the current thinking).
 
 ## What not to do
 
