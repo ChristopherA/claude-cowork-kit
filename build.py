@@ -505,6 +505,13 @@ def check_research_scripts():
                          "title: Social Norms and Human Foraging\npublisher: Indiana University\n",
                          "Schweik, C. M. (1998). *Social norms and human foraging* [Doctoral dissertation, Indiana University].",
                          "phdthesis", "thesis"),
+        "working paper": ("kind: working paper\nauthors: Hoffmann, Manuel; Nagle, Frank; Zhou, Yanuo\nyear: 2024\n"
+                          "title: The Value of Open Source Software\nissue: 24-038\npublisher: Harvard Business School\n",
+                          "Hoffmann, M., Nagle, F., & Zhou, Y. (2024). *The value of open source software* "
+                          "(Working Paper No. 24-038). Harvard Business School.", "techreport", "report"),
+        "standard": ("kind: standard\nauthors: Bray, Tim\nyear: 2017\ntitle: The JSON Data Interchange Format\n"
+                     "issue: RFC 8259\npublisher: IETF\n",
+                     "Bray, T. (2017). *The JSON data interchange format* (RFC 8259). IETF.", "techreport", "standard"),
     }
     for kind, (fields, apa_line, bib_type, csl_type) in samples.items():
         sample = ROOT / "dist" / "cite-sample.md"

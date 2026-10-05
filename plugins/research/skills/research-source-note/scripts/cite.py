@@ -79,7 +79,7 @@ BIB_TYPE = {"journal article": "article", "review article": "article", "article"
             "web article": "online", "blog post": "online", "microcontent": "online", "preprint": "unpublished",
             "software": "software", "conference paper": "inproceedings", "working paper": "techreport",
             "dissertation": "phdthesis", "news article": "article", "magazine article": "article",
-            "encyclopedia entry": "incollection", "standard": "standard", "white paper": "techreport",
+            "encyclopedia entry": "incollection", "standard": "techreport", "white paper": "techreport",
             "documentation": "manual", "discussion": "online", "licence": "misc", "talk": "misc",
             "presentation": "misc", "event page": "online", "fact sheet": "techreport",
             "government guidance": "techreport"}
@@ -88,6 +88,8 @@ BIB_TYPE = {"journal article": "article", "review article": "article", "article"
 DESCRIBED = {"dissertation": "Doctoral dissertation", "working paper": "Working paper", "white paper": "White paper",
              "fact sheet": "Fact sheet", "government guidance": "Guidance", "standard": "Standard",
              "talk": "Talk", "presentation": "Presentation", "licence": "Licence", "documentation": "Documentation"}
+# Kinds that carry a report number in the issue field ("24-038", "RFC 8259").
+NUMBERED = {"report", "working paper", "white paper", "fact sheet", "government guidance", "standard"}
 SMALL_AFTER = re.compile(r"([:?!—–]\s*)(\w)")
 
 
@@ -186,6 +188,31 @@ def dash(pages):
     return (pages or "").replace("--", "-").replace("-", "–")
 
 
+def report_number(f):
+    """(label, number) for a numbered report-like work, or None.
+
+    A number that starts with its own series word ("RFC 8259") keeps it; a bare
+    one takes the kind's description ("Working paper" 24-038).
+    """
+    if f.get("kind") not in NUMBERED or not f.get("issue"):
+        return None
+    m = re.match(r"^([A-Za-z][A-Za-z.]*)\s+(\S.*)$", f["issue"])
+    if m:
+        return m.group(1), m.group(2)
+    return DESCRIBED.get(f["kind"], "Report"), f["issue"]
+
+
+def number_phrase(f, apa_style=False):
+    """"Working paper 24-038" or "RFC 8259"; APA writes a described kind "Working Paper No. 24-038"."""
+    rn = report_number(f)
+    if not rn:
+        return ""
+    label, number = rn
+    if apa_style and (label in DESCRIBED.values() or label == "Report"):
+        return f"{label.title()} No. {number}"
+    return f"{label} {number}"
+
+
 def is_chapter(f):
     return f.get("kind") in IN_KINDS and bool(f.get("container"))
 
@@ -228,10 +255,11 @@ def apa(f):
     head = apa_names(people(f.get("authors")))
     title = apa_title(f)
     described = DESCRIBED.get(f.get("kind"), "")
+    numbered = number_phrase(f, apa_style=True)
     publisher = f.get("publisher")
     if f.get("kind") == "dissertation" and publisher:
         described, publisher = f"{described}, {publisher}", None
-    described = f" [{described}]" if described else ""
+    described = f" ({numbered})" if numbered else (f" [{described}]" if described else "")
     if head and not head.endswith("."):
         head += "."
     link = doi_url(f)
@@ -303,6 +331,8 @@ def chicago(f):
         out += "."
     else:
         out = f"{head}. {year}. *{title}*."
+        if number_phrase(f):
+            out += f" {number_phrase(f)}."
         if f.get("publisher"):
             out += f" {f['publisher']}."
     if link:
@@ -347,6 +377,8 @@ def ieee(f, n):
         out = f"[{n}] {head}, *{title}*."
         if f.get("publisher"):
             out += f" {f['publisher']},"
+        if number_phrase(f):
+            out += f" {number_phrase(f)},"
         out += f" {year}"
     if f.get("doi"):
         out += f", doi: {f['doi']}."
@@ -370,8 +402,8 @@ def bibtex(f):
                      "online": "organization"}.get(kind, "howpublished")
     publisher_key = {"phdthesis": "school", "techreport": "institution", "manual": "organization"}.get(kind, "publisher")
     for field, value in ((container_key, f.get("container")), ("editor", " and ".join(f"{fa}, {gi}" if gi else fa for fa, gi in people(f.get("editors")))),
-                         ("volume", f.get("volume")), ("number", f.get("issue")), ("pages", (f.get("pages") or "").replace("-", "--")),
-                         (publisher_key, f.get("publisher")), ("type", DESCRIBED.get(f.get("kind")) if kind in ("techreport", "misc", "manual") else None),
+                         ("volume", f.get("volume")), ("number", report_number(f)[1] if report_number(f) else f.get("issue")), ("pages", (f.get("pages") or "").replace("-", "--")),
+                         (publisher_key, f.get("publisher")), ("type", (report_number(f)[0] if report_number(f) else DESCRIBED.get(f.get("kind"))) if kind in ("techreport", "misc", "manual") else None),
                          ("doi", f.get("doi")), ("isbn", f.get("isbn")), ("url", f.get("url")),
                          ("urldate", f.get("retrieved") or f.get("available"))):
         if value:
@@ -397,7 +429,9 @@ def csl(f):
             item["issued"]["circa"] = True
     if f.get("kind") in DESCRIBED:
         item["genre"] = DESCRIBED[f["kind"]]
-    for key, field in (("container-title", "container"), ("volume", "volume"), ("issue", "issue"), ("page", "pages"),
+    if report_number(f):
+        item["number"] = f["issue"]
+    for key, field in (("container-title", "container"), ("volume", "volume"), ("issue", "issue" if not report_number(f) else "_none"), ("page", "pages"),
                        ("publisher", "publisher"), ("DOI", "doi"), ("ISBN", "isbn"), ("URL", "url")):
         if f.get(field):
             item[key] = f[field]
