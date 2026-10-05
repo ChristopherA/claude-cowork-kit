@@ -57,6 +57,8 @@ The note is structured, not prose to the reader: each part is its own labeled bl
 6. **KEY POINTS** (read): the work's main moves in your words, one bullet each, a bold concept name and a colon, with no quoted phrases; formulas and methods go here.
 7. **KEY QUOTES** (read): the two or three passages worth keeping, each verbatim as an indented blockquote with its page or location. Quote only from text you have a rendition of; a quote the reader types from a printed book is theirs, kept and marked as not checked.
 8. **WHY SAVED**: the reader's answer to the first filing question, in their words.
+9. **CONTRIBUTED BY** (a source a co-author brought): their name, and, if they could not supply the source itself, that it was not seen, so its quotes are not used.
+10. **WHY THIS MATTERS (for a piece)**: added later by the write-up skill, one line per piece that cites the source, saying what it supplies to that argument.
 
 ## Where the note goes
 

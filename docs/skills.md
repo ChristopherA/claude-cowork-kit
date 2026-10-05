@@ -158,11 +158,11 @@ Writes or updates one living topic note, what the reader currently thinks first,
 
 ### `research-write-up`
 
-Drafts prose for other readers from the reader's topic notes, citing the sources those notes cite. Use for "write this up", "draft a post from my notes", "turn my topic note into an article".
+Builds a piece for other readers from topic notes, alone or with co-authors: a claim map, a scaffold by kind, sections on request, references in its style. Use for "write this up", "start a paper".
 
-**When to reach for it.** A topic note says what you think, and you want to say it to someone else: a post, an essay, a memo.
+**When to reach for it.** A topic note says what you think and you want to say it to others: a literature review, a paper or spec, a brief or memo, an essay or post, alone or with co-authors.
 
-**What it hands back.** A draft in your voice, argued from your topic notes and cited from the sources they cite, with a reference list that links only to where a stranger can reach each work. It names any gap rather than filling it, keeps your open questions open, and is written into your folder or a Context document on a yes.
+**What it hands back.** A record of the piece in `writing/`, a claim map that says for every claim whose it is and how well it is supported, a scaffold by kind, prose only for the section you ask for, and references in the piece's style with a BibTeX or CSL file for your co-authors. In a shared Google Doc it writes only into the sections you assign; reviewer comments you paste are sorted into the claim map, source notes and prose, each with a proposed response.
 
 ## CWK Learning Binder, `learn`
 

@@ -13,7 +13,7 @@ Version 0.1.0-rc.8 of the Claude Cowork Kit; every plugin in a release carries t
 - `research-setup`: Sets up the research binder: three questions, two conventions, then rules.md, map.md and inbox.md in Context and text to paste. Use for "set up my research binder", "notes setup", "set up my notes".
 - `research-source-note`: Writes one source note from a book, paper, article or transcript the reader hands over, the source's claims kept apart from the reader's own. Use for "source note", "save this article to my notes".
 - `research-topic-note`: Writes or updates one living topic note, what the reader currently thinks first, then the sources behind it. Use for "topic note", "update my note on", "what do I think about".
-- `research-write-up`: Drafts prose for other readers from the reader's topic notes, citing the sources those notes cite. Use for "write this up", "draft a post from my notes", "turn my topic note into an article".
+- `research-write-up`: Builds a piece for other readers from topic notes, alone or with co-authors: a claim map, a scaffold by kind, sections on request, references in its style. Use for "write this up", "start a paper".
 
 ## Install
 

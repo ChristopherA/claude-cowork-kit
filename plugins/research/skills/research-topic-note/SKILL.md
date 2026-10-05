@@ -36,6 +36,7 @@ A topic note is structured: labeled blocks separated by blank lines, in this ord
 2. **CURRENT THINKING**: what the reader thinks now, in their words, in a few sentences. It leads the note. When new material changes it, the old wording is replaced, not appended to; the note says what is thought now, and the sources below carry how it got there.
 3. **SOURCES**: one bullet per source, a link to its source note and a line saying what it supports, challenges or complicates in the current thinking, in the reader's words. A source that challenges the current thinking stays listed; a topic note that lists only agreement has been curated, not written.
 4. **OPEN QUESTIONS** (only if there are any): what the reader has not settled, one bullet each.
+5. **WRITTEN UP** (only once a piece drawing on it is published): one line per piece, with its venue, date and link, added through the write-up skill.
 
 Link to a source note the way `map.md` says: with relative links, `../sources/<name>.md`, or, for a source that is a folder, `../sources/<name>/<name>.md`; with wikilinks, `[[<name>]]`. Check that every link resolves before showing the note.
 
