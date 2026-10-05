@@ -30,7 +30,7 @@ The setup creates one Context document, `priorities.md`, the two or three things
    - **Folder:** choose **Use a folder** and pick the folder that holds your working files, drafts, lists, threads you are keeping, earlier replies.
 
    Click **Create project**. When Claude asks to change files in the folder, choose **Always allow**.
-3. **Run the setup.** In a task inside the project, say `set up my week binder`. Claude asks where the folder is, what your current priorities are, and which of the kit's other binders you have; creates the priorities document; and hands back what only you can paste: the account instructions, if your Settings, Account, "Instructions for Claude" field does not carry them yet (the account instructions in the explainer), and the project instructions below, for the Instructions panel at the side of the project page, not the description.
+3. **Run the setup.** On the project page, switch the box at the top from **Chat** to **Cowork**, then say `set up my week binder`. Claude asks where the folder is, what your current priorities are, and which of the kit's other binders you have; creates the priorities document; and hands back what only you can paste: the account instructions, if your Settings, Account, "Instructions for Claude" field does not carry them yet (the account instructions in the explainer), and the project instructions below, for **Instructions** on the right of the project page (click its pencil and paste), not the description under the title.
 
 Without the plugin: paste the account instructions as the explainer says, create the project, ask Claude in a task to create `priorities.md` from your answers, and paste the block below, with the folder path filled in, into the Instructions panel.
 

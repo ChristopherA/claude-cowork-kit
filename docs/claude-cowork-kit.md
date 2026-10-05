@@ -182,7 +182,7 @@ The README's First run is the setup with a plugin: one install and two pastes th
 
 1. **Settings, Account, "Instructions for Claude".** Paste the account instructions printed below, with your chosen voice substituted in. The app's own label on this field says it reaches chats and Cowork alike; it is not the Cowork entry in the Settings sidebar.
 2. **Create the project with its folder,** as the README's First run describes: Projects, New project, a name, a sentence under What are you trying to achieve?, then Use a folder.
-3. **Ask Claude to create the Context documents** the binder's document names, from the texts printed there. Creating them in a task keeps each one's name and text exactly as printed.
+3. **Create the Context documents** the binder's document names, from the texts printed there. By hand: in the project's Context panel click **+**, choose **Add text content**, give the title exactly as printed, paste the text, and fill in every [BRACKET] before you add it. Or ask Claude in a Cowork task to create them, which keeps each name exactly as printed and fills the brackets from your answers.
 4. **Paste the project instructions** from the binder's document into the Instructions panel at the side of the project page, not into the description.
 
 Each binder's document, under `binders/`, carries its use case, its skills and when to reach for each, its setup phrase, a check that it works, and the texts its setup writes: [research](binders/research.md), [learning](binders/learning.md), [your week](binders/week.md), [money](binders/money.md) and [health](binders/health.md). For a binder the kit does not describe, the core plugin's `cowork-new-binder` skill designs one with you and hands back its text.
