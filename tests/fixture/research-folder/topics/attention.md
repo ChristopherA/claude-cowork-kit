@@ -2,7 +2,7 @@ created: 2026-09-13
 
 CURRENT THINKING
 
-Attention is the scarce resource, not information. A system for handling information should be judged by how much attention it saves, not by how much it stores, which is why the description Claude reads first is kept small.
+Attention is the scarce resource, not information. A system for handling information should be judged by how much attention it saves, not by how much it stores, which is why the description Claude reads first is kept small. (Drafted by Claude from my reading log; correct it.)
 
 SOURCES
 

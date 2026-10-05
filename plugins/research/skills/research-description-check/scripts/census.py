@@ -5,6 +5,13 @@ Reads only. Prints JSON to stdout, diagnostics to stderr.
 
 Usage:
   census.py --folder PATH [--limit N] [--ext .md] [--sources sources] [--topics topics]
+      [--works works] [--folders inbox,sources,topics,...]
+
+--folders is the list of top-level folders map.md names; the census then
+reports which of them are missing and which top-level folders it does
+not name (such as a "Claude outputs" folder the app made). map.md is a
+Context document, not a file in the folder, so the script cannot read
+it; whoever runs the script passes the list.
 
 Output keys:
   folders: {relative folder: {"files": N, "md": N}}
@@ -21,12 +28,22 @@ Output keys:
     no_lead: source folders without a lead file of the folder's name
     lead_only: source folders holding nothing but their lead file
     no_rendition: originals (PDF or saved web page) with no rendition
+    loose_files: files in the sources folder that are not notes and sit
+      outside an originals/ or renditions/ folder (a PDF beside its note)
     levels: {"citation": N, "minimal": N, "read": N, "none": N}
     level_mismatch: [{"path", "level", "problem"}] where a note's
       labeled blocks do not match its level
     uncited: source notes no note outside the sources folder links to
   topics: {"notes": N, "cite_nothing": [...]}, topic notes with no link
-    to a source note (empty when the topics folder does not exist)
+    to a source note or a works note (empty when the topics folder does
+    not exist)
+  works: {"notes": N}, the reader's own works, citable like sources
+  awaiting_confirmation: {"count": N, "items": [{"path", "what"}]}, lines
+    Claude drafted for the reader to confirm: a WHY SAVED inferred from
+    their writing, and in a topic or works note, a passage marked
+    "(Drafted by Claude from ...)"
+  folders_check: {"missing": [...], "unknown": [...]} against --folders,
+    or null when no list was given
 Files under originals/ and renditions/ are counted in "sources", not as notes.
 Exit 0 on success, 2 on bad arguments, 3 if the folder is unreadable.
 """
@@ -49,6 +66,8 @@ LEVEL = re.compile(r"^\s*level:\s*(\w+)", re.I | re.M)
 LABEL = re.compile(r"^\W*(BRIEF|SHORT ABSTRACT|EVIDENCE|KEY POINTS|KEY QUOTES|INFLUENCE|WHY SAVED)\b", re.M)
 ORIGINAL_EXT = (".pdf", ".html", ".htm", ".webarchive", ".mhtml")
 SIDECARS = ("originals", "renditions")
+INFERRED = re.compile(r"^\W*WHY SAVED\s*\(inferred", re.I | re.M)
+DRAFTED = re.compile(r"\(Drafted by Claude from", re.I)
 URL = re.compile(r"\]\(https?://[^)]+\)")
 
 
@@ -108,9 +127,9 @@ def level_problem(level, labels):
     return None
 
 
-def source_census(root, sources_dir, topics_dir, texts, limit):
+def source_census(root, sources_dir, topics_dir, works_dir, texts, limit):
     """Check the sources folder's shape and how the notes cite it."""
-    out = {"flat": 0, "compound": 0, "no_lead": [], "lead_only": [], "no_rendition": [],
+    out = {"flat": 0, "compound": 0, "no_lead": [], "lead_only": [], "no_rendition": [], "loose_files": [],
            "levels": {"citation": 0, "minimal": 0, "read": 0, "none": 0},
            "level_mismatch": [], "uncited": []}
     base = os.path.join(root, sources_dir)
@@ -123,6 +142,8 @@ def source_census(root, sources_dir, topics_dir, texts, limit):
             if os.path.isfile(path) and entry.endswith(".md"):
                 out["flat"] += 1
                 notes[entry[:-3]] = os.path.relpath(path, root)
+            elif os.path.isfile(path):
+                out["loose_files"].append(os.path.relpath(path, root))
             elif os.path.isdir(path):
                 out["compound"] += 1
                 lead = os.path.join(path, entry + ".md")
@@ -132,6 +153,8 @@ def source_census(root, sources_dir, topics_dir, texts, limit):
                     continue
                 notes[entry] = os.path.relpath(lead, root)
                 others = [f for f in os.listdir(path) if not f.startswith(".") and f != entry + ".md"]
+                out["loose_files"] += [os.path.join(rel, f) for f in sorted(others)
+                                       if os.path.isfile(os.path.join(path, f)) and not f.endswith(".md")]
                 beside = [f for d in SIDECARS if os.path.isdir(os.path.join(path, d))
                           for f in os.listdir(os.path.join(path, d)) if not f.startswith(".")]
                 if not [o for o in others if o not in SIDECARS] and not beside:
@@ -155,8 +178,12 @@ def source_census(root, sources_dir, topics_dir, texts, limit):
         if problem:
             out["level_mismatch"].append({"path": rel, "level": level, "problem": problem})
 
+    # Works are the reader's own writing, citable like a source note.
+    works = {os.path.splitext(os.path.basename(rel))[0]: rel for rel in texts
+             if rel.startswith(works_dir + os.sep)}
     # Who links to which source note, from outside the sources folder.
     by_path = {os.path.normpath(rel): stem for stem, rel in notes.items()}
+    by_path.update({os.path.normpath(rel): stem for stem, rel in works.items()})
     cited, topic_links = set(), {}
     for rel, text in texts.items():
         if rel.startswith(sources_dir + os.sep):
@@ -170,16 +197,16 @@ def source_census(root, sources_dir, topics_dir, texts, limit):
             stem = os.path.basename(target.strip())
             if stem.endswith(".md"):
                 stem = stem[:-3]
-            if stem in notes:
+            if stem in notes or stem in works:
                 found.add(stem)
         cited |= found
         if rel.startswith(topics_dir + os.sep):
             topic_links[rel] = found
     out["uncited"] = sorted(notes[s] for s in notes if s not in cited)[:limit]
     topics = {"notes": len(topic_links), "cite_nothing": sorted(r for r, f in topic_links.items() if not f)[:limit]}
-    for key in ("no_lead", "lead_only", "no_rendition", "level_mismatch"):
+    for key in ("no_lead", "lead_only", "no_rendition", "loose_files", "level_mismatch"):
         out[key] = out[key][:limit]
-    return out, topics
+    return out, topics, {"notes": len(works)}
 
 
 def main():
@@ -189,6 +216,8 @@ def main():
     ap.add_argument("--ext", default=".md")
     ap.add_argument("--sources", default="sources", help="the sources folder, relative to --folder")
     ap.add_argument("--topics", default="topics", help="the topic notes' folder, relative to --folder")
+    ap.add_argument("--works", default="works", help="the reader's own works, relative to --folder")
+    ap.add_argument("--folders", help="the top-level folders map.md names, comma-separated")
     args = ap.parse_args()
     root = args.folder
     if not os.path.isdir(root):
@@ -261,7 +290,21 @@ def main():
         "created_range": {"earliest": min(created_dates) if created_dates else None,
                           "latest": max(created_dates) if created_dates else None},
     }
-    out["sources"], out["topics"] = source_census(root, args.sources, args.topics, texts, args.limit)
+    out["sources"], out["topics"], out["works"] = source_census(root, args.sources, args.topics, args.works,
+                                                                texts, args.limit)
+    waiting = []
+    for rel, text in sorted(texts.items()):
+        if INFERRED.search(text):
+            waiting.append({"path": rel, "what": "WHY SAVED inferred, not yet confirmed"})
+        if DRAFTED.search(text) and rel.startswith((args.topics + os.sep, args.works + os.sep)):
+            waiting.append({"path": rel, "what": "drafted by Claude, not yet corrected"})
+    out["awaiting_confirmation"] = {"count": len(waiting), "items": waiting[: args.limit]}
+    out["folders_check"] = None
+    if args.folders is not None:
+        named = [f.strip().strip("/") for f in args.folders.split(",") if f.strip()]
+        present = sorted(d for d in os.listdir(root) if os.path.isdir(os.path.join(root, d)) and not d.startswith("."))
+        out["folders_check"] = {"missing": [f for f in named if f not in present],
+                                "unknown": [d for d in present if d not in named]}
     print(f"scanned {len(files_seen)} notes in {len(folders)} folders", file=sys.stderr)
     json.dump(out, sys.stdout, indent=1)
     print()

@@ -448,7 +448,7 @@ def check_research_scripts():
     if out.returncode != 1:
         fail(f"quote_check.py: a quote with one word changed was not caught (exit {out.returncode})")
 
-    out = run([census, "--folder", folder])
+    out = run([census, "--folder", folder, "--folders", "inbox,sources,topics,threads,writing,archive"])
     try:
         report = json.loads(out.stdout)
         sources, topics = report["sources"], report["topics"]
@@ -457,7 +457,8 @@ def check_research_scripts():
         return
     want = {"lead_only": ["sources/simon-1971-designing-organizations"],
             "uncited": [],
-            "no_lead": [], "no_rendition": [], "level_mismatch": []}
+            "no_lead": [], "no_rendition": [], "level_mismatch": [],
+            "loose_files": ["sources/ahrens-2017-how-to-take-smart-notes.txt"]}
     for key, value in want.items():
         if sources.get(key) != value:
             fail(f"census.py: on the fixture, sources.{key} is {sources.get(key)!r}, expected {value!r}")
@@ -526,6 +527,12 @@ def check_research_scripts():
     if out.returncode != 1:
         fail(f"prose_check.py: a brief with an unsupported 'seminal' and a 'we' was not caught (exit {out.returncode})")
 
+    want_folders = {"missing": ["writing"], "unknown": ["Claude outputs"]}
+    if report.get("folders_check") != want_folders:
+        fail(f"census.py: on the fixture, folders_check is {report.get('folders_check')!r}, expected {want_folders!r}")
+    waiting = sorted(i["path"] for i in report.get("awaiting_confirmation", {}).get("items", []))
+    if waiting != ["sources/ahrens-2017-how-to-take-smart-notes.md", "topics/attention.md"]:
+        fail(f"census.py: on the fixture, awaiting_confirmation lists {waiting!r}, expected the Ahrens note and attention.md")
     expected = ["topics/Reading.md", "topics/how-a-note-should-open.md"]
     if topics.get("cite_nothing") != expected:
         fail(f"census.py: on the fixture, topics.cite_nothing is {topics.get('cite_nothing')!r}, expected {expected!r}")

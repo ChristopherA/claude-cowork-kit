@@ -16,6 +16,6 @@ SHORT ABSTRACT
 
 The book describes how Luhmann's slip-box of some ninety thousand notes served as the working material for his books. The author argues that writing is not what happens after thinking but the medium in which it happens. A note-taking system should therefore be built for the writing it will feed rather than for storage.
 
-WHY SAVED
+WHY SAVED (inferred from my draft on note-taking; confirm or replace)
 
 The claim that a note needs links to be found again, which I keep testing.
