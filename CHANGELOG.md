@@ -2,6 +2,12 @@
 
 Every release is listed here, newest first, with what changed since the one before. The version is the kit's, in `VERSION`; every plugin in a release carries it.
 
+## Unreleased
+
+From a reader's second live run, on rc.10, which confirmed every rc.9 script fix on real files and ran the new upgrade on a real binder. Scripts now run in place from the research plugin as the desktop app installed it on your computer, so nothing has to be copied over each session; each script reports its release with `--version`, and when your computer's copy is older than the skill, you are told a newer version is available and to upgrade under Customize, Plugins. A rendition says which release made it.
+
+The citation script prints report numbers ("Working Paper No. 24-038", "RFC 8259") and writes a standard as a BibTeX technical report. A source note records when and against what its citation was checked. The description check finds works notes without a brief and quotes no one can check, the two shapes an upgrade from rc.9 has to find. `map.md` carries a Kit release line, written by setup and updated by the upgrade. A brief for your own work is written from the work and marked as drafted until you confirm it. The upgrade proposes a changed wording in every document that carries it, treats a renamed note as a move with its links fixed first, and warns that the app may ask for delete permission again after the link to your computer drops.
+
 ## 0.1.0-rc.10 (2026-10-05)
 
 From a reader's live run of rc.9 on their own research folder. Renditions of two-column journal articles now read each column in turn, so quotes typed from the page match; the old extraction set the columns side by side and failed every quote in a real paper. A rendition also writes ligatures as plain letters, removes publisher download stamps, which carry the reader's IP address, and leaves a publisher's cover sheet out of the text and the page numbers. The quote check keeps a quote whole when it quotes a phrase itself. The cite script sets APA titles in sentence case and knows sixteen more kinds of work, conference papers, dissertations, news articles, encyclopedia entries, standards and others, with a convention for Wikipedia.
