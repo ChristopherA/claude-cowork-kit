@@ -31,9 +31,11 @@ The setup creates three Context documents: `mission.md` (what you're learning, w
    Click **Create project**. When Claude asks to change files in the folder, choose **Always allow**.
 3. **Run the setup.** On the project page, switch the box at the top from **Chat** to **Cowork**, then say `set up my learning binder`. Claude asks what you are learning, why and by when, how you will know, where you stand, how you like to learn, and where the materials are; drafts the curriculum for your yes; creates the three Context documents; and hands back what only you can paste: the account instructions, if your Settings, Account, "Instructions for Claude" field does not carry them yet (the account instructions in the explainer), and the project instructions below, for **Instructions** on the right of the project page (click its pencil and paste), not the description under the title.
 
-Without the plugin: paste the account instructions as the explainer says, create the project, then in a task ask Claude to interview you and write the three Context documents from the block below, and paste the block, with the subject and the folder path filled in, into the Instructions panel.
+Without the plugin: paste the account instructions as the explainer says, create the project, then make `mission.md`, `curriculum.md` and `progress.md`: in a Cowork task ask Claude to interview you and write them from the block below, or write them yourself by hand, in the **Context** panel with **+**, **Add text content**, the title typed exactly and every [BRACKET] filled in before you add it. Then paste the block, with the subject and the folder path filled in, into **Instructions** on the right of the project page (click its pencil).
 
 ## Check it works
+
+First look at the project's **Context** panel: `mission.md`, `curriculum.md` and `progress.md` should be there, with no [BRACKET] left in them, and the capacity bar should be nearly empty, since Context holds a description and never copies of your files. Then:
 
 1. **In this project, ask Claude a direct question about the subject** and see whether it answers or asks. The instructions say to ask first.
 2. **From your phone, with the computer closed,** ask where the progress record says you are; the document alone can answer.

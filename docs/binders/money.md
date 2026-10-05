@@ -30,9 +30,11 @@ The setup creates two Context documents: `categories.md`, each category with one
 3. **Run the setup.** On the project page, switch the box at the top from **Chat** to **Cowork**, then say `set up my money binder`. Claude says what the folder does and does not protect and asks whether to go on; then asks where the folder is, what your categories are, and what your targets are; creates the two Context documents; and hands back what only you can paste: the account instructions, if your Settings, Account, "Instructions for Claude" field does not carry them yet (the account instructions in the explainer), and the project instructions below, for **Instructions** on the right of the project page (click its pencil and paste), not the description under the title.
 4. **In the app,** keep this project in the mode that asks before acting, and if you have let Claude see and control your screen, keep your banking apps and sites out of its reach.
 
-Without the plugin: paste the account instructions as the explainer says, create the project, ask Claude in a task to create `categories.md` and `targets.md` from your answers, and paste the block below, with the folder path filled in, into the Instructions panel.
+Without the plugin: paste the account instructions as the explainer says, create the project, create `categories.md` and `targets.md`, either by asking Claude in a Cowork task to write them from your answers or by hand, in the **Context** panel with **+**, **Add text content**, the title typed exactly and every [BRACKET] filled in before you add it, and paste the block below, with the folder path filled in, into **Instructions** on the right of the project page (click its pencil).
 
 ## Check it works
+
+First look at the project's **Context** panel: `categories.md` and `targets.md` should be there, with no [BRACKET] left in them, and no account number, balance or figure from a statement, and the capacity bar should be nearly empty, since Context holds a description and never copies of your files. Then:
 
 1. **At your desk, with the folder connected,** drop one statement or export in it and ask for a summary. The summary should show categories and totals and nothing that identifies an account.
 2. **From your phone, with the computer closed,** ask what your categories are; the Context document alone can answer, and no figure from a statement should come with it.

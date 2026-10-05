@@ -32,9 +32,11 @@ The setup creates one Context document, `priorities.md`, the two or three things
    Click **Create project**. When Claude asks to change files in the folder, choose **Always allow**.
 3. **Run the setup.** On the project page, switch the box at the top from **Chat** to **Cowork**, then say `set up my week binder`. Claude asks where the folder is, what your current priorities are, and which of the kit's other binders you have; creates the priorities document; and hands back what only you can paste: the account instructions, if your Settings, Account, "Instructions for Claude" field does not carry them yet (the account instructions in the explainer), and the project instructions below, for **Instructions** on the right of the project page (click its pencil and paste), not the description under the title.
 
-Without the plugin: paste the account instructions as the explainer says, create the project, ask Claude in a task to create `priorities.md` from your answers, and paste the block below, with the folder path filled in, into the Instructions panel.
+Without the plugin: paste the account instructions as the explainer says, create the project, create `priorities.md`, either by asking Claude in a Cowork task to write it from your answers or by hand, in the **Context** panel with **+**, **Add text content**, the title typed exactly and every [BRACKET] filled in before you add it, and paste the block below, with the folder path filled in, into **Instructions** on the right of the project page (click its pencil).
 
 ## Check it works
+
+First look at the project's **Context** panel: `priorities.md` should be there, with no [BRACKET] left in it, and the capacity bar should be nearly empty, since Context holds a description and never copies of your files. Then:
 
 1. **At your desk, dump a mess of obligations into a task** and see whether a short ordered list comes back with nothing around it.
 2. **From your phone, with the computer closed,** ask what the current priorities are; the document alone can answer.

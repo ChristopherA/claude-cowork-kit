@@ -53,7 +53,9 @@ The setup creates three Context documents: `rules.md`, the working rules; `map.m
 
 ## Check it works
 
-1. **Look at the Context panel, then ask at your desk:** `rules.md`, `map.md` and `inbox.md` should all be there, with no [BRACKET] left in them, and the capacity bar should be nearly empty, since the description is not a copy of your notes. Then, in a Cowork task, ask *what's in my notes?* This checks that the folder is reachable and the description matches reality.
+First look at the project's **Context** panel: `rules.md`, `map.md` and `inbox.md` should be there, with no [BRACKET] left in them, and the capacity bar should be nearly empty, since Context holds a description and never copies of your files. Then:
+
+1. **At your desk, in a Cowork task, ask:** *what's in my notes?* This checks that the folder is reachable and the description matches reality.
 2. **From your phone, with the computer closed,** ask something the description alone can answer.
 3. **Send yourself a capture** from the phone: open the project and type a thought with no request attached, `idea: notes should lead with the claim`. Check that it lands in `inbox.md` and that Claude didn't try to file it. A Context document already open in the side panel doesn't refresh when a task writes to it; close it and reopen it from the chat before deciding the capture was lost.
 4. **Back at your desk, process the inbox.** One item, start to finish.
