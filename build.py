@@ -482,6 +482,38 @@ def check_research_scripts():
     if out.returncode != 1:
         fail(f"cite.py: a note whose year field disagrees with its line was not caught (exit {out.returncode})")
 
+    # The published styles, held to exact output for kinds that once fell to misc.
+    samples = {
+        "conference paper": ("kind: conference paper\nauthors: Ostrom, Elinor; Hess, Charlotte\nyear: 2007\n"
+                             "title: Private and Common Property Rights: The Case of DAOs\n"
+                             "container: Proceedings of the IASC Conference\npages: 10-20\npublisher: IASC\n",
+                             "Ostrom, E., & Hess, C. (2007). Private and common property rights: The case of DAOs. "
+                             "In *Proceedings of the IASC Conference* (pp. 10–20). IASC.", "inproceedings", "paper-conference"),
+        "encyclopedia entry": ("kind: encyclopedia entry\nauthors: Wikipedia contributors\nyear: 2026\n"
+                               "title: Tragedy of the Commons\ncontainer: Wikipedia\n"
+                               "url: https://en.wikipedia.org/wiki/Tragedy_of_the_commons\nretrieved: 2026-10-05\n",
+                               "Wikipedia contributors. (2026). Tragedy of the commons. In *Wikipedia*. Retrieved "
+                               "October 5, 2026, from https://en.wikipedia.org/wiki/Tragedy_of_the_commons",
+                               "incollection", "entry-encyclopedia"),
+        "dissertation": ("kind: dissertation\nauthors: Schweik, Charles M.\nyear: 1998\n"
+                         "title: Social Norms and Human Foraging\npublisher: Indiana University\n",
+                         "Schweik, C. M. (1998). *Social norms and human foraging* [Doctoral dissertation, Indiana University].",
+                         "phdthesis", "thesis"),
+    }
+    for kind, (fields, apa_line, bib_type, csl_type) in samples.items():
+        sample = ROOT / "dist" / "cite-sample.md"
+        sample.write_text(fields + "\n")
+        apa_out = run([cite, sample, "--style", "apa"]).stdout.strip()
+        bib_out = run([cite, sample, "--style", "bibtex"]).stdout
+        csl_out = run([cite, sample, "--style", "csl"]).stdout
+        sample.unlink()
+        if apa_out != apa_line:
+            fail(f"cite.py: the APA line for a {kind} is {apa_out!r}, expected {apa_line!r}")
+        if not bib_out.startswith(f"@{bib_type}{{"):
+            fail(f"cite.py: a {kind} is not a BibTeX @{bib_type}: {bib_out[:40]!r}")
+        if json.loads(csl_out)[0].get("type") != csl_type:
+            fail(f"cite.py: a {kind} is not CSL type {csl_type}")
+
     prose = scripts / "research-source-note" / "scripts" / "prose_check.py"
     for note in notes:
         out = run([prose, note])

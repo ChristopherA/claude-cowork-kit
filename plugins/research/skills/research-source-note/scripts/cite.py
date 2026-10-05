@@ -12,7 +12,13 @@ before the first blank line. The citation fields are:
 
   kind       web article, blog post, journal article, review article,
              preprint, book, book chapter, report, software, microcontent
-             (a social post), or another plain word
+             (a social post), conference paper, working paper,
+             dissertation, news article, magazine article, encyclopedia
+             entry, standard (an RFC, an ISO standard), white paper,
+             documentation, discussion (a forum thread), licence, talk,
+             presentation, event page, fact sheet, government guidance,
+             or another plain word, which the published styles treat as
+             a document
   authors    "Family, Given" each, separated by semicolons; an
              organisation, or a name whose family name comes first by
              culture, is written as it is shown, without a comma
@@ -23,8 +29,19 @@ before the first blank line. The citation fields are:
   volume, issue, pages, publisher, doi, isbn (the ISBN-13), url
   retrieved  YYYY-MM-DD, for an open link
   available  YYYY-MM-DD, for a paywalled link
+  apa-title  optional: the title in sentence case with its proper nouns
+             capitalised, when the APA style's guess is wrong
 
-Styles: kit is the binder's own reference line; apa is APA 7; chicago
+A Wikipedia article is an encyclopedia entry whose authors field is
+"Wikipedia contributors", whose container is Wikipedia, whose year is
+the year it was retrieved, and which carries its retrieved date, since
+the page changes; APA then prints "Retrieved <date>, from <url>".
+
+Styles: kit is the binder's own reference line; apa is APA 7, with
+titles in sentence case (the first word, the first word after a colon,
+acronyms and words with an inner capital keep their capitals; every
+other word is lowercased, so a proper noun needs a hand check, and the
+script says so on stderr whenever it changed a title); chicago
 is Chicago author-date; ieee numbers the references in the order the
 notes are given; bibtex and csl write a file a reference manager reads.
 --check compares each note's own citation line (the first line after
@@ -42,17 +59,36 @@ import re
 import sys
 
 FIELDS = ("kind", "authors", "year", "title", "container", "editors", "volume", "issue",
-          "pages", "publisher", "doi", "isbn", "url", "retrieved", "available")
+          "pages", "publisher", "doi", "isbn", "url", "retrieved", "available", "apa-title")
+# Kinds printed "In <container>", a part of a larger work.
+IN_KINDS = {"book chapter", "chapter", "conference paper", "encyclopedia entry"}
+# Kinds whose container is printed after the title as a periodical or site.
 CONTAINED = {"web article", "blog post", "microcontent", "journal article", "review article", "article",
-             "book chapter", "chapter"}
+             "news article", "magazine article", "discussion", "event page"} | IN_KINDS
 CSL_TYPE = {"web article": "webpage", "journal article": "article-journal", "review article": "article-journal",
             "article": "article-journal", "preprint": "article", "book": "book", "book chapter": "chapter",
             "chapter": "chapter", "report": "report", "software": "software", "blog post": "post-weblog",
-            "microcontent": "post"}
+            "microcontent": "post", "conference paper": "paper-conference", "working paper": "report",
+            "dissertation": "thesis", "news article": "article-newspaper", "magazine article": "article-magazine",
+            "encyclopedia entry": "entry-encyclopedia", "standard": "standard", "white paper": "report",
+            "documentation": "document", "discussion": "post", "licence": "document", "talk": "speech",
+            "presentation": "speech", "event page": "webpage", "fact sheet": "report",
+            "government guidance": "report"}
 BIB_TYPE = {"journal article": "article", "review article": "article", "article": "article", "book": "book",
             "book chapter": "incollection", "chapter": "incollection", "report": "techreport",
             "web article": "online", "blog post": "online", "microcontent": "online", "preprint": "unpublished",
-            "software": "software"}
+            "software": "software", "conference paper": "inproceedings", "working paper": "techreport",
+            "dissertation": "phdthesis", "news article": "article", "magazine article": "article",
+            "encyclopedia entry": "incollection", "standard": "standard", "white paper": "techreport",
+            "documentation": "manual", "discussion": "online", "licence": "misc", "talk": "misc",
+            "presentation": "misc", "event page": "online", "fact sheet": "techreport",
+            "government guidance": "techreport"}
+# The bracketed description APA 7 puts after the title of grey literature,
+# and the genre or type a reference manager shows for it.
+DESCRIBED = {"dissertation": "Doctoral dissertation", "working paper": "Working paper", "white paper": "White paper",
+             "fact sheet": "Fact sheet", "government guidance": "Guidance", "standard": "Standard",
+             "talk": "Talk", "presentation": "Presentation", "licence": "Licence", "documentation": "Documentation"}
+SMALL_AFTER = re.compile(r"([:?!—–]\s*)(\w)")
 
 
 def read_fields(path):
@@ -151,13 +187,53 @@ def dash(pages):
 
 
 def is_chapter(f):
-    return f.get("kind") in ("book chapter", "chapter") and bool(f.get("container"))
+    return f.get("kind") in IN_KINDS and bool(f.get("container"))
+
+
+def sentence_case(title):
+    """APA's sentence case, as far as a script can tell: see the module notes."""
+    words = title.split(" ")
+    out = []
+    for i, w in enumerate(words):
+        core = re.sub(r"^\W+|\W+$", "", w)
+        keep = (i == 0 or core.isupper() and len(core) > 1 or any(c.isdigit() for c in core)
+                or re.search(r".[A-Z]", core))
+        out.append(w if keep else w.lower())
+    text = " ".join(out)
+    return SMALL_AFTER.sub(lambda m: m.group(1) + m.group(2).upper(), text)
+
+
+def apa_title(f):
+    if f.get("apa-title"):
+        return f["apa-title"]
+    title = f.get("title", "")
+    made = sentence_case(title)
+    if made != title:
+        print(f"{f['_slug']}: APA title set in sentence case; check its proper nouns, "
+              "or give the right form in an apa-title field", file=sys.stderr)
+    return made
+
+
+def long_date(iso):
+    m = re.fullmatch(r"(\d{4})-(\d{2})-(\d{2})", iso or "")
+    if not m:
+        return iso
+    months = ("January", "February", "March", "April", "May", "June", "July", "August", "September",
+              "October", "November", "December")
+    return f"{months[int(m.group(2)) - 1]} {int(m.group(3))}, {m.group(1)}"
 
 
 def apa(f):
     year = f.get("year", "n.d.").lstrip("~")
     head = apa_names(people(f.get("authors")))
-    title = f.get("title", "")
+    title = apa_title(f)
+    described = DESCRIBED.get(f.get("kind"), "")
+    publisher = f.get("publisher")
+    if f.get("kind") == "dissertation" and publisher:
+        described, publisher = f"{described}, {publisher}", None
+    described = f" [{described}]" if described else ""
+    if head and not head.endswith("."):
+        head += "."
     link = doi_url(f)
     if is_chapter(f):
         eds = [f"{initials(gi)} {fa}" if gi else fa for fa, gi in people(f.get("editors"))]
@@ -179,11 +255,13 @@ def apa(f):
             out += f", {dash(f['pages'])}"
         out += "."
     else:
-        out = f"{head} ({year}). *{title}*."
-        if f.get("publisher"):
-            out += f" {f['publisher']}."
+        out = f"{head} ({year}). *{title}*{described}."
+        if publisher:
+            out += f" {publisher}."
     out = out.lstrip()
-    if link:
+    if link and f.get("kind") == "encyclopedia entry" and f.get("retrieved") and not f.get("doi"):
+        out += f" Retrieved {long_date(f['retrieved'])}, from {link}"
+    elif link:
         out += f" {link}"
     return out
 
@@ -236,6 +314,8 @@ def ieee(f, n):
     names = [f"{initials(gi)} {fa}" if gi else fa for fa, gi in people(f.get("authors"))]
     if len(names) > 6:
         head = names[0] + " et al."
+    elif len(names) == 2:
+        head = " and ".join(names)
     elif len(names) > 1:
         head = ", ".join(names[:-1]) + ", and " + names[-1]
     else:
@@ -248,7 +328,9 @@ def ieee(f, n):
         if eds:
             out += ", " + ", ".join(eds) + (", Eds." if len(eds) > 1 else ", Ed.")
         if f.get("publisher"):
-            out += f" {f['publisher']},"
+            out += f", {f['publisher']},"
+        else:
+            out += ","
         out += f" {year}"
         if f.get("pages"):
             out += f", pp. {dash(f['pages'])}"
@@ -284,10 +366,13 @@ def bibtex(f):
     key = f["_slug"].replace("-", "_")
     authors = " and ".join(f"{fa}, {gi}" if gi else "{" + fa + "}" for fa, gi in people(f.get("authors")))
     entries = [("author", authors), ("title", "{" + f.get("title", "") + "}"), ("year", f.get("year", "").lstrip("~"))]
-    container_key = {"article": "journal", "incollection": "booktitle", "online": "organization"}.get(kind, "howpublished")
+    container_key = {"article": "journal", "incollection": "booktitle", "inproceedings": "booktitle",
+                     "online": "organization"}.get(kind, "howpublished")
+    publisher_key = {"phdthesis": "school", "techreport": "institution", "manual": "organization"}.get(kind, "publisher")
     for field, value in ((container_key, f.get("container")), ("editor", " and ".join(f"{fa}, {gi}" if gi else fa for fa, gi in people(f.get("editors")))),
                          ("volume", f.get("volume")), ("number", f.get("issue")), ("pages", (f.get("pages") or "").replace("-", "--")),
-                         ("publisher", f.get("publisher")), ("doi", f.get("doi")), ("isbn", f.get("isbn")), ("url", f.get("url")),
+                         (publisher_key, f.get("publisher")), ("type", DESCRIBED.get(f.get("kind")) if kind in ("techreport", "misc", "manual") else None),
+                         ("doi", f.get("doi")), ("isbn", f.get("isbn")), ("url", f.get("url")),
                          ("urldate", f.get("retrieved") or f.get("available"))):
         if value:
             entries.append((field, value))
@@ -310,6 +395,8 @@ def csl(f):
         item["issued"] = {"date-parts": [[int(year.lstrip("~"))]]}
         if year.startswith("~"):
             item["issued"]["circa"] = True
+    if f.get("kind") in DESCRIBED:
+        item["genre"] = DESCRIBED[f["kind"]]
     for key, field in (("container-title", "container"), ("volume", "volume"), ("issue", "issue"), ("page", "pages"),
                        ("publisher", "publisher"), ("DOI", "doi"), ("ISBN", "isbn"), ("URL", "url")):
         if f.get(field):
