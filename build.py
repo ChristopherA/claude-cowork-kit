@@ -140,7 +140,7 @@ PLUGINS = {
             "pack, record a visit into the folder, keep a weekly functional log, and turn a handed "
             "article into questions for the clinician."
         ),
-        "keywords": ["health", "health", "cowork", "records"],
+        "keywords": ["health", "medical", "cowork", "records"],
         "setup": "health-setup",
         "doc": "docs/binders/health.md",
         "references": ["health-instructions.md", "global-instructions.md", "voices.md"],
