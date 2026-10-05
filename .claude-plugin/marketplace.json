@@ -11,42 +11,42 @@
       "name": "cowork-kit",
       "displayName": "CWK Core",
       "description": "CWK Core, the Claude Cowork Kit's routines for any binder: a setup interview that hands back the account instructions and names the binder to install next, plus deciding, interviewing, explaining again, questions for others, a meeting pack, a transcript, confidence, premortem, postmortem, where was I, wrap-up, and a new binder.",
-      "version": "0.1.0-rc.8",
+      "version": "0.1.0-rc.9",
       "source": "./plugins/cowork-kit"
     },
     {
       "name": "learn",
       "displayName": "CWK Learning Binder",
       "description": "Your learning binder: learn a subject, a skill or an exam on purpose, with a course plan, short lessons and quizzes, and a record of what has clicked. Part of the Claude Cowork Kit (CWK).",
-      "version": "0.1.0-rc.8",
+      "version": "0.1.0-rc.9",
       "source": "./plugins/learn"
     },
     {
       "name": "week",
       "displayName": "CWK Week Binder",
       "description": "Your week binder: triage a pile of obligations into next actions, plan and review the week, write up a meeting, and draft a reply without sending it. Part of the Claude Cowork Kit (CWK).",
-      "version": "0.1.0-rc.8",
+      "version": "0.1.0-rc.9",
       "source": "./plugins/week"
     },
     {
       "name": "money",
       "displayName": "CWK Money Binder",
       "description": "Your money binder: summarize a statement and close each month against your categories, with account details kept out of everything that syncs. Part of the Claude Cowork Kit (CWK).",
-      "version": "0.1.0-rc.8",
+      "version": "0.1.0-rc.9",
       "source": "./plugins/money"
     },
     {
       "name": "health",
       "displayName": "CWK Health Binder",
       "description": "Your health binder: prepare for an appointment, record a visit, keep a weekly log, and turn an article into questions for your clinician; records, never diagnosis. Part of the Claude Cowork Kit (CWK).",
-      "version": "0.1.0-rc.8",
+      "version": "0.1.0-rc.9",
       "source": "./plugins/health"
     },
     {
       "name": "research",
       "displayName": "CWK Research Binder",
       "description": "Your research binder: capture ideas anywhere, file them into notes at your desk, write source notes, and answer from what you have read. Part of the Claude Cowork Kit (CWK).",
-      "version": "0.1.0-rc.8",
+      "version": "0.1.0-rc.9",
       "source": "./plugins/research"
     }
   ]

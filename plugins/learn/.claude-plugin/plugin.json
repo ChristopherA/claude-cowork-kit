@@ -1,6 +1,6 @@
 {
   "name": "learn",
-  "version": "0.1.0-rc.8",
+  "version": "0.1.0-rc.9",
   "description": "Your learning binder: learn a subject, a skill or an exam on purpose, with a course plan, short lessons and quizzes, and a record of what has clicked. Part of the Claude Cowork Kit (CWK).",
   "author": {
     "name": "Christopher Allen"

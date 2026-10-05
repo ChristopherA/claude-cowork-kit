@@ -1,6 +1,6 @@
 {
   "name": "research",
-  "version": "0.1.0-rc.8",
+  "version": "0.1.0-rc.9",
   "description": "Your research binder: capture ideas anywhere, file them into notes at your desk, write source notes, and answer from what you have read. Part of the Claude Cowork Kit (CWK).",
   "author": {
     "name": "Christopher Allen"

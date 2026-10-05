@@ -4,7 +4,7 @@ Your week binder: triage a pile of obligations into next actions, plan and revie
 
 Each skill expects the week binder the Claude Cowork Kit describes: a working folder connected in the desktop app, a priorities document the setup creates, and a reviews document the review creates. Nothing here sends a message or changes a calendar; drafts are handed back.
 
-Version 0.1.0-rc.8 of the Claude Cowork Kit; every plugin in a release carries the kit's version, and the releases are at https://github.com/ChristopherA/claude-cowork-kit/releases.
+Version 0.1.0-rc.9 of the Claude Cowork Kit; every plugin in a release carries the kit's version, and the releases are at https://github.com/ChristopherA/claude-cowork-kit/releases.
 
 ## Skills
 

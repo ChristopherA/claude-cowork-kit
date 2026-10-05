@@ -4,7 +4,7 @@ Your health binder: prepare for an appointment, record a visit, keep a weekly lo
 
 Each skill expects the health binder the Claude Cowork Kit describes: records in a connected folder that stays on the computer, arranged as the kit's docs/binders/health.md describes, and Context documents holding only a questions list and a bare timeline. Keep the project in the mode that asks (the kit's explainer, under The two approval modes).
 
-Version 0.1.0-rc.8 of the Claude Cowork Kit; every plugin in a release carries the kit's version, and the releases are at https://github.com/ChristopherA/claude-cowork-kit/releases.
+Version 0.1.0-rc.9 of the Claude Cowork Kit; every plugin in a release carries the kit's version, and the releases are at https://github.com/ChristopherA/claude-cowork-kit/releases.
 
 ## Skills
 
