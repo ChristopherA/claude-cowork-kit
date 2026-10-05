@@ -4,17 +4,30 @@
 Reads only. Prints JSON to stdout, diagnostics to stderr.
 
 Usage:
-  census.py --folder PATH [--limit N] [--ext .md]
+  census.py --folder PATH [--limit N] [--ext .md] [--sources sources] [--topics topics]
 
 Output keys:
   folders: {relative folder: {"files": N, "md": N}}
   naming: {relative folder: {"pattern": "kebab|spaces|mixed|other", "sample": [...]}}
   metadata: {"with_created": N, "with_source": N, "without_created": [...]}
+    (with_source counts a source line, or a source note's level line)
   wrapping: {"hard_wrapped": N, "unwrapped": N, "hard_wrapped_files": [...]}
   links: {"relative_markdown": N, "wikilinks": N, "urls": N}
   newest, oldest: [{"path", "mtime", "created"}] by modification time
     (mtime is unreliable on a mounted folder; prefer created)
   created_range: {"earliest", "latest"} from created lines
+  sources: the source notes, checked against the binder's conventions:
+    flat, compound: how many source notes are one file, how many a folder
+    no_lead: source folders without a lead file of the folder's name
+    lead_only: source folders holding nothing but their lead file
+    no_rendition: originals (PDF or saved web page) with no rendition
+    levels: {"citation": N, "minimal": N, "read": N, "none": N}
+    level_mismatch: [{"path", "level", "problem"}] where a note's
+      labeled blocks do not match its level
+    uncited: source notes no note outside the sources folder links to
+  topics: {"notes": N, "cite_nothing": [...]}, topic notes with no link
+    to a source note (empty when the topics folder does not exist)
+Files under originals/ and renditions/ are counted in "sources", not as notes.
 Exit 0 on success, 2 on bad arguments, 3 if the folder is unreadable.
 """
 
@@ -30,6 +43,12 @@ CREATED = re.compile(r"^\s*created:\s*(\d{4}-\d{2}-\d{2})", re.I | re.M)
 SOURCE = re.compile(r"^\s*source:", re.I | re.M)
 WIKI = re.compile(r"\[\[[^\]]+\]\]")
 RELMD = re.compile(r"\]\((?!https?://)[^)]+\.md\)")
+RELMD_TARGET = re.compile(r"\]\((?!https?://)([^)#]+\.md)(?:#[^)]*)?\)")
+WIKI_TARGET = re.compile(r"\[\[([^\]|#]+)")
+LEVEL = re.compile(r"^\s*level:\s*(\w+)", re.I | re.M)
+LABEL = re.compile(r"^\W*(BRIEF|SHORT ABSTRACT|EVIDENCE|KEY POINTS|KEY QUOTES|WHY SAVED)\b", re.M)
+ORIGINAL_EXT = (".pdf", ".html", ".htm", ".webarchive", ".mhtml")
+SIDECARS = ("originals", "renditions")
 URL = re.compile(r"\]\(https?://[^)]+\)")
 
 
@@ -71,11 +90,105 @@ def is_hard_wrapped(text):
     return False
 
 
+def level_problem(level, labels):
+    """What is wrong with a source note's blocks for its level, or None."""
+    summary = {"BRIEF", "SHORT ABSTRACT"}
+    deep = {"KEY POINTS", "KEY QUOTES"}
+    if level == "citation" and labels - {"WHY SAVED"}:
+        return "citation level but carries " + ", ".join(sorted(labels - {"WHY SAVED"}))
+    if level == "minimal":
+        if not summary <= labels:
+            return "minimal level but lacks " + ", ".join(sorted(summary - labels))
+        if labels & deep:
+            return "minimal level but carries " + ", ".join(sorted(labels & deep))
+    if level == "read" and not labels & deep:
+        return "read level but has no KEY POINTS or KEY QUOTES"
+    if level not in ("citation", "minimal", "read"):
+        return f"unknown level {level!r}"
+    return None
+
+
+def source_census(root, sources_dir, topics_dir, texts, limit):
+    """Check the sources folder's shape and how the notes cite it."""
+    out = {"flat": 0, "compound": 0, "no_lead": [], "lead_only": [], "no_rendition": [],
+           "levels": {"citation": 0, "minimal": 0, "read": 0, "none": 0},
+           "level_mismatch": [], "uncited": []}
+    base = os.path.join(root, sources_dir)
+    notes = {}  # stem -> relative path of the source note
+    if os.path.isdir(base):
+        for entry in sorted(os.listdir(base)):
+            if entry.startswith("."):
+                continue
+            path = os.path.join(base, entry)
+            if os.path.isfile(path) and entry.endswith(".md"):
+                out["flat"] += 1
+                notes[entry[:-3]] = os.path.relpath(path, root)
+            elif os.path.isdir(path):
+                out["compound"] += 1
+                lead = os.path.join(path, entry + ".md")
+                rel = os.path.relpath(path, root)
+                if not os.path.isfile(lead):
+                    out["no_lead"].append(rel)
+                    continue
+                notes[entry] = os.path.relpath(lead, root)
+                others = [f for f in os.listdir(path) if not f.startswith(".") and f != entry + ".md"]
+                beside = [f for d in SIDECARS if os.path.isdir(os.path.join(path, d))
+                          for f in os.listdir(os.path.join(path, d)) if not f.startswith(".")]
+                if not [o for o in others if o not in SIDECARS] and not beside:
+                    out["lead_only"].append(rel)
+                originals = os.path.join(path, "originals")
+                if os.path.isdir(originals):
+                    for f in sorted(os.listdir(originals)):
+                        if f.lower().endswith(ORIGINAL_EXT):
+                            stem = os.path.splitext(f)[0]
+                            if not os.path.isfile(os.path.join(path, "renditions", stem + ".md")):
+                                out["no_rendition"].append(os.path.join(rel, "originals", f))
+    for stem, rel in notes.items():
+        text = texts.get(rel, "")
+        m = LEVEL.search(text[:600])
+        if not m:
+            out["levels"]["none"] += 1
+            continue
+        level = m.group(1).lower()
+        out["levels"][level] = out["levels"].get(level, 0) + 1
+        problem = level_problem(level, set(LABEL.findall(text)))
+        if problem:
+            out["level_mismatch"].append({"path": rel, "level": level, "problem": problem})
+
+    # Who links to which source note, from outside the sources folder.
+    by_path = {os.path.normpath(rel): stem for stem, rel in notes.items()}
+    cited, topic_links = set(), {}
+    for rel, text in texts.items():
+        if rel.startswith(sources_dir + os.sep):
+            continue
+        found = set()
+        for target in RELMD_TARGET.findall(text):
+            resolved = os.path.normpath(os.path.join(os.path.dirname(rel), target))
+            if resolved in by_path:
+                found.add(by_path[resolved])
+        for target in WIKI_TARGET.findall(text):
+            stem = os.path.basename(target.strip())
+            if stem.endswith(".md"):
+                stem = stem[:-3]
+            if stem in notes:
+                found.add(stem)
+        cited |= found
+        if rel.startswith(topics_dir + os.sep):
+            topic_links[rel] = found
+    out["uncited"] = sorted(notes[s] for s in notes if s not in cited)[:limit]
+    topics = {"notes": len(topic_links), "cite_nothing": sorted(r for r, f in topic_links.items() if not f)[:limit]}
+    for key in ("no_lead", "lead_only", "no_rendition", "level_mismatch"):
+        out[key] = out[key][:limit]
+    return out, topics
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--folder", required=True)
     ap.add_argument("--limit", type=int, default=10, help="items per list (default 10)")
     ap.add_argument("--ext", default=".md")
+    ap.add_argument("--sources", default="sources", help="the sources folder, relative to --folder")
+    ap.add_argument("--topics", default="topics", help="the topic notes' folder, relative to --folder")
     args = ap.parse_args()
     root = args.folder
     if not os.path.isdir(root):
@@ -87,9 +200,10 @@ def main():
     wrap = {"hard_wrapped": 0, "unwrapped": 0, "hard_wrapped_files": []}
     links = {"relative_markdown": 0, "wikilinks": 0, "urls": 0}
     created_dates = []
+    texts = {}
 
     for dirpath, dirnames, filenames in os.walk(root):
-        dirnames[:] = [d for d in dirnames if not d.startswith(".")]
+        dirnames[:] = [d for d in dirnames if not d.startswith(".") and d not in SIDECARS]
         rel = os.path.relpath(dirpath, root)
         rel = "." if rel == "." else rel
         md = [f for f in filenames if f.endswith(args.ext) and not f.startswith(".")]
@@ -107,6 +221,7 @@ def main():
                 print(f"skip {path}: {e}", file=sys.stderr)
                 continue
             relpath = os.path.relpath(path, root)
+            texts[relpath] = text
             head = text[:600]
             m = CREATED.search(head)
             created = m.group(1) if m else None
@@ -115,7 +230,7 @@ def main():
                 created_dates.append(created)
             else:
                 meta["without_created"].append(relpath)
-            if SOURCE.search(head):
+            if SOURCE.search(head) or LEVEL.search(head):
                 meta["with_source"] += 1
             if is_hard_wrapped(text):
                 wrap["hard_wrapped"] += 1
@@ -146,6 +261,7 @@ def main():
         "created_range": {"earliest": min(created_dates) if created_dates else None,
                           "latest": max(created_dates) if created_dates else None},
     }
+    out["sources"], out["topics"] = source_census(root, args.sources, args.topics, texts, args.limit)
     print(f"scanned {len(files_seen)} notes in {len(folders)} folders", file=sys.stderr)
     json.dump(out, sys.stdout, indent=1)
     print()

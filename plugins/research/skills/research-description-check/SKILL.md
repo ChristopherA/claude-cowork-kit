@@ -33,6 +33,17 @@ For each claim in `map.md`, say one of three things:
 
 Then look for what `map.md` does not say: a folder it never mentions; a pattern in the newest notes (a metadata line, a naming habit, a kind of link) that has become a convention without being written down; something on the "deliberately not here" list that is, in fact, there.
 
+## Sources and topic notes
+
+Check the conventions `map.md` sets for sources and topic notes, from the census's `sources` and `topics` or by reading the sources folder and the topic notes' home:
+
+- Every source folder has a lead file of the folder's own name, and no folder holds only its lead; a single file is never a folder.
+- Every original that is a PDF or a saved web page has its rendition beside it, in `renditions/` under the same name.
+- Every source note's `level` matches what it contains: `citation` is the line alone, `minimal` has a brief and a short abstract and no key points or quotes, `read` has key points or key quotes.
+- Which source notes nothing outside the sources folder cites, and which topic notes cite no source.
+
+The first three are drift in the folder, reported with the files as above. The last two are not faults: an uncited source is a candidate for the inbox drain to revisit or for a topic note to take up, and a topic note that cites nothing is the reader's thinking without its sources. List them under their own heading, at most ten each, and say what each could become. Pass `--sources` and `--topics` to the census when `map.md` names other folders for them.
+
 Check the open threads against the files, not against the description: for each thread `map.md` names, confirm a note for it exists and say the newest date inside it. A thread listed as open whose note is missing, or untouched for months, is reported as such; a claim that something exists is checked by the thing existing.
 
 ## The current-work section
@@ -41,16 +52,16 @@ Treat it separately, because it goes stale fastest and matters most. Say when it
 
 ## Report
 
-One short report, in this order: what holds (a line), what is stale in the description (each with proposed wording), what has drifted in the folder (each with the files), what is missing from the description, and the current-work question. Then stop, with one word for how complete the check was: full (script census and the description read whole), partial (census by reading only, or the folder partly reachable), and what was not checked.
+One short report, in this order: what holds (a line), what is stale in the description (each with proposed wording), what has drifted in the folder (each with the files), the sources nothing cites and the topic notes that cite nothing, what is missing from the description, and the current-work question. Then stop, with one word for how complete the check was: full (script census and the description read whole), partial (census by reading only, or the folder partly reachable), and what was not checked.
 
 If the reader chooses, through the control, to apply them, two kinds of edit are on offer and they are handled differently. Wording changes to `map.md` or `rules.md` (a renamed folder, a convention written down, a stale sentence replaced, a rule the reader has decided to relax) are safe: make the ones the reader names, one at a time, showing each before writing, then read the document back and confirm what changed. Offer each through the app's question control, recommended option first. Anything that would change the folder (moving a file, renaming a note, adding a missing metadata line) is not this skill's to do: list those as a proposal for the reader to carry out or to hand to the inbox-drain or source-note skills, and never edit notes in the folder from here.
 
 ## The census script
 
-`scripts/census.py` walks the research folder and prints, as JSON, the folder tree with counts, per-folder file naming patterns, which files carry a `created` line and a `source` line at the top, how many have paragraphs longer than one line (hard-wrapped), the link styles found, and the newest and oldest files by modification time with their dates. It reads only; it needs code execution enabled.
+`scripts/census.py` walks the research folder and prints, as JSON, the folder tree with counts, per-folder file naming patterns, which files carry a `created` line and a `source` or `level` line at the top, how many have paragraphs longer than one line (hard-wrapped), the link styles found, the newest and oldest files by modification time with their dates, and, under `sources` and `topics`, the source-note and topic-note checks above. It reads only; it needs code execution enabled.
 
 ```
-python3 scripts/census.py --folder "<research folder path>" --limit 10
+python3 scripts/census.py --folder "<research folder path>" --limit 10 --sources sources --topics topics
 ```
 
 The script runs in the task's own cloud workspace, a Linux space apart from the reader's computer that can read the research folder because the folder is connected to the project. Copy the script from the plugin's files into that workspace and run it there; it is never copied into the research folder or any folder of the reader's, and anything it writes goes into the workspace first and reaches the folder only as this skill says, after a yes. Then say in one plain sentence that a script read the folder; the reader is not a programmer and does not need the mechanics, but is never left unaware that something ran. If the task cannot run scripts, do the same work by reading, as this skill says, and say that you did. Never rely on the folder's modification times: the mount flattens them. Prefer the `created` lines inside notes for age; the script reports both, and its modification times are there only so you can see that they disagree. If the script is not available, take the census by reading, as above.

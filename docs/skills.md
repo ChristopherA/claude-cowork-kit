@@ -122,7 +122,7 @@ Compares map.md against the research folder and reports every claim that is no l
 
 **When to reach for it.** At the two-week sitting, and whenever an answer from the phone comes back wrong.
 
-**What it hands back.** Every claim in `map.md` that the folder no longer bears out, with the edit proposed for each. It changes nothing; you decide what to fix.
+**What it hands back.** Every claim in `map.md` that the folder no longer bears out, with the edit proposed for each, and where sources and topic notes have drifted: a source folder without its lead note, an original without its searchable copy, a note whose level does not match what it holds, the sources nothing cites and the topic notes that cite nothing. It changes nothing; you decide what to fix.
 
 ### `research-inbox-drain`
 
