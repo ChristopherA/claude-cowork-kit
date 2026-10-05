@@ -94,11 +94,11 @@ Do not summarize the whole source; the note is for finding the work again and re
 
 ## The scripts
 
-`scripts/pdf_info.py` prints a PDF's metadata (title, author, dates, page count) and the text of its first pages, as JSON, and with `--rendition` writes the whole text as a rendition with page markers. `--first-page` is the number printed on the PDF's first page, so the markers carry the citation's page numbers; read it from the first page before running. It extracts text with `pdftotext` or the `pypdf` library, whichever the task has, and reads the PDF only.
+`scripts/pdf_info.py` prints a PDF's metadata (title, author, dates, page count) and the text of its first pages, as JSON, and with `--rendition` writes the whole text as a rendition with page markers. `--first-page` is the number printed on the article's first page, so the markers carry the citation's page numbers; read it from the first page before running. It extracts text with `pdftotext` or the `pypdf` library, whichever the task has, and reads the PDF only. The rendition reads a two-column page one column after another, writes ligatures as plain letters, removes publisher download stamps (which often carry the reader's IP address), and leaves out a publisher's cover sheet, unnumbered; it reports the pages it took for a cover sheet, so check that guess against the PDF and pass `--cover-pages` (PDF page positions, or `none`) when it is wrong. `--link-style wiki` writes the header's link to the original as a wikilink, for a folder whose `map.md` uses them.
 
 ```
 python3 scripts/pdf_info.py "<copy of the pdf>" --pages 3
-python3 scripts/pdf_info.py "<copy of the pdf>" --rendition "<name>.md" --first-page 1561 --title "<title>" --author "<family, given>" --link "<url>" --original "<name>.pdf"
+python3 scripts/pdf_info.py "<copy of the pdf>" --rendition "<name>.md" --first-page 1561 --title "<title>" --author "<family, given>" --link "<url>" --original "<name>.pdf" [--link-style wiki]
 ```
 
 `scripts/cite.py` writes citations from a note's fields: the kit's line by default, or `--style apa`, `chicago`, `ieee`, `bibtex` or `csl` for the write-up skill. With `--check` it compares a note's citation line with the line its fields make and lists the fields a note lacks; run it on the draft before showing it, and fix the field or the line until they agree.

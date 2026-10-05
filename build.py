@@ -411,8 +411,14 @@ RESIDUE = re.compile(r"\\[0-9n]")
 def check_research_scripts():
     """Run the research plugin's scripts on the fixture and compare with what it was built to show.
 
-    The fixture's compound source carries two quotes that must pass the quote
-    check against its rendition, and a copy with one word changed must fail;
+    The fixture's compound source is a PDF shaped like a journal article, two
+    columns, a cover sheet and a download stamp naming an IP address, made by
+    tests/fixture/make-fixture-pdf.py: rebuilt, it must match the committed
+    PDF, and its rendition rebuilt by pdf_info.py must match the committed
+    rendition, with the cover sheet and stamps left out, while a rendition
+    made with pdftotext -layout must fail the quote check. Its three quotes,
+    one quoting a phrase itself, must pass, and a copy with one word changed
+    must fail;
     the census must find the planted lead-only folder and the two topic notes
     that cite no source; every fixture source note's citation line must be
     the one cite.py makes from its fields, and its BibTeX and CSL must hold
@@ -430,6 +436,7 @@ def check_research_scripts():
     def run(args):
         return subprocess.run([sys.executable, *map(str, args)], capture_output=True, text=True)
 
+    check_fixture_rendition(scripts, folder, name, run)
     out = run([quote_check, "--note", note, "--rendition", rendition])
     if out.returncode != 0:
         fail(f"quote_check.py: the fixture's quotes do not pass (exit {out.returncode}): {out.stdout[-300:]}{out.stderr[-300:]}")
@@ -490,6 +497,55 @@ def check_research_scripts():
     expected = ["topics/Reading.md", "topics/how-a-note-should-open.md"]
     if topics.get("cite_nothing") != expected:
         fail(f"census.py: on the fixture, topics.cite_nothing is {topics.get('cite_nothing')!r}, expected {expected!r}")
+
+
+def check_fixture_rendition(scripts, folder, name, run):
+    """The fixture PDF and its rendition are what the generator and pdf_info.py make now."""
+    src = folder / "sources" / name
+    pdf, rendition = src / "originals" / f"{name}.pdf", src / "renditions" / f"{name}.md"
+    pdf_info = scripts / "research-source-note" / "scripts" / "pdf_info.py"
+    quote_check = scripts / "research-source-note" / "scripts" / "quote_check.py"
+    work = ROOT / "dist" / "rendition-check"
+    work.mkdir(parents=True, exist_ok=True)
+    try:
+        made = work / "fixture.pdf"
+        run([ROOT / "tests" / "fixture" / "make-fixture-pdf.py", made])
+        if made.read_bytes() != pdf.read_bytes():
+            fail(f"{pdf.relative_to(ROOT)}: differs from what tests/fixture/make-fixture-pdf.py writes; rebuild it")
+
+        spec = __import__("importlib.util").util.spec_from_file_location("pdf_info", pdf_info)
+        mod = __import__("importlib.util").util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        if mod.clean("the \ufb01rst \ufb02oor")[0] != "the first floor":
+            fail("pdf_info.py: ligatures are not written as plain letters")
+
+        if shutil.which("pdftotext") is None:
+            print("  note: pdftotext not found; the fixture rendition was not rebuilt", file=sys.stderr)
+            return
+        fresh = work / "rendition.md"
+        out = run([pdf_info, pdf, "--rendition", fresh, "--title", "Notes That Last", "--author", "Example, Ada",
+                   "--link", "https://example.org/notes-that-last.pdf", "--retrieved", "2026-10-04"])
+        try:
+            report = json.loads(out.stdout)["rendition"]
+        except (ValueError, KeyError, TypeError):
+            fail(f"pdf_info.py: no rendition report on the fixture PDF (exit {out.returncode}): {out.stderr[-300:]}")
+            return
+        if report.get("cover_pages") != [3] or report.get("stamps_removed") != 2:
+            fail(f"pdf_info.py: on the fixture PDF, expected cover page [3] and 2 stamps removed, got {report!r}")
+        text = fresh.read_text()
+        if "192.0.2.10" in text or "personal, non-commercial" in text:
+            fail("pdf_info.py: the fixture rendition still carries the download stamp or the cover sheet")
+        if text != rendition.read_text():
+            fail(f"{rendition.relative_to(ROOT)}: differs from what pdf_info.py writes from the fixture PDF; rebuild it")
+
+        layout = work / "layout.md"
+        pages = subprocess.run(["pdftotext", "-layout", str(pdf), "-"], capture_output=True, text=True).stdout.split("\f")
+        layout.write_text("".join(f"<!-- p. {i} -->\n{t}\n" for i, t in enumerate(pages[:2], 1)))
+        out = run([quote_check, "--note", src / f"{name}.md", "--rendition", layout])
+        if out.returncode != 1:
+            fail(f"quote_check.py: the fixture's quotes passed against a -layout rendition, so the fixture no longer tests column order (exit {out.returncode})")
+    finally:
+        shutil.rmtree(work, ignore_errors=True)
 
 
 def check_residue():

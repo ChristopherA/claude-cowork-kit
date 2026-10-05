@@ -27,6 +27,7 @@ KEY POINTS
 KEY QUOTES
 
     > "A note that no topic note cites has no reader but its author, and its author has moved on." (p. 1)
+    > "Call this practice “writing from” a collection rather than “writing to” it." (p. 2)
     > "If the answer is a folder of sources, the collection has been gathering rather than thinking." (p. 2)
 
 WHY SAVED

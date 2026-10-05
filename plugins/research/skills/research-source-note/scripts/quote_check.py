@@ -7,7 +7,10 @@ Usage:
   quote_check.py --note NOTE.md --rendition RENDITION.md [--min-words N]
 
 A quote is any span in double quotes (straight or curly) of at least
---min-words words (default 4) anywhere in the note. A page cited for it
+--min-words words (default 4) anywhere in the note. A quote may itself
+quote something: inside straight quotes, curly ones are part of the
+quote ("we might add “natural cooperation” as a third"), and inside
+curly quotes, a balanced inner pair of curly ones is. A page cited for it
 is a "(p. N)", "(pp. N-M)", "p. N" or "page N" within a few characters
 after the closing quote. The rendition is the markdown copy of the
 source, with a page marker <!-- p. N --> at the start of each page.
@@ -40,7 +43,9 @@ import re
 import sys
 import unicodedata
 
-QUOTE = re.compile(r'["“”]([^"“”\n]+?)["“”]')
+QUOTE = re.compile(r'"([^"\n]+?)"'                       # straight, curly quotes inside allowed
+                   r'|“((?:[^“”"\n]|“[^“”\n]*”)+?)”'       # curly, a balanced curly pair inside
+                   r'|[“”]([^"“”\n]+?)[“”"]')                # mismatched marks, as typed
 PAGE_AFTER = re.compile(r'^[\s,.;:)]{0,3}\(?(?:pp?\.|pages?)\s*(\d+)(?:\s*[-–]\s*(\d+))?', re.I)
 MARKER = re.compile(r'<!--\s*p\.\s*(\d+)\s*-->')
 GAP = re.compile(r'\s*(?:\.\s?\.\s?\.|…|\[[^\]]*\])\s*')
@@ -149,7 +154,7 @@ def main():
 
     results = []
     for m in QUOTE.finditer(note):
-        quote = m.group(1).strip()
+        quote = next(g for g in m.groups() if g is not None).strip()
         if len(quote.split()) < args.min_words:
             continue
         pm = PAGE_AFTER.match(note[m.end(): m.end() + 30])
