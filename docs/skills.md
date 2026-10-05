@@ -146,7 +146,7 @@ Writes one source note from a book, paper, article or transcript the reader hand
 
 **When to reach for it.** You have read, or are about to read, something worth keeping: a book, a paper, an article, a transcript. It can read a public page you point it at; a source behind a login or a paywall is yours to save or paste.
 
-**What it hands back.** One note in the sources folder, on a yes, at the level what you read supports: the citation line alone, or with a brief, a short abstract and why you saved it, or with key points and quotes as well. It asks why you are saving the source and which topic note should cite it, and keeps a searchable copy of a PDF or web page beside the note, so every quote is checked word for word and against its page before you see it.
+**What it hands back.** One note in the sources folder, on a yes, at the level what you read supports: the citation line alone, or with a brief, a short abstract and why you saved it, or with key points and quotes as well. It asks why you are saving the source and which topic note should cite it, and keeps a searchable copy of a PDF or web page beside the note, so every quote is checked word for word and against its page, and the prose against the citation rules, before you see it.
 
 ### `research-topic-note`
 

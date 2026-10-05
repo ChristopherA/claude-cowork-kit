@@ -46,7 +46,7 @@ RELMD = re.compile(r"\]\((?!https?://)[^)]+\.md\)")
 RELMD_TARGET = re.compile(r"\]\((?!https?://)([^)#]+\.md)(?:#[^)]*)?\)")
 WIKI_TARGET = re.compile(r"\[\[([^\]|#]+)")
 LEVEL = re.compile(r"^\s*level:\s*(\w+)", re.I | re.M)
-LABEL = re.compile(r"^\W*(BRIEF|SHORT ABSTRACT|EVIDENCE|KEY POINTS|KEY QUOTES|WHY SAVED)\b", re.M)
+LABEL = re.compile(r"^\W*(BRIEF|SHORT ABSTRACT|EVIDENCE|KEY POINTS|KEY QUOTES|INFLUENCE|WHY SAVED)\b", re.M)
 ORIGINAL_EXT = (".pdf", ".html", ".htm", ".webarchive", ".mhtml")
 SIDECARS = ("originals", "renditions")
 URL = re.compile(r"\]\(https?://[^)]+\)")
@@ -93,7 +93,7 @@ def is_hard_wrapped(text):
 def level_problem(level, labels):
     """What is wrong with a source note's blocks for its level, or None."""
     summary = {"BRIEF", "SHORT ABSTRACT"}
-    deep = {"KEY POINTS", "KEY QUOTES"}
+    deep = {"KEY POINTS", "KEY QUOTES", "INFLUENCE"}
     if level == "citation" and labels - {"WHY SAVED"}:
         return "citation level but carries " + ", ".join(sorted(labels - {"WHY SAVED"}))
     if level == "minimal":

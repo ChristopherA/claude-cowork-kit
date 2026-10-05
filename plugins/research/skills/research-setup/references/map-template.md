@@ -30,7 +30,7 @@ This describes what's in my research folder and how it's organized. It lives in 
 
 ## Note format
 
-Plain markdown. The metadata at the top of a note is a `created` date in YYYY-MM-DD form and, where the note came from something, a `source` line with the link or citation; a source note carries a `level` line instead of `source`, then its citation fields (`kind`, `authors`, `year`, `title`, `container`, `volume`, `issue`, `pages`, `publisher`, `doi`, `url`, `retrieved` or `available`), and its citation line follows. A source note is structured: each part is a labeled block, and its key points are bullets.
+Plain markdown. The metadata at the top of a note is a `created` date in YYYY-MM-DD form and, where the note came from something, a `source` line with the link or citation; a source note carries a `level` line instead of `source`, then its citation fields (`kind`, `authors`, `year`, `title`, `container`, `volume`, `issue`, `pages`, `publisher`, `doi`, `isbn`, `url`, `retrieved` or `available`), and its citation line follows. A source note is structured: each part is a labeled block, and its key points are bullets.
 
 Don't hard-wrap. One paragraph is one line, and the editor wraps it for display.
 
@@ -42,7 +42,7 @@ One reference line at the top of a source note, made from its citation fields:
 
 * _**Title**_ (Year). [web article]. _Family, Given._ Publication, volume(issue), pages. Retrieved YYYY-MM-DD from: <URL>
 
-The kind in brackets is specific: web article, preprint, book, review article, software. "Retrieved" for an open link and "Available" for a paywalled one, each with the date. Authors family name first, separated by semicolons; past six, the first three and et al. A name whose family name comes first by culture keeps its order. Undated works take (n.d.) and approximate dates (~YYYY); a title in another language stays in it. Each passage I keep goes under the key quotes as an indented blockquote with its page.
+The kind in brackets is specific: web article, blog post, journal article, review article, preprint, book, book chapter, report, software, microcontent (a social post). A DOI or an ISBN-13 follows the kind inside the brackets: `[journal article, DOI: 10.1126/science.1133755]`. "Retrieved" for an open link and "Available" for a paywalled one, each with the date. Authors family name first, separated by semicolons; past six, the first three and et al. A name whose family name comes first by culture keeps its order. Undated works take (n.d.) and approximate dates (~YYYY); a title in another language stays in it. Each passage I keep goes under the key quotes as an indented blockquote with its page.
 
 ## What I'm working on now
 

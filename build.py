@@ -475,6 +475,18 @@ def check_research_scripts():
     if out.returncode != 1:
         fail(f"cite.py: a note whose year field disagrees with its line was not caught (exit {out.returncode})")
 
+    prose = scripts / "research-source-note" / "scripts" / "prose_check.py"
+    for note in notes:
+        out = run([prose, note])
+        if out.returncode != 0:
+            fail(f"prose_check.py: {note.relative_to(ROOT)} has prose errors: {out.stdout[-400:]}")
+    altered = ROOT / "dist" / "prose-control.md"
+    altered.write_text("created: 2026-10-05\nlevel: minimal\n\nBRIEF\n\nThis seminal paper offers a comprehensive account that we found useful for every reader in the field today.\n")
+    out = run([prose, altered])
+    altered.unlink()
+    if out.returncode != 1:
+        fail(f"prose_check.py: a brief with an unsupported 'seminal' and a 'we' was not caught (exit {out.returncode})")
+
     expected = ["topics/Reading.md", "topics/how-a-note-should-open.md"]
     if topics.get("cite_nothing") != expected:
         fail(f"census.py: on the fixture, topics.cite_nothing is {topics.get('cite_nothing')!r}, expected {expected!r}")

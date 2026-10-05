@@ -10,8 +10,9 @@ Usage:
 A source note's metadata is the run of "key: value" lines at its top,
 before the first blank line. The citation fields are:
 
-  kind       web article, journal article, review article, preprint, book,
-             book chapter, report, software, or another plain word
+  kind       web article, blog post, journal article, review article,
+             preprint, book, book chapter, report, software, microcontent
+             (a social post), or another plain word
   authors    "Family, Given" each, separated by semicolons; an
              organisation, or a name whose family name comes first by
              culture, is written as it is shown, without a comma
@@ -19,7 +20,7 @@ before the first blank line. The citation fields are:
   title      the work's title, in its own language
   container  the journal, site, or book a chapter appears in
   editors    for a book chapter, as authors
-  volume, issue, pages, publisher, doi, url
+  volume, issue, pages, publisher, doi, isbn (the ISBN-13), url
   retrieved  YYYY-MM-DD, for an open link
   available  YYYY-MM-DD, for a paywalled link
 
@@ -41,14 +42,17 @@ import re
 import sys
 
 FIELDS = ("kind", "authors", "year", "title", "container", "editors", "volume", "issue",
-          "pages", "publisher", "doi", "url", "retrieved", "available")
-CONTAINED = {"web article", "journal article", "review article", "article", "book chapter", "chapter"}
+          "pages", "publisher", "doi", "isbn", "url", "retrieved", "available")
+CONTAINED = {"web article", "blog post", "microcontent", "journal article", "review article", "article",
+             "book chapter", "chapter"}
 CSL_TYPE = {"web article": "webpage", "journal article": "article-journal", "review article": "article-journal",
             "article": "article-journal", "preprint": "article", "book": "book", "book chapter": "chapter",
-            "chapter": "chapter", "report": "report", "software": "software"}
+            "chapter": "chapter", "report": "report", "software": "software", "blog post": "post-weblog",
+            "microcontent": "post"}
 BIB_TYPE = {"journal article": "article", "review article": "article", "article": "article", "book": "book",
             "book chapter": "incollection", "chapter": "incollection", "report": "techreport",
-            "web article": "online", "preprint": "unpublished", "software": "software"}
+            "web article": "online", "blog post": "online", "microcontent": "online", "preprint": "unpublished",
+            "software": "software"}
 
 
 def read_fields(path):
@@ -110,7 +114,10 @@ def kit(f):
     authors = people(f.get("authors"))
     names = ["; ".join((fa + ", " + gi) if gi else fa for fa, gi in authors[:3]) + "; et al."] if len(authors) > 6 \
         else ["; ".join((fa + ", " + gi) if gi else fa for fa, gi in authors)]
-    out = f"* _**{f.get('title', '[title]')}**_ ({f.get('year', 'n.d.')}). [{f.get('kind', 'work')}]."
+    ids = [f"DOI: {f['doi']}"] if f.get("doi") else []
+    ids += [f"ISBN-13: {f['isbn']}"] if f.get("isbn") else []
+    bracket = ", ".join([f.get("kind", "work")] + ids)
+    out = f"* _**{f.get('title', '[title]')}**_ ({f.get('year', 'n.d.')}). [{bracket}]."
     if names[0]:
         out += f" _{names[0].rstrip('.')}._"
     container = f.get("container")
@@ -120,8 +127,6 @@ def kit(f):
     where = [x for x in (container, locator(f), f.get("publisher")) if x]
     if where:
         out += " " + ", ".join(where) + "."
-    if f.get("doi"):
-        out += f" DOI: {f['doi']}."
     if f.get("url"):
         if f.get("available"):
             out += f" Available {f['available']} from: <{f['url']}>"
@@ -282,7 +287,7 @@ def bibtex(f):
     container_key = {"article": "journal", "incollection": "booktitle", "online": "organization"}.get(kind, "howpublished")
     for field, value in ((container_key, f.get("container")), ("editor", " and ".join(f"{fa}, {gi}" if gi else fa for fa, gi in people(f.get("editors")))),
                          ("volume", f.get("volume")), ("number", f.get("issue")), ("pages", (f.get("pages") or "").replace("-", "--")),
-                         ("publisher", f.get("publisher")), ("doi", f.get("doi")), ("url", f.get("url")),
+                         ("publisher", f.get("publisher")), ("doi", f.get("doi")), ("isbn", f.get("isbn")), ("url", f.get("url")),
                          ("urldate", f.get("retrieved") or f.get("available"))):
         if value:
             entries.append((field, value))
@@ -306,7 +311,7 @@ def csl(f):
         if year.startswith("~"):
             item["issued"]["circa"] = True
     for key, field in (("container-title", "container"), ("volume", "volume"), ("issue", "issue"), ("page", "pages"),
-                       ("publisher", "publisher"), ("DOI", "doi"), ("URL", "url")):
+                       ("publisher", "publisher"), ("DOI", "doi"), ("ISBN", "isbn"), ("URL", "url")):
         if f.get(field):
             item[key] = f[field]
     accessed = f.get("retrieved") or f.get("available")
