@@ -41,11 +41,11 @@ Before the project instructions, read the reader's Account instructions if you c
 ## Running a script
 
 ```
-The script runs inside the task, in the task's own working space on the side where the research folder is mounted; it never runs on the reader's computer and never goes into the research folder or any folder of theirs. The plugin's files live in the task's cloud space, so copy the script into that working space first and run it there. Then say in one plain sentence that a script read the folder; the reader is not a programmer and does not need the mechanics, but is never left unaware that something ran. If the task cannot run scripts, do the same work by reading, as this skill says, and say that you did. Never rely on the folder's modification times: the mount flattens them.
+The script runs in the task's own cloud workspace, a Linux space apart from the reader's computer that can read the research folder because the folder is connected to the project. Copy the script from the plugin's files into that workspace and run it there; it is never copied into the research folder or any folder of the reader's, and anything it writes goes into the workspace first and reaches the folder only as this skill says, after a yes. Then say in one plain sentence that a script read the folder; the reader is not a programmer and does not need the mechanics, but is never left unaware that something ran. If the task cannot run scripts, do the same work by reading, as this skill says, and say that you did. Never rely on the folder's modification times: the mount flattens them.
 ```
 
 ## The evidence words
 
 ```
-strong (several controlled trials, a systematic review, or a guideline named), moderate (some trials, mixed results, or experts disagreeing), limited (small studies or case reports, or a plausible mechanism), anecdotal (people report it helped, no controlled study named), none stated
+strong (several controlled trials, a systematic review, or a guideline named), moderate (some trials, mixed results, or experts disagreeing), limited (small studies or case reports, or a plausible mechanism), anecdotal (people report it helped, no controlled study named), derived from a model, not tested (the claim follows from a mathematical or computational model and the source cites no test of it), none stated
 ```

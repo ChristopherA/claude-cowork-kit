@@ -144,9 +144,9 @@ Sets up the research binder: three questions, then rules.md, map.md and inbox.md
 
 Writes one source note from a book, paper, article or transcript the reader hands over, the source's claims kept apart from the reader's own. Use for "source note", "save this article to my notes".
 
-**When to reach for it.** You have read, or are about to read, something worth keeping: a book, a paper, an article, a transcript. You do the fetching; a source behind a login or a paywall is yours to save or paste.
+**When to reach for it.** You have read, or are about to read, something worth keeping: a book, a paper, an article, a transcript. It can read a public page you point it at; a source behind a login or a paywall is yours to save or paste.
 
-**What it hands back.** One note in the sources folder, written the way `map.md` says notes are written, the citation recorded in its form, the source's claims kept apart from your own, on a yes.
+**What it hands back.** One note in the sources folder, on a yes, at the level what you read supports: the citation line alone, or with a brief, a short abstract and why you saved it, or with key points and quotes as well. It asks why you are saving the source and which topic note should cite it, and keeps a searchable copy of a PDF or web page beside the note, so every quote is checked word for word and against its page before you see it.
 
 ## CWK Learning Binder, `learn`
 
@@ -290,7 +290,7 @@ From a handed article or a clinician's suggestion, grades the evidence it cites 
 
 **When to reach for it.** A treatment has been offered or you have found one, and you have an article, a study or the clinician's suggestion as you recorded it.
 
-**What it hands back.** What the source claims and on what evidence, graded in one of five words, strong, moderate, limited, anecdotal, none stated, only for what it cites, and the gaps turned into questions for the clinician, added to `questions.md` on a yes. It does not research and does not say whether to try it.
+**What it hands back.** What the source claims and on what evidence, graded in one of six terms, strong, moderate, limited, anecdotal, derived from a model, not tested, and none stated, only for what it cites, and the gaps turned into questions for the clinician, added to `questions.md` on a yes. It does not research and does not say whether to try it.
 
 ### `health-visit-prep`
 

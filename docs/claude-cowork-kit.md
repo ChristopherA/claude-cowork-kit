@@ -30,7 +30,7 @@ It is not a second brain that thinks for you, and it is not a search engine over
 
 ### What it won't do
 
-It will not fetch for you: a task cannot reach the web on its own, use your browser or your logins, or keep anything installed from one session to the next, so a bookmark does not become a saved article and a citation by itself, and a patient portal does not get read. You save the PDF or paste the page, and Claude turns what you handed it into a note to your conventions. If you come expecting a pipeline, the kit will look broken when it is only scoped.
+It will not go past a login for you: a task can read a public web page you point it at, but it cannot use your browser or your logins, or keep anything installed from one session to the next, so nothing behind a paywall or a sign-in gets read, a bookmark does not become a saved article unless you ask, and a patient portal stays yours to open. For those you save the PDF or paste the page, and Claude turns what you handed it into a note to your conventions. If you come expecting a pipeline, the kit will look broken when it is only scoped.
 
 The limit is a floor, not a wall. Because everything here is plain files in ordinary folders, the same folders work unchanged under tools that run on your computer with your access to the web, when you are ready for them, and the description you write for this kit is the seed of what such a tool reads. Nothing you build now has to be redone.
 

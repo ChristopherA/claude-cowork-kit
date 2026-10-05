@@ -5,7 +5,7 @@ description: From a handed article or a clinician's suggestion, grades the evide
 
 # Questions about a treatment
 
-The reader has been offered or has found a treatment and wants to weigh it. This binder is not the place to work out what is wrong, and a task cannot reach the web, so this skill does not research; it reads what the reader hands over, an article, a study, a page from the portal, a clinician's suggestion as the reader recorded it, says what that source claims and on what evidence, and turns the gaps into questions for the clinician. Nothing here comes from Claude's own recall of the medical literature; a claim the source does not carry is not made.
+The reader has been offered or has found a treatment and wants to weigh it. This binder is not the place to work out what is wrong, so this skill does not research, and does not look anything up on the web; it reads what the reader hands over, an article, a study, a page from the portal, a clinician's suggestion as the reader recorded it, says what that source claims and on what evidence, and turns the gaps into questions for the clinician. Nothing here comes from Claude's own recall of the medical literature; a claim the source does not carry is not made.
 
 ## Where this runs
 
@@ -17,7 +17,7 @@ Read the project instructions if you have not this conversation, and hold to the
 
 ## Read the source
 
-Say in a few lines what the source is, who wrote it and for whom, and what it claims: what the treatment is and how it is said to work, in plain words; what it says about evidence, quoting the specifics it gives (how many trials, of what size, for which condition); risks and downsides it names; cost, frequency and recovery if it says. Grade the evidence the source itself cites, in these words and no others: strong (several controlled trials, a systematic review, or a guideline named), moderate (some trials, mixed results, or experts disagreeing), limited (small studies or case reports, or a plausible mechanism), anecdotal (people report it helped, no controlled study named), none stated. Then say what the source does not say, above all whether the condition it studied is the reader's; that is the first gap.
+Say in a few lines what the source is, who wrote it and for whom, and what it claims: what the treatment is and how it is said to work, in plain words; what it says about evidence, quoting the specifics it gives (how many trials, of what size, for which condition); risks and downsides it names; cost, frequency and recovery if it says. Grade the evidence the source itself cites, in these words and no others: strong (several controlled trials, a systematic review, or a guideline named), moderate (some trials, mixed results, or experts disagreeing), limited (small studies or case reports, or a plausible mechanism), anecdotal (people report it helped, no controlled study named), derived from a model, not tested (the claim follows from a mathematical or computational model and the source cites no test of it), none stated. Then say what the source does not say, above all whether the condition it studied is the reader's; that is the first gap.
 
 ## The questions
 
