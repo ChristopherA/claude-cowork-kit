@@ -100,12 +100,16 @@ Everything a skill does you could ask for in a sentence, more slowly. The setup 
 
 Everything installs from the Claude desktop app, under **Customize** in the left sidebar, then **Plugins**. Adding the kit's marketplace only lists its plugins; each one still has to be added, and it is installed when it appears under **Yours**. Two ways:
 
-- **From the marketplace.** Choose **Add marketplace** and enter `ChristopherA/claude-cowork-kit`. Then, under **Discover**, search **CWK**: the kit's six plugins come up together. Click **Add** on the one you want. Installing this way also brings updates.
+- **From the marketplace.** Choose **Add**, then **Add marketplace**, then **Add from a repository**, and enter `ChristopherA/claude-cowork-kit`. Then, under **Discover**, search **CWK**: the kit's six plugins come up together. Click **Add** on the one you want. Installing this way also brings updates.
 - **From a file.** Download the plugin's `.plugin` file from the [releases page](https://github.com/ChristopherA/claude-cowork-kit/releases) and add it with the upload option on the same Plugins page. The release notes carry each file's checksum.
+
+To see only the kit's plugins, use the filter beside the search: **Filter by**, **Source**, **claude-cowork-kit**.
 
 Turn the plugin on after installing it. Do not drag a `.plugin` file into a task's composer: a plugin dropped there is attached to that one task only and is gone with it.
 
 Install one plugin at a time, and run its setup before installing the next.
+
+A plugin does not update by itself. To get a new release, open the plugin under **Customize**, **Plugins**, choose its **⋮** menu, then **Check for updates**, and click **Update** when it becomes active. Do the same for each kit plugin you have. **Submit to the directory**, on the same page, is for publishing a plugin, not for installing one.
 
 ## First run
 
