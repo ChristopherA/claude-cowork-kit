@@ -30,13 +30,13 @@ The setup creates three Context documents: `rules.md`, the working rules; `map.m
 
 1. **Back your research folder up** with whatever you already use, before the first task that is allowed to write.
 2. **Install the binder's plugin**, `research`, shown as **Research**, and turn it on. No other plugin has to come first.
-3. **Create the project and connect the folder.** Make an ordinary project in the app and name it; for the one-line description under the title, something like `Research base: notes and reading. The rules are in Instructions; the notes are in my research folder.` is enough. Connect your research folder to it from the project's page. Do not create the project *from* the folder.
+3. **Create the project with its folder.** In Claude, open **Projects**, then **New project**. Name it; under What are you trying to achieve?, something like `Research base: notes and reading. The rules are in Instructions; the notes are in my research folder.` is enough. Choose **Use a folder** and pick your research folder itself, not the folder it sits in. When Claude asks to change files in the folder, choose **Always allow**.
 4. **Run the setup.** In a task inside the project, say `set up my research binder`. Claude asks where the folder is, who you are and how you work, and what you are working on now; reads the folder if it can reach it; creates the three Context documents; and hands back what only you can paste: the account instructions, if your Settings, Account, "Instructions for Claude" field does not carry them yet (the account instructions in the explainer, with your voice filled in), and the short project instructions, printed below, for the Instructions panel at the side of the project page, not the description.
 
 ### Without the plugin
 
 1. Paste the account instructions, the explainer's account instructions with one of its voices substituted, into Settings, Account, "Instructions for Claude".
-2. Create the project and connect the folder, as in step 3 above.
+2. Create the project with its folder, as in step 3 above.
 3. In a task inside the project, ask Claude to create `rules.md` from the working rules below with your folder path filled in, `map.md` from the description below with every bracket filled, and `inbox.md` as a heading and nothing else. The app has no way to create a Context document by hand, and a task can.
 4. Paste the project instructions below into the Instructions panel at the side of the project page, not into the description.
 

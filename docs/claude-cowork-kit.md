@@ -43,9 +43,9 @@ You could do this other ways, and each one costs something.
 | An AI plugin in Obsidian or Logseq | yes | no | yes | no |
 | Claude Code | yes | no | yes | yes |
 | An always-on assistant that watches your screen | it builds its own store | yes | no | no |
-| **Cowork with this kit** | yes, while the desktop app is open | yes, from a description of the folder | yes | no |
+| **Cowork with this kit** | yes, while the desktop app is open | yes: the folder itself while Claude is open on your Mac, a description of it when it is not | yes | no |
 
-The phone column of the last row is the whole trick: from the phone, Claude works from a small description of your notes kept in the project's Context, not from the notes themselves, which stay on your computer. That split, what goes in the folder and what goes in the description, is the one idea the kit is built around, and How it works, below, is about it.
+The phone column of the last row is the whole trick. Leave Claude open on your Mac and your iPhone or iPad can work in the folder itself; close it, and Claude still answers from a small description of your notes kept in the project's Context, while the notes stay on your computer. That split, what goes in the folder and what goes in the description, is the one idea the kit is built around, and How it works, below, is about it.
 
 **A notes app on its own,** Obsidian or Logseq with or without an AI plugin, gives you the same folder of files. What it does not give you is a Claude that can read the whole folder, write into it to your conventions, and answer from a description of it on your phone when the computer is closed. The plugins are desk-bound and each knows one app. This kit keeps your vault exactly as it is and adds that layer beside it.
 
@@ -59,7 +59,7 @@ The phone column of the last row is the whole trick: from the phone, Claude work
 
 Three places things can live, and only two of them last. Then one fact about memory that decides what goes where.
 
-**The folder on your computer is where the work lives.** Every file, unbounded in size, searchable, yours. Claude can reach it only while your computer is awake and the desktop app is running: from your desk, or from your phone if the computer happens to be open at home. Close the laptop and the folder is out of reach from everywhere.
+**The folder on your computer is where the work lives.** Every file, unbounded in size, searchable, yours. Claude can reach it only while your computer is awake and the desktop app is running: from your desk, or from Claude on your iPhone or iPad, which the app calls Remote Control. Leave the Mac awake with Claude open and your phone can start a task that reads and writes the folder. Close the laptop and the folder is out of reach from everywhere.
 
 **Context is what Claude carries with it.** A small set of Context documents attached to each project, reachable from your phone at 11pm, and still there when the laptop is shut. Small is the point: it holds a description of your files, not a copy of them.
 
@@ -123,7 +123,7 @@ Most surprises come from the three places above behaving as described. Each row 
 |---|---|---|
 | Something Claude made during a task is gone after you closed it. | The session is a workbench that is cleared when the task ends. | Before closing, have it saved to the folder or a Context document. The account instructions tell Claude to say when something will not survive. |
 | At your desk, Claude does not remember last time. | A session that reads your folder does not use memory. | Keep the description true; it is what Claude works from there. The research binder's description check finds what no longer matches. |
-| From your phone, Claude cannot open your notes. | The folder is reachable only while the computer is awake and the desktop app is running. | Capture to the inbox from the phone and file at the desk. |
+| From your phone, Claude cannot open your notes. | The phone reaches the folder only while the Mac is awake with Claude open on it. | Leave Claude open on the Mac, or capture to the inbox from the phone and file at the desk. |
 | A file shows in the folder, with its size, and Claude cannot open it. | iCloud moved it off the Mac to save space. | Turn Optimize Mac Storage off; see [What the connected folder does and does not protect](#what-the-connected-folder-does-and-does-not-protect). |
 | A skill that worked in one task does nothing in the next. | A plugin dragged into a task's composer is attached to that task only. | Install it under Customize, Plugins, and turn it on. |
 | Something is filed in the wrong binder. | Binders cannot see each other, so nothing moves it back. | Move it yourself. Each binder's instructions tell Claude to name the right binder and stop. |
@@ -136,7 +136,7 @@ Most surprises come from the three places above behaving as described. Each row 
 
 ## What the connected folder does and does not protect
 
-Everything Claude can reach in a connected folder it may read, and everything it reads goes to Claude on Anthropic's servers, whether the session is a cloud one or a local one. Connect the folder the binder is about and only that folder: not Documents, not your home folder, not the parent it sits in.
+Everything Claude can reach in a connected folder it may read, and everything it reads goes to Claude on Anthropic's servers, whether the session is a cloud one or a local one. Connect the folder the binder is about and only that folder: not Documents, not your home folder, not the parent it sits in. If you keep your binders together in one folder, each project gets its own binder's folder inside it, never the shared one. While Claude is open on your Mac, tasks started from your phone or claude.ai can read and edit the folder too; the app says that what they read or run is sent to Anthropic, the same as at the desk, and that this can be turned off in Settings.
 
 Two of the binders, money and medical, carry data you'd mind leaking, and it's worth being exact. **The sensitive material stays in the folder on your computer, and Context documents hold only what you'd be relaxed about syncing.** That keeps your statements and records out of Context, out of every other binder, and off your phone. It does not keep them off Anthropic's servers: when Claude reads a statement to answer you, that statement goes to Claude on Anthropic's servers. Anthropic's own safety guidance says to avoid giving Claude local access to financial documents at all. Plenty of people are fine with a session reading a bank statement or a lab result and would never let it near a password; others draw the line further back. Where you draw it is yours to decide, and those two binders assume you've decided to let Claude read the records. One floor for everyone: credentials, logins, and card numbers never go in a connected folder or a pasted message. And keep both of those projects in the mode that asks before acting.
 
@@ -159,7 +159,7 @@ Cowork can pause for your approval before it acts on the world, sending, sharing
 The README's First run is the setup with a plugin: one install and two pastes the first time, and one paste for each binder after. A task can create Context documents and read your folder, but it cannot write Settings, create a project, connect a folder, or install a plugin, so those steps are yours either way. Everything else a setup skill does can be done by hand from the printed blocks, in this order:
 
 1. **Settings, Account, "Instructions for Claude".** Paste the account instructions printed below, with your chosen voice substituted in. The app's own label on this field says it reaches chats and Cowork alike; it is not the Cowork entry in the Settings sidebar.
-2. **Create the project and connect the folder,** as the README's First run describes. The one-line description under the project's title is only a label, and a sentence is enough.
+2. **Create the project with its folder,** as the README's First run describes: Projects, New project, a name, a sentence under What are you trying to achieve?, then Use a folder.
 3. **Ask Claude to create the Context documents** the binder's document names, from the texts printed there. Creating them in a task keeps each one's name and text exactly as printed.
 4. **Paste the project instructions** from the binder's document into the Instructions panel at the side of the project page, not into the description.
 

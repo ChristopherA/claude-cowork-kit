@@ -4,11 +4,11 @@ Plugins for people who use Claude in the desktop and mobile apps rather than in 
 
 ## Who it is for
 
-You use Claude Cowork: the desktop app with a folder connected, and the phone app for everything that does not need the folder. You are not a programmer and do not want to become one to keep notes with Claude.
+You use Claude Cowork: the desktop app with a folder connected, and the iPhone or iPad app for capture and questions anywhere, and for work in the folder itself while Claude stays open on your Mac. You are not a programmer and do not want to become one to keep notes with Claude.
 
 You need a Claude plan that includes Cowork and the Claude desktop app on the computer where your files live. Cowork tasks draw on the plan's usage allowance much faster than chat does, so a plan that feels roomy for conversation can feel tight for work on files.
 
-Why Cowork rather than plain chat, a notes app, or a developer tool is argued in [the explainer](docs/claude-cowork-kit.md#why-cowork). The short version: Claude reads your whole folder at your desk, answers from a small description of it on your phone, and your material stays plain files you own.
+Why Cowork rather than plain chat, a notes app, or a developer tool is argued in [the explainer](docs/claude-cowork-kit.md#why-cowork). The short version: Claude reads your whole folder at your desk or from your phone while Claude is open on the Mac, answers from a small description of it when it is not, and your material stays plain files you own.
 
 ## Words you will see
 
@@ -115,9 +115,9 @@ Pick the binder you want first. Each one is its own plugin, set up with one phra
 
 Before you connect a folder, read what the connected folder does and does not protect: `PRIVACY.md` here, and the explainer's section [What the connected folder does and does not protect](docs/claude-cowork-kit.md#what-the-connected-folder-does-and-does-not-protect). Everything Claude can reach in a connected folder it may read, and a file in that folder can carry instructions Claude will follow. The money and medical binders hold what you would mind leaking; their setups say what the folder does and does not protect before anything else.
 
-1. **Back up the binder's folder** with whatever you already use. Do it before the first task that is allowed to write, not after. If the folder is in iCloud Drive, read the explainer's iCloud paragraph first: one setting needs changing.
+1. **Make the binder's folder and back it up.** Keep your binders together: one folder, such as `Claude Cowork Binders` in your home folder, with a folder inside it for each binder. Each project gets only its own binder's folder, never the one they share, so the medical binder cannot read your money files. Back it up with whatever you already use, before the first task that is allowed to write. If the folder is in iCloud Drive, read the explainer's iCloud paragraph first: one setting needs changing.
 2. **Install the binder's plugin** by either path above, and turn it on.
-3. **Create the project and connect the folder.** Make an ordinary project in the app and name it, then connect the binder's folder to it from the project's page. Do not create the project *from* the folder: a project created that way lives on that computer and does not sync, which silently breaks the phone half of this.
+3. **Create the project with its folder.** In Claude, open **Projects**, then **New project**. Name it under What are you working on?, and say in a sentence what the binder is for under What are you trying to achieve?. Choose **Use a folder** and pick the binder's own folder. Claude then asks to change files in it: choose **Always allow** for research, learning and your week, and **Allow** for money and medical, so those two ask each time. The folder stays on this computer: Claude reaches it from your desk, or from your iPhone or iPad while Claude is open on the Mac and the Mac is awake. The project and its Context documents are in your account; that a project created with a folder shows on your phone is one of the things the kit is still confirming.
 4. **Run the setup.** In a task inside that project, say the binder's phrase from the table. Claude asks a few questions, creates the binder's Context documents, and hands back what only you can paste: the account instructions, if your Settings, Account, "Instructions for Claude" field does not carry them yet, and the project instructions for the Instructions panel at the side of the project page. It then tells you what exists and what is waiting for you.
 5. **Install the core plugin** (`cowork-kit`, shown as **Cowork Kit core**) when you want its routines; they work in every binder. Its own setup, `set up the kit`, is for a reader who wants the account instructions before choosing a binder.
 
