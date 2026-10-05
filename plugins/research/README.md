@@ -12,6 +12,7 @@ Version 0.1.0-rc.8 of the Claude Cowork Kit; every plugin in a release carries t
 - `research-inbox-drain`: Processes the capture inbox one item at a time into notes in the research folder, to map.md conventions. Use for "process the inbox", "drain the inbox", "file my captures".
 - `research-setup`: Sets up the research binder: three questions, two conventions, then rules.md, map.md and inbox.md in Context and text to paste. Use for "set up my research binder", "notes setup", "set up my notes".
 - `research-source-note`: Writes one source note from a book, paper, article or transcript the reader hands over, the source's claims kept apart from the reader's own. Use for "source note", "save this article to my notes".
+- `research-topic-note`: Writes or updates one living topic note, what the reader currently thinks first, then the sources behind it. Use for "topic note", "update my note on", "what do I think about".
 
 ## Install
 

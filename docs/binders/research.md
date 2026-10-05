@@ -17,11 +17,12 @@ It is not a second brain that thinks for you, and it is not a search engine over
 
 ## The skills
 
-Four skills, each triggered by a phrase; everything they do you could ask for in a sentence, more slowly.
+Five skills, each triggered by a phrase; everything they do you could ask for in a sentence, more slowly.
 
 - **`research-setup`**, `set up my research binder`. Three questions and two conventions, then the three Context documents and the short instructions to paste. Run it once, in a task inside the project; if the binder is already set up it says so and offers the description check instead.
 - **`research-inbox-drain`**, `process the inbox`. At your desk, with the folder connected: the captures one at a time, each placed, shown, and written into the folder only after a yes. Reach for it when the inbox has a handful of items, not when it has fifty; a short drain is the habit that keeps the second job away.
 - **`research-source-note`**, `source note` or `save this article to my notes`. One note from a book, paper, article or transcript you hand over, the source's claims kept apart from your own, the citation recorded in the form `map.md` gives. It reads a public page you point it at; anything behind a login or a paywall you save or paste.
+- **`research-topic-note`**, `update my note on` a topic. One living note per topic: what you currently think, first, then the sources that support or challenge it. New material goes into the note that holds the topic; a source cited here is offered a fuller note.
 - **`research-description-check`**, `check the description`. Compares `map.md` against the folder and reports every claim that is no longer true, proposing edits without making them. Run it at the two-week sitting and whenever an answer from the phone comes back wrong.
 
 ## Setup

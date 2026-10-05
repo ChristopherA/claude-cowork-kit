@@ -37,6 +37,7 @@ Notes and reading: capture from anywhere, file at your desk, answer from what yo
 - `research-setup`: sets up the binder in three questions and two conventions. "Set up my research binder."
 - `research-inbox-drain`: files your captures one at a time into your notes. "Process the inbox."
 - `research-source-note`: turns an article, paper or transcript you hand over into one note. "Save this article to my notes."
+- `research-topic-note`: keeps one note per topic, what you think now and the sources behind it. "Update my note on cooperation."
 - `research-description-check`: finds what the binder's description says that your folder no longer bears out. "Check the description."
 
 ### Learning, `learn`
