@@ -66,7 +66,7 @@ Judge by what Claude does, not by what it says about itself. Asked where it runs
 Run each in a new project created with its own test folder. Pass for every one: the questions come through the question control; it creates exactly the Context documents its binder document names; it hands back the account instructions only if the field does not carry them yet, and the project instructions with the folder filled in; it ends by saying what now exists and what waits for you.
 
 - [ ] **Core.** `set up the kit`. Also pass: it names the binder plugin to install next with its setup phrase.
-- [ ] **Research,** on the fixture folder. `set up my research binder`. Compare what it creates with `tests/fixture/context-documents/`.
+- [ ] **Research,** on the fixture folder. `set up my research binder`. Compare what it creates with `tests/fixture/context-documents/`. Also pass: after the folder it asks where topic notes live and which link style, recommending `topics/` and relative links because the fixture uses both, and `map.md` is left with no template field in brackets.
 - [ ] **Learning.** `set up my learning binder`, once with an empty folder.
 - [ ] **Your week.** `set up my week binder`.
 - [ ] **Money,** with a made-up statement in the folder (a short CSV with a date, a payee and an amount per row, no real account). `set up my money binder`. Also pass: it says what the folder does and does not protect before anything else, and no figure from the statement reaches a Context document.
@@ -74,9 +74,12 @@ Run each in a new project created with its own test folder. Pass for every one: 
 
 ## The research skills, on the fixture
 
-- [ ] **Description check.** `Check the description against my folder.` Pass: it finds all three planted defects and proposes edits without making them.
+- [ ] **Description check.** `Check the description against my folder.` Pass: it finds all four planted defects, reports the Simon source as cited by nothing without calling it a fault, and proposes edits without making them.
 - [ ] **Inbox drain.** `Process the inbox.` Pass: four items, one at a time; the attention capture goes to the existing note, the bookmark line becomes a new note, the dentist line is named as another binder's, the Bush article is a source to read; nothing is written without a yes.
-- [ ] **Source note.** Paste a short article and say `Save this article to my notes.` Pass: one note in the sources folder, citation recorded, the article's claims kept apart from yours, written on a yes.
+- [ ] **Source note.** Paste a short article and say `Save this article to my notes.` Pass: it asks the filing questions through the control and recommends a level; one note in the sources folder, its citation line in the kit's form, the article's claims kept apart from yours, no "My take" placeholder, written on a yes.
+- [ ] **Source note from a public page.** Give the link to a public web article and say `Save this to my notes.` Pass: it reads the page itself, keeps the text it read as a rendition in a folder with the note, and says it ran the quote check and what it found.
+- [ ] **Source note from a PDF.** Put a PDF of a paper in the folder's `inbox/` and say `Make a source note from the PDF in my inbox.` Pass: the pdf-info script writes a rendition with page markers numbered as the paper prints them; the note, the original and the rendition land in one folder of the note's name on a yes; every quote shown has passed the quote check.
+- [ ] **Topic note.** After a source note, say `Add this to my note on what makes a collection useful.` Pass: it updates `topics/what-makes-a-collection-useful.md` rather than making a new note, asks before changing the current thinking, links the source, and offers a fuller note for a source at the citation level.
 - [ ] **Where was I.** `Where was I?` Pass: one next step with its reason, nothing filed.
 - [ ] **Scripts.** `Check the description against my folder, and tell me whether you ran the census script or worked without it.` Pass: the script runs, or the skill says code execution is off and works without it.
 

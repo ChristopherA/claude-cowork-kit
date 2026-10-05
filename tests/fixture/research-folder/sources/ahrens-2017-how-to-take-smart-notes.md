@@ -1,12 +1,16 @@
 created: 2026-09-12
-source: Ahrens, Sönke. How to Take Smart Notes. 2017. Second edition 2022.
+level: minimal
 
-A book about the note-taking method of the sociologist Niklas Luhmann, whose slip-box of some ninety thousand notes was the working material for seventy books. The author argues that writing is not what happens after thinking but the medium in which thinking happens, and that a note-taking system should be built for the writing you will do, not for storage.
+* _**How to Take Smart Notes**_ (2017). [book]. _Ahrens, Sönke._ Self-published; second edition 2022.
 
-"Notes are only as valuable as the note network they are embedded in." (p. 42)
+BRIEF
 
-"The slip-box is designed to present you with ideas you have already forgotten." (p. 61)
+A book on the slip-box method of the sociologist Niklas Luhmann, arguing that writing is the medium of thinking rather than its record.
 
-My take: the network claim is the one I keep testing. A note with no links is a note I never find again.
+SHORT ABSTRACT
 
-Related: [attention is the scarce resource](../notes/attention-is-the-scarce-resource.md)
+The book describes how Luhmann's slip-box of some ninety thousand notes served as the working material for his books. The author argues that writing is not what happens after thinking but the medium in which it happens, and that a note-taking system should be built for the writing it will feed rather than for storage.
+
+WHY SAVED
+
+The claim that a note needs links to be found again, which I keep testing.

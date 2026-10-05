@@ -321,6 +321,7 @@ def kit_references(docs_dir):
     check_residue()
     check_project_sections()
     check_skills_index()
+    check_research_scripts()
     for name, body in binders.items():
         if "[FOLDER PATH ON MY COMPUTER]" not in body:
             fail(f"kit: the {name} binder's block has no folder placeholder")
@@ -405,6 +406,50 @@ def check_skills_index():
 
 
 RESIDUE = re.compile(r"\\[0-9n]")
+
+
+def check_research_scripts():
+    """Run the research plugin's scripts on the fixture and compare with what it was built to show.
+
+    The fixture's compound source carries two quotes that must pass the quote
+    check against its rendition, and a copy with one word changed must fail;
+    the census must find the planted lead-only folder and the uncited source.
+    A script that breaks then fails the build instead of reaching a reader.
+    """
+    scripts = PLUGINS_DIR / "research" / "skills"
+    folder = ROOT / "tests" / "fixture" / "research-folder"
+    name = "example-2024-notes-that-last"
+    note = folder / "sources" / name / f"{name}.md"
+    rendition = folder / "sources" / name / "renditions" / f"{name}.md"
+    quote_check = scripts / "research-source-note" / "scripts" / "quote_check.py"
+    census = scripts / "research-description-check" / "scripts" / "census.py"
+
+    def run(args):
+        return subprocess.run([sys.executable, *map(str, args)], capture_output=True, text=True)
+
+    out = run([quote_check, "--note", note, "--rendition", rendition])
+    if out.returncode != 0:
+        fail(f"quote_check.py: the fixture's quotes do not pass (exit {out.returncode}): {out.stdout[-300:]}{out.stderr[-300:]}")
+    altered = ROOT / "dist" / "quote-check-control.md"
+    altered.parent.mkdir(exist_ok=True)
+    altered.write_text(note.read_text().replace("has no reader but its author", "has no reader except its author"))
+    out = run([quote_check, "--note", altered, "--rendition", rendition])
+    altered.unlink()
+    if out.returncode != 1:
+        fail(f"quote_check.py: a quote with one word changed was not caught (exit {out.returncode})")
+
+    out = run([census, "--folder", folder])
+    try:
+        sources = json.loads(out.stdout)["sources"]
+    except (ValueError, KeyError):
+        fail(f"census.py: no sources report from the fixture (exit {out.returncode}): {out.stderr[-300:]}")
+        return
+    want = {"lead_only": ["sources/simon-1971-designing-organizations"],
+            "uncited": ["sources/simon-1971-designing-organizations/simon-1971-designing-organizations.md"],
+            "no_lead": [], "no_rendition": [], "level_mismatch": []}
+    for key, value in want.items():
+        if sources.get(key) != value:
+            fail(f"census.py: on the fixture, sources.{key} is {sources.get(key)!r}, expected {value!r}")
 
 
 def check_residue():

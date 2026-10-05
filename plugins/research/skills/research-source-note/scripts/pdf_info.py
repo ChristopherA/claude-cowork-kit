@@ -115,7 +115,7 @@ def write_rendition(args, meta, tools):
     if args.link:
         head.append(f"link: {args.link}")
     head += [f"retrieved: {retrieved}",
-             f"original: originals/{original}",
+             f"original: ../originals/{original}",
              "", "A lossy text copy of the original, for searching and checking quotes. "
              "Cite the original, not this file.", ""]
     body, empty = [], 0

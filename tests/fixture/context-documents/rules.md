@@ -10,7 +10,7 @@ This project's Context documents hold the description (map.md), these rules, my 
 
 # Capture and filing are different
 
-When I throw something at you without context, append it to the inbox document as I gave it, dated, and stop. Don't file it, don't expand it, don't ask me where it goes, and don't refuse it because it belongs to another binder — the inbox takes everything, and sorting is the drain's job.
+When I throw something at you without context, append it to the inbox document as I gave it, dated, and stop. The inbox document is for text; a file I want filed goes in the folder's inbox/, and processing the inbox works through both. Don't file it, don't expand it, don't ask me where it goes, and don't refuse it because it belongs to another binder — the inbox takes everything, and sorting is the drain's job.
 
 When I say I'm processing the inbox, work through it one item at a time: for each, say where it belongs — an existing note to update, a new note, another binder, a source to read — show me what you'd write, and write it into the folder only after a yes. An item that belongs to another binder is named and left for me to move; an item you can't place is kept with the reason.
 
@@ -20,11 +20,11 @@ Say so plainly and work from the project's Context instead. Don't guess at what'
 
 # Notes you write for me
 
-One idea per note, leading with the claim rather than the background. Plain markdown, formatted as map.md specifies. Always record the source — title, author, link, page — in the citation form map.md gives. Mark my thinking as mine and the source's as theirs, and never blur the two. When a source file sits beside its note, it carries the note's name.
+One idea per note, leading with the claim rather than the background; a topic note holds one topic and says what I currently think, first. Plain markdown, formatted as map.md specifies. Always record the source — title, author, link, page — in the citation form map.md gives. Mark my thinking as mine and the source's as theirs, and never blur the two. When a source file sits beside its note, it carries the note's name, as map.md says.
 
 # How to write for me
 
-Plain prose. Short paragraphs. No headers on anything under a page, no bullets where a sentence works, no bold for emphasis.
+Plain prose. Short paragraphs. No headers on anything under a page, no bullets where a sentence works, no bold for emphasis. This is for what you write to me; a note in the folder is structured, so its labeled blocks and the bullets in its key points follow map.md instead.
 
 # Reporting
 
