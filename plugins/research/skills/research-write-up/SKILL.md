@@ -68,7 +68,7 @@ python3 cite.py "<source note>" ["<source note>" ...] --style apa
 python3 cite.py "<source note>" ["<source note>" ...] --style bibtex --out "<piece-name>.bib"
 ```
 
-The script runs in the task's cloud workspace, copied there from the research plugin's `research-source-note/scripts/` folder, never into the reader's folder; say in one sentence that it ran. A source whose note lacks the fields the style needs is named, and its fields are filled from the document through the source-note skill, never guessed. Link a reference only to where a stranger can reach the work, its DOI or public URL, never to the reader's folder, a rendition or an original.
+The script runs in the computer's own shell from a scratch folder outside the research folder, or in the task's cloud workspace on copies of the notes it cites, copied there from the research plugin's `research-source-note/scripts/` folder, never into the reader's folder; say in one sentence that it ran. A source whose note lacks the fields the style needs is named, and its fields are filled from the document through the source-note skill, never guessed. Link a reference only to where a stranger can reach the work, its DOI or public URL, never to the reader's folder, a rendition or an original.
 
 ## Working with co-authors
 

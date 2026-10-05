@@ -50,7 +50,7 @@ The kind in brackets is specific: web article, blog post, journal article, revie
 
 ## Topics
 
-[One line per topic note: its name, then what I currently think, in a sentence. When a topic note's thinking changes, its line here changes too. With no topic notes yet, say so.]
+[One line per topic note: its name, then what I currently think, in a sentence. When a topic note's thinking changes, its line here changes too. A topic I mean to write about but have not written yet keeps a line too, with the sources waiting for it: "topic — not written yet; sources waiting: links". With no topic notes yet, say so.]
 
 ## Open threads
 

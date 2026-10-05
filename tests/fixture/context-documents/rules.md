@@ -20,7 +20,7 @@ Say so plainly and work from the project's Context instead. Don't guess at what'
 
 # Notes you write for me
 
-A topic note holds one topic and leads with what I currently think; new material on a topic goes into its note, not a new one. Plain markdown, formatted as map.md specifies. Always record the source — title, author, link, page — in the citation form map.md gives. Mark my thinking as mine and the source's as theirs, and never blur the two. When a source file sits beside its note, it carries the note's name, as map.md says.
+A topic note holds one topic and leads with what I currently think; new material on a topic goes into its note, not a new one. Plain markdown, formatted as map.md specifies. Always record the source — title, author, link, page — in the citation form map.md gives. Mark my thinking as mine and the source's as theirs, and never blur the two. A source's original lives in its note's originals/ folder under the note's name, as map.md says.
 
 # How to write for me
 

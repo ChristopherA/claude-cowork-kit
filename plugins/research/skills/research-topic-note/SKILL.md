@@ -42,7 +42,7 @@ Link to a source note the way `map.md` says: with relative links, `../sources/<n
 
 ## The reader's thinking is theirs
 
-Write the current thinking only from what the reader has said: this conversation, their answers to the source note's filing questions, and the note as it stands. Never write it from what the sources say, and never from anything known about the reader from elsewhere. When new material arrives, say plainly what it supports or challenges in the current thinking, and ask whether and how the thinking changes; offer a revised wording only from what they answer, marked as your draft of their words for them to correct. If they do not say, the current thinking stays as it was and the source is listed with what it bears on.
+Write the current thinking only from what the reader has said: this conversation, their answers to the source note's filing questions, the note as it stands, and their own writing when they hand it over and ask for it to be used, a draft or a published work of theirs. A current thinking drafted from their writing ends with "(Drafted by Claude from my <writing>; correct it.)" until the reader edits it, and the description check lists the ones still marked. When their writing says nothing about a topic, ask; do not infer. Never write it from what the sources say, and never from anything known about the reader from elsewhere. When new material arrives, say plainly what it supports or challenges in the current thinking, and ask whether and how the thinking changes; offer a revised wording only from what they answer, marked as your draft of their words for them to correct. If they do not say, the current thinking stays as it was and the source is listed with what it bears on.
 
 ## Sources move up a level
 
@@ -50,7 +50,7 @@ Citing a source from a topic note is what earns it a fuller note. When the note 
 
 ## Show, then write
 
-Show the whole note, or for an update the note as it would read after the change with the change named, and wait for a yes. On a yes, write it, read it back to confirm it landed as shown, and confirm the file name and folder in one line. Then, if the current thinking is new or changed, offer the matching line in `map.md`'s Topics section, the note's name and its current thinking in a sentence, and change `map.md` only on a yes; that line is what answers from the phone, where the folder cannot be read. End with one word for completeness: full, or partial with what is missing (a source cited without a source note, a challenge not yet answered in the current thinking).
+Show the whole note, or for an update the note as it would read after the change with the change named, and wait for a yes. On a yes, write it, read it back to confirm it landed as shown, and confirm the file name and folder in one line. When `map.md`'s Topics section holds this topic's line as not written yet, with sources waiting, take those sources into SOURCES, each with what it bears on as the reader says, and replace the waiting line. Then, if the current thinking is new or changed, offer the matching line in `map.md`'s Topics section, the note's name and its current thinking in a sentence, and change `map.md` only on a yes; that line is what answers from the phone, where the folder cannot be read. End with one word for completeness: full, or partial with what is missing (a source cited without a source note, a challenge not yet answered in the current thinking).
 
 ## What not to do
 
