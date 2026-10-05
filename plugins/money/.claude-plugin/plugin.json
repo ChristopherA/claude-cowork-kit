@@ -1,6 +1,6 @@
 {
   "name": "money",
-  "version": "0.1.0-rc.7",
+  "version": "0.1.0-rc.8",
   "description": "Your money binder: summarize a statement and close each month against your categories, with account details kept out of everything that syncs. Part of the Claude Cowork Kit (CWK).",
   "author": {
     "name": "Christopher Allen"

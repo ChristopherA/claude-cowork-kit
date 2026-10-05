@@ -2,6 +2,16 @@
 
 Every release is listed here, newest first, with what changed since the one before. The version is the kit's, in `VERSION`; every plugin in a release carries it.
 
+## 0.1.0-rc.8 (2026-10-04)
+
+Every plugin is named with CWK, short for Claude Cowork Kit, so the six can be found together: search CWK in the app's Discover list. They are CWK Core and CWK Research, Learning, Week, Money and Health Binder, and each description now opens with what that binder does. The medical binder is now the health binder: the plugin is `health`, its skills are `health-setup`, `health-visit-prep`, `health-record-visit`, `health-check-in` and `health-treatment-questions`, and its setup phrase is `set up my health binder`. An installed `medical` plugin does not update into `health`; remove it and add CWK Health Binder.
+
+The setup steps match the app as it now is. A project is created with its folder in one dialog: Projects, New project, a name, a sentence under What are you trying to achieve? (every binder document gives one to paste), then Use a folder. The box on the project page starts on Chat and a setup runs only with Cowork switched on. A Context document can be made by hand as well as by a task. Adding the marketplace only lists the plugins; each is installed once it shows under Yours.
+
+Binders start in one folder on the Mac, outside Documents and Desktop; moving one into iCloud Drive, for the Files app on the phone, is an advanced option with Keep Downloaded set on its folder. On the phone, a conversation started there works from the Context documents only; a Cowork task started on the Mac and continued from the phone, found under Recents, reaches the folder while the Mac is awake with Claude open.
+
+The README is the front door for someone new to Claude: every skill in a line, and a first run that works for whichever binder you start with. The explainer is the reference, with a new section for when something surprises you, and the core setup recommends the binder you asked for. `tests/in-app/developer-checklist.md` lists what to test in the app before a release.
+
 ## 0.1.0-rc.7 (2026-09-23)
 
 The iCloud Drive guidance is corrected: Optimize Mac Storage goes off, not on, since on is what lets iCloud move files off the Mac, and off is the best iCloud allows rather than a guarantee, so Time Machine stays on.

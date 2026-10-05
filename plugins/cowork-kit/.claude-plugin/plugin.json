@@ -1,6 +1,6 @@
 {
   "name": "cowork-kit",
-  "version": "0.1.0-rc.7",
+  "version": "0.1.0-rc.8",
   "description": "CWK Core, the Claude Cowork Kit's routines for any binder: a setup interview that hands back the account instructions and names the binder to install next, plus deciding, interviewing, explaining again, questions for others, a meeting pack, a transcript, confidence, premortem, postmortem, where was I, wrap-up, and a new binder.",
   "author": {
     "name": "Christopher Allen"
