@@ -38,7 +38,7 @@ The kit's principle is that structure lives in plain files the reader can read, 
 
 **Backlinks and orphans.** `rg` over the folder for links to a note (relative markdown links in the kit's default format, `[[wikilinks]]` in an Obsidian vault) answers "what points here" in one command, and the inverse, notes nothing links to, is a set difference over the same output. This is the feature the LLM-wiki plugin builds a SQLite graph for; over a folder of a few thousand notes ripgrep does it in well under a second with no stored index.
 
-**Untouched notes.** The kit's Maintenance section promises "surface notes untouched in six months". A `find` over the mount by modification time, or a `stat` pass, gives the list. Two caveats to probe: whether the VirtioFS mount preserves the host's modification times, and whether a sync service's own touches (iCloud, Dropbox) make every file look fresh. The kit's `created` date inside the note is the fallback the script can read with `rg`.
+**Untouched notes.** The kit's Maintenance section promises "surface notes untouched in six months". A `find` over the mount by modification time, or a `stat` pass, gives the list. Probe 2 found that the mount flattens modification times, and a sync service's own touches (iCloud, Dropbox) can make every file look fresh anyway, so the `created` date inside the note, which the script reads with `rg`, is what it relies on.
 
 **Description versus folder.** The "it will drift" check is a comparison of two lists: the folders and conventions map.md claims, against a `find`-and-`rg` census of what is actually there (folder names, files per folder, the metadata line present or missing at the top of each note, wrapped versus unwrapped paragraphs). A script produces the census as JSON; Claude reads both and reports the differences. Deterministic and cheap, where a purely conversational check reads a sample and guesses.
 
@@ -50,7 +50,7 @@ The kit's principle is that structure lives in plain files the reader can read, 
 
 **Frontmatter and dates.** The kit's notes carry a `created` line and optionally `source`. A script that reads those lines across the folder with `rg` and emits JSON gives Claude a table to answer "what did I read in March" or "which sources have no note yet" without opening every file.
 
-**Learning project.** The progress record is markdown by design, so `jq` does not apply to it directly; a script can still parse its three states (settled, shaky, untested) into JSON for a "what should we drill" answer, and can sample a question bank deterministically so grill-me does not always start at the top. Both are marginal; the learning skills are mostly instructions.
+**Learning project.** The progress record is markdown by design, so `jq` does not apply to it directly; a script can still parse its three states (settled, shaky, untested) into JSON for a "what should we drill" answer, and can sample a question bank deterministically so `learn-quiz` does not always start at the top. Both are marginal; the learning skills are mostly instructions.
 
 **What scripts do not help with.** Filing, writing, deciding what a note is about, and everything in the Context documents that is about judgment. The money binder's arithmetic is the one place a script is not optional: a total computed by Python from a CSV is checkable in a way a total produced in prose is not, and the kit's accuracy clause ("show the arithmetic") is easier to honour with the calculation in a script's output.
 

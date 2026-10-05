@@ -1,6 +1,6 @@
 # What leaves your computer, and what does not
 
-The kit has two projects that read things you would mind leaking, a bank statement and a medical record, so this is said once, plainly, outside the explainer.
+The kit has two binders that read things you would mind leaking, a bank statement and a medical record, so this is said once, plainly, outside the explainer.
 
 **The folder stays on your computer.** Claude reaches a connected folder only while the desktop app is open on that computer and the computer is awake. Nothing in the folder syncs anywhere because of the kit, and nothing the kit sets up copies a note, a statement or a record into the project.
 
@@ -16,6 +16,6 @@ The kit has two projects that read things you would mind leaking, a bank stateme
 
 **Never in a connected folder or a pasted message:** credentials, logins, card numbers. And connect only folders whose contents you wrote or trust, because a file in a connected folder can carry instructions Claude will follow without being asked.
 
-**The kit itself collects nothing.** It is text. Nothing in it phones home, and the scripts in the research plugin read your folder and write nothing.
+**The kit itself collects nothing.** It is text. Nothing in it phones home. A few research skills come with small helper programs Claude can run to read your folder faster; they read and write nothing else.
 
 The details, with what the kit has and has not yet confirmed in the running app, are in the explainer, `docs/claude-cowork-kit.md`, under Using your binders from your iPhone or iPad and What the connected folder does and does not protect, and in the money and medical documents under `docs/binders/`.

@@ -1,8 +1,8 @@
 # The kit's skills
 
-Every skill in every plugin: what it does, in the skill's own words, when to reach for it, and what it hands back. A skill is one routine inside a plugin, picked up when you ask for its job in a phrase; the phrases are at the end of each description. Everything a skill does you could ask for in a sentence, more slowly. Every skill asks its questions through the app's question control, never writes into your folder or a Context document without a yes, and ends with one word for how complete the work was: full, partial or minimal, with what is missing.
+Every skill in every plugin: what it does, in the skill's own words, when to reach for it, and what it hands back. A skill is one routine inside a plugin, picked up when you ask for its job in a phrase; the phrases are at the end of each description. Everything a skill does you could ask for in a sentence, more slowly. Every skill asks its questions through the app's question control, never changes your folder without a yes, and ends with one word for how complete the work was: full, partial or minimal, with what is missing.
 
-The descriptions below are the ones the skills carry, and the build checks that they match; the plugin READMEs carry the same descriptions. The reasoning behind each binder is in its document under `binders/`, and the kit's case is in [the explainer](claude-cowork-kit.md).
+The descriptions below are the ones the skills carry, word for word, and each plugin's README carries the same. The reasoning behind each binder is in its document under `binders/`, and the kit's case is in [the explainer](claude-cowork-kit.md).
 
 ## Cowork Kit core, `cowork-kit`
 
@@ -114,7 +114,7 @@ Writes where this session leaves off, done, open, the next step and what to watc
 
 ## Research, `research`
 
-The research binder's four skills. All but the setup read `rules.md` and `map.md` first and write into the folder only after a yes; the three that read the folder run at the desk.
+The research binder's four skills. All but the setup read `rules.md` and `map.md` first and write into the folder only after a yes; the three that read the folder need it reachable: at your desk, or from your phone while Claude is open on the Mac.
 
 ### `research-description-check`
 
@@ -138,7 +138,7 @@ Sets up the research binder: three questions, then rules.md, map.md and inbox.md
 
 **When to reach for it.** Once, in a task inside the new project for the research binder, after the folder is connected.
 
-**What it hands back.** The three Context documents created, `rules.md`, `map.md` and `inbox.md`, and the two things only you can paste: the account instructions if your Settings field is empty, and the short project instructions for the Instructions panel. It then names the day-one checks, the phone check among them.
+**What it hands back.** The three Context documents created, `rules.md`, `map.md` and `inbox.md`, and the two things only you can paste: the account instructions if your Settings field does not carry them yet, and the short project instructions for the Instructions panel. It then names the day-one checks, the phone check among them.
 
 ### `research-source-note`
 
@@ -150,7 +150,7 @@ Writes one source note from a book, paper, article or transcript the reader hand
 
 ## Learning, `learn`
 
-The learning binder's three skills. The lesson and the quiz run from the Context documents, so they work from the phone with the computer closed; only the setup looks at the materials folder.
+The learning binder's three skills. The lesson and the quiz run from the Context documents, so they need no folder and should work from the phone with the computer closed, which the kit is still confirming; only the setup looks at the materials folder.
 
 ### `learn-lesson`
 
@@ -174,7 +174,7 @@ Sets up the learning binder: an interview, then mission.md, curriculum.md and pr
 
 **When to reach for it.** Once, in a task inside the new project for the learning binder.
 
-**What it hands back.** An interview of six questions, the curriculum drafted whole for your yes, then `mission.md`, `curriculum.md` and `progress.md` created, and the two things only you can paste: the account instructions if your Settings field is empty, and the project instructions with the subject and folder filled in.
+**What it hands back.** An interview of six questions, the curriculum drafted whole for your yes, then `mission.md`, `curriculum.md` and `progress.md` created, and the two things only you can paste: the account instructions if your Settings field does not carry them yet, and the project instructions with the subject and folder filled in.
 
 ## Your week, `week`
 
@@ -218,7 +218,7 @@ Sets up the week binder: three questions, then priorities.md as a Context docume
 
 **When to reach for it.** Once, in a task inside the new project for the week binder.
 
-**What it hands back.** `priorities.md` created from your answers, and the two things only you can paste: the account instructions if your Settings field is empty, and the project instructions with the folder filled in.
+**What it hands back.** `priorities.md` created from your answers, and the two things only you can paste: the account instructions if your Settings field does not carry them yet, and the project instructions with the folder filled in.
 
 ### `week-triage`
 
@@ -246,7 +246,7 @@ Sets up the money binder: the privacy floor, three questions, then categories.md
 
 **When to reach for it.** Once, in a task inside the new project for the money binder. It opens by saying what the folder does and does not protect and asks whether to go on.
 
-**What it hands back.** `categories.md` and `targets.md` created from your answers with no account details or figures from a statement in either, and the two things only you can paste: the account instructions if your Settings field is empty, and the project instructions with the folder filled in.
+**What it hands back.** `categories.md` and `targets.md` created from your answers with no account details or figures from a statement in either, and the two things only you can paste: the account instructions if your Settings field does not carry them yet, and the project instructions with the folder filled in.
 
 ### `money-statement`
 
@@ -282,7 +282,7 @@ Sets up the medical binder: the privacy floor, three questions, questions.md and
 
 **When to reach for it.** Once, in a task inside the new project for the medical binder. It opens by saying what the folder does and does not protect.
 
-**What it hands back.** `questions.md` and `timeline.md` created with nothing clinical in them, the folder's standing files offered as headed empty files if it has none, and the two things only you can paste: the account instructions if your Settings field is empty, and the project instructions with the folder filled in.
+**What it hands back.** `questions.md` and `timeline.md` created with nothing clinical in them, the folder's standing files offered as headed empty files if it has none, and the two things only you can paste: the account instructions if your Settings field does not carry them yet, and the project instructions with the folder filled in.
 
 ### `medical-treatment-questions`
 

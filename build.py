@@ -165,7 +165,7 @@ PLUGINS = {
             "Each skill expects the research binder the Claude Cowork Kit describes: a research folder "
             "connected in the desktop app, a Context document `rules.md` with the working rules, a "
             "Context document `map.md` describing the folder, and a Context document `inbox.md` for captures. "
-            "The three skills with scripts read the folder only; they never write to it without "
+            "The scripts in three of its skills only read the folder; the skills write to it only on "
             "the reader's yes, and each says in its body what to do when code execution is off."
         ),
     },

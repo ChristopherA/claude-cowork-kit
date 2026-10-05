@@ -27,7 +27,7 @@ For money-like and medical-like binders, anything the reader would mind leaking,
 
 Draft the Instructions text in the kit's shape from the answers: what the binder is for, what belongs elsewhere, where things live, how to answer, what you are not, then the two standing lines (show and wait before changing anything in the folder; read the Context documents first). Show it whole, in one code block. Then a one-line description for the field under the project's title, and the list of Context documents to create with one sentence each on what they hold.
 
-Say the hand steps the app needs: create the project, connect the folder, paste the Instructions text into the Instructions panel at the side of the project page (not the description), and ask Claude in a task to create the Context documents.
+Say the hand steps the app needs: create the project with Use a folder on the binder's own folder, paste the Instructions text into the Instructions panel at the side of the project page (not the description), and ask Claude in a task to create the Context documents.
 
 ## A plugin is optional, and it is not for everyone
 
