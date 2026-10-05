@@ -114,7 +114,7 @@ Writes where this session leaves off, done, open, the next step and what to watc
 
 ## CWK Research Binder, `research`
 
-The research binder's five skills. All but the setup read `rules.md` and `map.md` first and write into the folder only after a yes; the four that read the folder run in a Cowork task at your desk.
+The research binder's six skills. All but the setup read `rules.md` and `map.md` first and write into the folder only after a yes; the five that read the folder run in a Cowork task at your desk.
 
 ### `research-description-check`
 
@@ -155,6 +155,14 @@ Writes or updates one living topic note, what the reader currently thinks first,
 **When to reach for it.** After a source note, when you named the topic it bears on; when something you read changes your mind; or when you want to see what you think about a topic in one place.
 
 **What it hands back.** One topic note, updated rather than duplicated: what you currently think, first, in your words, then each source linked with what it supports or challenges. It writes your thinking only from what you say, and offers to give a source cited from here a fuller note.
+
+### `research-write-up`
+
+Drafts prose for other readers from the reader's topic notes, citing the sources those notes cite. Use for "write this up", "draft a post from my notes", "turn my topic note into an article".
+
+**When to reach for it.** A topic note says what you think, and you want to say it to someone else: a post, an essay, a memo.
+
+**What it hands back.** A draft in your voice, argued from your topic notes and cited from the sources they cite, with a reference list that links only to where a stranger can reach each work. It names any gap rather than filling it, keeps your open questions open, and is written into your folder or a Context document on a yes.
 
 ## CWK Learning Binder, `learn`
 
