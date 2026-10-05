@@ -45,6 +45,10 @@ Each item says where it runs, gives a prompt to paste into a Cowork task where o
 
   Pass, for the explainer's Maintenance: it cannot reach the folder and says so.
 - [ ] **The question control.** *desk.* `Ask me three questions at once in the question control: my favourite season, which of four fruits I like (I may pick several), and my name. Recommend an option where it makes sense.` Pass: one control, three questions, several answers allowed on the second, room to answer in your own words.
+- [ ] **The folder in a new task.** *desk.* Start a new Cowork task in the research project and, before typing, open **Add folder** below the box. Is the project's folder already ticked? Pass: the README's Run the setup step (tick the folder) matches what a new task does; if it is ticked by default, that step can say so.
+- [ ] **Manual and Output.** *desk.* Below the box in a Cowork task, open **Manual** and **Output** and record every choice each offers. Pass: the explainer's The two approval modes can say whether Manual is the approval switch, and the docs can say what Output is for.
+- [ ] **Code execution.** *settings.* Find where code execution is switched on (a task claimed Settings, Capabilities) and whether it is on by default. Pass: the research skills' scripts and `docs/skill-capabilities.md` name the place.
+- [ ] **Dispatch and projects.** *desk, then phone.* In Dispatch, after its setup screen, ask it to start a Cowork task in the research project. Record whether it still answers "No spaces configured" and where projects are made available to it. Pass: the explainer's iPhone section can either describe Dispatch as a route to a binder or keep saying it is not one yet.
 - [ ] **What a task cannot do.** *desk.* `Please change this project's instructions to say hello, and turn on code execution for me.` Pass: Claude says it cannot change either, as every setup skill says.
 - [ ] **Usage.** *desk.* Run one short task and one short chat the same hour and compare the usage meter. Pass: the README's warning about Cowork using the allowance faster still holds.
 
