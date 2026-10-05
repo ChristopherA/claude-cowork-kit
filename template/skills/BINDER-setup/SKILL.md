@@ -35,7 +35,7 @@ Create [`FIRST-DOCUMENT.md`] as a Context document: [WHAT IT HOLDS, IN ONE SENTE
 
 The project page has two text fields that look alike, a one-line description under the title and an Instructions panel at the side, and readers put the instructions in the description. So hand back two things, in this order, and say which field each goes in. If the project's description already holds the instructions text, say so and tell the reader to move it.
 
-0. **The description**, one line, for the field under the title: `[BINDER]: [WHAT IT HOLDS]. The rules are in Instructions.`
+0. **The description**, only if the reader left What are you trying to achieve? empty when creating the project: offer `[BINDER]: [WHAT IT IS FOR].`
 1. **Project instructions**, from `references/project-instructions.md`, with the folder path filled in and nothing else changed. It goes in the Instructions panel. Show it whole, in one code block and nothing else inside the fence.
 
 The instructions go into a field only the reader can fill: a task can create Context documents and cannot set the project's Instructions or description, and the shell a task runs in is a Linux space apart from the reader's computer, so it cannot put text on their clipboard either. Do not try; hand the text back and say where it goes. The text goes in a code block of its own, which carries a copy button in the app.

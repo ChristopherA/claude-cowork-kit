@@ -49,7 +49,7 @@ Before the project instructions, read the reader's Account instructions if you c
 
 The project page has two text fields that look alike, a one-line description under the title and an Instructions panel at the side, and readers put the instructions in the description. So hand back two things, in this order, and say which field each goes in. If the project's description already holds the instructions text, say so and tell the reader to move it.
 
-0. **The description**, one line, for the field under the project's title. Offer this: `Medical records: visits, results, and questions for appointments. The rules are in Instructions; the records are in [folder name] and stay there.` with the folder name filled in.
+0. **The description**, only if the reader left What are you trying to achieve? empty when creating the project: offer `My medical records: visits, results, medications and the questions for my next appointment, kept so I can compare them across visits.`, the same text the binder's document gives.
 
 The instructions go into a field only the reader can fill: a task can create Context documents and cannot set the project's Instructions or description, and the shell a task runs in is a Linux space apart from the reader's computer, so it cannot put text on their clipboard either. Do not try; hand the text back and say where it goes. The text goes in a code block of its own, which carries a copy button in the app.
 
