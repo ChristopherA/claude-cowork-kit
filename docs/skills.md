@@ -114,7 +114,7 @@ Writes where this session leaves off, done, open, the next step and what to watc
 
 ## Research, `research`
 
-The research binder's four skills. All but the setup read `rules.md` and `map.md` first and write into the folder only after a yes; the three that read the folder need it reachable: at your desk, or from your phone while Claude is open on the Mac.
+The research binder's four skills. All but the setup read `rules.md` and `map.md` first and write into the folder only after a yes; the three that read the folder run in a Cowork task at your desk.
 
 ### `research-description-check`
 
@@ -150,7 +150,7 @@ Writes one source note from a book, paper, article or transcript the reader hand
 
 ## Learning, `learn`
 
-The learning binder's three skills. The lesson and the quiz run from the Context documents, so they need no folder and should work from the phone with the computer closed, which the kit is still confirming; only the setup looks at the materials folder.
+The learning binder's three skills. The lesson and the quiz run from the Context documents, so they need no folder; on the phone, where the plugins' skills are not available, the project instructions carry a lesson or a quiz asked for in a sentence; only the setup looks at the materials folder.
 
 ### `learn-lesson`
 

@@ -6,7 +6,7 @@ Set up Claude, in its desktop and phone apps, to help with your notes and readin
 
 ## Who it is for
 
-You use Claude Cowork: the desktop app with a folder connected, and the iPhone or iPad app for capture and questions anywhere, and for work in the folder itself while Claude stays open on your Mac. You are not a programmer and do not want to become one to keep notes with Claude.
+You use Claude Cowork: the desktop app with a folder connected, and the iPhone or iPad app for capture and questions anywhere, answered from the project's Context. You are not a programmer and do not want to become one to keep notes with Claude.
 
 You need a Claude plan that includes Cowork and the Claude desktop app on the computer where your files live. Cowork tasks draw on the plan's usage allowance much faster than chat does, so a plan that feels roomy for conversation can feel tight for work on files.
 
@@ -14,7 +14,7 @@ The steps are written for a Mac: the folders live on it, and your phone reaches 
 
 **Start here:** make a folder, install one binder's plugin, and say its setup phrase. [First run](#first-run) has the steps.
 
-Why Cowork rather than plain chat, a notes app, or a developer tool is argued in [the explainer](docs/claude-cowork-kit.md#why-cowork). The short version: Claude reads your whole folder at your desk or from your phone while Claude is open on the Mac, answers from a small description of it when it is not, and your material stays plain files you own.
+Why Cowork rather than plain chat, a notes app, or a developer tool is argued in [the explainer](docs/claude-cowork-kit.md#why-cowork). The short version: Claude reads your whole folder in a Cowork task at your desk, answers from a small description of it on your phone, and your material stays plain files you own.
 
 ## Words you will see
 
@@ -123,7 +123,7 @@ Before you connect a folder, read what the connected folder does and does not pr
 
 1. **Make the binder's folder and back it up.** The simplest and safest start is one folder for all your binders, such as `Claude Cowork Binders` in your home folder, with a folder inside it for each binder. Keep it out of Documents and Desktop, which iCloud may be syncing depending on your settings. As an advanced option, later, you can move a binder into iCloud Drive on purpose, so you can open it in the Files app on your phone; [using your binders from your iPhone or iPad](docs/claude-cowork-kit.md#using-your-binders-from-your-iphone-or-ipad) says when that is worth it and how. Back the folder up with whatever you already use, before the first task that is allowed to write.
 2. **Install the binder's plugin** by either path above, and turn it on.
-3. **Create the project with its folder.** In Claude, open **Projects**, then **New project**. Name it under What are you working on?, and say in a sentence or two what the binder is for under What are you trying to achieve?; each binder's document gives a text to paste. Choose **Use a folder** and pick the binder's own folder, never one that holds several binders, so the health binder cannot read your money files. Claude then asks to change files in it: choose **Always allow** for research, learning and your week, and **Allow** for money and health, so those two ask each time. The folder stays on this computer: Claude reaches it from your desk, or from your iPhone or iPad while Claude is open on the Mac and the Mac is awake; [using your binders from your iPhone or iPad](docs/claude-cowork-kit.md#using-your-binders-from-your-iphone-or-ipad) says how to keep it that way. The project and its Context documents are in your account; that a project created with a folder shows on your phone is one of the things the kit is still confirming.
+3. **Create the project with its folder.** In Claude, open **Projects**, then **New project**. Name it under What are you working on?, and say in a sentence or two what the binder is for under What are you trying to achieve?; each binder's document gives a text to paste. Choose **Use a folder** and pick the binder's own folder, never one that holds several binders, so the health binder cannot read your money files. Claude then asks to change files in it: choose **Always allow** for research, learning and your week, and **Allow** for money and health, so those two ask each time. The folder stays on this computer, and Claude reaches it from a Cowork task there. The project and its Context documents are in your account and reach your phone, where a conversation in the project works from them; whether the phone can reach the folder by some other route is one of the things the kit is still confirming.
 4. **Run the setup.** On the project page, switch the box at the top from **Chat** to **Cowork**, then say the binder's phrase from the table. Claude asks a few questions, creates the binder's Context documents, and hands back what only you can paste: the account instructions, if your Settings, Account, "Instructions for Claude" field does not carry them yet, and the project instructions for the Instructions panel at the side of the project page. It then tells you what exists and what is waiting for you.
 5. **Install the core plugin** (`cowork-kit`, shown as **Cowork Kit core**) when you want its routines; they work in every binder. Its own setup, `set up the kit`, is for a reader who wants the account instructions before choosing a binder.
 
@@ -131,7 +131,7 @@ Each binder's document under [`docs/binders/`](docs/binders/) has its own setup 
 
 ## Status
 
-Release candidate. The research plugin has had one run in Cowork; the core and the four other binder plugins have not run yet, and whether the phone app runs plugins is not yet confirmed. Anything the kit is still confirming is marked as such where it appears.
+Release candidate. The research plugin has had one run in Cowork; the core and the four other binder plugins have not run yet, and on the phone a conversation in the project is a chat: it works from the Context documents and the project instructions, without the folder or the plugins' skills. Anything the kit is still confirming is marked as such where it appears.
 
 ## Learn more
 

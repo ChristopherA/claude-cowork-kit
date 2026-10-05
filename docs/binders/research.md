@@ -61,7 +61,7 @@ First look at the project's **Context** panel: `rules.md`, `map.md` and `inbox.m
 4. **Back at your desk, process the inbox.** One item, start to finish.
 5. **Two weeks later,** cut any instruction that never changed Claude's behavior, and have Claude check the description against the folder.
 
-The phone check matters most and gets skipped most. It's the only step that proves the split works rather than taking it on faith, and it has to be the computer *closed*, because with the desktop app open at home your phone can reach the folder through it, which proves nothing about the day the laptop is in a bag. If the answer comes back wrong or empty, either the description is too thin or the project isn't syncing, and you want to find that out on day one, not in six weeks on a train with no laptop.
+The phone check matters most and gets skipped most. It's the only step that proves the split works rather than taking it on faith, and it has to be the computer *closed*, so that the answer can only come from the description, which is what you will have on the day the laptop is in a bag. If the answer comes back wrong or empty, either the description is too thin or the project isn't syncing, and you want to find that out on day one, not in six weeks on a train with no laptop.
 
 ---
 
