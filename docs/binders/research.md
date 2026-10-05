@@ -30,7 +30,18 @@ The setup creates three Context documents: `rules.md`, the working rules; `map.m
 
 1. **Back your research folder up** with whatever you already use, before the first task that is allowed to write.
 2. **Install the binder's plugin**, `research`, shown as **Research**, and turn it on. No other plugin has to come first.
-3. **Create the project with its folder.** In Claude, open **Projects**, then **New project**. Name it; under What are you trying to achieve?, something like `Research base: notes and reading. The rules are in Instructions; the notes are in my research folder.` is enough. Choose **Use a folder** and pick your research folder itself, not the folder it sits in. As an advanced option, the folder can live in iCloud Drive so the Files app on your phone can read it; [the explainer](../claude-cowork-kit.md#using-your-binders-from-your-iphone-or-ipad) says how. When Claude asks to change files in the folder, choose **Always allow**.
+3. **Create the project with its folder.** In Claude, open **Projects**, then **New project**, and fill in the dialog:
+   - **What are you working on?** The binder's name, such as `Research`.
+   - **What are you trying to achieve?** A sentence or two saying what the binder is for. Paste this and change it to suit:
+
+     ```
+     Research: my notes and reading. Help me capture ideas from anywhere, file them into notes in my research folder, and answer questions from what I have read.
+     ```
+
+     The app reads this when deciding which project a task belongs in; the rules Claude works by come later, from the setup.
+   - **Folder:** choose **Use a folder** and pick your research folder itself, not the folder it sits in. As an advanced option, the folder can live in iCloud Drive so the Files app on your phone can read it; [the explainer](../claude-cowork-kit.md#using-your-binders-from-your-iphone-or-ipad) says how.
+
+   Click **Create project**. When Claude asks to change files in the folder, choose **Always allow**.
 4. **Run the setup.** In a task inside the project, say `set up my research binder`. Claude asks where the folder is, who you are and how you work, and what you are working on now; reads the folder if it can reach it; creates the three Context documents; and hands back what only you can paste: the account instructions, if your Settings, Account, "Instructions for Claude" field does not carry them yet (the account instructions in the explainer, with your voice filled in), and the short project instructions, printed below, for the Instructions panel at the side of the project page, not the description.
 
 ### Without the plugin

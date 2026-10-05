@@ -15,7 +15,18 @@ The floor here is exact. Statements and exports stay in the folder on your compu
 The setup creates two Context documents: `categories.md`, each category with one line saying what falls in it, and `targets.md`, your budget targets as you give them, or a heading and nothing else until you have some. Neither holds an account number, a balance, a transaction row, or the folder path. The general steps and the install paths are in the repository's README, under First run and Install; for this binder:
 
 1. **Install the money plugin**, `money`, shown as **Money**, and turn it on.
-2. **Create the project with its folder.** In Claude, open **Projects**, then **New project**. Name it, say in a sentence what the binder is for under What are you trying to achieve?, choose **Use a folder**, and pick the folder that holds your financial files and nothing else. When Claude asks to change files in the folder, choose **Allow**, not Always allow, so it asks again each time; this binder holds what you would mind leaking.
+2. **Create the project with its folder.** In Claude, open **Projects**, then **New project**, and fill in the dialog:
+   - **What are you working on?** The binder's name, such as `Money`.
+   - **What are you trying to achieve?** A sentence or two saying what the binder is for. Paste this and change it to suit:
+
+     ```
+     My household money: statements, spending categories, and a monthly close against my budget targets.
+     ```
+
+     The app reads this when deciding which project a task belongs in; the rules Claude works by come later, from the setup. Keep it general, with no names, conditions or account details: it syncs with the project.
+   - **Folder:** choose **Use a folder** and pick the folder that holds your financial files and nothing else.
+
+   Click **Create project**. When Claude asks to change files in the folder, choose **Allow**, not Always allow, so it asks again each time; this binder holds what you would mind leaking.
 3. **Run the setup.** In a task inside the project, say `set up my money binder`. Claude says what the folder does and does not protect and asks whether to go on; then asks where the folder is, what your categories are, and what your targets are; creates the two Context documents; and hands back what only you can paste: the account instructions, if your Settings, Account, "Instructions for Claude" field does not carry them yet (the account instructions in the explainer), and the project instructions below, for the Instructions panel at the side of the project page, not the description.
 4. **In the app,** keep this project in the mode that asks before acting, and if you have let Claude see and control your screen, keep your banking apps and sites out of its reach.
 
