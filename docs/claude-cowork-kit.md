@@ -7,7 +7,7 @@ The [README](../README.md) says what the kit is, what each plugin does, and how 
 - [What this is for](#what-this-is-for), what it won't do, and why Cowork
 - [How it works](#how-it-works): the three places things live, and the habits that follow from them
 - [When something surprises you](#when-something-surprises-you): what you see, why, and what to do
-- [Using your binders from your iPhone or iPad](#using-your-binders-from-your-iphone-or-ipad): keeping the Mac awake, and iCloud Drive
+- [Using your binders from your iPhone or iPad](#using-your-binders-from-your-iphone-or-ipad): what the phone does, with the advanced options on a page of their own
 - [What the connected folder does and does not protect](#what-the-connected-folder-does-and-does-not-protect)
 - [The two approval modes](#the-two-approval-modes)
 - [Setting up a binder without the plugins](#setting-up-a-binder-without-the-plugins), [the account instructions](#the-account-instructions) and [the voices](#the-voices)
@@ -131,7 +131,7 @@ Most surprises come from the three places above behaving as described. Where a r
 | Claude says it is running in the cloud and cannot see your folder, or offers you Terminal commands. | The box at the top was on **Chat**, not **Cowork**, or the binder's folder was not ticked under **Add folder**: a chat reads the project's Context documents but not the folder, and the plugins' skills do not run in it. | Start a new conversation in the project, switch the box to **Cowork**, and ask again. |
 | Something Claude made during a task is gone after you closed it. | The session is a workbench that is cleared when the task ends. | Before closing, have it saved to the folder or a Context document. The account instructions tell Claude to say when something will not survive. |
 | At your desk, Claude does not remember last time. | A session that reads your folder does not use memory. | Keep the description true; it is what Claude works from there. The research binder's description check finds what no longer matches. |
-| From your phone, Claude cannot open your notes. | A conversation started on the phone runs in the cloud: it reads the Context documents, not the folder. | Start the task on the Mac and continue it from the phone; see [Using your binders from your iPhone or iPad](#using-your-binders-from-your-iphone-or-ipad). Or capture to the inbox from the phone and file at the desk. |
+| From your phone, Claude cannot open your notes. | A conversation started on the phone runs in the cloud: it reads the Context documents, not the folder. | Start the task on the Mac and continue it from the phone; see [Using your binders from your iPhone or iPad](iphone-and-ipad.md). Or capture to the inbox from the phone and file at the desk. |
 | A file shows in the folder, with its size, and Claude cannot open it. | iCloud moved it off the Mac to save space. | Right-click the binder's folder in Finder and choose Keep Downloaded, or turn Optimize Mac Storage off; see [What the connected folder does and does not protect](#what-the-connected-folder-does-and-does-not-protect). |
 | A skill that worked in one task does nothing in the next. | A plugin dragged into a task's composer is attached to that task only. | Install it under Customize, Plugins, and turn it on. |
 | Something is filed in the wrong binder. | Binders cannot see each other, so nothing moves it back. | Move it yourself. Each binder's instructions tell Claude to name the right binder and stop. |
@@ -144,23 +144,9 @@ Most surprises come from the three places above behaving as described. Where a r
 
 ## Using your binders from your iPhone or iPad
 
-On your phone, the project is there with its description, its instructions and its Context documents. A conversation you start there runs in the cloud: it answers from those documents, and it cannot reach the folder. Two things get you further.
+On your phone, the project is there with its description, its instructions and its Context documents. A conversation you start there runs in the cloud: it answers from those documents, and it cannot reach the folder or use the plugins' skills. That is what the inbox and the description are for.
 
-**Working in the folder from your phone.** Start the task on the Mac and carry it with you:
-
-1. On the Mac, open the project, switch the box to **Cowork**, check that the binder's folder is ticked under **Add folder**, and start the task with a sentence, such as `I will continue this from my phone.`
-2. Keep the Mac awake with Claude open (below).
-3. On the phone, open that same task. It is listed under **Recents** in the app's sidebar, not in the project's list. Whatever you ask there runs on the Mac, with the folder.
-
-A task you start on the phone instead runs in the cloud and is not linked to the Mac. Anthropic's Dispatch, in both apps' sidebars, also runs work on the Mac, but the kit has not yet got it to find a project. To keep the Mac reachable while you are away:
-
-- In System Settings, search for "sleeping". On a Mac laptop, turn on **Prevent automatic sleeping on power adapter when the display is off**, and leave it plugged in; on a desktop Mac the setting is **Prevent automatic sleeping when the display is off**.
-- Leave Claude open. To step away, lock the screen with Control-Command-Q (Lock Screen in the Apple menu): a locked Mac stays awake and Claude keeps running.
-- Do not put the Mac to sleep, log out, or shut it down. Any of those takes the Mac out of reach until you are back at it.
-
-**The Files app, reading the folder itself.** Start with every binder in one folder on the Mac, outside Documents and Desktop, which iCloud may be syncing; that is the simplest and safest place. Once a binder has settled, moving its folder into iCloud Drive is an advanced option, taken on purpose. A binder whose folder is in iCloud Drive can also be opened in the Files app on your iPhone or iPad, with or without Claude, and even when the Mac is asleep. That is worth having for research, to read a note on the train, and for medical records, to show a doctor a result from another clinic or read your list of questions in the waiting room. The cost is that the folder then lives in Apple's iCloud as well as on your Mac, so decide binder by binder: a money folder is the one you are most likely to keep on the Mac only.
-
-To put a binder in iCloud Drive, make or move its folder there in Finder, then at **Use a folder** choose **iCloud Drive** in the picker's sidebar, go to the folder, and click **Open**. Then right-click the folder in Finder and choose **Keep Downloaded**, for the reason the next section gives.
+Two more things are possible and take more setting up: working in the folder from the phone, by continuing a task you started on the Mac, and keeping a binder in iCloud Drive so the Files app can open it. [Using your binders from your iPhone or iPad](iphone-and-ipad.md) has both.
 
 ---
 

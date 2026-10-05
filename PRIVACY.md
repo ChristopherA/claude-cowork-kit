@@ -18,4 +18,4 @@ The kit has two binders that read things you would mind leaking, a bank statemen
 
 **The kit itself collects nothing.** It is text. Nothing in it phones home. A few research skills come with small helper programs Claude can run to read your folder faster; they read and write nothing else.
 
-The details, with what the kit has and has not yet confirmed in the running app, are in the explainer, `docs/claude-cowork-kit.md`, under Using your binders from your iPhone or iPad and What the connected folder does and does not protect, and in the money and health documents under `docs/binders/`.
+The details, with what the kit has and has not yet confirmed in the running app, are in the explainer, `docs/claude-cowork-kit.md`, under What the connected folder does and does not protect, in `docs/iphone-and-ipad.md` for the phone and iCloud Drive, and in the money and health documents under `docs/binders/`.
