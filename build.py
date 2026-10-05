@@ -448,7 +448,7 @@ def check_research_scripts():
     if out.returncode != 1:
         fail(f"quote_check.py: a quote with one word changed was not caught (exit {out.returncode})")
 
-    out = run([census, "--folder", folder, "--folders", "inbox,sources,topics,threads,writing,archive"])
+    out = run([census, "--folder", folder, "--folders", "inbox,sources,topics,threads,works,writing,archive"])
     try:
         report = json.loads(out.stdout)
         sources, topics = report["sources"], report["topics"]
@@ -463,7 +463,8 @@ def check_research_scripts():
         if sources.get(key) != value:
             fail(f"census.py: on the fixture, sources.{key} is {sources.get(key)!r}, expected {value!r}")
     cite = scripts / "research-source-note" / "scripts" / "cite.py"
-    notes = sorted(p for p in (folder / "sources").rglob("*.md") if "renditions" not in p.parts)
+    notes = sorted(p for p in [*(folder / "sources").rglob("*.md"), *(folder / "works").glob("*.md")]
+                   if "renditions" not in p.parts)
     out = run([cite, *notes, "--check"])
     if out.returncode != 0:
         fail(f"cite.py: a fixture note's citation line differs from its fields (exit {out.returncode}): {out.stdout[-400:]}{out.stderr[-200:]}")

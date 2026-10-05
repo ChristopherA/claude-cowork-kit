@@ -19,7 +19,7 @@ Check that the research folder is reachable. If it is not, write the note into t
 
 Before drafting, look for a note on this source already: search the sources folder for the link and for the title. If one exists, say so and propose additions to it rather than a second file, such as moving it up a level; two notes on one source is the same failure as two notes on one idea.
 
-If the source is the reader's own writing, say so and stop: their published work is a primary source, and `map.md` says where their own writing lives, if anywhere. It does not get a source note.
+If the source is the reader's own writing, it does not get a source note: their work is a primary source, and it goes in `works/`, or where `map.md` says their own writing lives, never in `sources/`. Offer a works note instead, on a yes: the same metadata and citation fields, a `status` line (published, or draft for a draft they want to cite), the citation line from the cite script, a BRIEF, and an INFLUENCE block when there is evidence in hand, written to the same rules as below. No WHY SAVED, filing questions or key points; what the reader thinks is in the work itself and in their topic notes. If `map.md` names no home for their works, offer `works/` and add its line to `map.md` on a yes.
 
 ## Get the text
 

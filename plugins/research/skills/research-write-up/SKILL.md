@@ -61,7 +61,7 @@ Write prose only when the reader asks, and only the section they name. A source'
 
 ## 6. References
 
-Convert the citation of every source the piece cites into its style with the source-note skill's cite script, and write the reference file beside the record, BibTeX or CSL JSON, whichever the co-authors' reference managers read:
+Convert the citation of every source the piece cites, and of every work of the reader's own in `works/`, into its style with the source-note skill's cite script, and write the reference file beside the record, BibTeX or CSL JSON, whichever the co-authors' reference managers read:
 
 ```
 python3 cite.py "<source note>" ["<source note>" ...] --style apa
