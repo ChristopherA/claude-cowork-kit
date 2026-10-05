@@ -462,7 +462,8 @@ def check_research_scripts():
     want = {"lead_only": ["sources/simon-1971-designing-organizations"],
             "uncited": [],
             "no_lead": [], "no_rendition": [], "level_mismatch": [],
-            "loose_files": ["sources/ahrens-2017-how-to-take-smart-notes.txt"]}
+            "loose_files": ["sources/ahrens-2017-how-to-take-smart-notes.txt"],
+            "quotes_unchecked": ["sources/example-2023-the-index-card.md"]}
     for key, value in want.items():
         if sources.get(key) != value:
             fail(f"census.py: on the fixture, sources.{key} is {sources.get(key)!r}, expected {value!r}")
@@ -539,6 +540,8 @@ def check_research_scripts():
     if out.returncode != 1:
         fail(f"prose_check.py: a brief with an unsupported 'seminal' and a 'we' was not caught (exit {out.returncode})")
 
+    if report.get("works", {}).get("no_brief") != ["works/reader-2024-notes-in-the-margin.md"]:
+        fail(f"census.py: on the fixture, works.no_brief is {report.get('works', {}).get('no_brief')!r}, expected the margin note")
     want_folders = {"missing": ["writing"], "unknown": ["Claude outputs"]}
     if report.get("folders_check") != want_folders:
         fail(f"census.py: on the fixture, folders_check is {report.get('folders_check')!r}, expected {want_folders!r}")

@@ -34,10 +34,14 @@ Output keys:
     level_mismatch: [{"path", "level", "problem"}] where a note's
       labeled blocks do not match its level
     uncited: source notes no note outside the sources folder links to
+    quotes_unchecked: read-level notes whose KEY QUOTES have no rendition
+      to be checked against and no label saying how they were checked
+      ("checked in the browser" or "unchecked")
   topics: {"notes": N, "cite_nothing": [...]}, topic notes with no link
     to a source note or a works note (empty when the topics folder does
     not exist)
-  works: {"notes": N}, the reader's own works, citable like sources
+  works: {"notes": N, "no_brief": [...]}, the reader's own works, citable
+    like sources; no_brief lists works notes without a BRIEF block
   awaiting_confirmation: {"count": N, "items": [{"path", "what"}]}, lines
     Claude drafted for the reader to confirm: a WHY SAVED inferred from
     their writing, and in a topic or works note, a passage marked
@@ -68,6 +72,8 @@ LEVEL = re.compile(r"^\s*level:\s*(\w+)", re.I | re.M)
 LABEL = re.compile(r"^\W*(BRIEF|SHORT ABSTRACT|EVIDENCE|KEY POINTS|KEY QUOTES|INFLUENCE|WHY SAVED)\b", re.M)
 ORIGINAL_EXT = (".pdf", ".html", ".htm", ".webarchive", ".mhtml")
 SIDECARS = ("originals", "renditions")
+QUOTES_LABEL = re.compile(r"^\W*KEY QUOTES\b(.*)$", re.M)
+BRIEF = re.compile(r"^\W*BRIEF\b", re.M)
 INFERRED = re.compile(r"^\W*WHY SAVED\s*\(inferred", re.I | re.M)
 DRAFTED = re.compile(r"\(Drafted by Claude from", re.I)
 URL = re.compile(r"\]\(https?://[^)]+\)")
@@ -131,7 +137,7 @@ def level_problem(level, labels):
 
 def source_census(root, sources_dir, topics_dir, works_dir, texts, limit):
     """Check the sources folder's shape and how the notes cite it."""
-    out = {"flat": 0, "compound": 0, "no_lead": [], "lead_only": [], "no_rendition": [], "loose_files": [],
+    out = {"flat": 0, "compound": 0, "no_lead": [], "lead_only": [], "no_rendition": [], "loose_files": [], "quotes_unchecked": [],
            "levels": {"citation": 0, "minimal": 0, "read": 0, "none": 0},
            "level_mismatch": [], "uncited": []}
     base = os.path.join(root, sources_dir)
@@ -179,6 +185,12 @@ def source_census(root, sources_dir, topics_dir, works_dir, texts, limit):
         problem = level_problem(level, set(LABEL.findall(text)))
         if problem:
             out["level_mismatch"].append({"path": rel, "level": level, "problem": problem})
+        label = QUOTES_LABEL.search(text)
+        if level == "read" and label:
+            rendition = os.path.join(root, os.path.dirname(rel), "renditions", stem + ".md")
+            how = label.group(1).lower()
+            if not os.path.isfile(rendition) and "checked in the browser" not in how and "unchecked" not in how:
+                out["quotes_unchecked"].append(rel)
 
     # Works are the reader's own writing, citable like a source note.
     works = {os.path.splitext(os.path.basename(rel))[0]: rel for rel in texts
@@ -206,9 +218,10 @@ def source_census(root, sources_dir, topics_dir, works_dir, texts, limit):
             topic_links[rel] = found
     out["uncited"] = sorted(notes[s] for s in notes if s not in cited)[:limit]
     topics = {"notes": len(topic_links), "cite_nothing": sorted(r for r, f in topic_links.items() if not f)[:limit]}
-    for key in ("no_lead", "lead_only", "no_rendition", "loose_files", "level_mismatch"):
+    for key in ("no_lead", "lead_only", "no_rendition", "loose_files", "quotes_unchecked", "level_mismatch"):
         out[key] = out[key][:limit]
-    return out, topics, {"notes": len(works)}
+    no_brief = sorted(rel for rel in works.values() if not BRIEF.search(texts.get(rel, "")))
+    return out, topics, {"notes": len(works), "no_brief": no_brief[:limit]}
 
 
 def main():

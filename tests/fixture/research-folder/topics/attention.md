@@ -8,3 +8,4 @@ SOURCES
 
 - [Designing Organizations for an Information-Rich World](../sources/simon-1971-designing-organizations/simon-1971-designing-organizations.md): the source of the claim, that a wealth of information creates a poverty of attention.
 - [How to Take Smart Notes](../sources/ahrens-2017-how-to-take-smart-notes.md): the same point from the writing side.
+- [The Index Card](../sources/example-2023-the-index-card.md): a small note saves attention when it is placed and found again.

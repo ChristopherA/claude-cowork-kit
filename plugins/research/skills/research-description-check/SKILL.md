@@ -39,12 +39,13 @@ Check the conventions `map.md` sets for sources and topic notes, from the census
 
 - Every source folder has a lead file of the folder's own name, and no folder holds only its lead; a single file is never a folder.
 - Every original that is a PDF or a saved web page has its rendition beside it, in `renditions/` under the same name.
+- A read-level note's quotes can be checked: against its rendition, or labeled as checked in the browser or as unchecked (the census's `quotes_unchecked`); and every works note has a BRIEF (the census's `works.no_brief`).
 - No file other than a note sits loose in the sources folder or beside a lead note (the census's `loose_files`): an original belongs in its note's `originals/` folder, under the note's name, and a file with no note is an inbox item.
 - Every source note's `level` matches what it contains: `citation` is the line alone, `minimal` has a brief and a short abstract and no key points or quotes, `read` has key points or key quotes.
 - Which source notes nothing outside the sources folder cites, and which topic notes cite no source. A link to one of the reader's own works, in `works/`, counts as a citation, both ways.
 - `map.md`'s Topics section against the topic notes: a note with no line, a line with no note (a line marked not written yet, with its sources waiting, is a plan rather than a fault; check only that each waiting source exists), and a line whose thinking no longer matches the note's current thinking. The last is stale wording in the description, reported with the note's current thinking as the proposed line.
 
-The first four are drift in the folder, reported with the files as above. The last two are not faults: an uncited source is a candidate for the inbox drain to revisit or for a topic note to take up, and a topic note that cites nothing is the reader's thinking without its sources. List them under their own heading, at most ten each, and say what each could become. Pass `--sources` and `--topics` to the census when `map.md` names other folders for them.
+The first five are drift in the folder, reported with the files as above. The last two are not faults: an uncited source is a candidate for the inbox drain to revisit or for a topic note to take up, and a topic note that cites nothing is the reader's thinking without its sources. List them under their own heading, at most ten each, and say what each could become. Pass `--sources` and `--topics` to the census when `map.md` names other folders for them.
 
 List the lines still waiting for the reader (the census's `awaiting_confirmation`): every WHY SAVED marked as inferred from their writing, and every passage in a topic or works note marked "(Drafted by Claude from ...)". Give the count and the first ten, and say that each stays marked until the reader confirms or replaces it; these are not faults either.
 
