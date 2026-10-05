@@ -24,6 +24,8 @@ python3 build.py --check    # what a pull request must pass: skills valid, gener
 
 `--check` fails on a skill description over 200 characters, a copy of a shared paragraph that differs from its source, a binder skill without its "Where this runs" section, a generated file that differs from what the docs would produce, a skills index that does not match the skills, a skill the README does not name, a literal `\1` or `\n` outside a code fence (what a scripted regex edit leaves behind), and, in a git checkout, a generated file left uncommitted. It reports every failure it finds before it exits, so one run shows the whole list. Commit the generated files with the change that caused them.
 
+A sentence about how the app behaves goes in only once it has been seen in the app, or marked as something the kit is still confirming. Anthropic's help pages and the app's own interface text say what a feature is for, not how a project and its folder behave with it; two sentences written from them alone were wrong within the day.
+
 The check guards paragraphs, not claims. A sentence that states an order, a count, or what a skill does and does not do is often said in several files, in different words: which plugin comes first, how many questions a setup asks, what a setup hands back. When you change one, search the tree for the claim in its own words, the README, the docs, the skills and the plugin READMEs' generator in `build.py` included, and change every copy in the same commit.
 
 ## Adding a skill

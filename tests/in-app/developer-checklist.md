@@ -4,6 +4,8 @@ What to test in the Claude app before a release candidate is promoted, and again
 
 Each item says where it runs, gives a prompt to paste into a Cowork task where one helps, and says what a pass looks like. Where the app differs from what the kit says, the kit is wrong: open an issue naming the item, and fix the text before the release.
 
+Judge by what Claude does, not by what it says about itself. Asked where it runs or which plugins it has, Claude has answered wrongly, once denying it was in Cowork and once saying installed plugins could not load; what settled each was behaviour. A skill that ran leaves its own marks: `research-description-check` names its census script, proposes edits without making them, and ends with full, partial or minimal.
+
 **Where:** *desk* is a task in the desktop app on the Mac; *phone* is the Claude app on an iPhone or iPad; *settings* is the desktop app's settings; *closed* means the Mac asleep or its lid shut.
 
 ## Before you start
