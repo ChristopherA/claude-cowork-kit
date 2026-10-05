@@ -134,7 +134,7 @@ Processes the capture inbox one item at a time into notes in the research folder
 
 ### `research-setup`
 
-Sets up the research binder: three questions, then rules.md, map.md and inbox.md as Context documents and the text to paste. Use for "set up my research binder", "notes setup", "set up my notes".
+Sets up the research binder: three questions, two conventions, then rules.md, map.md and inbox.md in Context and text to paste. Use for "set up my research binder", "notes setup", "set up my notes".
 
 **When to reach for it.** Once, in a task inside the new project for the research binder, after the folder is connected.
 

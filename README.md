@@ -34,7 +34,7 @@ Six plugins: five binders and a core. No plugin has to come first: start with th
 
 Notes and reading: capture from anywhere, file at your desk, answer from what you have read.
 
-- `research-setup`: sets up the binder in three questions. "Set up my research binder."
+- `research-setup`: sets up the binder in three questions and two conventions. "Set up my research binder."
 - `research-inbox-drain`: files your captures one at a time into your notes. "Process the inbox."
 - `research-source-note`: turns an article, paper or transcript you hand over into one note. "Save this article to my notes."
 - `research-description-check`: finds what the binder's description says that your folder no longer bears out. "Check the description."

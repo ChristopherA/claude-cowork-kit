@@ -19,7 +19,7 @@ It is not a second brain that thinks for you, and it is not a search engine over
 
 Four skills, each triggered by a phrase; everything they do you could ask for in a sentence, more slowly.
 
-- **`research-setup`**, `set up my research binder`. Three questions, then the three Context documents and the short instructions to paste. Run it once, in a task inside the project; if the binder is already set up it says so and offers the description check instead.
+- **`research-setup`**, `set up my research binder`. Three questions and two conventions, then the three Context documents and the short instructions to paste. Run it once, in a task inside the project; if the binder is already set up it says so and offers the description check instead.
 - **`research-inbox-drain`**, `process the inbox`. At your desk, with the folder connected: the captures one at a time, each placed, shown, and written into the folder only after a yes. Reach for it when the inbox has a handful of items, not when it has fifty; a short drain is the habit that keeps the second job away.
 - **`research-source-note`**, `source note` or `save this article to my notes`. One note from a book, paper, article or transcript you hand over, the source's claims kept apart from your own, the citation recorded in the form `map.md` gives. It reads a public page you point it at; anything behind a login or a paywall you save or paste.
 - **`research-description-check`**, `check the description`. Compares `map.md` against the folder and reports every claim that is no longer true, proposing edits without making them. Run it at the two-week sitting and whenever an answer from the phone comes back wrong.
@@ -42,7 +42,7 @@ The setup creates three Context documents: `rules.md`, the working rules; `map.m
    - **Folder:** choose **Use a folder** and pick your research folder itself, not the folder it sits in.
 
    Click **Create project**. When Claude asks to change files in the folder, choose **Always allow**.
-4. **Run the setup.** On the project page, switch the box at the top from **Chat** to **Cowork**, check that the binder's folder is ticked under **Add folder** just below it, then say `set up my research binder`. Claude asks where the folder is, who you are and how you work, and what you are working on now; reads the folder if it can reach it; creates the three Context documents; and hands back what only you can paste: the account instructions, if your Settings, Account, "Instructions for Claude" field does not carry them yet (the account instructions in the explainer, with your voice filled in), and the short project instructions, printed below, for **Instructions** on the right of the project page (click its pencil and paste), not the description under the title.
+4. **Run the setup.** On the project page, switch the box at the top from **Chat** to **Cowork**, check that the binder's folder is ticked under **Add folder** just below it, then say `set up my research binder`. Claude asks where the folder is, who you are and how you work, and what you are working on now; reads the folder if it can reach it; asks where topic notes live and which link style you use, recommending what the folder already does; creates the three Context documents; and hands back what only you can paste: the account instructions, if your Settings, Account, "Instructions for Claude" field does not carry them yet (the account instructions in the explainer, with your voice filled in), and the short project instructions, printed below, for **Instructions** on the right of the project page (click its pencil and paste), not the description under the title.
 
 ### Without the plugin
 
@@ -94,7 +94,7 @@ This project's Context documents hold the description (map.md), these rules, my 
 
 # Capture and filing are different
 
-When I throw something at you without context, append it to the inbox document as I gave it, dated, and stop. Don't file it, don't expand it, don't ask me where it goes, and don't refuse it because it belongs to another binder — the inbox takes everything, and sorting is the drain's job.
+When I throw something at you without context, append it to the inbox document as I gave it, dated, and stop. The inbox document is for text; a file I want filed goes in the folder's inbox/, and processing the inbox works through both. Don't file it, don't expand it, don't ask me where it goes, and don't refuse it because it belongs to another binder — the inbox takes everything, and sorting is the drain's job.
 
 When I say I'm processing the inbox, work through it one item at a time: for each, say where it belongs — an existing note to update, a new note, another binder, a source to read — show me what you'd write, and write it into the folder only after a yes. An item that belongs to another binder is named and left for me to move; an item you can't place is kept with the reason.
 
@@ -104,11 +104,11 @@ Say so plainly and work from the project's Context instead. Don't guess at what'
 
 # Notes you write for me
 
-One idea per note, leading with the claim rather than the background. Plain markdown, formatted as map.md specifies. Always record the source — title, author, link, page — in the citation form map.md gives. Mark my thinking as mine and the source's as theirs, and never blur the two. When a source file sits beside its note, it carries the note's name.
+One idea per note, leading with the claim rather than the background; a topic note holds one topic and says what I currently think, first. Plain markdown, formatted as map.md specifies. Always record the source — title, author, link, page — in the citation form map.md gives. Mark my thinking as mine and the source's as theirs, and never blur the two. When a source file sits beside its note, it carries the note's name, as map.md says.
 
 # How to write for me
 
-Plain prose. Short paragraphs. No headers on anything under a page, no bullets where a sentence works, no bold for emphasis.
+Plain prose. Short paragraphs. No headers on anything under a page, no bullets where a sentence works, no bold for emphasis. This is for what you write to me; a note in the folder is structured, so its labeled blocks and the bullets in its key points follow map.md instead.
 
 # Reporting
 
@@ -139,22 +139,27 @@ This describes what's in my research folder and how it's organized. It lives in 
 ## What's in each folder
 
 - `inbox/` — files I drop in at my desk, a PDF, a scan, a saved page, not yet processed. Typed captures from anywhere go to `inbox.md` in Context instead; processing the inbox works through both. Nothing here is finished.
-- `sources/` — one note per book, paper, talk, or article I've read. Named `author-year-short-title.md`. A source file kept beside its note (a PDF, say) carries the note's name.
+- `sources/` — one note per book, paper, talk, or article, named `author-year-short-title.md`, at the level of what I read: `citation` (the line only, until something cites it), `minimal` (the line, a brief, a short abstract, why I saved it), or `read` (adds key points and quotes). A source that comes with its original becomes a folder holding a lead note of the same name, `author-year-short-title/author-year-short-title.md`, with the original in its `originals/` and a searchable markdown copy, page-marked, in its `renditions/`; never a folder for one file. `originals/` holds copyrighted material kept for my own use and is never published.
+- `topics/` — one living note per topic: what I currently think, first, then the sources that support or challenge it. New material on a topic goes into its note, not a new one. A source moves up a level when a topic note cites it.
 - `notes/` — one idea each. Named for the claim they make, not the topic they're about.
-- `threads/` — things I'm actively thinking about. Longer and messier than a note, and they change often.
+- `threads/` — things I'm actively thinking about. Longer and messier than a note, and they change often; a topic note often starts here before it settles.
 - `archive/` — done, superseded, or abandoned. Read it, don't write to it.
 
 ## Note format
 
-Plain markdown. The only metadata at the top of a note is a `created` date in YYYY-MM-DD form and, where the note came from something, a `source` line with the link or citation.
+Plain markdown. The metadata at the top of a note is a `created` date in YYYY-MM-DD form and, where the note came from something, a `source` line with the link or citation; a source note carries a `level` line instead of `source`, and its citation line follows. A source note is structured: each part is a labeled block, and its key points are bullets.
 
 Don't hard-wrap. One paragraph is one line, and the editor wraps it for display.
 
-Links between notes are relative markdown links. No tags, no wiki syntax, no generated index files.
+Links between notes are relative markdown links. No tags, no generated index files.
 
 ## Citation form
 
-One reference line at the top of a source note, markdown-friendly: the title in bold italics, the year, the type in brackets, the author family-name first in italics, the publisher or journal with volume and pages, the locator (chapter, section, page), then the DOI or "Available from:" and the link. Each passage I keep goes under it as an indented blockquote.
+One reference line at the top of a source note:
+
+* _**Title**_ (Year). [web article]. _Family, Given._ Publication, volume(issue), pages. Retrieved YYYY-MM-DD from: <URL>
+
+The kind in brackets is specific: web article, preprint, book, review article, software. "Retrieved" for an open link and "Available" for a paywalled one, each with the date. Authors family name first, separated by semicolons; past six, the first three and et al. A name whose family name comes first by culture keeps its order. Undated works take (n.d.) and approximate dates (~YYYY); a title in another language stays in it. Each passage I keep goes under the key quotes as an indented blockquote with its page.
 
 ## What I'm working on now
 

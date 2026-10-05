@@ -1,11 +1,11 @@
 ---
 name: research-setup
-description: Sets up the research binder: three questions, then rules.md, map.md and inbox.md as Context documents and the text to paste. Use for "set up my research binder", "notes setup", "set up my notes".
+description: Sets up the research binder: three questions, two conventions, then rules.md, map.md and inbox.md in Context and text to paste. Use for "set up my research binder", "notes setup", "set up my notes".
 ---
 
 # Setup
 
-Build the research binder the Claude Cowork Kit describes, from three answers, and a fourth, the voice, when the account instructions are missing. Create what a task can create, the three Context documents, and hand back what only the reader can paste, the short project instructions. Read the research folder; do not write into it, except to create empty folders when the reader is starting from nothing and has said yes.
+Build the research binder the Claude Cowork Kit describes, from three answers and two conventions, and the voice when the account instructions are missing. Create what a task can create, the three Context documents, and hand back what only the reader can paste, the short project instructions. Read the research folder; do not write into it, except to create empty folders when the reader is starting from nothing and has said yes.
 
 The texts this skill hands back are in `references/`, generated from the kit's docs when the plugin was packaged: `research-instructions.md` (the short text for the Instructions panel), `rules-template.md` (the working rules document), `map-template.md` (the description), `voices.md` (the three voices), `global-instructions.md` (the account-wide instructions). Use them as they are; do not rewrite them, and do not paraphrase them into the conversation. Fill in only the marked fields.
 
@@ -31,11 +31,18 @@ Ask as the Asking section says, grouping the questions whose answers do not depe
 
 If the folder is reachable, read it before writing anything: the top-level folders, a sample of file names in each, roughly how many files, whether notes carry a `created` line, whether paragraphs are wrapped, and how notes link. Describe what is there. The template's folder layout is a default for an empty folder, not a description of theirs.
 
+## Two conventions
+
+After the folder, ask two things in one control, each recommending what the folder already does and, where it shows nothing, the template's default:
+
+1. **Where topic notes live.** A topic note says what the reader currently thinks about one topic, then the sources behind it, and is updated rather than duplicated. The choices: a `topics/` folder beside `notes/` (the default), or `notes/` itself, changed from one idea per note to one topic per note. Fill `map.md`'s folder list for the choice: with `notes/` chosen, drop the `topics/` line and say in the `notes/` line that each note holds one topic.
+2. **Link style.** Relative markdown links (the default), or wikilinks, `[[note name]]`, for a reader who opens the folder in Obsidian or another tool that resolves them. Fill `map.md`'s link line for the choice. With wikilinks, a source note that moves into a folder needs no link rewriting.
+
 ## Create the three Context documents
 
 Create `rules.md` as a Context document from `references/rules-template.md`, with the folder path filled in and nothing else changed; the reader revises it later, with you, one rule at a time.
 
-Create `map.md` as a Context document from `references/map-template.md`, with every bracket filled from the answers and from what the folder showed. The folder sections describe the real folder. The conventions section holds what the folder shows plus anything the reader said is settled. Set the date. Leave nothing in brackets; where an answer is missing, ask rather than invent.
+Create `map.md` as a Context document from `references/map-template.md`, with every bracket filled from the answers and from what the folder showed. The folder sections describe the real folder. The conventions section holds what the folder shows plus anything the reader said is settled. Set the date. Leave nothing in brackets; where an answer is missing, ask rather than invent, and where the reader has nothing for a section yet (no open threads, nothing kept out), say so in the section in a plain sentence, with a yes, rather than leaving the template's example lines. Before going on, read `map.md` back and check it against the template: a bracketed field of the template's still there means the setup is not finished, so name it and ask. The brackets in the citation form, such as `[web article]`, are part of the form, not fields.
 
 Create `inbox.md` as a Context document, a heading and nothing else, unless it already exists, in which case leave it untouched.
 
