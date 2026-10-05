@@ -58,6 +58,8 @@ import os
 import re
 import sys
 
+__version__ = "0.1.0-rc.10"  # the kit release; build.py sets it from VERSION
+
 FIELDS = ("kind", "authors", "year", "title", "container", "editors", "volume", "issue",
           "pages", "publisher", "doi", "isbn", "url", "retrieved", "available", "apa-title")
 # Kinds printed "In <container>", a part of a larger work.
@@ -443,6 +445,7 @@ def csl(f):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
+    ap.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     ap.add_argument("notes", nargs="+", help="source notes")
     ap.add_argument("--style", default="kit", choices=("kit", "apa", "chicago", "ieee", "bibtex", "csl"))
     ap.add_argument("--out", help="write here instead of printing")

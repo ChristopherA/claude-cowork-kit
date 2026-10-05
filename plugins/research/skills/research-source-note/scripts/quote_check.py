@@ -43,6 +43,8 @@ import re
 import sys
 import unicodedata
 
+__version__ = "0.1.0-rc.10"  # the kit release; build.py sets it from VERSION
+
 QUOTE = re.compile(r'"([^"\n]+?)"'                       # straight, curly quotes inside allowed
                    r'|“((?:[^“”"\n]|“[^“”\n]*”)+?)”'       # curly, a balanced curly pair inside
                    r'|[“”]([^"“”\n]+?)[“”"]')                # mismatched marks, as typed
@@ -131,6 +133,7 @@ def check(quote, cited, rendition, markers):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
+    ap.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     ap.add_argument("--note", required=True, help="the source note")
     ap.add_argument("--rendition", required=True, help="the source's markdown rendition, with page markers")
     ap.add_argument("--min-words", type=int, default=4, help="shortest quoted span to check (default 4 words)")

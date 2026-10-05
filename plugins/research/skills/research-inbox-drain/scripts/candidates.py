@@ -25,6 +25,8 @@ import os
 import re
 import sys
 
+__version__ = "0.1.0-rc.10"  # the kit release; build.py sets it from VERSION
+
 STOP = set("""
 a an the and or but if then of to in on at by for from with without into onto
 is are was were be been being am do does did have has had not no yes it its
@@ -63,6 +65,7 @@ def terms_of(text):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
+    ap.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     ap.add_argument("--folder", required=True, help="notes folder to search")
     ap.add_argument("--text", required=True, help="the captured item")
     ap.add_argument("--limit", type=int, default=5, help="max results (default 5)")

@@ -4,6 +4,7 @@ author: Example, Ada
 link: https://example.org/notes-that-last.pdf
 retrieved: 2026-10-04
 original: ../originals/example-2024-notes-that-last.pdf
+made with: research pdf_info 0.1.0-rc.10
 
 A lossy text copy of the original, for searching and checking quotes. Cite the original, not this file. Extracted in reading order, column by column; the publisher's cover sheet (PDF page 3) is left out; publisher download stamps are removed.
 

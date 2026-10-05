@@ -55,6 +55,8 @@ import os
 import re
 import sys
 
+__version__ = "0.1.0-rc.10"  # the kit release; build.py sets it from VERSION
+
 KEYLINE = re.compile(r"^[A-Za-z][A-Za-z _-]{0,30}:\s")  # a metadata line, not prose
 CREATED = re.compile(r"^\s*created:\s*(\d{4}-\d{2}-\d{2})", re.I | re.M)
 SOURCE = re.compile(r"^\s*source:", re.I | re.M)
@@ -211,6 +213,7 @@ def source_census(root, sources_dir, topics_dir, works_dir, texts, limit):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
+    ap.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     ap.add_argument("--folder", required=True)
     ap.add_argument("--limit", type=int, default=10, help="items per list (default 10)")
     ap.add_argument("--ext", default=".md")

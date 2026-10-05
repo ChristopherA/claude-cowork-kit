@@ -586,7 +586,10 @@ def check_fixture_rendition(scripts, folder, name, run):
         text = fresh.read_text()
         if "192.0.2.10" in text or "personal, non-commercial" in text:
             fail("pdf_info.py: the fixture rendition still carries the download stamp or the cover sheet")
-        if text != rendition.read_text():
+        same = lambda t: re.sub(r"^made with: .*\n", "", t, flags=re.M)
+        if "made with: research pdf_info " not in text:
+            fail("pdf_info.py: the fixture rendition does not say which release made it")
+        if same(text) != same(rendition.read_text()):
             fail(f"{rendition.relative_to(ROOT)}: differs from what pdf_info.py writes from the fixture PDF; rebuild it")
 
         layout = work / "layout.md"
@@ -700,6 +703,14 @@ def generated_files(refs):
             dest = ref if ref.startswith(name) else f"{name}-{ref}"
             out[upgrade / dest] = release_stamp(refs[ref].split("from the Claude Cowork Kit's ", 1)[1].split(";", 1)[0]) \
                 + refs[ref].split("\n", 2)[2]
+    # Every script carries the kit's release, so a stale copy can say what it is.
+    for script in sorted(PLUGINS_DIR.glob("*/skills/*/scripts/*.py")):
+        text = script.read_text()
+        if not re.search(r'^__version__ = "[^"]*"', text, re.M):
+            fail(f"{script.relative_to(ROOT)}: no __version__ line for build.py to set")
+            continue
+        out[script] = re.sub(r'^__version__ = "[^"]*"', f'__version__ = "{KIT_VERSION}"', text, count=1, flags=re.M)
+
     marketplace = {
         "name": "claude-cowork-kit",
         "owner": {"name": AUTHOR},

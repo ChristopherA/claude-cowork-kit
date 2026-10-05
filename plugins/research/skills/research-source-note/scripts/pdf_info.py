@@ -15,7 +15,9 @@ are removed from every page, since they are not the work and often name
 the reader. A publisher's cover sheet, a first or last page carrying a
 download notice rather than the article, is left out of the rendition and
 out of the page numbering; --cover-pages names the cover pages when the
-guess is wrong.
+guess is wrong. The header's "made with" line names the script and the
+kit release that wrote it, so a later upgrade can find renditions made
+before a fix; --version prints the release alone.
 
 Usage:
   pdf_info.py FILE.pdf [--pages N] [--chars N]
@@ -52,6 +54,8 @@ import re
 import shutil
 import subprocess
 import sys
+
+__version__ = "0.1.0-rc.10"  # the kit release; build.py sets it from VERSION
 
 
 def run(cmd):
@@ -181,7 +185,8 @@ def write_rendition(args, meta, tools):
         notes.append("the publisher's cover sheet (PDF page " + ", ".join(map(str, covers)) + ") is left out")
     if stamps:
         notes.append("publisher download stamps are removed")
-    head += [f"retrieved: {retrieved}", f"original: {link}", "", "; ".join(notes) + ".", ""]
+    head += [f"retrieved: {retrieved}", f"original: {link}", f"made with: research pdf_info {__version__}",
+             "", "; ".join(notes) + ".", ""]
     with open(args.rendition, "w", encoding="utf-8") as f:
         f.write("\n".join(head + body))
     return {"path": args.rendition, "pages": len(pages) - len(covers), "pages_without_text": empty,
@@ -190,6 +195,7 @@ def write_rendition(args, meta, tools):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
+    ap.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     ap.add_argument("file", help="the PDF to read")
     ap.add_argument("--pages", type=int, default=3, help="pages of text to extract (default 3)")
     ap.add_argument("--chars", type=int, default=12000, help="max characters of text (default 12000)")

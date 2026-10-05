@@ -29,6 +29,8 @@ import json
 import re
 import sys
 
+__version__ = "0.1.0-rc.10"  # the kit release; build.py sets it from VERSION
+
 LABELS = ["SHORT ABSTRACT", "ABSTRACT", "BRIEF", "EVIDENCE", "KEY POINTS", "KEY QUOTES", "INFLUENCE",
           "METHODOLOGY", "WHY SAVED", "WHY THIS MATTERS", "CONTRIBUTED BY", "CURRENT THINKING",
           "SOURCES", "OPEN QUESTIONS", "WRITTEN UP"]
@@ -178,6 +180,7 @@ def check(text):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
+    ap.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     ap.add_argument("note", help="the source note to check")
     args = ap.parse_args()
     try:
