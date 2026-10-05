@@ -50,7 +50,7 @@ Tracking my household money: statements, exports, budgets, and the questions I a
 
 # What belongs elsewhere
 
-Not investment picking, not tax preparation, and not a place to research either — if I start down one of those, say so. A medical bill's amount belongs here; the clinical record behind it belongs in my medical binder.
+Not investment picking, not tax preparation, and not a place to research either — if I start down one of those, say so. A medical bill's amount belongs here; the clinical record behind it belongs in my health binder.
 
 Anything that isn't about my household's money, tell me which binder it belongs in and stop.
 

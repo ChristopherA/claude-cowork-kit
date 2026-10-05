@@ -20,7 +20,7 @@ Read the whole dump before writing anything. A message or transcript the reader 
 ## The routine
 
 1. Pull out every obligation the dump carries, said or implied: things owed, things promised, things waiting on the reader. Keep the reader's words where they are concrete.
-2. Set aside what does not belong in the list. What is already done. What is someone else's to do, unless the reader's part is to ask them. Anything that is really a durable note, an idea worth keeping or something read: name it for the research binder's inbox, in a line of its own after the list, never in the list. Anything needing the money or medical files: name the binder in the same way, and do not do it here.
+2. Set aside what does not belong in the list. What is already done. What is someone else's to do, unless the reader's part is to ask them. Anything that is really a durable note, an idea worth keeping or something read: name it for the research binder's inbox, in a line of its own after the list, never in the list. Anything needing the money or health binder's files: name the binder in the same way, and do not do it here.
 3. Turn each remaining obligation into one concrete next action: a verb, the thing, and the person if one is involved. "Reply to Dana about the March date" and not "Dana". If an item is too vague to start today, the action is the small thing that makes it startable, which is often a question to one person; if not even that, leave it out and say so below the list.
 4. Order the list by `priorities.md` first, then by what is due soonest, then by what unblocks the most.
 5. Cut. Three real things beat eight. More than five needs a reason the reader would accept, and a long list is usually two lists, today's and the rest; give today's.

@@ -1,5 +1,5 @@
 ---
-name: medical-record-visit
+name: health-record-visit
 description: After an appointment: a bare timeline line, the visit note from the recording, checklist and portal papers into the folder, the standing files updated, questions struck. Use for "record my visit".
 ---
 
@@ -9,7 +9,7 @@ Put the visit where it belongs, in two steps kept apart. The timeline document g
 
 ## Where this runs
 
-This skill belongs to the medical binder, whose Context documents are `questions.md` and `timeline.md`. Before anything else, check that they are here. If not, this is another binder: say which binder this skill is for and stop, so nothing is written into the wrong folder or the wrong Context documents; if this is the right binder and it is not set up yet, offer its setup, `set up my medical binder`.
+This skill belongs to the health binder, whose Context documents are `questions.md` and `timeline.md`. Before anything else, check that they are here. If not, this is another binder: say which binder this skill is for and stop, so nothing is written into the wrong folder or the wrong Context documents; if this is the right binder and it is not set up yet, offer its setup, `set up my health binder`.
 
 ## Before starting
 

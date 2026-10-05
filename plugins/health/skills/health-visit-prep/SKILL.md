@@ -1,5 +1,5 @@
 ---
-name: medical-visit-prep
+name: health-visit-prep
 description: Before an appointment, drafts the questions from what changed in the record, and on request a visit pack: a handout, a script and a companion checklist. Use for "prep my doctor's visit", "visit pack".
 ---
 
@@ -9,7 +9,7 @@ Walk into the appointment with clear questions. This skill is the Appointments c
 
 ## Where this runs
 
-This skill belongs to the medical binder, whose Context documents are `questions.md` and `timeline.md`. Before anything else, check that they are here. If not, this is another binder: say which binder this skill is for and stop, so nothing is written into the wrong folder or the wrong Context documents; if this is the right binder and it is not set up yet, offer its setup, `set up my medical binder`.
+This skill belongs to the health binder, whose Context documents are `questions.md` and `timeline.md`. Before anything else, check that they are here. If not, this is another binder: say which binder this skill is for and stop, so nothing is written into the wrong folder or the wrong Context documents; if this is the right binder and it is not set up yet, offer its setup, `set up my health binder`.
 
 ## Before starting
 

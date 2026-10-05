@@ -12,7 +12,7 @@ Give the reader one next step, chosen from where things actually stand, and say 
 In this order, and say which of them you could reach:
 
 1. `wrap-up.md`, if it exists: the note the last session left, with its first next step. Read it first; it is the reader's own statement of where they stopped.
-2. The binder's own Context documents, whichever this binder has: in the research binder, `map.md`'s "what I'm working on now" and "open threads" sections and `inbox.md` (how many items are waiting, and how old the oldest looks); in the week binder, `priorities.md`; in the learning binder, `mission.md` and `progress.md`; in the money binder, `categories.md` and the newest summary; in the medical binder, `questions.md` and `timeline.md`. Say which you found.
+2. The binder's own Context documents, whichever this binder has: in the research binder, `map.md`'s "what I'm working on now" and "open threads" sections and `inbox.md` (how many items are waiting, and how old the oldest looks); in the week binder, `priorities.md`; in the learning binder, `mission.md` and `progress.md`; in the money binder, `categories.md` and the newest summary; in the health binder, `questions.md` and `timeline.md`. Say which you found.
 3. If the folder is reachable, the notes and threads with the newest dates inside them (a `created` or dated line; the file's modification time is not reliable on the mount): their names and, for the top few, their first lines. If the folder is not reachable, say so; the recommendation then comes from the Context documents, which is enough for a phone.
 
 Do not ask the reader what they were doing. The point of this skill is that they do not remember, and the files do.

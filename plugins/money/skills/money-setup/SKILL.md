@@ -15,7 +15,7 @@ A task can read the project's Context documents, create Context documents in the
 
 ## Before the first question
 
-Before anything else, check whether this project already holds another binder: `map.md` is the research binder's, `mission.md` the learning binder's, `priorities.md` the week binder's, `categories.md` the money binder's and `timeline.md` the medical binder's. If one of them is here and it is not this binder's own, say which binder this project holds, that each binder needs a project and a folder of its own, and stop; this binder's documents created here would mix the two.
+Before anything else, check whether this project already holds another binder: `map.md` is the research binder's, `mission.md` the learning binder's, `priorities.md` the week binder's, `categories.md` the money binder's and `timeline.md` the health binder's. If one of them is here and it is not this binder's own, say which binder this project holds, that each binder needs a project and a folder of its own, and stop; this binder's documents created here would mix the two.
 
 Check which of `categories.md` and `targets.md` already exist. If both do, this binder is already set up: say so and stop. Do not run setup twice. A Context document that exists is kept and read back, never recreated; say which you kept. If one exists without the other, an earlier setup stopped partway: say so, ask only what the missing one needs, and skip the privacy statement below if the reader has already heard it.
 

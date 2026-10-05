@@ -1,5 +1,5 @@
 ---
-name: medical-treatment-questions
+name: health-treatment-questions
 description: From a handed article or a clinician's suggestion, grades the evidence it cites and writes the questions to ask about the treatment, never from recall. Use for "questions about this treatment".
 ---
 
@@ -9,7 +9,7 @@ The reader has been offered or has found a treatment and wants to weigh it. This
 
 ## Where this runs
 
-This skill belongs to the medical binder, whose Context documents are `questions.md` and `timeline.md`. Before anything else, check that they are here. If not, this is another binder: say which binder this skill is for and stop, so nothing is written into the wrong folder or the wrong Context documents; if this is the right binder and it is not set up yet, offer its setup, `set up my medical binder`.
+This skill belongs to the health binder, whose Context documents are `questions.md` and `timeline.md`. Before anything else, check that they are here. If not, this is another binder: say which binder this skill is for and stop, so nothing is written into the wrong folder or the wrong Context documents; if this is the right binder and it is not set up yet, offer its setup, `set up my health binder`.
 
 ## Before starting
 

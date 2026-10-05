@@ -15,7 +15,7 @@ A task can read the project's Context documents, create Context documents in the
 
 ## Before the first question
 
-Before anything else, check whether this project already holds another binder: `map.md` is the research binder's, `mission.md` the learning binder's, `priorities.md` the week binder's, `categories.md` the money binder's and `timeline.md` the medical binder's. If one of them is here and it is not this binder's own, say which binder this project holds, that each binder needs a project and a folder of its own, and stop; this binder's documents created here would mix the two.
+Before anything else, check whether this project already holds another binder: `map.md` is the research binder's, `mission.md` the learning binder's, `priorities.md` the week binder's, `categories.md` the money binder's and `timeline.md` the health binder's. If one of them is here and it is not this binder's own, say which binder this project holds, that each binder needs a project and a folder of its own, and stop; this binder's documents created here would mix the two.
 
 Check whether a Context document named `priorities.md` already exists. If it does, this binder is already set up: say so, offer to update the priorities instead, and stop. Do not run setup twice.
 
@@ -25,7 +25,7 @@ Ask as the Asking section says, grouping the questions whose answers do not depe
 
 1. **The folder.** Where the working files are on their computer: the folder that holds drafts, lists, threads they are keeping, earlier replies. If they name a folder, confirm you can reach it; if you cannot, say so, continue from their description, and mark in `priorities.md` that the folder is to be checked at the desk. The folder is reachable only from a task at the desk; the Context document this skill creates is reachable from the phone as well, which is why the priorities live in the document and not in the folder.
 2. **Current priorities.** The two or three things that matter this month, in order, each in a phrase, and the one eating their attention right now. Not everything they owe; the things a plan should bend around. If they offer eight, ask which three would still matter if the other five slipped.
-3. **The other binders.** Which of the kit's other binders exist for them: a research binder (notes and reading), a learning binder, a money binder, a medical binder. Offer the four, more than one allowed; choosing none, or saying so in their own words, means none yet. The instructions send notes to the research binder's inbox and money and medical questions to their binders; the answer decides whether those redirects name a binder that exists or one the reader has still to build.
+3. **The other binders.** Which of the kit's other binders exist for them: a research binder (notes and reading), a learning binder, a money binder, a health binder. Offer the four, more than one allowed; choosing none, or saying so in their own words, means none yet. The instructions send notes to the research binder's inbox and money and health questions to their binders; the answer decides whether those redirects name a binder that exists or one the reader has still to build.
 
 ## Create the Context document
 

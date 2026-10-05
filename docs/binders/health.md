@@ -1,6 +1,6 @@
-# The medical binder
+# The health binder
 
-Keeping your medical records organized: visits, test results, medications, and the questions you want to ask at your next appointment, as a record you can compare across visits. Its plugin is `medical`, shown as **Medical records** in the app. The reasoning every binder shares is in [the kit's explainer](../claude-cowork-kit.md), and its section on what the connected folder does and does not protect is the one to read before this binder; the setup opens by saying the same thing.
+Your health, kept as records: visits, test results, medications, and the questions you want to ask at your next appointment, organized so you can compare them across visits. It is for keeping your records and preparing for appointments, not for advice or diagnosis: nothing here works out what is wrong between visits. Its plugin is `health`, shown as **Health** in the app. The reasoning every binder shares is in [the kit's explainer](../claude-cowork-kit.md), and its section on what the connected folder does and does not protect is the one to read before this binder; the setup opens by saying the same thing.
 
 The floor is the same as for money. The records stay in the folder on your computer; the Context documents hold a running list of questions for appointments and a bare timeline of visit dates, nothing clinical, because Context documents sync to the cloud and reach your phone. Claude quotes lab values, dosages and dates exactly as the record has them and never reconstructs one from memory; it is not your doctor, does not diagnose, and does not reassure. Keep this project in the mode that asks before acting, and if you have let Claude see and control your screen, keep your patient portals and health apps out of its reach.
 
@@ -10,30 +10,30 @@ The folder is where the record accumulates, and its shape matters more here than
 
 The skills are built on that folder.
 
-- **`medical-setup`**, `set up my medical binder`. The privacy floor first, then three questions, then the two Context documents and the instructions to paste. If the folder is reachable and holds none of the standing files, it offers to create them empty, with a heading each.
-- **`medical-visit-prep`**, `prep my doctor's visit`. Before an appointment, the questions drawn from what has actually changed in the record since the last one, not a generic checklist; on a first visit, from what you tell it. On request, `visit pack`: a one-page handout the clinician can scan, a script you follow, and a checklist a companion fills in with the clinician's exact words.
-- **`medical-record-visit`**, `record my visit`. After an appointment: a bare timeline line, the visit note from the recording, the checklist and the portal papers into the folder, the standing files updated so the next prep starts from a current record, and the answered questions struck.
-- **`medical-check-in`**, `check in on how I'm doing`. A weekly entry in the functional log, in your own words: what you did, what hurt, what helped, how you feel.
-- **`medical-treatment-questions`**, `questions about this treatment`. Reads an article or a clinician's suggestion you hand over, says what it claims and on what evidence it cites, and turns the gaps into questions. It grades the evidence in five words and no others, strong, moderate, limited, anecdotal, none stated, and only for what the source itself cites; it does not research, because a task cannot reach the web and this binder is not the place to work out what is wrong between appointments.
+- **`health-setup`**, `set up my health binder`. The privacy floor first, then three questions, then the two Context documents and the instructions to paste. If the folder is reachable and holds none of the standing files, it offers to create them empty, with a heading each.
+- **`health-visit-prep`**, `prep my doctor's visit`. Before an appointment, the questions drawn from what has actually changed in the record since the last one, not a generic checklist; on a first visit, from what you tell it. On request, `visit pack`: a one-page handout the clinician can scan, a script you follow, and a checklist a companion fills in with the clinician's exact words.
+- **`health-record-visit`**, `record my visit`. After an appointment: a bare timeline line, the visit note from the recording, the checklist and the portal papers into the folder, the standing files updated so the next prep starts from a current record, and the answered questions struck.
+- **`health-check-in`**, `check in on how I'm doing`. A weekly entry in the functional log, in your own words: what you did, what hurt, what helped, how you feel.
+- **`health-treatment-questions`**, `questions about this treatment`. Reads an article or a clinician's suggestion you hand over, says what it claims and on what evidence it cites, and turns the gaps into questions. It grades the evidence in five words and no others, strong, moderate, limited, anecdotal, none stated, and only for what the source itself cites; it does not research, because a task cannot reach the web and this binder is not the place to work out what is wrong between appointments.
 
 ## Setup
 
 The setup creates two Context documents: `questions.md`, the running list of questions for appointments, and `timeline.md`, the bare list of visit dates by clinician role. Neither holds anything clinical. The general steps and the install paths are in the repository's README, under First run and Install; for this binder:
 
-1. **Install the medical plugin**, `medical`, shown as **Medical records**, and turn it on.
+1. **Install the health plugin**, `health`, shown as **Health**, and turn it on.
 2. **Create the project with its folder.** In Claude, open **Projects**, then **New project**, and fill in the dialog:
-   - **What are you working on?** The binder's name, such as `Medical records`.
+   - **What are you working on?** The binder's name, such as `Health`.
    - **What are you trying to achieve?** A sentence or two saying what the binder is for. Paste this and change it to suit:
 
      ```
-     My medical records: visits, results, medications and the questions for my next appointment, kept so I can compare them across visits.
+     My health records and appointments: visits, results, medications and the questions for my next appointment, kept so I can compare them across visits.
      ```
 
      The app reads this when deciding which project a task belongs in; the rules Claude works by come later, from the setup. Keep it general, with no names, conditions or account details: it syncs with the project.
    - **Folder:** choose **Use a folder** and pick the folder that holds your records and nothing else. As an advanced option, the folder can live in iCloud Drive, so the Files app on your phone can show a result from another clinic or your questions at an appointment; it also puts the records in Apple's iCloud, so choose it on purpose, and [the explainer](../claude-cowork-kit.md#using-your-binders-from-your-iphone-or-ipad) says how.
 
    Click **Create project**. When Claude asks to change files in the folder, choose **Allow**, not Always allow, so it asks again each time; this binder holds what you would mind leaking.
-3. **Run the setup.** In a task inside the project, say `set up my medical binder`. Claude says what the folder does and does not protect; asks where the folder is, which clinicians you see by role, and when the next appointment is; creates the two Context documents; offers the standing files if the folder has none; and hands back what only you can paste: the account instructions, if your Settings, Account, "Instructions for Claude" field does not carry them yet (the account instructions in the explainer), and the project instructions below, for the Instructions panel at the side of the project page, not the description.
+3. **Run the setup.** In a task inside the project, say `set up my health binder`. Claude says what the folder does and does not protect; asks where the folder is, which clinicians you see by role, and when the next appointment is; creates the two Context documents; offers the standing files if the folder has none; and hands back what only you can paste: the account instructions, if your Settings, Account, "Instructions for Claude" field does not carry them yet (the account instructions in the explainer), and the project instructions below, for the Instructions panel at the side of the project page, not the description.
 4. **In the app,** keep this project in the mode that asks before acting ([the explainer's approval modes](../claude-cowork-kit.md#the-two-approval-modes) say where the kit has got to in finding that switch), and if you have let Claude see and control your screen, keep your patient portals and health apps out of its reach.
 
 Without the plugin: paste the account instructions as the explainer says, create the project, ask Claude in a task to create `questions.md` and `timeline.md`, and paste the block below, with the folder path filled in, into the Instructions panel.

@@ -46,7 +46,7 @@ Before a meeting with a professional: a one-page brief for them, a script for th
 
 **When to reach for it.** A short meeting with a professional where the slot is expensive and the preamble would eat it, and especially when someone is coming with you to take notes.
 
-**What it hands back.** Three documents: a one-page brief the professional can scan, a script you follow, and a capture sheet for whoever takes notes, the asks first; each written on a yes. For a clinician, the medical binder's visit prep does this from the record.
+**What it hands back.** Three documents: a one-page brief the professional can scan, a script you follow, and a capture sheet for whoever takes notes, the asks first; each written on a yes. For a clinician, the health binder's visit prep does this from the record.
 
 ### `cowork-new-binder`
 
@@ -256,11 +256,11 @@ Summarizes one statement or export from the folder into categories and totals wi
 
 **What it hands back.** Categories and totals with every figure traced to a row and the arithmetic shown, what did not fit named rather than forced, nothing that identifies an account; written to a Context document on a yes.
 
-## Medical records, `medical`
+## Health, `health`
 
-The medical binder's five skills. The folder holds the clinical record and the Context documents hold only the questions list and the bare timeline; none of them diagnoses, interprets, or reassures.
+The health binder's five skills. The folder holds the clinical record and the Context documents hold only the questions list and the bare timeline; none of them diagnoses, interprets, or reassures.
 
-### `medical-check-in`
+### `health-check-in`
 
 A weekly check-in in the reader's own words: what they did, what hurt, what helped, how they feel; a dated entry in the functional log. Use for "check in on how I'm doing", "health check-in".
 
@@ -268,7 +268,7 @@ A weekly check-in in the reader's own words: what they did, what hurt, what help
 
 **What it hands back.** A dated entry in the functional log in the folder, what you did, what hurt, what helped, how you feel, and the one or two things that moved against the last few entries. Nothing clinical reaches a Context document.
 
-### `medical-record-visit`
+### `health-record-visit`
 
 After an appointment: a bare timeline line, the visit note from the recording, checklist and portal papers into the folder, the standing files updated, questions struck. Use for "record my visit".
 
@@ -276,15 +276,15 @@ After an appointment: a bare timeline line, the visit note from the recording, c
 
 **What it hands back.** A dated line in `timeline.md` with nothing clinical in it, the visit note and the papers into the folder, the standing files updated so the next prep starts from a current record, and the answered questions struck, each step on a yes.
 
-### `medical-setup`
+### `health-setup`
 
-Sets up the medical binder: the privacy floor, three questions, questions.md and timeline.md as Context documents and the instructions to paste. Use for "set up my medical binder", "medical setup".
+Sets up the health binder: the privacy floor, three questions, questions.md and timeline.md as Context documents and the instructions to paste. Use for "set up my health binder", "health setup".
 
-**When to reach for it.** Once, in a task inside the new project for the medical binder. It opens by saying what the folder does and does not protect.
+**When to reach for it.** Once, in a task inside the new project for the health binder. It opens by saying what the folder does and does not protect.
 
 **What it hands back.** `questions.md` and `timeline.md` created with nothing clinical in them, the folder's standing files offered as headed empty files if it has none, and the two things only you can paste: the account instructions if your Settings field does not carry them yet, and the project instructions with the folder filled in.
 
-### `medical-treatment-questions`
+### `health-treatment-questions`
 
 From a handed article or a clinician's suggestion, grades the evidence it cites and writes the questions to ask about the treatment, never from recall. Use for "questions about this treatment".
 
@@ -292,7 +292,7 @@ From a handed article or a clinician's suggestion, grades the evidence it cites 
 
 **What it hands back.** What the source claims and on what evidence, graded in one of five words, strong, moderate, limited, anecdotal, none stated, only for what it cites, and the gaps turned into questions for the clinician, added to `questions.md` on a yes. It does not research and does not say whether to try it.
 
-### `medical-visit-prep`
+### `health-visit-prep`
 
 Before an appointment, drafts the questions from what changed in the record, and on request a visit pack: a handout, a script and a companion checklist. Use for "prep my doctor's visit", "visit pack".
 

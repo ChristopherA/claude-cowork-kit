@@ -1,6 +1,6 @@
 # Claude Cowork Kit
 
-Set up Claude, in its desktop and phone apps, to help with your notes and reading, something you are learning, your week, your money, or your medical records. Each of these is a *binder*: a folder of plain files on your Mac that stays yours, and a project in the Claude app that knows what is in it. You install one plugin and say one sentence, and Claude sets the binder up with you; after that, its routines make the binder worth opening: a decision worked through one question at a time, an inbox of captures filed to your own conventions, a visit prepared from what changed in your record, a week planned from what is actually on the calendar.
+Set up Claude, in its desktop and phone apps, to help with your notes and reading, something you are learning, your week, your money, or your health. Each of these is a *binder*: a folder of plain files on your Mac that stays yours, and a project in the Claude app that knows what is in it. You install one plugin and say one sentence, and Claude sets the binder up with you; after that, its routines make the binder worth opening: a decision worked through one question at a time, an inbox of captures filed to your own conventions, a visit prepared from what changed in your record, a week planned from what is actually on the calendar.
 
 **Status:** a release candidate. So far only the research binder has been tried in the app; [Status](#status) says what is still being confirmed.
 
@@ -66,15 +66,15 @@ Statements and a monthly close, with account details kept out of everything that
 - `money-statement`: one statement summarized into categories and totals. "Summarize this statement."
 - `money-close`: the month's transactions categorized and compared with your targets. "Close the month."
 
-### Medical records, `medical`
+### Health, `health`
 
-A record you can compare across visits, and appointments prepared from it. None of these skills diagnoses or interprets.
+Your medical records and appointments: a record you can compare across visits, and appointments prepared from it. None of these skills diagnoses or interprets.
 
-- `medical-setup`: what the folder does and does not protect, then a questions list and a visit timeline. "Set up my medical binder."
-- `medical-visit-prep`: the questions to ask, from what changed since the last visit, and a visit pack if someone is coming with you. "Prep my doctor's visit."
-- `medical-record-visit`: after an appointment, the visit note filed and the record brought up to date. "Record my visit."
-- `medical-check-in`: a weekly entry in your own words about how you are doing. "Health check-in."
-- `medical-treatment-questions`: grades the evidence an article cites and turns the gaps into questions for your clinician. "Questions about this treatment."
+- `health-setup`: what the folder does and does not protect, then a questions list and a visit timeline. "Set up my health binder."
+- `health-visit-prep`: the questions to ask, from what changed since the last visit, and a visit pack if someone is coming with you. "Prep my doctor's visit."
+- `health-record-visit`: after an appointment, the visit note filed and the record brought up to date. "Record my visit."
+- `health-check-in`: a weekly entry in your own words about how you are doing. "Health check-in."
+- `health-treatment-questions`: grades the evidence an article cites and turns the gaps into questions for your clinician. "Questions about this treatment."
 
 ### Cowork Kit core, `cowork-kit`
 
@@ -117,13 +117,13 @@ Pick the binder you want first. Each one is its own plugin, set up with one phra
 | Something you are learning | **Learning** (`learn`) | `set up my learning binder` |
 | Your week | **Your week** (`week`) | `set up my week binder` |
 | Money | **Money** (`money`) | `set up my money binder` |
-| Medical records | **Medical records** (`medical`) | `set up my medical binder` |
+| Health records and appointments | **Health** (`health`) | `set up my health binder` |
 
-Before you connect a folder, read what the connected folder does and does not protect: `PRIVACY.md` here, and the explainer's section [What the connected folder does and does not protect](docs/claude-cowork-kit.md#what-the-connected-folder-does-and-does-not-protect). Everything Claude can reach in a connected folder it may read, and a file in that folder can carry instructions Claude will follow. The money and medical binders hold what you would mind leaking; their setups say what the folder does and does not protect before anything else.
+Before you connect a folder, read what the connected folder does and does not protect: `PRIVACY.md` here, and the explainer's section [What the connected folder does and does not protect](docs/claude-cowork-kit.md#what-the-connected-folder-does-and-does-not-protect). Everything Claude can reach in a connected folder it may read, and a file in that folder can carry instructions Claude will follow. The money and health binders hold what you would mind leaking; their setups say what the folder does and does not protect before anything else.
 
 1. **Make the binder's folder and back it up.** The simplest and safest start is one folder for all your binders, such as `Claude Cowork Binders` in your home folder, with a folder inside it for each binder. Keep it out of Documents and Desktop, which iCloud may be syncing depending on your settings. As an advanced option, later, you can move a binder into iCloud Drive on purpose, so you can open it in the Files app on your phone; [using your binders from your iPhone or iPad](docs/claude-cowork-kit.md#using-your-binders-from-your-iphone-or-ipad) says when that is worth it and how. Back the folder up with whatever you already use, before the first task that is allowed to write.
 2. **Install the binder's plugin** by either path above, and turn it on.
-3. **Create the project with its folder.** In Claude, open **Projects**, then **New project**. Name it under What are you working on?, and say in a sentence or two what the binder is for under What are you trying to achieve?; each binder's document gives a text to paste. Choose **Use a folder** and pick the binder's own folder, never one that holds several binders, so the medical binder cannot read your money files. Claude then asks to change files in it: choose **Always allow** for research, learning and your week, and **Allow** for money and medical, so those two ask each time. The folder stays on this computer: Claude reaches it from your desk, or from your iPhone or iPad while Claude is open on the Mac and the Mac is awake; [using your binders from your iPhone or iPad](docs/claude-cowork-kit.md#using-your-binders-from-your-iphone-or-ipad) says how to keep it that way. The project and its Context documents are in your account; that a project created with a folder shows on your phone is one of the things the kit is still confirming.
+3. **Create the project with its folder.** In Claude, open **Projects**, then **New project**. Name it under What are you working on?, and say in a sentence or two what the binder is for under What are you trying to achieve?; each binder's document gives a text to paste. Choose **Use a folder** and pick the binder's own folder, never one that holds several binders, so the health binder cannot read your money files. Claude then asks to change files in it: choose **Always allow** for research, learning and your week, and **Allow** for money and health, so those two ask each time. The folder stays on this computer: Claude reaches it from your desk, or from your iPhone or iPad while Claude is open on the Mac and the Mac is awake; [using your binders from your iPhone or iPad](docs/claude-cowork-kit.md#using-your-binders-from-your-iphone-or-ipad) says how to keep it that way. The project and its Context documents are in your account; that a project created with a folder shows on your phone is one of the things the kit is still confirming.
 4. **Run the setup.** In a task inside that project, say the binder's phrase from the table. Claude asks a few questions, creates the binder's Context documents, and hands back what only you can paste: the account instructions, if your Settings, Account, "Instructions for Claude" field does not carry them yet, and the project instructions for the Instructions panel at the side of the project page. It then tells you what exists and what is waiting for you.
 5. **Install the core plugin** (`cowork-kit`, shown as **Cowork Kit core**) when you want its routines; they work in every binder. Its own setup, `set up the kit`, is for a reader who wants the account instructions before choosing a binder.
 
@@ -136,7 +136,7 @@ Release candidate. The research plugin has had one run in Cowork; the core and t
 ## Learn more
 
 - [How the kit works](docs/claude-cowork-kit.md): why Cowork, where things live and why, what to do when something surprises you, what the connected folder does and does not protect, setting up a binder by hand, and what to change after two weeks.
-- One document per binder under [`docs/binders/`](docs/binders/): [research](docs/binders/research.md), [learning](docs/binders/learning.md), [your week](docs/binders/week.md), [money](docs/binders/money.md) and [medical records](docs/binders/medical.md), each with its setup, a check that it works, and the text its setup writes.
+- One document per binder under [`docs/binders/`](docs/binders/): [research](docs/binders/research.md), [learning](docs/binders/learning.md), [your week](docs/binders/week.md), [money](docs/binders/money.md) and [health](docs/binders/health.md), each with its setup, a check that it works, and the text its setup writes.
 - [The skills index](docs/skills.md): every skill, when to reach for it, and what it hands back.
 - `PRIVACY.md`: what leaves your computer and what does not. `CHANGELOG.md`: what each release changed. `CONTRIBUTING.md`: how to report a problem or change the kit.
 

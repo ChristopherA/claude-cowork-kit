@@ -5,7 +5,7 @@ description: Before a meeting with a professional: a one-page brief for them, a 
 
 # Meeting pack
 
-A short meeting with a professional, an accountant, a lawyer, a contractor, a teacher, an advisor, goes better when three things are written beforehand for three readers: a one-page brief the professional can scan in a minute, a script the reader follows so a twenty-minute slot is not spent on preamble, and a capture sheet for whoever takes notes, so the professional's exact words survive the visit. For a clinician, the medical binder's visit prep does this from the record; this is the same pack for everyone else.
+A short meeting with a professional, an accountant, a lawyer, a contractor, a teacher, an advisor, goes better when three things are written beforehand for three readers: a one-page brief the professional can scan in a minute, a script the reader follows so a twenty-minute slot is not spent on preamble, and a capture sheet for whoever takes notes, so the professional's exact words survive the visit. For a clinician, the health binder's visit prep does this from the record; this is the same pack for everyone else.
 
 ## Take stock
 

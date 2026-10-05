@@ -5,7 +5,7 @@ description: Cleans a raw transcript at a stated level: speakers named, filler t
 
 # Transcript
 
-A raw transcript, from a meeting tool, a dictation app, or a recording the reader had transcribed, is hard to read and full of small errors, and the notes built on it inherit both. This skill turns it into a clean, readable copy without changing what anyone said, saves it beside the raw one, and hands it to whatever the binder does next: a visit note in the medical binder, a source note in the research binder, meeting notes in the week binder. It starts from text; a task cannot transcribe a recording, so a recording is transcribed first with whatever the reader uses, and the text comes here.
+A raw transcript, from a meeting tool, a dictation app, or a recording the reader had transcribed, is hard to read and full of small errors, and the notes built on it inherit both. This skill turns it into a clean, readable copy without changing what anyone said, saves it beside the raw one, and hands it to whatever the binder does next: a visit note in the health binder, a source note in the research binder, meeting notes in the week binder. It starts from text; a task cannot transcribe a recording, so a recording is transcribed first with whatever the reader uses, and the text comes here.
 
 ## Take stock
 

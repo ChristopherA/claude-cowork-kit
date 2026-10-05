@@ -36,11 +36,11 @@
       "source": "./plugins/money"
     },
     {
-      "name": "medical",
-      "displayName": "Medical records",
-      "description": "Skills for the Claude Cowork Kit's medical binder: set it up, prepare a visit and its pack, record a visit into the folder, keep a weekly functional log, and turn a handed article into questions for the clinician.",
+      "name": "health",
+      "displayName": "Health",
+      "description": "Skills for the Claude Cowork Kit's health binder: set it up, prepare a visit and its pack, record a visit into the folder, keep a weekly functional log, and turn a handed article into questions for the clinician.",
       "version": "0.1.0-rc.7",
-      "source": "./plugins/medical"
+      "source": "./plugins/health"
     },
     {
       "name": "research",

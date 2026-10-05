@@ -64,7 +64,7 @@ Run each in a new project created with its own test folder. Pass for every one: 
 - [ ] **Learning.** `set up my learning binder`, once with an empty folder.
 - [ ] **Your week.** `set up my week binder`.
 - [ ] **Money,** with a made-up statement in the folder (a short CSV with a date, a payee and an amount per row, no real account). `set up my money binder`. Also pass: it says what the folder does and does not protect before anything else, and no figure from the statement reaches a Context document.
-- [ ] **Medical,** with a made-up record in the folder. `set up my medical binder`. Also pass: as for money, and nothing clinical reaches `questions.md` or `timeline.md`.
+- [ ] **Health,** with a made-up record in the folder. `set up my health binder`. Also pass: as for money, and nothing clinical reaches `questions.md` or `timeline.md`.
 
 ## The research skills, on the fixture
 

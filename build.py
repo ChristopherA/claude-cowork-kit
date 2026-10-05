@@ -52,7 +52,7 @@ HOMEPAGE = "https://github.com/ChristopherA/claude-cowork-kit"
 RELEASES = f"{HOMEPAGE}/releases"
 SHARED_DOC = ROOT / "docs" / "shared.md"
 TEMPLATE_SKILLS = ROOT / "template" / "skills"
-BINDER_DOCS_WITH_BLOCK = ("learning", "week", "money", "medical")  # docs/binders/<name>.md carries `## Project instructions`
+BINDER_DOCS_WITH_BLOCK = ("learning", "week", "money", "health")  # docs/binders/<name>.md carries `## Project instructions`
 AUTHOR = "Christopher Allen"
 DESCRIPTION_LIMIT = 200  # Cowork rejects a longer description on upload
 ALLOWED_KEYS = {"name", "description", "license", "allowed-tools", "metadata", "compatibility"}
@@ -133,20 +133,20 @@ PLUGINS = {
             "targets and summaries with no account details. Keep the project in the mode that asks (the kit's explainer, under The two approval modes)."
         ),
     },
-    "medical": {
-        "display": "Medical records",
+    "health": {
+        "display": "Health",
         "description": (
-            "Skills for the Claude Cowork Kit's medical binder: set it up, prepare a visit and its "
+            "Skills for the Claude Cowork Kit's health binder: set it up, prepare a visit and its "
             "pack, record a visit into the folder, keep a weekly functional log, and turn a handed "
             "article into questions for the clinician."
         ),
-        "keywords": ["medical", "health", "cowork", "records"],
-        "setup": "medical-setup",
-        "doc": "docs/binders/medical.md",
-        "references": ["medical-instructions.md", "global-instructions.md", "voices.md"],
+        "keywords": ["health", "health", "cowork", "records"],
+        "setup": "health-setup",
+        "doc": "docs/binders/health.md",
+        "references": ["health-instructions.md", "global-instructions.md", "voices.md"],
         "readme": (
-            "Each skill expects the medical binder the Claude Cowork Kit describes: records in a "
-            "connected folder that stays on the computer, arranged as the kit's docs/binders/medical.md "
+            "Each skill expects the health binder the Claude Cowork Kit describes: records in a "
+            "connected folder that stays on the computer, arranged as the kit's docs/binders/health.md "
             "describes, and Context documents holding only a questions list and a bare timeline. Keep the "
             "project in the mode that asks (the kit's explainer, under The two approval modes)."
         ),
@@ -186,7 +186,7 @@ SHARED = {
                          "plugins/research/skills/research-inbox-drain/SKILL.md",
                          "plugins/research/skills/research-source-note/SKILL.md"],
     "The evidence words": ["plugins/research/skills/research-source-note/SKILL.md",
-                           "plugins/medical/skills/medical-treatment-questions/SKILL.md"],
+                           "plugins/health/skills/health-treatment-questions/SKILL.md"],
 }
 
 
@@ -353,7 +353,7 @@ CONTEXT_DOCUMENTS = {  # each binder plugin's setup Context documents, which eve
     "learn": ["mission.md", "curriculum.md", "progress.md"],
     "week": ["priorities.md"],
     "money": ["categories.md", "targets.md"],
-    "medical": ["questions.md", "timeline.md"],
+    "health": ["questions.md", "timeline.md"],
 }
 
 

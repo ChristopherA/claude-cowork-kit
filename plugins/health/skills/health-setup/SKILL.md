@@ -1,13 +1,13 @@
 ---
-name: medical-setup
-description: Sets up the medical binder: the privacy floor, three questions, questions.md and timeline.md as Context documents and the instructions to paste. Use for "set up my medical binder", "medical setup".
+name: health-setup
+description: Sets up the health binder: the privacy floor, three questions, questions.md and timeline.md as Context documents and the instructions to paste. Use for "set up my health binder", "health setup".
 ---
 
 # Setup
 
-Build the medical binder the Claude Cowork Kit describes, from three answers. Say what the folder does and does not protect before anything else, create what a task can create, the two Context documents, and hand back what only the reader can paste, the project instructions. Read the records folder if it is reachable; do not write into it, except to create the standing files as headed empty files when the reader has none and says yes.
+Build the health binder the Claude Cowork Kit describes, from three answers. Say what the folder does and does not protect before anything else, create what a task can create, the two Context documents, and hand back what only the reader can paste, the project instructions. Read the records folder if it is reachable; do not write into it, except to create the standing files as headed empty files when the reader has none and says yes.
 
-The texts this skill hands back are in `references/`, generated from the kit's docs when the plugin was packaged: `medical-instructions.md` (the project instructions), `global-instructions.md` (the account-wide instructions) and `voices.md` (the three voices). Use them as they are; do not rewrite them, and do not paraphrase them into the conversation. Fill in only the folder path where it is marked.
+The texts this skill hands back are in `references/`, generated from the kit's docs when the plugin was packaged: `health-instructions.md` (the project instructions), `global-instructions.md` (the account-wide instructions) and `voices.md` (the three voices). Use them as they are; do not rewrite them, and do not paraphrase them into the conversation. Fill in only the folder path where it is marked.
 
 ## What a task can and cannot do
 
@@ -15,7 +15,7 @@ A task can read the project's Context documents, create Context documents in the
 
 ## Before the first question
 
-Before anything else, check whether this project already holds another binder: `map.md` is the research binder's, `mission.md` the learning binder's, `priorities.md` the week binder's, `categories.md` the money binder's and `timeline.md` the medical binder's. If one of them is here and it is not this binder's own, say which binder this project holds, that each binder needs a project and a folder of its own, and stop; this binder's documents created here would mix the two.
+Before anything else, check whether this project already holds another binder: `map.md` is the research binder's, `mission.md` the learning binder's, `priorities.md` the week binder's, `categories.md` the money binder's and `timeline.md` the health binder's. If one of them is here and it is not this binder's own, say which binder this project holds, that each binder needs a project and a folder of its own, and stop; this binder's documents created here would mix the two.
 
 Check which of `questions.md` and `timeline.md` already exist. If both do, this binder is already set up: say so and stop. Do not run setup twice. A Context document that exists is kept and read back, never recreated; say which you kept.
 
@@ -49,11 +49,11 @@ Before the project instructions, read the reader's Account instructions if you c
 
 The project page has two text fields that look alike, a one-line description under the title and an Instructions panel at the side, and readers put the instructions in the description. So hand back two things, in this order, and say which field each goes in. If the project's description already holds the instructions text, say so and tell the reader to move it.
 
-0. **The description**, only if the reader left What are you trying to achieve? empty when creating the project: offer `My medical records: visits, results, medications and the questions for my next appointment, kept so I can compare them across visits.`, the same text the binder's document gives.
+0. **The description**, only if the reader left What are you trying to achieve? empty when creating the project: offer `My health records and appointments: visits, results, medications and the questions for my next appointment, kept so I can compare them across visits.`, the same text the binder's document gives.
 
 The instructions go into a field only the reader can fill: a task can create Context documents and cannot set the project's Instructions or description, and the shell a task runs in is a Linux space apart from the reader's computer, so it cannot put text on their clipboard either. Do not try; hand the text back and say where it goes. The text goes in a code block of its own, which carries a copy button in the app.
 
-1. **Project instructions**, from `references/medical-instructions.md`, with the folder path filled in where it is marked and nothing else changed. It goes in the Instructions panel on the project's page, not in the one-line description under the title, which is a label.
+1. **Project instructions**, from `references/health-instructions.md`, with the folder path filled in where it is marked and nothing else changed. It goes in the Instructions panel on the project's page, not in the one-line description under the title, which is a label.
 
 Show the block whole, one code block, and nothing else inside the fence.
 

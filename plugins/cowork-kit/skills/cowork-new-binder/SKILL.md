@@ -9,7 +9,7 @@ Give a binder the kit does not describe the same shape as the ones it does: a pu
 
 ## Before the first question
 
-Ask what the binder is for in one sentence, and take that as the working title. If the reader's answer belongs to a binder the kit already describes (notes and reading, learning, the week, money, medical records), say so and point them at that binder's plugin instead; do not build a second one.
+Ask what the binder is for in one sentence, and take that as the working title. If the reader's answer belongs to a binder the kit already describes (notes and reading, learning, the week, money, health), say so and point them at that binder's plugin instead; do not build a second one.
 
 ## The interview, as a plan in rounds
 
@@ -21,7 +21,7 @@ Work this as the interview skill does: a first round of numbered questions, each
 4. **The default shape of an answer.** A list, a draft, a summary, prose.
 5. **What Claude is not, here.** The role it must not take, and what it is good for instead.
 
-For money-like and medical-like binders, anything the reader would mind leaking, add the kit's floor: sensitive files stay in the folder, Context documents hold only what is fine to sync, credentials never anywhere, and the project stays in the mode that asks before acting.
+For money-like and health-like binders, anything the reader would mind leaking, add the kit's floor: sensitive files stay in the folder, Context documents hold only what is fine to sync, credentials never anywhere, and the project stays in the mode that asks before acting.
 
 ## Hand back the design
 

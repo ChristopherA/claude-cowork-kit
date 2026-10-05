@@ -7,7 +7,7 @@ description: Writes the questions for someone who holds what the reader lacks, a
 
 The reader has a decision or a job they cannot finish alone, because someone else holds what they need: an accountant, a contractor, a landlord, a teacher, a lawyer, a relative who was there. This skill writes the questions for that person, as a short document the reader takes to a meeting or sends to be answered.
 
-Interview the reader only about the send, which they can always answer; the questions in the document then aim at the gap between what the other person knows and what the reader needs. For a doctor, use the medical binder's visit prep instead, which knows the record.
+Interview the reader only about the send, which they can always answer; the questions in the document then aim at the gap between what the other person knows and what the reader needs. For a doctor, use the health binder's visit prep instead, which knows the record.
 
 ## Two questions for the reader
 
@@ -24,7 +24,7 @@ Each question is one idea, never two, in plain words, with a blank line under it
 
 ## Ending
 
-Offer to save the document as a Context document, named by date, `YYYY-MM-DD`, and the person, and write it only on a yes. Context documents sync to the account and the phone, so in the money or medical binder, or wherever the questions carry figures, results or account details, offer the folder instead, since that binder's rules keep such things out of Context documents. Say that the reader sends it; you do not.
+Offer to save the document as a Context document, named by date, `YYYY-MM-DD`, and the person, and write it only on a yes. Context documents sync to the account and the phone, so in the money or health binder, or wherever the questions carry figures, results or account details, offer the folder instead, since that binder's rules keep such things out of Context documents. Say that the reader sends it; you do not.
 
 This skill is learned from Matt Pocock's to-questionnaire skill, published under the MIT license, and not copied from it. End with one word for completeness: full, partial (with what is missing), or minimal (stopped early).
 
