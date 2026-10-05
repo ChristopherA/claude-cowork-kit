@@ -104,13 +104,13 @@ Most people should build one binder, live with it for a week, and add the others
 
 ### How Claude asks
 
-Every skill in the kit asks its questions the same way, through the question control, the prompt a task shows with options to tap rather than a question to type an answer to. Each question comes one at a time in the same box, with **Something else** for an answer in your own words and **Skip** to leave it. This is the rule every skill carries, and you can hold them to it. The one exception is a question that tests you, in the learning binder: there no option is marked as recommended, because the mark would be the answer.
+Every skill in the kit asks its questions the same way, through the question control, the prompt a task shows with options to tap rather than a question to type an answer to. Each question comes one at a time in the same box, with **Something else** for an answer in your own words and **Skip** to leave it. No skill offers you an option or a draft built from what is known about you outside the project, such as what is public about your name; it works from what you have said and what your folder shows. This is the rule every skill carries, and you can hold them to it. The one exception is a question that tests you, in the learning binder: there no option is marked as recommended, because the mark would be the answer.
 
 <details>
 <summary>The exact rule every skill carries</summary>
 
 ```
-Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said. Silence is never a yes: a yes is a tap on the control or a word.
+Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never build an option or a draft from outside knowledge of the reader, such as what is public about the account's name: draw only on what they have said and what their folder shows. Never ask what the reader has already said. Silence is never a yes: a yes is a tap on the control or a word.
 ```
 
 </details>

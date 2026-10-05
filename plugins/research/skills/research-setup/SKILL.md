@@ -24,7 +24,7 @@ Check which of the three Context documents already exist: `rules.md`, `map.md`, 
 Ask as the Asking section says, grouping the questions whose answers do not depend on each other in one control and putting the dependent ones after. Skip any the reader has already answered in their request. Reflect each answer back in a phrase before going on.
 
 1. **The folder.** Where the research folder is on their computer, or whether they need to start one. If they name a folder, confirm you can reach it; if you cannot, say so and continue from their description, marking in `map.md` that the folder section is to be checked at the desk. If they are starting one, propose the default layout from the description template (inbox, sources, notes, threads, archive), show it, say that the folder should be backed up before anything writes into it, and create the empty folders only after a yes.
-2. **Who they are and how they work.** Three or four sentences: what they do, what the notes are for, when and how they work with them. Not a biography; the things you would otherwise guess wrong.
+2. **Who they are and how they work.** Three or four sentences: what they do, what the notes are for, when and how they work with them. Not a biography; the things you would otherwise guess wrong. If the reader asks for a draft, read the folder first and build it only from what the folder shows and what they have said, say that is what it came from, and leave out anything you know or guess about them from elsewhere.
 3. **Current work.** Two or three sentences: the open questions, the thing eating their attention this month. Ask for the open threads by name if they have any.
 
 ## Look at the folder
@@ -63,7 +63,7 @@ Report what exists now: the three Context documents by name, the folders created
 
 ## Asking
 
-Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said. Silence is never a yes: a yes is a tap on the control or a word.
+Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never build an option or a draft from outside knowledge of the reader, such as what is public about the account's name: draw only on what they have said and what their folder shows. Never ask what the reader has already said. Silence is never a yes: a yes is a tap on the control or a word.
 
 ## What this skill does not do
 
