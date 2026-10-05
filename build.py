@@ -173,7 +173,9 @@ SHARED = {
     "The account block": [g for g in SETUPS if g.startswith("plugins/")],
     "Running a script": ["plugins/research/skills/research-description-check/SKILL.md",
                          "plugins/research/skills/research-inbox-drain/SKILL.md",
-                         "plugins/research/skills/research-source-note/SKILL.md"],
+                         "plugins/research/skills/research-source-note/SKILL.md",
+                         "plugins/research/skills/research-import/SKILL.md",
+                         "plugins/research/skills/research-write-up/SKILL.md"],
     "The evidence words": ["plugins/research/skills/research-source-note/SKILL.md",
                            "plugins/health/skills/health-treatment-questions/SKILL.md"],
 }
