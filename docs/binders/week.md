@@ -15,7 +15,7 @@ This binder exists so that the research binder can stay quiet. A research binder
 
 ## Setup
 
-The setup creates one Context document, `priorities.md`, the two or three things that matter this month, which every plan bends around; the review creates a second, `reviews.md`, when it first runs. The general steps are in the explainer under Setting up a binder, and the install paths in the repository's README; for this binder:
+The setup creates one Context document, `priorities.md`, the two or three things that matter this month, which every plan bends around; the review creates a second, `reviews.md`, when it first runs. The general steps and the install paths are in the repository's README, under First run and Install; for this binder:
 
 1. **Install the week plugin**, `week`, shown as **Your week**, and turn it on.
 2. **Create the project and connect the folder** that holds your working files, drafts, lists, threads you are keeping, earlier replies, from the project's page. Do not create the project *from* the folder.

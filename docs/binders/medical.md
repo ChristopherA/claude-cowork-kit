@@ -18,7 +18,7 @@ The skills are built on that folder.
 
 ## Setup
 
-The setup creates two Context documents: `questions.md`, the running list of questions for appointments, and `timeline.md`, the bare list of visit dates by clinician role. Neither holds anything clinical. The general steps are in the explainer under Setting up a binder, and the install paths in the repository's README; for this binder:
+The setup creates two Context documents: `questions.md`, the running list of questions for appointments, and `timeline.md`, the bare list of visit dates by clinician role. Neither holds anything clinical. The general steps and the install paths are in the repository's README, under First run and Install; for this binder:
 
 1. **Install the medical plugin**, `medical`, shown as **Medical records**, and turn it on.
 2. **Create the project and connect the folder** that holds your records, from the project's page. Do not create the project *from* the folder.

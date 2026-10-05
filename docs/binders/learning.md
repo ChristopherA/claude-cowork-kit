@@ -14,7 +14,7 @@ Claude also has a built-in Learning style, in the style menu, that makes it ask 
 
 ## Setup
 
-The setup creates three Context documents: `mission.md` (what you're learning, why, by when, how you'll know), `curriculum.md` (units and lessons, one idea each lesson is meant to make intuitive) and `progress.md` (what's settled, what's shaky, what's untested). The general steps are in the explainer under Setting up a binder, and the install paths in the repository's README; for this binder:
+The setup creates three Context documents: `mission.md` (what you're learning, why, by when, how you'll know), `curriculum.md` (units and lessons, one idea each lesson is meant to make intuitive) and `progress.md` (what's settled, what's shaky, what's untested). The general steps and the install paths are in the repository's README, under First run and Install; for this binder:
 
 1. **Install the learning plugin**, `learn`, shown as **Learning**, and turn it on.
 2. **Create the project and connect the folder** that holds your materials, the book, the papers, the course files, from the project's page. If there are no materials yet, an ordinary project with no folder is fine. Do not create the project *from* the folder.

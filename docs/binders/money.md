@@ -12,7 +12,7 @@ The floor here is exact. Statements and exports stay in the folder on your compu
 
 ## Setup
 
-The setup creates two Context documents: `categories.md`, each category with one line saying what falls in it, and `targets.md`, your budget targets as you give them, or a heading and nothing else until you have some. Neither holds an account number, a balance, a transaction row, or the folder path. The general steps are in the explainer under Setting up a binder, and the install paths in the repository's README; for this binder:
+The setup creates two Context documents: `categories.md`, each category with one line saying what falls in it, and `targets.md`, your budget targets as you give them, or a heading and nothing else until you have some. Neither holds an account number, a balance, a transaction row, or the folder path. The general steps and the install paths are in the repository's README, under First run and Install; for this binder:
 
 1. **Install the money plugin**, `money`, shown as **Money**, and turn it on.
 2. **Create the project and connect the folder** that holds your financial files, from the project's page. Do not create the project *from* the folder.

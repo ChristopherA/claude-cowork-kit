@@ -382,6 +382,8 @@ def check_skills_index():
 
     A missing skill, a listed skill that no longer exists, and a description
     that drifted each fail by name, so the public index cannot go stale.
+    The README names every skill too, in a line of its own words, so a new
+    skill cannot ship without one.
     """
     if not SKILLS_INDEX.exists():
         fail(f"{SKILLS_INDEX.relative_to(ROOT)}: missing (the public skills index)")
@@ -407,6 +409,10 @@ def check_skills_index():
                 fail(f"docs/skills.md: {fm['name']}'s description differs from its SKILL.md")
     for stale in sorted(set(listed) - expected):
         fail(f"docs/skills.md: lists {stale}, which no plugin carries")
+    readme = (ROOT / "README.md").read_text()
+    for skill in sorted(expected):
+        if f"`{skill}`" not in readme:
+            fail(f"README.md: {skill} has no line under What is in the kit")
 
 
 RESIDUE = re.compile(r"\\[0-9n]")

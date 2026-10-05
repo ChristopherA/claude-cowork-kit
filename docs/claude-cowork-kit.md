@@ -1,14 +1,16 @@
-# The Claude Cowork Kit
+# How the Claude Cowork Kit works
 
 Plain files that stay yours, and a Claude that knows them.
 
-This kit is a set of plugins for Claude Cowork, with the reasoning beside them. A few words are used throughout and mean one thing each. *Cowork* is the mode of the Claude desktop and mobile apps that works inside projects and on your files. A *task* is one piece of work you start there, in a workspace of its own that is cleared when it ends. The *session* is where a task's work runs, either in the cloud, the default, or on your computer; Claude itself runs on Anthropic's servers either way, and *conversation* means the same as task. A *plugin* is a bundle you install once, in the desktop app under Customize, and a *skill* is one routine inside it: a way of doing a job that Claude picks up when you ask for that job in a phrase. The *marketplace* is the list the app can install plugins from, and this kit's repository is one. A *project* is the app's own container: a page with Instructions, Context, a Folder and Scheduled tasks. Its *Context* holds documents Claude reads in every task and chat in the project, each one a *Context document*. A *binder* is one part of your life as the kit sets it up: one project, one folder on your computer, and the Context documents that describe it.
+The [README](../README.md) says what the kit is, what each plugin does, and how to install it and run your first setup; it also defines the words used here, under Words you will see. This document is the part no plugin can carry: how the pieces fit together, what the connected folder does and does not protect, how to set up a binder with no plugin at all, and what to change once you have lived with it. Read it before you connect a folder, and come back to it when something surprises you.
 
-The kit describes five binders, one for each part of life that files accumulate around: your research, meaning your notes and reading; something you are learning; your week; your money; your medical records. Each is its own plugin, whose setup skill asks a few questions, creates the binder's Context documents, and hands back only what the app still needs from your hands. A core plugin carries routines that work in any binder. Every binder has the same shape: a folder of plain files on your own computer, a small description of it kept where your phone can read it, and a Claude that begins each conversation already knowing both. The files are ordinary. Open them in any editor, back them up, sync them however you like, or walk away from Claude entirely and still have everything.
-
-This document is the part no plugin can carry: why Cowork, what the connected folder does and does not protect, the two approval modes, and what the kit will not do. Each binder has a document of its own under `binders/`, with its use case, its skills, its setup, a check that it works, and the text its setup writes, printed so you can read it before running anything or paste it by hand. The account-wide text every binder shares, the account instructions and the voices, is printed here. The repository's README says how to install; this document says why.
-
-Setup takes about thirty minutes for the first binder. You make the decisions; Claude does the typing.
+- [What this is for](#what-this-is-for), what it won't do, and why Cowork
+- [How it works](#how-it-works): the three places things live, and the habits that follow from them
+- [When something surprises you](#when-something-surprises-you): what you see, why, and what to do
+- [What the connected folder does and does not protect](#what-the-connected-folder-does-and-does-not-protect)
+- [The two approval modes](#the-two-approval-modes)
+- [Setting up a binder without the plugins](#setting-up-a-binder-without-the-plugins), [the account instructions](#the-account-instructions) and [the voices](#the-voices)
+- [Maintenance](#maintenance): the second sitting, and what comes after
 
 ---
 
@@ -33,39 +35,23 @@ The limit is a floor, not a wall. Because everything here is plain files in ordi
 
 ### Why Cowork
 
-You could do this other ways, and it is worth saying what each one costs.
+You could do this other ways, and each one costs something.
+
+| Approach | Reads your whole folder | Works from your phone | Your material stays plain files | Needs a terminal |
+|---|---|---|---|---|
+| Chat with a project | no, only what you upload | yes | no, it lives in the account | no |
+| An AI plugin in Obsidian or Logseq | yes | no | yes | no |
+| Claude Code | yes | no | yes | yes |
+| An always-on assistant that watches your screen | it builds its own store | yes | no | no |
+| **Cowork with this kit** | yes, while the desktop app is open | yes, from a description of the folder | yes | no |
+
+The phone column of the last row is the whole trick: from the phone, Claude works from a small description of your notes kept in the project's Context, not from the notes themselves, which stay on your computer. That split, what goes in the folder and what goes in the description, is the one idea the kit is built around, and How it works, below, is about it.
 
 **A notes app on its own,** Obsidian or Logseq with or without an AI plugin, gives you the same folder of files. What it does not give you is a Claude that can read the whole folder, write into it to your conventions, and answer from a description of it on your phone when the computer is closed. The plugins are desk-bound and each knows one app. This kit keeps your vault exactly as it is and adds that layer beside it.
 
 **Claude Code,** the command-line tool, is the more powerful choice for someone at home in a terminal: it opens inside your folder, reads it directly, and anything it runs, runs on your computer with your access to the web. The price is a terminal, and no phone. Cowork is the same Claude reached through the desktop and mobile apps, and the price you pay instead is the description-versus-copy split explained below and the fact that the folder is reachable only while the desktop app is open. The two are not a fork in the road: start here, and when you want that tooling, point it at the same folder.
 
 **An always-on assistant** that builds its memory by watching your screen is less work, and what you get back is a memory in that app's store, in that app's shape; this kit is the opposite bet, deliberate capture into plain files that are yours.
-
----
-
-## What you need
-
-A Claude plan that includes Cowork, and the Claude desktop app installed on the computer where your files live.
-
-A folder for the binder's files. An existing one is fine; an Obsidian or Logseq vault works as-is, and you should not reorganize it to match anything here. Connect that folder and only that folder: not Documents, not your home folder, not the parent it sits in. Everything Claude can reach it may read, and everything it reads goes to Claude on Anthropic's servers.
-
-About thirty minutes, and a second sitting a couple of weeks later to trim what didn't work.
-
-Optionally, Claude on your phone. That's what makes capture-from-anywhere work, and it's half the value.
-
-One thing to know about cost. Cowork tasks draw on your plan's usage allowance much faster than chat does, so a plan that feels roomy for conversation can feel tight for file work. A long session also gets worse as it goes; start a fresh one for each piece of work rather than carrying a day's worth in one window.
-
----
-
-## What you end up with
-
-Five separate binders: one for research, your notes and reading, one for running your week, one for money, one for medical records, one for learning something on purpose.
-
-Separate, not one assistant that knows everything about you. That's worth saying plainly up front, because "one companion that remembers me" is the natural thing to expect and it isn't what this builds. Claude's memory is scoped to each project, and so to each binder, and doesn't cross between them, so a single all-knowing assistant isn't really on offer. The separation turns that constraint into something useful: your medical records don't surface while you're planning a work week, and a project you never share can't be shared by accident.
-
-There is a second reason for the separation, beyond what memory allows. A research binder that also runs your week fills up with tasks, and the notes drown in them: every conversation starts with what is due rather than what you are thinking about. Keeping the research binder quiet is what makes it worth opening. The week, the money, the medical records, and whatever you are learning each get a binder of their own, with its own plugin and its own document under `binders/`, and you build those only if you want them.
-
-Most people should build one binder, live with it for a week, and add the others only if they want them. All five at once is a lot of setup for a system you haven't tried yet.
 
 ---
 
@@ -77,7 +63,7 @@ Three places things can live, and only two of them last. Then one fact about mem
 
 **Context is what Claude carries with it.** A small set of Context documents attached to each project, reachable from your phone at 11pm, and still there when the laptop is shut. Small is the point: it holds a description of your files, not a copy of them.
 
-**The session is a workbench that gets cleared.** Everything Claude does during a conversation happens in temporary space that's wiped when the conversation ends. This catches people constantly: they watch Claude build something good, close the window, and it's gone. Anything that matters has to land in one of the first two.
+**The session is a workbench that gets cleared.** A task's work runs in a session, in the cloud by default or on your computer; Claude itself runs on Anthropic's servers either way. Everything Claude does during a conversation happens in temporary space that's wiped when the conversation ends. This catches people constantly: they watch Claude build something good, close the window, and it's gone. Anything that matters has to land in one of the first two.
 
 **Memory is for sessions that run in the cloud.** Claude remembers things across conversations, and that memory is scoped to each project. But a session that runs on your computer, the kind that reads your folder, does not use memory at all. So at your desk, the very place you'd expect Claude to remember last time, it works from two things only: the description in Context and what's actually in the folder. That is why the description exists, and why it has to be kept true. (As Anthropic documents it, September 2026.)
 
@@ -99,17 +85,21 @@ Drain that inbox later, at your desk, where the folder is connected and filing c
 
 It's tempting to let Claude maintain elaborate metadata schemas and generated index files, because Claude is good at it and the retrieval feels clever. That structure rots the moment you stop using the agent, and leaves you a pile only software can love.
 
-Plain markdown. Folders you can open in any editor. Filenames you can scan. Context is the Claude-specific layer and it should be the expendable one: if you deleted every project tomorrow, your files should be entirely intact and still make sense.
+Plain markdown. Folders you can open in any editor. Filenames you can scan. Use the folder you already have; an Obsidian or Logseq vault works as-is, and you should not reorganize it to match anything here. Context is the Claude-specific layer and it should be the expendable one: if you deleted every project tomorrow, your files should be entirely intact and still make sense.
 
 If you've seen kits that keep a memory file in the folder that Claude writes to as it learns, that's the same idea placed differently. This kit keeps the description where your phone can read it and keeps Claude's own bookkeeping out of your files on purpose: a file Claude maintains for Claude's benefit is exactly the pile only software can love.
 
 The same test decides whether something earns a file at all, in any of the binders: would it help to have this written down the next time you talk to someone about it or make a decision? A capture, a source you will want again, a condition, a course, a priority: yes. A one-off question, a bad day, something already covered by a file you have: no, and the conversation is enough. Not everything needs tracking, and a folder of files nobody reopens is the second job this kit exists to avoid.
 
-### Binders don't talk to each other
+### Binders are separate on purpose
 
-Claude working in one project cannot read or write another project's Context documents, and memory doesn't cross over either. Mostly this is the feature described above, but it has a sharp edge: a file filed in the wrong binder doesn't get moved later. It sits there with the wrong context attached, and nothing reconciles it but you.
+Not one assistant that knows everything about you. That's worth saying plainly, because "one companion that remembers me" is the natural thing to expect and it isn't what this builds. Claude's memory is scoped to each project, and so to each binder, and doesn't cross between them, so a single all-knowing assistant isn't really on offer. The separation turns that constraint into something useful: your medical records don't surface while you're planning a work week, and a project you never share can't be shared by accident.
 
-That's why each project's instructions block has a section telling Claude what belongs elsewhere, and to name the right binder and stop rather than helpfully filing things wherever you happen to be standing.
+There is a second reason, beyond what memory allows. A research binder that also runs your week fills up with tasks, and the notes drown in them: every conversation starts with what is due rather than what you are thinking about. Keeping the research binder quiet is what makes it worth opening.
+
+The separation has a sharp edge. Claude working in one project cannot read or write another project's Context documents, so a file filed in the wrong binder doesn't get moved later. It sits there with the wrong context attached, and nothing reconciles it but you. That's why each project's instructions block has a section telling Claude what belongs elsewhere, and to name the right binder and stop rather than helpfully filing things wherever you happen to be standing.
+
+Most people should build one binder, live with it for a week, and add the others only if they want them. All five at once is a lot of setup for a system you haven't tried yet.
 
 ### How Claude asks
 
@@ -119,15 +109,38 @@ Every skill in the kit asks its questions the same way, through the question con
 Ask through the app's question control whenever there is a choice, and for every wait for a yes. Put up to four questions in one control when their answers do not depend on each other; a question whose answer depends on another goes in the next control. Each question offers two to four options with the recommended one first and marked as recommended; where the choices are not exclusive, allow more than one. The reader can always answer in their own words instead, and an answer in their own words outranks the options. Reflect each answer back in a phrase before going on. Never ask what the reader has already said. Silence is never a yes: a yes is a tap on the control or a word.
 ```
 
+### The plugins are the upgrade, not the floor
+
+The instruction blocks are the floor and the plugins are the upgrade: everything a skill does, you can ask for in a sentence, more slowly. Skills trigger from their description rather than needing a command you have to remember. They run in Cowork tasks, not in plain chat, and whether the phone app runs them is something the kit is still confirming; the instruction blocks work from the phone regardless, which is why they are the floor. The README lists every skill in a line, and [the skills index](skills.md) says for each when to reach for it and what it hands back. When you write your own, three good ones beat fifteen half-finished.
+
+---
+
+## When something surprises you
+
+Most surprises come from the three places above behaving as described. Each row points at the section that explains it.
+
+| What you see | Why | What to do |
+|---|---|---|
+| Something Claude made during a task is gone after you closed it. | The session is a workbench that is cleared when the task ends. | Before closing, have it saved to the folder or a Context document. The account instructions tell Claude to say when something will not survive. |
+| At your desk, Claude does not remember last time. | A session that reads your folder does not use memory. | Keep the description true; it is what Claude works from there. The research binder's description check finds what no longer matches. |
+| From your phone, Claude cannot open your notes. | The folder is reachable only while the computer is awake and the desktop app is running. | Capture to the inbox from the phone and file at the desk. |
+| A file shows in the folder, with its size, and Claude cannot open it. | iCloud moved it off the Mac to save space. | Turn Optimize Mac Storage off; see [What the connected folder does and does not protect](#what-the-connected-folder-does-and-does-not-protect). |
+| A skill that worked in one task does nothing in the next. | A plugin dragged into a task's composer is attached to that task only. | Install it under Customize, Plugins, and turn it on. |
+| Something is filed in the wrong binder. | Binders cannot see each other, so nothing moves it back. | Move it yourself. Each binder's instructions tell Claude to name the right binder and stop. |
+| Claude follows an instruction you never gave it. | A file at the root of a connected folder can carry instructions Claude reads at the start of a task. | Connect only folders whose contents you wrote or trust. |
+| A long task gets vaguer as it goes. | A long session gets worse as it grows. | Start a fresh task for each piece of work rather than carrying a day's worth in one window. |
+| Your plan's allowance runs out faster than you expected. | Cowork tasks draw on it much faster than chat does. | Save Cowork for work on files, and keep conversation in chat. |
+| Claude asks before every rename, and you have stopped reading the asks. | Every binder's instructions start by asking for a yes before changing the folder. | Widen the leash on purpose; see [Maintenance](#maintenance). |
+
 ---
 
 ## What the connected folder does and does not protect
 
-Everything Claude can reach in a connected folder it may read, and everything it reads goes to Claude on Anthropic's servers, whether the session is a cloud one or a local one. Connect the folder the binder is about and only that folder.
+Everything Claude can reach in a connected folder it may read, and everything it reads goes to Claude on Anthropic's servers, whether the session is a cloud one or a local one. Connect the folder the binder is about and only that folder: not Documents, not your home folder, not the parent it sits in.
 
 Two of the binders, money and medical, carry data you'd mind leaking, and it's worth being exact. **The sensitive material stays in the folder on your computer, and Context documents hold only what you'd be relaxed about syncing.** That keeps your statements and records out of Context, out of every other binder, and off your phone. It does not keep them off Anthropic's servers: when Claude reads a statement to answer you, that statement goes to Claude on Anthropic's servers. Anthropic's own safety guidance says to avoid giving Claude local access to financial documents at all. Plenty of people are fine with a session reading a bank statement or a lab result and would never let it near a password; others draw the line further back. Where you draw it is yours to decide, and those two binders assume you've decided to let Claude read the records. One floor for everyone: credentials, logins, and card numbers never go in a connected folder or a pasted message. And keep both of those projects in the mode that asks before acting.
 
-A file in a connected folder can carry instructions Claude will follow without being asked: Cowork reads certain files at the root of a connected folder at the start of a task, the way developer tools do. That is the reason to connect only folders whose contents you wrote or trust, and it is why this kit keeps its rules in Context documents rather than in a file on disk: your phone can read a Context document and cannot read the folder, and a file Claude can edit and then obeys unprompted is the wrong place for rules. Cowork also has folder instructions, set on the desktop when you connect the folder; the kit does not use them. Your instructions go in the two places described under Setting up a binder.
+A file in a connected folder can carry instructions Claude will follow without being asked: Cowork reads certain files at the root of a connected folder at the start of a task, the way developer tools do. That is the reason to connect only folders whose contents you wrote or trust, and it is why this kit keeps its rules in Context documents rather than in a file on disk: your phone can read a Context document and cannot read the folder, and a file Claude can edit and then obeys unprompted is the wrong place for rules. Cowork also has folder instructions, set on the desktop when you connect the folder; the kit does not use them. Your instructions go in the two places described under Setting up a binder without the plugins.
 
 Back the folder up before the first session that's allowed to write, with whatever you already use: Time Machine, your sync service's version history, git if that's your habit. Claude should never be the only copy of anything, and the kit's own rule that Claude shows you what it would change and waits for a yes is an instruction, not a backup; an instruction can be misread.
 
@@ -141,25 +154,16 @@ Cowork can pause for your approval before it acts on the world, sending, sharing
 
 ---
 
-## Setting up a binder
+## Setting up a binder without the plugins
 
-Every binder is built the same way. The repository's README, under Install and First run, has the install steps in full and what not to do; each binder's document has its own setup phrase and the Context documents its setup creates. The shape:
-
-1. **Back the folder up** if you have not already; the section above says why.
-2. **Install the binder's plugin,** by either path the README gives, and turn it on. No plugin is a prerequisite for another: start with whichever binder you want, though the research binder is the one the others learn their habits from.
-3. **Create the project and connect the folder.** Make an ordinary project in the app and name it; the one-line description under the title is a label, and a sentence is enough. Then connect the folder to it from the project's page in the desktop app. Do not create the project *from* the folder: a project created from a folder lives on that computer and doesn't sync, which breaks the phone half of this entirely. If unsure, make an ordinary project and connect the folder to it.
-4. **Run the setup.** In a task inside the project, say the phrase the binder's document gives. Claude asks its questions, creates the Context documents, and hands back what only you can paste: the account instructions, printed below, with your voice filled in, if your Settings, Account, "Instructions for Claude" field does not carry them yet; and the project instructions, for the Instructions panel at the side of the project page, not the one-line description under the title.
-
-That is the whole gap between this and a one-click install: one install and two pastes, the first time, and one paste for each binder after. A task can create Context documents and read your folder, but it cannot write Settings, create a project, connect a folder, or install a plugin. Those are yours, and the steps above are exactly them. The core plugin, whose routines work in any binder, is installed when you want them; its own setup, `set up the kit`, hands back the account instructions for a reader who starts there instead.
-
-### Without the plugins
-
-Everything a setup does can be done by hand from the printed blocks, in this order:
+The README's First run is the setup with a plugin: one install and two pastes the first time, and one paste for each binder after. A task can create Context documents and read your folder, but it cannot write Settings, create a project, connect a folder, or install a plugin, so those steps are yours either way. Everything else a setup skill does can be done by hand from the printed blocks, in this order:
 
 1. **Settings, Account, "Instructions for Claude".** Paste the account instructions printed below, with your chosen voice substituted in. The app's own label on this field says it reaches chats and Cowork alike; it is not the Cowork entry in the Settings sidebar.
-2. **Create the project and connect the folder,** as in step 3 above.
+2. **Create the project and connect the folder,** as the README's First run describes. The one-line description under the project's title is only a label, and a sentence is enough.
 3. **Ask Claude to create the Context documents** the binder's document names, from the texts printed there. Creating them in a task keeps each one's name and text exactly as printed.
 4. **Paste the project instructions** from the binder's document into the Instructions panel at the side of the project page, not into the description.
+
+Each binder's document, under `binders/`, carries its use case, its skills and when to reach for each, its setup phrase, a check that it works, and the texts its setup writes: [research](binders/research.md), [learning](binders/learning.md), [your week](binders/week.md), [money](binders/money.md) and [medical records](binders/medical.md). For a binder the kit does not describe, the core plugin's `cowork-new-binder` skill designs one with you and hands back its text.
 
 ---
 
@@ -223,29 +227,13 @@ All three tell Claude not to restate your question. Anthropic's own advice for d
 
 ## Maintenance
 
+Plan a second sitting a couple of weeks after the first, to trim what didn't work.
+
 **Prune.** People add instructions and never subtract. The failure is invisible: past a certain length Claude starts quietly weighting the wrong ones. Anything that never changed its behavior should go. The same goes for memory: everything Claude has remembered about you is listed under Topics in the Memory settings, where you can read, edit, or delete each entry, and pause or reset the whole thing. Read it at the two-week sitting; a wrong memory is a wrong instruction you never wrote.
 
 **Widen the leash on purpose.** Every binder's project instructions make Claude show you what it would change in your folder and wait for a yes. That's right for the first weeks and wrong forever: a Claude that must ask before every rename is one you'll stop using for filing. At the two-week sitting, decide what it has earned, filing inbox items into the folder without a yes is the usual first step, renames and deletions the usual last, and change that sentence in the Instructions panel to say exactly that. Relax it deliberately, one permission at a time, rather than leaving it forever or dropping it on day one.
 
 **Scheduled tasks are where this starts paying off,** with one shape to keep in mind. A scheduled task runs in the cloud, on its own, whether or not your computer is on, and for the same reason it cannot be tied to a folder on your computer at all. So a scheduled task works from Context and connected services: a weekly pass that reads the inbox document and the description, pulls the reading list out of the captures, and lists what's changed since last week. Anything that needs the folder itself, surfacing notes untouched in six months, finding where last week's thinking contradicts something from March, is a task you start at your desk, or a saved prompt you run there. Don't schedule anything that touches sensitive records or sends messages on your behalf; nobody is watching a scheduled run.
-
-**The plugins.** The kit's skills ship as plugins, one per binder plus the core. The README's table lists every plugin with its skills in a phrase, the skills index beside this document, `skills.md`, says for each skill when to reach for it and what it hands back, and each plugin's own README lists the phrases that trigger them. Install them one at a time, and run each plugin's setup before installing the next.
-
-The instruction blocks are the floor and the plugins are the upgrade: everything a skill does, you can ask for in a sentence, more slowly. Skills trigger from their description rather than needing a command you have to remember. They run in Cowork tasks, not in plain chat, and whether the phone app runs them is something the kit is still confirming; the instruction blocks work from the phone regardless, which is why they are the floor. When you write your own, three good ones beat fifteen half-finished.
-
----
-
-## The binders
-
-One document each, under `binders/`: the binder's use case, its skills and when to reach for each, its setup, a check that it works, and the text its setup writes, printed so you can read it first or paste it by hand. Each shares the account instructions and differs in what is distinctive about the work. Build them when you want them, not all at once.
-
-- [Research](binders/research.md): notes and reading. Capture from anywhere, file at your desk, answer from what you have read. The first binder, and the one the others learn their habits from.
-- [Learning](binders/learning.md): a subject, a skill or an exam, learned on purpose, with a plan and a record of what has clicked.
-- [Your week](binders/week.md): obligations turned into next actions, and a week planned from the time you actually have.
-- [Money](binders/money.md): statements and a monthly close, with account details kept out of everything that syncs.
-- [Medical records](binders/medical.md): a record you can compare across visits, and appointments prepared from it.
-
-For a binder the kit does not describe, the core plugin's `cowork-new-binder` skill designs one with you and hands back its text.
 
 ---
 
