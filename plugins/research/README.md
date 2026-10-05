@@ -4,7 +4,7 @@ Your research binder: capture ideas anywhere, file them into notes at your desk,
 
 Each skill expects the research binder the Claude Cowork Kit describes: a research folder connected in the desktop app, a Context document `rules.md` with the working rules, a Context document `map.md` describing the folder, and a Context document `inbox.md` for captures. The scripts in three of its skills only read the folder; the skills write to it only on the reader's yes, and each says in its body what to do when code execution is off.
 
-Version 0.1.0-rc.9 of the Claude Cowork Kit; every plugin in a release carries the kit's version, and the releases are at https://github.com/ChristopherA/claude-cowork-kit/releases.
+Version 0.1.0-rc.10 of the Claude Cowork Kit; every plugin in a release carries the kit's version, and the releases are at https://github.com/ChristopherA/claude-cowork-kit/releases.
 
 ## Skills
 

@@ -2,7 +2,7 @@
 
 Every release is listed here, newest first, with what changed since the one before. The version is the kit's, in `VERSION`; every plugin in a release carries it.
 
-## Unreleased
+## 0.1.0-rc.10 (2026-10-05)
 
 From a reader's live run of rc.9 on their own research folder. Renditions of two-column journal articles now read each column in turn, so quotes typed from the page match; the old extraction set the columns side by side and failed every quote in a real paper. A rendition also writes ligatures as plain letters, removes publisher download stamps, which carry the reader's IP address, and leaves a publisher's cover sheet out of the text and the page numbers. The quote check keeps a quote whole when it quotes a phrase itself. The cite script sets APA titles in sentence case and knows sixteen more kinds of work, conference papers, dissertations, news articles, encyclopedia entries, standards and others, with a convention for Wikipedia.
 
