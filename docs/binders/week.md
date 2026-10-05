@@ -36,7 +36,7 @@ Without the plugin: paste the account instructions as the explainer says, create
 
 ## Check it works
 
-First look at the project's **Context** panel: `priorities.md` should be there, with no [BRACKET] left in it, and the capacity bar should be nearly empty, since Context holds a description and never copies of your files. Then:
+First look at the project's **Context** panel: `priorities.md` should be there (one Claude created may show as `claude/` followed by its name, which is fine), with no [BRACKET] left in it, and the capacity bar should be nearly empty, since Context holds a description and never copies of your files. Then:
 
 1. **At your desk, dump a mess of obligations into a task** and see whether a short ordered list comes back with nothing around it.
 2. **From your phone, with the computer closed,** ask what the current priorities are; the document alone can answer.

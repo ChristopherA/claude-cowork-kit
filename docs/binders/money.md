@@ -34,7 +34,7 @@ Without the plugin: paste the account instructions as the explainer says, create
 
 ## Check it works
 
-First look at the project's **Context** panel: `categories.md` and `targets.md` should be there, with no [BRACKET] left in them, and no account number, balance or figure from a statement, and the capacity bar should be nearly empty, since Context holds a description and never copies of your files. Then:
+First look at the project's **Context** panel: `categories.md` and `targets.md` should be there (one Claude created may show as `claude/` followed by its name, which is fine), with no [BRACKET] left in them, and no account number, balance or figure from a statement, and the capacity bar should be nearly empty, since Context holds a description and never copies of your files. Then:
 
 1. **At your desk, with the folder connected,** drop one statement or export in it and ask for a summary. The summary should show categories and totals and nothing that identifies an account.
 2. **From your phone, with the computer closed,** ask what your categories are; the Context document alone can answer, and no figure from a statement should come with it.

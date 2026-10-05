@@ -104,7 +104,7 @@ Most people should build one binder, live with it for a week, and add the others
 
 ### How Claude asks
 
-Every skill in the kit asks its questions the same way, through the question control, the prompt a task shows with options to tap rather than a question to type an answer to. This is the rule every skill carries, and you can hold them to it. The one exception is a question that tests you, in the learning binder: there no option is marked as recommended, because the mark would be the answer.
+Every skill in the kit asks its questions the same way, through the question control, the prompt a task shows with options to tap rather than a question to type an answer to. Each question comes one at a time in the same box, with **Something else** for an answer in your own words and **Skip** to leave it. This is the rule every skill carries, and you can hold them to it. The one exception is a question that tests you, in the learning binder: there no option is marked as recommended, because the mark would be the answer.
 
 <details>
 <summary>The exact rule every skill carries</summary>
@@ -127,6 +127,7 @@ Most surprises come from the three places above behaving as described. Where a r
 
 | What you see | Why | What to do |
 |---|---|---|
+| Claude says it is running in the cloud and cannot see your folder, or offers you Terminal commands. | The box at the top was on **Chat**, not **Cowork**: a chat reads the project's Context documents but not the folder, and the plugins' skills do not run in it. | Start a new conversation in the project, switch the box to **Cowork**, and ask again. |
 | Something Claude made during a task is gone after you closed it. | The session is a workbench that is cleared when the task ends. | Before closing, have it saved to the folder or a Context document. The account instructions tell Claude to say when something will not survive. |
 | At your desk, Claude does not remember last time. | A session that reads your folder does not use memory. | Keep the description true; it is what Claude works from there. The research binder's description check finds what no longer matches. |
 | From your phone, Claude cannot open your notes. | The phone reaches the folder only while the Mac is awake with Claude open on it. | Keep the Mac awake with Claude open; see [Using your binders from your iPhone or iPad](#using-your-binders-from-your-iphone-or-ipad). Or capture to the inbox from the phone and file at the desk. |

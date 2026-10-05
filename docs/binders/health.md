@@ -40,7 +40,7 @@ Without the plugin: paste the account instructions as the explainer says, create
 
 ## Check it works
 
-First look at the project's **Context** panel: `questions.md` and `timeline.md` should be there, with no [BRACKET] left in them, and nothing clinical: no result, diagnosis or medication, and the capacity bar should be nearly empty, since Context holds a description and never copies of your files. Then:
+First look at the project's **Context** panel: `questions.md` and `timeline.md` should be there (one Claude created may show as `claude/` followed by its name, which is fine), with no [BRACKET] left in them, and nothing clinical: no result, diagnosis or medication, and the capacity bar should be nearly empty, since Context holds a description and never copies of your files. Then:
 
 1. **From your phone, with the computer closed,** open the project and ask for the questions list. It should come back empty, with no record in it. If the project is not on your phone at all, that is one of the things the kit is still confirming; see [the README's Status](../../README.md#status).
 2. **At your desk, with the folder connected,** say `check in on how I'm doing` and answer; a dated entry should land in the functional log and nowhere else.

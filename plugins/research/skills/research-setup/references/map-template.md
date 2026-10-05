@@ -21,7 +21,7 @@ This describes what's in my research folder and how it's organized. It lives in 
 
 ## What's in each folder
 
-- `inbox/` — raw captures, not yet processed. Nothing here is finished.
+- `inbox/` — files I drop in at my desk, a PDF, a scan, a saved page, not yet processed. Typed captures from anywhere go to `inbox.md` in Context instead; processing the inbox works through both. Nothing here is finished.
 - `sources/` — one note per book, paper, talk, or article I've read. Named `author-year-short-title.md`. A source file kept beside its note (a PDF, say) carries the note's name.
 - `notes/` — one idea each. Named for the claim they make, not the topic they're about.
 - `threads/` — things I'm actively thinking about. Longer and messier than a note, and they change often.

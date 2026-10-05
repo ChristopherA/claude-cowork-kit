@@ -53,7 +53,7 @@ The setup creates three Context documents: `rules.md`, the working rules; `map.m
 
 ## Check it works
 
-First look at the project's **Context** panel: `rules.md`, `map.md` and `inbox.md` should be there, with no [BRACKET] left in them, and the capacity bar should be nearly empty, since Context holds a description and never copies of your files. Then:
+First look at the project's **Context** panel: `rules.md`, `map.md` and `inbox.md` should be there (one Claude created may show as `claude/` followed by its name, which is fine), with no [BRACKET] left in them, and the capacity bar should be nearly empty, since Context holds a description and never copies of your files. Then:
 
 1. **At your desk, in a Cowork task, ask:** *what's in my notes?* This checks that the folder is reachable and the description matches reality.
 2. **From your phone, with the computer closed,** ask something the description alone can answer.
@@ -138,7 +138,7 @@ This describes what's in my research folder and how it's organized. It lives in 
 
 ## What's in each folder
 
-- `inbox/` — raw captures, not yet processed. Nothing here is finished.
+- `inbox/` — files I drop in at my desk, a PDF, a scan, a saved page, not yet processed. Typed captures from anywhere go to `inbox.md` in Context instead; processing the inbox works through both. Nothing here is finished.
 - `sources/` — one note per book, paper, talk, or article I've read. Named `author-year-short-title.md`. A source file kept beside its note (a PDF, say) carries the note's name.
 - `notes/` — one idea each. Named for the claim they make, not the topic they're about.
 - `threads/` — things I'm actively thinking about. Longer and messier than a note, and they change often.

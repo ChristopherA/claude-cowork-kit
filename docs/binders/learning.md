@@ -35,7 +35,7 @@ Without the plugin: paste the account instructions as the explainer says, create
 
 ## Check it works
 
-First look at the project's **Context** panel: `mission.md`, `curriculum.md` and `progress.md` should be there, with no [BRACKET] left in them, and the capacity bar should be nearly empty, since Context holds a description and never copies of your files. Then:
+First look at the project's **Context** panel: `mission.md`, `curriculum.md` and `progress.md` should be there (one Claude created may show as `claude/` followed by its name, which is fine), with no [BRACKET] left in them, and the capacity bar should be nearly empty, since Context holds a description and never copies of your files. Then:
 
 1. **In this project, ask Claude a direct question about the subject** and see whether it answers or asks. The instructions say to ask first.
 2. **From your phone, with the computer closed,** ask where the progress record says you are; the document alone can answer.
