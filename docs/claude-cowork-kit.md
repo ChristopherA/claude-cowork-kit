@@ -60,7 +60,7 @@ The phone column of the last row is the whole trick: from the phone, Claude work
 
 Three places things can live, and only two of them last. Then one fact about memory that decides what goes where.
 
-**The folder on your computer is where the work lives.** Every file, unbounded in size, searchable, yours. Claude can reach it only while your computer is awake and the desktop app is running: in a Cowork task at your desk. A conversation in the project on your phone is a chat, and it cannot reach the folder even with the Mac open. Close the laptop and the folder is out of reach from everywhere.
+**The folder on your computer is where the work lives.** Every file, unbounded in size, searchable, yours. Claude can reach it only while your computer is awake and the desktop app is running: in a Cowork task started on the Mac. A conversation started on your phone runs in the cloud and cannot reach the folder; a task started on the Mac and continued from your phone can, while the Mac is awake with Claude open. Close the laptop and the folder is out of reach from everywhere.
 
 **Context is what Claude carries with it.** A small set of Context documents attached to each project, reachable from your phone at 11pm, and still there when the laptop is shut. Small is the point: it holds a description of your files, not a copy of them.
 
@@ -130,7 +130,7 @@ Most surprises come from the three places above behaving as described. Where a r
 | Claude says it is running in the cloud and cannot see your folder, or offers you Terminal commands. | The box at the top was on **Chat**, not **Cowork**: a chat reads the project's Context documents but not the folder, and the plugins' skills do not run in it. | Start a new conversation in the project, switch the box to **Cowork**, and ask again. |
 | Something Claude made during a task is gone after you closed it. | The session is a workbench that is cleared when the task ends. | Before closing, have it saved to the folder or a Context document. The account instructions tell Claude to say when something will not survive. |
 | At your desk, Claude does not remember last time. | A session that reads your folder does not use memory. | Keep the description true; it is what Claude works from there. The research binder's description check finds what no longer matches. |
-| From your phone, Claude cannot open your notes. | A conversation in the project on the phone is a chat: it reads the Context documents, not the folder. | Capture to the inbox from the phone and file at the desk; ask from the phone what the description can answer. |
+| From your phone, Claude cannot open your notes. | A conversation started on the phone runs in the cloud: it reads the Context documents, not the folder. | Start the task on the Mac and continue it from the phone; see [Using your binders from your iPhone or iPad](#using-your-binders-from-your-iphone-or-ipad). Or capture to the inbox from the phone and file at the desk. |
 | A file shows in the folder, with its size, and Claude cannot open it. | iCloud moved it off the Mac to save space. | Right-click the binder's folder in Finder and choose Keep Downloaded, or turn Optimize Mac Storage off; see [What the connected folder does and does not protect](#what-the-connected-folder-does-and-does-not-protect). |
 | A skill that worked in one task does nothing in the next. | A plugin dragged into a task's composer is attached to that task only. | Install it under Customize, Plugins, and turn it on. |
 | Something is filed in the wrong binder. | Binders cannot see each other, so nothing moves it back. | Move it yourself. Each binder's instructions tell Claude to name the right binder and stop. |
@@ -143,9 +143,15 @@ Most surprises come from the three places above behaving as described. Where a r
 
 ## Using your binders from your iPhone or iPad
 
-On your phone, the project is there with its description, its instructions and its Context documents, and a conversation in it is a chat: it answers from those, and it cannot reach the folder or use the plugins' skills. That is what the inbox and the description are for. Two more things can help.
+On your phone, the project is there with its description, its instructions and its Context documents. A conversation you start there runs in the cloud: it answers from those documents, and it cannot reach the folder. Two things get you further.
 
-**Reaching the Mac from your phone.** The desktop app can let sessions started from your phone or claude.ai read and edit folders on the Mac while Claude is open there; it calls this Remote Control, says that what those sessions read goes to Anthropic, and lets you turn it off in Settings. A conversation in a project is not one of those sessions, and the kit has not yet confirmed a route that brings a binder's folder to the phone. Any route that does needs the Mac awake while you are away from it:
+**Working in the folder from your phone.** Start the task on the Mac and carry it with you:
+
+1. On the Mac, open the project, switch the box to **Cowork**, check that the binder's folder is ticked under **Add folder**, and start the task with a sentence, such as `I will continue this from my phone.`
+2. Keep the Mac awake with Claude open (below).
+3. On the phone, open that same task. It is listed under **Recents** in the app's sidebar, not in the project's list. Whatever you ask there runs on the Mac, with the folder.
+
+A task you start on the phone instead runs in the cloud and is not linked to the Mac. Anthropic's Dispatch, in both apps' sidebars, also runs work on the Mac, but the kit has not yet got it to find a project. To keep the Mac reachable while you are away:
 
 - In System Settings, search for "sleeping". On a Mac laptop, turn on **Prevent automatic sleeping on power adapter when the display is off**, and leave it plugged in; on a desktop Mac the setting is **Prevent automatic sleeping when the display is off**.
 - Leave Claude open. To step away, lock the screen with Control-Command-Q (Lock Screen in the Apple menu): a locked Mac stays awake and Claude keeps running.
@@ -159,7 +165,7 @@ To put a binder in iCloud Drive, make or move its folder there in Finder, then a
 
 ## What the connected folder does and does not protect
 
-Everything Claude can reach in a connected folder it may read, and everything it reads goes to Claude on Anthropic's servers, whether the session is a cloud one or a local one. Connect the folder the binder is about and only that folder: not Documents, not your home folder, not the parent it sits in. Your binders start out together in one folder; each project gets its own binder's folder inside it, never the shared one. The desktop app can also let sessions started from your phone reach folders on the Mac while Claude is open there; [Using your binders from your iPhone or iPad](#using-your-binders-from-your-iphone-or-ipad) says what the kit knows of that.
+Everything Claude can reach in a connected folder it may read, and everything it reads goes to Claude on Anthropic's servers, whether the session is a cloud one or a local one. Connect the folder the binder is about and only that folder: not Documents, not your home folder, not the parent it sits in. Your binders start out together in one folder; each project gets its own binder's folder inside it, never the shared one. A task started on the Mac and continued from your phone reads and edits the folder too, and what it reads goes to Anthropic the same as at the desk; [Using your binders from your iPhone or iPad](#using-your-binders-from-your-iphone-or-ipad) says how it works.
 
 Two of the binders, money and health, carry data you'd mind leaking, and it's worth being exact. **The sensitive material stays in the folder on your computer, and Context documents hold only what you'd be relaxed about syncing.** That keeps your statements and records out of Context, out of every other binder, and off your phone. It does not keep them off Anthropic's servers: when Claude reads a statement to answer you, that statement goes to Claude on Anthropic's servers. Anthropic's own safety guidance says to avoid giving Claude local access to financial documents at all. Plenty of people are fine with a session reading a bank statement or a lab result and would never let it near a password; others draw the line further back. Where you draw it is yours to decide, and those two binders assume you've decided to let Claude read the records. A folder in iCloud Drive adds Apple to the list of places the records live; that can be worth it for medical records you want on your phone at an appointment, and it is a decision to make on purpose. One floor for everyone: credentials, logins, and card numbers never go in a connected folder or a pasted message. And keep both of those projects in the mode that asks before acting.
 

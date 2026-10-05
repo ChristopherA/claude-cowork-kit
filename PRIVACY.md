@@ -4,7 +4,7 @@ The kit has two binders that read things you would mind leaking, a bank statemen
 
 **The folder stays on your computer.** Claude reaches a connected folder only while the desktop app is open on that computer and the computer is awake. Nothing in the folder syncs anywhere because of the kit, and nothing the kit sets up copies a note, a statement or a record into the project.
 
-**Your phone reaches the Context documents, not the folder.** A conversation in the project on your iPhone or iPad is a chat that works from the Context documents. Separately, the desktop app can let sessions started from your phone or claude.ai read and edit folders on the Mac while Claude is open there; it calls this Remote Control and it can be turned off in Settings. What such a session reads goes to Anthropic, the same as at the desk.
+**From your phone, a task you started on the Mac can reach the folder.** A conversation you start on your iPhone or iPad runs in the cloud and works from the Context documents only. A Cowork task started on the Mac and continued from the phone runs on the Mac and can read and edit the folder while Claude is open there and the Mac is awake. What it reads goes to Anthropic, the same as at the desk.
 
 **A folder in iCloud Drive is also in Apple's iCloud.** The kit's starting point is a folder on the Mac, outside Documents and Desktop, which iCloud may be syncing. Moving a binder's folder into iCloud Drive, so the Files app on your phone can open it, is an advanced option and your decision: the files are then stored by Apple as well. Decide it binder by binder; money is the one you are most likely to keep on the Mac only.
 
