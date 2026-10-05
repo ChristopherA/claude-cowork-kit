@@ -1,6 +1,6 @@
 # money
 
-Skills for the Claude Cowork Kit's money binder: set it up with the privacy floor, summarize a statement, and close a month against your categories.
+Your money binder: summarize a statement and close each month against your categories, with account details kept out of everything that syncs. Part of the Claude Cowork Kit (CWK).
 
 Each skill expects the money binder the Claude Cowork Kit describes: statements in a connected folder that stays on the computer, and Context documents holding only categories, targets and summaries with no account details. Keep the project in the mode that asks (the kit's explainer, under The two approval modes).
 

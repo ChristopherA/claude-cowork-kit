@@ -1,6 +1,6 @@
 # The learning binder
 
-Learning something on purpose: a subject, a skill, or an exam. This binder holds the plan, the record of what has clicked, and the practice. It is deliberately not the research binder: what you learn that is worth keeping goes there, as a note; what lives here goes stale by design once the course is done. Its plugin is `learn`, shown as **Learning** in the app. The reasoning every binder shares is in [the kit's explainer](../claude-cowork-kit.md).
+Learning something on purpose: a subject, a skill, or an exam. This binder holds the plan, the record of what has clicked, and the practice. It is deliberately not the research binder: what you learn that is worth keeping goes there, as a note; what lives here goes stale by design once the course is done. Its plugin is `learn`, shown as **CWK Learning Binder** in the app. The reasoning every binder shares is in [the kit's explainer](../claude-cowork-kit.md).
 
 The Context documents here are small on purpose, a mission, a curriculum, a progress record, so that a lesson works from your phone with the computer closed. The reading material itself stays in the folder.
 
@@ -16,7 +16,7 @@ Claude also has a built-in Learning style, in the style menu, that makes it ask 
 
 The setup creates three Context documents: `mission.md` (what you're learning, why, by when, how you'll know), `curriculum.md` (units and lessons, one idea each lesson is meant to make intuitive) and `progress.md` (what's settled, what's shaky, what's untested). The general steps and the install paths are in the repository's README, under First run and Install; for this binder:
 
-1. **Install the learning plugin**, `learn`, shown as **Learning**, and turn it on.
+1. **Install the learning plugin**, `learn`, shown as **CWK Learning Binder**, and turn it on.
 2. **Create the project with its folder.** In Claude, open **Projects**, then **New project**, and fill in the dialog:
    - **What are you working on?** The binder's name, such as `Learning`.
    - **What are you trying to achieve?** A sentence or two saying what the binder is for. Paste this and change it to suit:

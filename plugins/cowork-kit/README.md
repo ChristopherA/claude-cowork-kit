@@ -1,6 +1,6 @@
 # cowork-kit
 
-The Claude Cowork Kit's core: a setup interview that hands back the account instructions and says which binder plugins to install next, plus twelve routines for any binder: deciding, interviewing, explaining again, questions for others, a meeting pack, a transcript, confidence, premortem, postmortem, where was I, wrap-up, and a new binder.
+CWK Core, the Claude Cowork Kit's routines for any binder: a setup interview that hands back the account instructions and names the binder to install next, plus deciding, interviewing, explaining again, questions for others, a meeting pack, a transcript, confidence, premortem, postmortem, where was I, wrap-up, and a new binder.
 
 No plugin has to come first. Install this one when you want its routines, or start here: in a task, say `set up the kit`, and the setup skill asks a few questions, hands back the account-wide instructions to paste, and says which binder plugin to install next. The other twelve skills work in any binder.
 

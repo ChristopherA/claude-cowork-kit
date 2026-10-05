@@ -4,7 +4,7 @@ Every skill in every plugin: what it does, in the skill's own words, when to rea
 
 The descriptions below are the ones the skills carry, word for word, and each plugin's README carries the same. The reasoning behind each binder is in its document under `binders/`, and the kit's case is in [the explainer](claude-cowork-kit.md).
 
-## Cowork Kit core, `cowork-kit`
+## CWK Core, `cowork-kit`
 
 The setup, and twelve routines that work in any binder. None of them needs a particular folder or Context document; each reads what the project it runs in has. The ones that write, write only a Context document, and only on a yes.
 
@@ -112,7 +112,7 @@ Writes where this session leaves off, done, open, the next step and what to watc
 
 **What it hands back.** A short Context document: done, open, the first next step and what to watch, read back after writing. It records the state of the work, not a summary of the conversation.
 
-## Research, `research`
+## CWK Research Binder, `research`
 
 The research binder's four skills. All but the setup read `rules.md` and `map.md` first and write into the folder only after a yes; the three that read the folder run in a Cowork task at your desk.
 
@@ -148,7 +148,7 @@ Writes one source note from a book, paper, article or transcript the reader hand
 
 **What it hands back.** One note in the sources folder, written the way `map.md` says notes are written, the citation recorded in its form, the source's claims kept apart from your own, on a yes.
 
-## Learning, `learn`
+## CWK Learning Binder, `learn`
 
 The learning binder's three skills. The lesson and the quiz run from the Context documents, so they need no folder; on the phone, where the plugins' skills are not available, the project instructions carry a lesson or a quiz asked for in a sentence; only the setup looks at the materials folder.
 
@@ -176,7 +176,7 @@ Sets up the learning binder: an interview, then mission.md, curriculum.md and pr
 
 **What it hands back.** An interview of six questions, the curriculum drafted whole for your yes, then `mission.md`, `curriculum.md` and `progress.md` created, and the two things only you can paste: the account instructions if your Settings field does not carry them yet, and the project instructions with the subject and folder filled in.
 
-## Your week, `week`
+## CWK Week Binder, `week`
 
 The week binder's six skills. Nothing here sends a message or touches a calendar; drafts and plans come back in the chat, and the folder and `priorities.md` change only on a yes.
 
@@ -228,7 +228,7 @@ Turns a dump of half-formed obligations into a short ordered list of next action
 
 **What it hands back.** A short ordered list of concrete next actions, each startable today, with nothing around it. It goes in the chat; nothing is scheduled, sent or started.
 
-## Money, `money`
+## CWK Money Binder, `money`
 
 The money binder's three skills. Every figure traces to a row in a file in the folder, nothing that identifies an account reaches a Context document, and none of them logs in anywhere.
 
@@ -256,7 +256,7 @@ Summarizes one statement or export from the folder into categories and totals wi
 
 **What it hands back.** Categories and totals with every figure traced to a row and the arithmetic shown, what did not fit named rather than forced, nothing that identifies an account; written to a Context document on a yes.
 
-## Health, `health`
+## CWK Health Binder, `health`
 
 The health binder's five skills. The folder holds the clinical record and the Context documents hold only the questions list and the bare timeline; none of them diagnoses, interprets, or reassures.
 

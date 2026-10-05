@@ -50,7 +50,7 @@ Each item says where it runs, gives a prompt to paste into a Cowork task where o
 
 ## Installing
 
-- [ ] **From the marketplace.** *desk.* Customize, Plugins, Add marketplace, `ChristopherA/claude-cowork-kit`. Pass: six plugins listed, each carrying the version in `VERSION`.
+- [ ] **From the marketplace.** *desk.* Customize, Plugins, Add marketplace, `ChristopherA/claude-cowork-kit`. Then search **CWK** under Discover. Pass: the six plugins come up together, named CWK Core and CWK … Binder, each carrying the version in `VERSION`; after Add, each shows under **Yours**.
 - [ ] **From a file.** *desk.* Download one `.plugin` from the release, check it against `SHA256SUMS` (`shasum -a 256 -c SHA256SUMS` in the download folder), and upload it. Pass: it installs and turns on.
 - [ ] **Dragged into the composer.** *desk.* Drop a `.plugin` file into a task's composer, then start a second task and say one of its phrases. Pass, for the README's warning: the skill does not fire in the second task.
 - [ ] **Skills on the phone.** *phone.* In the research project, say `Where was I?`. Pass: the core plugin's `cowork-where-was-i` runs, or the README's Status keeps saying the phone is unconfirmed.

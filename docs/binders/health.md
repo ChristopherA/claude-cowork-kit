@@ -1,6 +1,6 @@
 # The health binder
 
-Your health, kept as records: visits, test results, medications, and the questions you want to ask at your next appointment, organized so you can compare them across visits. It is for keeping your records and preparing for appointments, not for advice or diagnosis: nothing here works out what is wrong between visits. Its plugin is `health`, shown as **Health** in the app. The reasoning every binder shares is in [the kit's explainer](../claude-cowork-kit.md), and its section on what the connected folder does and does not protect is the one to read before this binder; the setup opens by saying the same thing.
+Your health, kept as records: visits, test results, medications, and the questions you want to ask at your next appointment, organized so you can compare them across visits. It is for keeping your records and preparing for appointments, not for advice or diagnosis: nothing here works out what is wrong between visits. Its plugin is `health`, shown as **CWK Health Binder** in the app. The reasoning every binder shares is in [the kit's explainer](../claude-cowork-kit.md), and its section on what the connected folder does and does not protect is the one to read before this binder; the setup opens by saying the same thing.
 
 The floor is the same as for money. The records stay in the folder on your computer; the Context documents hold a running list of questions for appointments and a bare timeline of visit dates, nothing clinical, because Context documents sync to the cloud and reach your phone. Claude quotes lab values, dosages and dates exactly as the record has them and never reconstructs one from memory; it is not your doctor, does not diagnose, and does not reassure. Keep this project in the mode that asks before acting, and if you have let Claude see and control your screen, keep your patient portals and health apps out of its reach.
 
@@ -20,7 +20,7 @@ The skills are built on that folder.
 
 The setup creates two Context documents: `questions.md`, the running list of questions for appointments, and `timeline.md`, the bare list of visit dates by clinician role. Neither holds anything clinical. The general steps and the install paths are in the repository's README, under First run and Install; for this binder:
 
-1. **Install the health plugin**, `health`, shown as **Health**, and turn it on.
+1. **Install the health plugin**, `health`, shown as **CWK Health Binder**, and turn it on.
 2. **Create the project with its folder.** In Claude, open **Projects**, then **New project**, and fill in the dialog:
    - **What are you working on?** The binder's name, such as `Health`.
    - **What are you trying to achieve?** A sentence or two saying what the binder is for. Paste this and change it to suit:

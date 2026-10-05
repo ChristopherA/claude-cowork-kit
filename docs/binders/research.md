@@ -1,6 +1,6 @@
 # The research binder
 
-Notes and reading: capture from anywhere, file at your desk, answer from what you have read. Its plugin is `research`, shown as **Research** in the app. This is the first binder the kit describes and the one the others learn their habits from. The reasoning behind its shape, the three places things can live and why the description is not a copy, is in [the kit's explainer](../claude-cowork-kit.md), and this document assumes it.
+Notes and reading: capture from anywhere, file at your desk, answer from what you have read. Its plugin is `research`, shown as **CWK Research Binder** in the app. This is the first binder the kit describes and the one the others learn their habits from. The reasoning behind its shape, the three places things can live and why the description is not a copy, is in [the kit's explainer](../claude-cowork-kit.md), and this document assumes it.
 
 You end up with a set of plain markdown notes in a folder on your own computer, and a Claude that can read them, add to them, and answer from them: at your desk, or from your phone while the computer is closed and in a bag. The notes are ordinary files. Open them in any editor, back them up, sync them however you like, or walk away from Claude entirely and still have everything.
 
@@ -29,7 +29,7 @@ Four skills, each triggered by a phrase; everything they do you could ask for in
 The setup creates three Context documents: `rules.md`, the working rules; `map.md`, the description of your folder; and `inbox.md`, the capture inbox, a heading and nothing else. The general steps and the install paths are in the repository's README, under First run and Install; for this binder:
 
 1. **Back your research folder up** with whatever you already use, before the first task that is allowed to write.
-2. **Install the binder's plugin**, `research`, shown as **Research**, and turn it on. No other plugin has to come first.
+2. **Install the binder's plugin**, `research`, shown as **CWK Research Binder**, and turn it on. No other plugin has to come first.
 3. **Create the project with its folder.** In Claude, open **Projects**, then **New project**, and fill in the dialog:
    - **What are you working on?** The binder's name, such as `Research`.
    - **What are you trying to achieve?** A sentence or two saying what the binder is for. Paste this and change it to suit:

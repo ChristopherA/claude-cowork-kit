@@ -1,6 +1,6 @@
 # research
 
-Skills for the Claude Cowork Kit's research binder: set it up, drain the capture inbox, write a source note, and check the description against the folder.
+Your research binder: capture ideas anywhere, file them into notes at your desk, write source notes, and answer from what you have read. Part of the Claude Cowork Kit (CWK).
 
 Each skill expects the research binder the Claude Cowork Kit describes: a research folder connected in the desktop app, a Context document `rules.md` with the working rules, a Context document `map.md` describing the folder, and a Context document `inbox.md` for captures. The scripts in three of its skills only read the folder; the skills write to it only on the reader's yes, and each says in its body what to do when code execution is off.
 

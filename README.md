@@ -28,7 +28,7 @@ Why Cowork rather than plain chat, a notes app, or a developer tool is argued in
 
 ## What is in the kit
 
-Six plugins: five binders and a core. No plugin has to come first: start with the binder you want most, and live with it for a week before adding another. Each skill below is one line; the phrase in quotes is one thing you can say to start it. [The skills index](docs/skills.md) says for every skill when to reach for it and what it hands back.
+Six plugins: five binders and a core. No plugin has to come first: start with the binder you want most, and live with it for a week before adding another. In the app, every kit plugin's name starts with **CWK**, short for Claude Cowork Kit: CWK Core, CWK Research Binder, CWK Learning Binder, CWK Week Binder, CWK Money Binder and CWK Health Binder. Each skill below is one line; the phrase in quotes is one thing you can say to start it. [The skills index](docs/skills.md) says for every skill when to reach for it and what it hands back.
 
 ### Research, `research`
 
@@ -76,7 +76,7 @@ Your medical records and appointments: a record you can compare across visits, a
 - `health-check-in`: a weekly entry in your own words about how you are doing. "Health check-in."
 - `health-treatment-questions`: grades the evidence an article cites and turns the gaps into questions for your clinician. "Questions about this treatment."
 
-### Cowork Kit core, `cowork-kit`
+### Core, `cowork-kit`
 
 Routines that work in any binder, installed beside one when you want them.
 
@@ -98,9 +98,9 @@ Everything a skill does you could ask for in a sentence, more slowly. The setup 
 
 ## Install
 
-Everything installs from the Claude desktop app, under **Customize** in the left sidebar, then **Plugins**. Two ways:
+Everything installs from the Claude desktop app, under **Customize** in the left sidebar, then **Plugins**. Adding the kit's marketplace only lists its plugins; each one still has to be added, and it is installed when it appears under **Yours**. Two ways:
 
-- **From the marketplace.** Choose **Add marketplace**, enter `ChristopherA/claude-cowork-kit`, and install a plugin from the list it shows. Installing this way also brings updates.
+- **From the marketplace.** Choose **Add marketplace** and enter `ChristopherA/claude-cowork-kit`. Then, under **Discover**, search **CWK**: the kit's six plugins come up together. Click **Add** on the one you want. Installing this way also brings updates.
 - **From a file.** Download the plugin's `.plugin` file from the [releases page](https://github.com/ChristopherA/claude-cowork-kit/releases) and add it with the upload option on the same Plugins page. The release notes carry each file's checksum.
 
 Turn the plugin on after installing it. Do not drag a `.plugin` file into a task's composer: a plugin dropped there is attached to that one task only and is gone with it.
@@ -113,11 +113,11 @@ Pick the binder you want first. Each one is its own plugin, set up with one phra
 
 | Binder | Plugin, as the app shows it | Say, in a task inside its project |
 |---|---|---|
-| Notes and reading | **Research** (`research`) | `set up my research binder` |
-| Something you are learning | **Learning** (`learn`) | `set up my learning binder` |
-| Your week | **Your week** (`week`) | `set up my week binder` |
-| Money | **Money** (`money`) | `set up my money binder` |
-| Health records and appointments | **Health** (`health`) | `set up my health binder` |
+| Notes and reading | **CWK Research Binder** (`research`) | `set up my research binder` |
+| Something you are learning | **CWK Learning Binder** (`learn`) | `set up my learning binder` |
+| Your week | **CWK Week Binder** (`week`) | `set up my week binder` |
+| Money | **CWK Money Binder** (`money`) | `set up my money binder` |
+| Health records and appointments | **CWK Health Binder** (`health`) | `set up my health binder` |
 
 Before you connect a folder, read what the connected folder does and does not protect: `PRIVACY.md` here, and the explainer's section [What the connected folder does and does not protect](docs/claude-cowork-kit.md#what-the-connected-folder-does-and-does-not-protect). Everything Claude can reach in a connected folder it may read, and a file in that folder can carry instructions Claude will follow. The money and health binders hold what you would mind leaking; their setups say what the folder does and does not protect before anything else.
 
@@ -125,7 +125,7 @@ Before you connect a folder, read what the connected folder does and does not pr
 2. **Install the binder's plugin** by either path above, and turn it on.
 3. **Create the project with its folder.** In Claude, open **Projects**, then **New project**. Name it under What are you working on?, and say in a sentence or two what the binder is for under What are you trying to achieve?; each binder's document gives a text to paste. Choose **Use a folder** and pick the binder's own folder, never one that holds several binders, so the health binder cannot read your money files. Claude then asks to change files in it: choose **Always allow** for research, learning and your week, and **Allow** for money and health, so those two ask each time. The folder stays on this computer, and Claude reaches it from a Cowork task started there. The project and its Context documents are in your account and reach your phone; to work in the folder from the phone, start a Cowork task on the Mac with the folder ticked, leave Claude open and the Mac awake, and continue that same task from the phone, where it is listed under Recents rather than in the project ([the explainer](docs/claude-cowork-kit.md#using-your-binders-from-your-iphone-or-ipad) has the steps).
 4. **Run the setup.** On the project page, switch the box at the top from **Chat** to **Cowork**, then say the binder's phrase from the table. Claude asks a few questions, creates the binder's Context documents, and hands back what only you can paste: the account instructions, if your Settings, Account, "Instructions for Claude" field does not carry them yet, and the project instructions for the Instructions panel at the side of the project page. It then tells you what exists and what is waiting for you.
-5. **Install the core plugin** (`cowork-kit`, shown as **Cowork Kit core**) when you want its routines; they work in every binder. Its own setup, `set up the kit`, is for a reader who wants the account instructions before choosing a binder.
+5. **Install the core plugin** (`cowork-kit`, shown as **CWK Core**) when you want its routines; they work in every binder. Its own setup, `set up the kit`, is for a reader who wants the account instructions before choosing a binder.
 
 Each binder's document under [`docs/binders/`](docs/binders/) has its own setup in full and a check that it works. Setup takes about thirty minutes for the first binder, and one install and one paste for each binder after. You make the decisions; Claude does the typing. Customize is in the desktop app's left sidebar; where Settings sits is one of the things the kit is still confirming. If the setup asks where the folder is and you are not sure, find it in Finder, hold Option, right-click it, and choose Copy as Pathname, then paste.
 

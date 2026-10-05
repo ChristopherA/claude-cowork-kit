@@ -1,6 +1,6 @@
 # week
 
-Skills for the Claude Cowork Kit's week binder: set it up, triage a pile of obligations into next actions, plan the week, review it, write up a meeting, and draft a reply without sending it.
+Your week binder: triage a pile of obligations into next actions, plan and review the week, write up a meeting, and draft a reply without sending it. Part of the Claude Cowork Kit (CWK).
 
 Each skill expects the week binder the Claude Cowork Kit describes: a working folder connected in the desktop app, a priorities document the setup creates, and a reviews document the review creates. Nothing here sends a message or changes a calendar; drafts are handed back.
 

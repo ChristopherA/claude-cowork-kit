@@ -1,6 +1,6 @@
 # The money binder
 
-Tracking your household money: statements, exports, budgets, and the questions you ask about them, with account details kept out of everything that syncs. Its plugin is `money`, shown as **Money** in the app. The reasoning every binder shares is in [the kit's explainer](../claude-cowork-kit.md), and its section on what the connected folder does and does not protect is the one to read before this binder; the setup opens by saying the same thing.
+Tracking your household money: statements, exports, budgets, and the questions you ask about them, with account details kept out of everything that syncs. Its plugin is `money`, shown as **CWK Money Binder** in the app. The reasoning every binder shares is in [the kit's explainer](../claude-cowork-kit.md), and its section on what the connected folder does and does not protect is the one to read before this binder; the setup opens by saying the same thing.
 
 The floor here is exact. Statements and exports stay in the folder on your computer; the Context documents hold your category definitions, your budget targets, and summaries with no account details in them, because Context documents sync to the cloud and reach your phone. Every number Claude gives you traces to a row in a file you gave it, and it never estimates, rounds, or fills in a figure to make a total come out. Keep this project in the mode that asks before acting. If you let Claude use your computer's screen and apps at all, block your banking apps and sites from it in the Cowork settings that govern computer use, so a task in some other project never wanders into them.
 
@@ -14,7 +14,7 @@ The floor here is exact. Statements and exports stay in the folder on your compu
 
 The setup creates two Context documents: `categories.md`, each category with one line saying what falls in it, and `targets.md`, your budget targets as you give them, or a heading and nothing else until you have some. Neither holds an account number, a balance, a transaction row, or the folder path. The general steps and the install paths are in the repository's README, under First run and Install; for this binder:
 
-1. **Install the money plugin**, `money`, shown as **Money**, and turn it on.
+1. **Install the money plugin**, `money`, shown as **CWK Money Binder**, and turn it on.
 2. **Create the project with its folder.** In Claude, open **Projects**, then **New project**, and fill in the dialog:
    - **What are you working on?** The binder's name, such as `Money`.
    - **What are you trying to achieve?** A sentence or two saying what the binder is for. Paste this and change it to suit:

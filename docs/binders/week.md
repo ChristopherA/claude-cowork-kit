@@ -1,6 +1,6 @@
 # The week binder
 
-Running your week: obligations turned into next actions, and a week planned from the time you actually have. Its plugin is `week`, shown as **Your week** in the app. The reasoning every binder shares is in [the kit's explainer](../claude-cowork-kit.md).
+Running your week: obligations turned into next actions, and a week planned from the time you actually have. Its plugin is `week`, shown as **CWK Week Binder** in the app. The reasoning every binder shares is in [the kit's explainer](../claude-cowork-kit.md).
 
 This binder exists so that the research binder can stay quiet. A research binder that also runs your week fills up with tasks, and every conversation starts with what is due rather than what you are thinking about. Here, what is due is the point. Nothing in this binder sends a message or changes a calendar; drafts are handed back, and you send them.
 
@@ -17,7 +17,7 @@ This binder exists so that the research binder can stay quiet. A research binder
 
 The setup creates one Context document, `priorities.md`, the two or three things that matter this month, which every plan bends around; the review creates a second, `reviews.md`, when it first runs. The general steps and the install paths are in the repository's README, under First run and Install; for this binder:
 
-1. **Install the week plugin**, `week`, shown as **Your week**, and turn it on.
+1. **Install the week plugin**, `week`, shown as **CWK Week Binder**, and turn it on.
 2. **Create the project with its folder.** In Claude, open **Projects**, then **New project**, and fill in the dialog:
    - **What are you working on?** The binder's name, such as `Your week`.
    - **What are you trying to achieve?** A sentence or two saying what the binder is for. Paste this and change it to suit:

@@ -65,15 +65,11 @@ SKIP_FILES = {".DS_Store"}
 # of what kit_references() produces.
 PLUGINS = {
     "cowork-kit": {
-        "display": "Cowork Kit core",
+        "display": "CWK Core",
         "description": (
-            "The Claude Cowork Kit's core: a setup interview that hands back the account "
-            "instructions and says which binder plugins to install next, plus twelve routines "
-            "for any binder: deciding, interviewing, explaining again, questions for others, a "
-            "meeting pack, a transcript, confidence, premortem, postmortem, where was I, wrap-up, "
-            "and a new binder."
+            "CWK Core, the Claude Cowork Kit's routines for any binder: a setup interview that hands back the account instructions and names the binder to install next, plus deciding, interviewing, explaining again, questions for others, a meeting pack, a transcript, confidence, premortem, postmortem, where was I, wrap-up, and a new binder."
         ),
-        "keywords": ["cowork", "setup", "personal", "non-programmer"],
+        "keywords": ["cowork", "setup", "personal", "non-programmer", "cwk"],
         "setup": "cowork-setup",
         "doc": "docs/claude-cowork-kit.md",
         "references": ["global-instructions.md", "voices.md"],
@@ -84,12 +80,11 @@ PLUGINS = {
         ),
     },
     "learn": {
-        "display": "Learning",
+        "display": "CWK Learning Binder",
         "description": (
-            "Skills for the Claude Cowork Kit's learning binder: set a course, run a lesson, "
-            "and quiz yourself on what you have learned or read."
+            'Your learning binder: learn a subject, a skill or an exam on purpose, with a course plan, short lessons and quizzes, and a record of what has clicked. Part of the Claude Cowork Kit (CWK).'
         ),
-        "keywords": ["learning", "study", "cowork", "tutor"],
+        "keywords": ["learning", "study", "cowork", "tutor", "cwk"],
         "setup": "learn-setup",
         "doc": "docs/binders/learning.md",
         "references": ["learning-instructions.md", "global-instructions.md", "voices.md"],
@@ -100,13 +95,11 @@ PLUGINS = {
         ),
     },
     "week": {
-        "display": "Your week",
+        "display": "CWK Week Binder",
         "description": (
-            "Skills for the Claude Cowork Kit's week binder: set it up, triage a pile of "
-            "obligations into next actions, plan the week, review it, write up a meeting, and "
-            "draft a reply without sending it."
+            'Your week binder: triage a pile of obligations into next actions, plan and review the week, write up a meeting, and draft a reply without sending it. Part of the Claude Cowork Kit (CWK).'
         ),
-        "keywords": ["productivity", "planning", "cowork", "week"],
+        "keywords": ["productivity", "planning", "cowork", "week", "cwk"],
         "setup": "week-setup",
         "doc": "docs/binders/week.md",
         "references": ["week-instructions.md", "global-instructions.md", "voices.md"],
@@ -118,12 +111,11 @@ PLUGINS = {
         ),
     },
     "money": {
-        "display": "Money",
+        "display": "CWK Money Binder",
         "description": (
-            "Skills for the Claude Cowork Kit's money binder: set it up with the privacy floor, "
-            "summarize a statement, and close a month against your categories."
+            'Your money binder: summarize a statement and close each month against your categories, with account details kept out of everything that syncs. Part of the Claude Cowork Kit (CWK).'
         ),
-        "keywords": ["money", "budget", "cowork", "household"],
+        "keywords": ["money", "budget", "cowork", "household", "cwk"],
         "setup": "money-setup",
         "doc": "docs/binders/money.md",
         "references": ["money-instructions.md", "global-instructions.md", "voices.md"],
@@ -134,13 +126,11 @@ PLUGINS = {
         ),
     },
     "health": {
-        "display": "Health",
+        "display": "CWK Health Binder",
         "description": (
-            "Skills for the Claude Cowork Kit's health binder: set it up, prepare a visit and its "
-            "pack, record a visit into the folder, keep a weekly functional log, and turn a handed "
-            "article into questions for the clinician."
+            'Your health binder: prepare for an appointment, record a visit, keep a weekly log, and turn an article into questions for your clinician; records, never diagnosis. Part of the Claude Cowork Kit (CWK).'
         ),
-        "keywords": ["health", "medical", "cowork", "records"],
+        "keywords": ["health", "medical", "cowork", "records", "cwk"],
         "setup": "health-setup",
         "doc": "docs/binders/health.md",
         "references": ["health-instructions.md", "global-instructions.md", "voices.md"],
@@ -152,12 +142,11 @@ PLUGINS = {
         ),
     },
     "research": {
-        "display": "Research",
+        "display": "CWK Research Binder",
         "description": (
-            "Skills for the Claude Cowork Kit's research binder: set it up, drain the "
-            "capture inbox, write a source note, and check the description against the folder."
+            'Your research binder: capture ideas anywhere, file them into notes at your desk, write source notes, and answer from what you have read. Part of the Claude Cowork Kit (CWK).'
         ),
-        "keywords": ["research", "notes", "cowork", "markdown"],
+        "keywords": ["research", "notes", "cowork", "markdown", "cwk"],
         "setup": "research-setup",
         "doc": "docs/binders/research.md",
         "references": ["research-instructions.md", "rules-template.md", "map-template.md", "voices.md", "global-instructions.md"],

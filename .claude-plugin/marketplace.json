@@ -9,43 +9,43 @@
   "plugins": [
     {
       "name": "cowork-kit",
-      "displayName": "Cowork Kit core",
-      "description": "The Claude Cowork Kit's core: a setup interview that hands back the account instructions and says which binder plugins to install next, plus twelve routines for any binder: deciding, interviewing, explaining again, questions for others, a meeting pack, a transcript, confidence, premortem, postmortem, where was I, wrap-up, and a new binder.",
+      "displayName": "CWK Core",
+      "description": "CWK Core, the Claude Cowork Kit's routines for any binder: a setup interview that hands back the account instructions and names the binder to install next, plus deciding, interviewing, explaining again, questions for others, a meeting pack, a transcript, confidence, premortem, postmortem, where was I, wrap-up, and a new binder.",
       "version": "0.1.0-rc.7",
       "source": "./plugins/cowork-kit"
     },
     {
       "name": "learn",
-      "displayName": "Learning",
-      "description": "Skills for the Claude Cowork Kit's learning binder: set a course, run a lesson, and quiz yourself on what you have learned or read.",
+      "displayName": "CWK Learning Binder",
+      "description": "Your learning binder: learn a subject, a skill or an exam on purpose, with a course plan, short lessons and quizzes, and a record of what has clicked. Part of the Claude Cowork Kit (CWK).",
       "version": "0.1.0-rc.7",
       "source": "./plugins/learn"
     },
     {
       "name": "week",
-      "displayName": "Your week",
-      "description": "Skills for the Claude Cowork Kit's week binder: set it up, triage a pile of obligations into next actions, plan the week, review it, write up a meeting, and draft a reply without sending it.",
+      "displayName": "CWK Week Binder",
+      "description": "Your week binder: triage a pile of obligations into next actions, plan and review the week, write up a meeting, and draft a reply without sending it. Part of the Claude Cowork Kit (CWK).",
       "version": "0.1.0-rc.7",
       "source": "./plugins/week"
     },
     {
       "name": "money",
-      "displayName": "Money",
-      "description": "Skills for the Claude Cowork Kit's money binder: set it up with the privacy floor, summarize a statement, and close a month against your categories.",
+      "displayName": "CWK Money Binder",
+      "description": "Your money binder: summarize a statement and close each month against your categories, with account details kept out of everything that syncs. Part of the Claude Cowork Kit (CWK).",
       "version": "0.1.0-rc.7",
       "source": "./plugins/money"
     },
     {
       "name": "health",
-      "displayName": "Health",
-      "description": "Skills for the Claude Cowork Kit's health binder: set it up, prepare a visit and its pack, record a visit into the folder, keep a weekly functional log, and turn a handed article into questions for the clinician.",
+      "displayName": "CWK Health Binder",
+      "description": "Your health binder: prepare for an appointment, record a visit, keep a weekly log, and turn an article into questions for your clinician; records, never diagnosis. Part of the Claude Cowork Kit (CWK).",
       "version": "0.1.0-rc.7",
       "source": "./plugins/health"
     },
     {
       "name": "research",
-      "displayName": "Research",
-      "description": "Skills for the Claude Cowork Kit's research binder: set it up, drain the capture inbox, write a source note, and check the description against the folder.",
+      "displayName": "CWK Research Binder",
+      "description": "Your research binder: capture ideas anywhere, file them into notes at your desk, write source notes, and answer from what you have read. Part of the Claude Cowork Kit (CWK).",
       "version": "0.1.0-rc.7",
       "source": "./plugins/research"
     }

@@ -1,6 +1,6 @@
 # health
 
-Skills for the Claude Cowork Kit's health binder: set it up, prepare a visit and its pack, record a visit into the folder, keep a weekly functional log, and turn a handed article into questions for the clinician.
+Your health binder: prepare for an appointment, record a visit, keep a weekly log, and turn an article into questions for your clinician; records, never diagnosis. Part of the Claude Cowork Kit (CWK).
 
 Each skill expects the health binder the Claude Cowork Kit describes: records in a connected folder that stays on the computer, arranged as the kit's docs/binders/health.md describes, and Context documents holding only a questions list and a bare timeline. Keep the project in the mode that asks (the kit's explainer, under The two approval modes).
 
