@@ -6,7 +6,7 @@ The descriptions below are the ones the skills carry, word for word, and each pl
 
 ## CWK Core, `cowork-kit`
 
-The setup, and twelve routines that work in any binder. None of them needs a particular folder or Context document; each reads what the project it runs in has. The ones that write, write only a Context document, and only on a yes.
+The setup, twelve routines that work in any binder, and the upgrade. None of the routines needs a particular folder or Context document; each reads what the project it runs in has. The ones that write, write only a Context document, and only on a yes. The upgrade is the exception: it compares a binder with what its setup makes in this release and changes its documents, folders and notes, each change on its own yes.
 
 ### `cowork-again`
 
@@ -111,6 +111,14 @@ Writes where this session leaves off, done, open, the next step and what to watc
 **When to reach for it.** The session is ending and the next one, or the phone at 11pm, should start from where this one stopped.
 
 **What it hands back.** A short Context document: done, open, the first next step and what to watch, read back after writing. It records the state of the work, not a summary of the conversation.
+
+### `cowork-upgrade`
+
+Brings a binder made with an earlier release up to this one: compares its documents and folder with what its setup makes now and proposes each change, one at a time. Use for "upgrade my binder".
+
+**When to reach for it.** After installing a new release, in a binder you set up with an earlier one; a setup runs only once, so nothing else carries a release's changes into a binder that exists.
+
+**What it hands back.** Each difference between the binder and this release, shown with the old and new wording and made only on a yes: the Context documents, new text for the Instructions panel to paste, folders the release keeps, and, for the research binder, old source notes brought to the current shape one at a time. What you filled in or decided yourself is kept, and asked about when it is not clear which it is.
 
 ## CWK Research Binder, `research`
 

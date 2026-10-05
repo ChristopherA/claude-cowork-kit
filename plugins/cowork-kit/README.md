@@ -1,8 +1,8 @@
 # cowork-kit
 
-CWK Core, the Claude Cowork Kit's routines for any binder: a setup interview that hands back the account instructions and names the binder to install next, plus deciding, interviewing, explaining again, questions for others, a meeting pack, a transcript, confidence, premortem, postmortem, where was I, wrap-up, and a new binder.
+CWK Core, the Claude Cowork Kit's routines for any binder: a setup interview that hands back the account instructions and names the binder to install next, plus deciding, interviewing, explaining again, questions for others, a meeting pack, a transcript, confidence, premortem, postmortem, where was I, wrap-up, a new binder, and upgrading a binder made with an earlier release.
 
-No plugin has to come first. Install this one when you want its routines, or start here: in a task, say `set up the kit`, and the setup skill asks a few questions, hands back the account-wide instructions to paste, and says which binder plugin to install next. The other twelve skills work in any binder.
+No plugin has to come first. Install this one when you want its routines, or start here: in a task, say `set up the kit`, and the setup skill asks a few questions, hands back the account-wide instructions to paste, and says which binder plugin to install next. The other thirteen skills work in any binder.
 
 Version 0.1.0-rc.9 of the Claude Cowork Kit; every plugin in a release carries the kit's version, and the releases are at https://github.com/ChristopherA/claude-cowork-kit/releases.
 
@@ -19,6 +19,7 @@ Version 0.1.0-rc.9 of the Claude Cowork Kit; every plugin in a release carries t
 - `cowork-questions-for`: Writes the questions for someone who holds what the reader lacks, an accountant, a contractor, a teacher, ordered by what matters. Use for "questions for my accountant", "what should I ask them".
 - `cowork-setup`: Sets up the Claude Cowork Kit: a short interview, the account instructions to paste, and which binder plugin to install next. Use for "set up the kit", "get started", "install the cowork kit".
 - `cowork-transcript`: Cleans a raw transcript at a stated level: speakers named, filler trimmed, terms fixed, nothing paraphrased, saved beside the raw one for the binder's next step. Use for "clean up this transcript".
+- `cowork-upgrade`: Brings a binder made with an earlier release up to this one: compares its documents and folder with what its setup makes now and proposes each change, one at a time. Use for "upgrade my binder".
 - `cowork-where-was-i`: Reads current work, the inbox and the newest notes, and recommends the one next step rather than a menu. Use for "where was I", "what was I in the middle of", "what should I do next".
 - `cowork-wrap-up`: Writes where this session leaves off, done, open, the next step and what to watch, into a Context document the next session or the phone reads. Use for "wrap up for today", "write down where we are".
 

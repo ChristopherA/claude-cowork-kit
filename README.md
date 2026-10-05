@@ -96,6 +96,7 @@ Routines that work in any binder, installed beside one when you want them.
 - `cowork-where-was-i`: the one next step after a gap. "Where was I?"
 - `cowork-wrap-up`: writes down where this session leaves off. "Wrap up for today."
 - `cowork-new-binder`: designs a binder for something the kit does not describe. "A binder for something else."
+- `cowork-upgrade`: brings a binder made with an earlier release up to this one, one change at a time. "Upgrade my binder."
 
 Everything a skill does you could ask for in a sentence, more slowly. The setup skills hand back only what the app still needs from your hands: a task can create Context documents and read your folder, but it cannot change your settings, create a project, connect a folder or install a plugin.
 
