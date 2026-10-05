@@ -313,6 +313,8 @@ def kit_references(docs_dir):
         fail("kit: the project instructions carry the folder placeholder, which belongs in the working rules")
     if "[FOLDER PATH ON MY COMPUTER]" not in block3b:
         fail("kit: the working rules have no folder placeholder")
+    if "[KIT RELEASE]" not in block4:
+        fail("kit: the description has no [KIT RELEASE] placeholder for build.py to fill")
     if "[FULL FOLDER PATH ON MY COMPUTER]" not in block4:
         fail("kit: the description has no folder placeholder")
     binders = {}
@@ -339,7 +341,7 @@ def kit_references(docs_dir):
                      + "".join(f"## {name}\n\n```\n{body}```\n\n" for name, body in voices.items()),
         "research-instructions.md": stamp(notes_rel) + "# The project instructions\n\nGoes in the project's Instructions panel, not the description. Nothing to fill in.\n\n```\n" + block3a + "```\n",
         "rules-template.md": stamp(notes_rel) + "# The working rules\n\nCreated as the Context document rules.md, with the folder path filled in.\n\n```markdown\n" + block3b + "```\n",
-        "map-template.md": stamp(notes_rel) + "# The description\n\nCreated as the Context document map.md, every bracket filled.\n\n```markdown\n" + block4 + "```\n",
+        "map-template.md": stamp(notes_rel) + "# The description\n\nCreated as the Context document map.md, every bracket filled.\n\n```markdown\n" + block4.replace("[KIT RELEASE]", KIT_VERSION) + "```\n",
     })
     return refs
 

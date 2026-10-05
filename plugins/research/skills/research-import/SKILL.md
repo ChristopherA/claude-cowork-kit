@@ -19,7 +19,7 @@ Ask which pieces to read, if the reader has not said, and where they are: files 
 
 ## 1. Extract
 
-Read every piece in full. List each work it cites, from reference lists, inline citations, footnotes and links, and for each keep the piece and the sentence that cites it: that sentence is how the reader used the work, and it is what the report and any inferred WHY SAVED are built from. Then merge the list across pieces: two entries are one work when they share a DOI or a URL, or a title and a first author. Search the sources folder and `works/` for each by its link and its title; a work with a note already is not filed again, and its new uses are listed as additions the reader may want made to that note. A work of the reader's own is a works note, not a source note, offered as the source-note skill describes.
+Read every piece in full. List each work it cites, from reference lists, inline citations, footnotes and links, and for each keep the piece and the sentence that cites it: that sentence is how the reader used the work, and it is what the report and any inferred WHY SAVED are built from. Then merge the list across pieces: two entries are one work when they share a DOI or a URL, or a title and a first author. Search the sources folder and `works/` for each by its link and its title; a work with a note already is not filed again, and its new uses are listed as additions the reader may want made to that note. A work of the reader's own is a works note, not a source note, offered as the source-note skill describes, its BRIEF written from the work itself and marked as drafted; the drafts being mined are not filed as works.
 
 Say how many pieces were read, how many citations they hold and how many distinct works that comes to.
 
@@ -39,7 +39,7 @@ Ask for one approval for the batch through the control, with the option of leavi
 
 ## 4. File
 
-Write each work as a flat source note at the `citation` level, named by the folder's naming rule: a `created` line, `level: citation`, the citation fields from the check, and, where `map.md`'s note format asks for one, a `checked` line saying when and against what the citation was checked, or that it could not be. The citation line comes from the source-note skill's cite script, run with `--check` on every note before it is written. A partly checked or unreachable work carries only the fields that were confirmed, and its line says what is missing rather than guessing.
+Write each work as a flat source note at the `citation` level, named by the folder's naming rule: a `created` line, `level: citation`, the citation fields from the check, and a `checked` line saying when and against what the citation was checked, or that it could not be. The citation line comes from the source-note skill's cite script, run with `--check` on every note before it is written. A partly checked or unreachable work carries only the fields that were confirmed, and its line says what is missing rather than guessing.
 
 ```
 python3 cite.py "<draft note>" ["<draft note>" ...] --check
@@ -57,7 +57,7 @@ Hand back, separately from the notes, a report for the author: for each piece, e
 
 ## What not to do
 
-Do not change the reader's writing. Do not file a field the check did not confirm, or fill one from memory. Do not write a WHY SAVED the reader did not ask for, or key points, abstracts or quotes; every note filed here is at the citation level, and the source-note skill takes a work further when a topic note cites it. Do not delete the pieces or anything else from the folder; if the reader wants files moved or removed afterwards, ask, and say first that deleting needs their permission in the app.
+Do not change the reader's writing. Do not file a field the check did not confirm, or fill one from memory. Do not write a WHY SAVED the reader did not ask for, or key points, abstracts or quotes; every note filed here is at the citation level, and the source-note skill takes a work further when a topic note cites it. Do not delete the pieces or anything else from the folder; if the reader wants files moved or removed afterwards, ask, and say first that deleting needs their permission in the app. If the link to the computer drops and comes back, the app may ask for the permission again; say before asking that it is the same permission, asked again after the reconnect, so the second prompt does not look like a repeat.
 
 ## Ending
 

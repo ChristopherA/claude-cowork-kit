@@ -19,19 +19,21 @@ This describes what's in my research folder and how it's organized. It lives in 
 
 [FULL FOLDER PATH ON MY COMPUTER]
 
+Kit release: 0.1.0-rc.10, set up [DATE]
+
 ## What's in each folder
 
 - `inbox/` — files I drop in at my desk, a PDF, a scan, a saved page, not yet processed. Typed captures from anywhere go to `inbox.md` in Context instead; processing the inbox works through both. Nothing here is finished.
 - `sources/` — one note per book, paper, talk, or article, named `author-year-short-title.md`, at the level of what I read: `citation` (the line only, until something cites it), `minimal` (the line, a brief, a short abstract, why I saved it), or `read` (adds key points and quotes). A source that comes with its original becomes a folder holding a lead note of the same name, `author-year-short-title/author-year-short-title.md`, with the original in its `originals/` and a searchable markdown copy, page-marked, in its `renditions/`; never a folder for one file. `originals/` holds copyrighted material kept for my own use and is never published.
 - `topics/` — one living note per topic, named for the topic: what I currently think, first, then the sources that support or challenge it. New material on a topic goes into its note, not a new one. A source moves up a level when a topic note cites it.
 - `threads/` — things I'm actively thinking about. Longer and messier than a topic note, and they change often; a topic note often starts here before it settles.
-- `works/` — my own published writing, and drafts I want to cite, one note per work, named like a source note, with the same citation fields plus a `status` line (published or draft), its citation line and a brief; a work may carry an INFLUENCE block with dated counts from named indexes. Never mixed into `sources/`; topic notes cite a work as "(my own work)".
+- `works/` — my own published writing, and drafts I want to cite, one note per work, named like a source note, with the same citation fields plus a `status` line (published or draft), its citation line and a brief; a work may carry an INFLUENCE block with dated counts from named indexes. Never mixed into `sources/`; topic notes cite a work as "(my own work)". Raw drafts mined for sources are not filed here.
 - `writing/` — pieces for other readers, one folder each: `writing/piece-name/piece-name.md` records the piece (its kind, its readers, its citation style, its co-authors, where the draft lives), with its claim map, its reference file and a copy of each version I sign off beside it.
 - `archive/` — done, superseded, or abandoned. Read it, don't write to it.
 
 ## Note format
 
-Plain markdown. The metadata at the top of a note is a `created` date in YYYY-MM-DD form and, where the note came from something, a `source` line with the link or citation; a source note carries a `level` line instead of `source`, then its citation fields (`kind`, `authors`, `year`, `title`, `container`, `volume`, `issue`, `pages`, `publisher`, `doi`, `isbn`, `url`, `retrieved` or `available`), and its citation line follows. A source note is structured: each part is a labeled block, and its key points are bullets.
+Plain markdown. The metadata at the top of a note is a `created` date in YYYY-MM-DD form and, where the note came from something, a `source` line with the link or citation; a source note carries a `level` line instead of `source`, then its citation fields (`kind`, `authors`, `year`, `title`, `container`, `volume`, `issue`, `pages`, `publisher`, `doi`, `isbn`, `url`, `retrieved` or `available`) and a `checked` line saying when and against what the citation was checked, and its citation line follows. A source note is structured: each part is a labeled block, and its key points are bullets.
 
 Don't hard-wrap. One paragraph is one line, and the editor wraps it for display.
 
