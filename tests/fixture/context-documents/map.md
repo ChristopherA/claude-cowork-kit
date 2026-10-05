@@ -23,6 +23,7 @@ Kit release: 0.1.0-rc.11, set up 2026-10-05
 - `works/` — my own published writing, and drafts I want to cite, one note per work, named like a source note, with the same citation fields plus a `status` line (published or draft), its citation line and a brief; a work may carry an INFLUENCE block with dated counts from named indexes. Never mixed into `sources/`; topic notes cite a work as "(my own work)". Raw drafts mined for sources are not filed here.
 - `writing/` — pieces for other readers, one folder each: `writing/piece-name/piece-name.md` records the piece (its kind, its readers, its citation style, its co-authors, where the draft lives), with its claim map, its reference file and a copy of each version I sign off beside it.
 - `archive/` — done, superseded, or abandoned. Read it, don't write to it.
+- `.cwk/` — hidden; the kit's scripts, kept and refreshed by the skills. Not notes: never filed, searched or described.
 
 ## Note format
 
