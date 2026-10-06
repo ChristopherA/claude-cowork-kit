@@ -2,7 +2,7 @@
 
 Every release is listed here, newest first, with what changed since the one before. The version is the kit's, in `VERSION`; every plugin in a release carries it.
 
-## Unreleased
+## 0.1.0-rc.11 (2026-10-05)
 
 From a reader's second live run, on rc.10, which confirmed every rc.9 script fix on real files and ran the new upgrade on a real binder. The research skills now keep their scripts in a hidden `.cwk/scripts/` folder in your research folder, so they are copied to your computer once per release instead of every session; each script reports its release with `--version`, and after a plugin upgrade the skills see the difference and refresh the copy themselves. A rendition says which release made it.
 

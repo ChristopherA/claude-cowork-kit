@@ -1,6 +1,6 @@
 {
   "name": "health",
-  "version": "0.1.0-rc.10",
+  "version": "0.1.0-rc.11",
   "description": "Your health binder: prepare for an appointment, record a visit, keep a weekly log, and turn an article into questions for your clinician; records, never diagnosis. Part of the Claude Cowork Kit (CWK).",
   "author": {
     "name": "Christopher Allen"

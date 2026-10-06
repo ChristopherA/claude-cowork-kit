@@ -29,7 +29,7 @@ import json
 import re
 import sys
 
-__version__ = "0.1.0-rc.10"  # the kit release; build.py sets it from VERSION
+__version__ = "0.1.0-rc.11"  # the kit release; build.py sets it from VERSION
 
 LABELS = ["SHORT ABSTRACT", "ABSTRACT", "BRIEF", "EVIDENCE", "KEY POINTS", "KEY QUOTES", "INFLUENCE",
           "METHODOLOGY", "WHY SAVED", "WHY THIS MATTERS", "CONTRIBUTED BY", "CURRENT THINKING",

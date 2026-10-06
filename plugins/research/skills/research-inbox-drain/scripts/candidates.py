@@ -25,7 +25,7 @@ import os
 import re
 import sys
 
-__version__ = "0.1.0-rc.10"  # the kit release; build.py sets it from VERSION
+__version__ = "0.1.0-rc.11"  # the kit release; build.py sets it from VERSION
 
 STOP = set("""
 a an the and or but if then of to in on at by for from with without into onto

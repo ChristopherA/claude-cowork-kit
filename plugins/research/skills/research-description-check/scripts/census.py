@@ -59,7 +59,7 @@ import os
 import re
 import sys
 
-__version__ = "0.1.0-rc.10"  # the kit release; build.py sets it from VERSION
+__version__ = "0.1.0-rc.11"  # the kit release; build.py sets it from VERSION
 
 KEYLINE = re.compile(r"^[A-Za-z][A-Za-z _-]{0,30}:\s")  # a metadata line, not prose
 CREATED = re.compile(r"^\s*created:\s*(\d{4}-\d{2}-\d{2})", re.I | re.M)

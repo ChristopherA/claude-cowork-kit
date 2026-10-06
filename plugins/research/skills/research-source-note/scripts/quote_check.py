@@ -43,7 +43,7 @@ import re
 import sys
 import unicodedata
 
-__version__ = "0.1.0-rc.10"  # the kit release; build.py sets it from VERSION
+__version__ = "0.1.0-rc.11"  # the kit release; build.py sets it from VERSION
 
 QUOTE = re.compile(r'"([^"\n]+?)"'                       # straight, curly quotes inside allowed
                    r'|“((?:[^“”"\n]|“[^“”\n]*”)+?)”'       # curly, a balanced curly pair inside

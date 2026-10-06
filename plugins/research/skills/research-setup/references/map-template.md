@@ -19,7 +19,7 @@ This describes what's in my research folder and how it's organized. It lives in 
 
 [FULL FOLDER PATH ON MY COMPUTER]
 
-Kit release: 0.1.0-rc.10, set up [DATE]
+Kit release: 0.1.0-rc.11, set up [DATE]
 
 ## What's in each folder
 
